@@ -1,0 +1,41 @@
+{
+  "structure_preserved": {
+    "topology": true,
+    "uv": true,
+    "seams": true,
+    "weights": true,
+    "groups": true,
+    "skeleton": true,
+    "materials": true,
+    "material_assignment": true,
+    "texture": true,
+    "actions": true
+  },
+  "rear_toe_retarget_max_matrix_error": 3.5762786865234375e-07,
+  "rear_toe_rest_axes_aligned": true,
+  "far_forefoot_offset": [
+    0.12,
+    -0.04,
+    0
+  ],
+  "furca_fold_yaw_degrees": -60,
+  "foot_target_errors_before_toe_retarget": {
+    "idle": 3.664968692341671e-05,
+    "walk": 4.422192554576923e-05,
+    "jump": 3.996994217523557e-05
+  },
+  "outline_before": 2,
+  "outline_after": 3,
+  "samples_before": 64,
+  "samples_after": 512,
+  "small_transparent_holes_before": 15,
+  "small_transparent_holes_after": 0,
+  "thin_opaque_spurs_after": 0,
+  "toe_alignment_tail_error": 0,
+  "far_forefoot_hidden_all_frames": true,
+  "furca_folded_idle_walk": true,
+  "actual_cleanup_filled_pixels": 0,
+  "actual_cleanup_removed_pixels": 1,
+  "model_triangles": 2732,
+  "bones": 37
+}

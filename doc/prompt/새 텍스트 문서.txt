@@ -1,0 +1,1 @@
+목표: Affinity MCP 이용, Computer-Use 미사용, 목차 파일과 레이아웃 파일, 상세 내용을 참고해 발표 자료 완성 명세서 생성. 목차 파일: "C:\Users\user\Desktop\BEng_Work\022_2D_PyGame\2DGP-Project-Toktogi\doc\prompt\toktogi_1st_presentation.txt". 레이아웃 파일(참고용): "C:\Users\user\Desktop\학사_문서\020_계절 학사 문서\발표\프렌즈슬롭 분석.af". 상세 내용 파일 디렉토리: C:\Users\user\Desktop\BEng_Work\022_2D_PyGame\2DGP-Project-Toktogi\doc\markdown

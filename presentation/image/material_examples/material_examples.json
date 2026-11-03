@@ -1,0 +1,25 @@
+{
+  "source": "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\blender\\toktogi_sprite.blend",
+  "frame": 1,
+  "resolution": [
+    384,
+    384
+  ],
+  "normal_encoding": "screen basis: X right, Y up, Z toward camera; RGB=0.5*(N+1), Raw/Non-Color",
+  "material_values": {
+    "body_roughness": 0.77,
+    "eye_roughness": 0.48,
+    "metallic": 0
+  },
+  "comparison": "Same flat 2D quad and same extracted maps; only area-light X changes -3 to +3",
+  "runtime_status": "Offline Blender example, not a Pico2D implementation or performance test",
+  "files": [
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\base_color.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\normal.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\roughness.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\metallic.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\alpha.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\light_left.png",
+    "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\presentation\\image\\material_examples\\light_right.png"
+  ]
+}

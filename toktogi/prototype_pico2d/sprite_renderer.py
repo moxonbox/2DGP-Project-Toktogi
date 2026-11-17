@@ -80,28 +80,33 @@ class SpriteRenderer:
         luminance = calc(lambda v: .2126*v['r']+.7152*v['g']+.0722*v['b'],
                          r=channels[0], g=channels[1], b=channels[2])
         threshold = calc(lambda v: v['min'](v['max']((v['y']-.12)/.10, 0.), 1.), y=luminance)
-        if threshold.getextrema()[1] == 0:
+        box=threshold.getbbox()
+        if box is None:
             return None
+        width,height=box[2]-box[0]+2*BLOOM_RADIUS,box[3]-box[1]+2*BLOOM_RADIUS
         side = SIZE + 2*BLOOM_RADIUS
         layers = []
         for channel in channels:
-            layer = Image.new('F', (side,side), 0.)
-            layer.paste(calc(lambda v: v['e']*v['t'], e=channel, t=threshold), (BLOOM_RADIUS,)*2)
+            layer = Image.new('F', (width,height), 0.)
+            layer.paste(calc(lambda v: v['e']*v['t'], e=channel, t=threshold).crop(box), (BLOOM_RADIUS,)*2)
             for axis in (0,1):
-                blurred = Image.new('F', (side,side), 0.)
+                blurred = Image.new('F', (width,height), 0.)
                 for offset, weight in zip(range(-BLOOM_RADIUS, BLOOM_RADIUS+1), BLOOM_KERNEL):
                     dx, dy = (offset,0) if axis == 0 else (0,offset)
-                    shifted = layer.crop((-dx,-dy,side-dx,side-dy))
+                    shifted = layer.crop((-dx,-dy,width-dx,height-dy))
                     blurred = calc(lambda v: v['a']+v['b']*v['w'], a=blurred, b=shifted, w=weight)
                 layer = blurred
-            layers.append(layer)
+            padded=Image.new('F',(side,side),0.)
+            padded.paste(layer,box[:2])
+            layers.append(padded)
         return tuple(layers)
 
-    def composite_bloom(self, background, key, origin, scale=1, *, emission=True, clip=None):
-        """Add emissive Bloom after the sprite and before overlays; return a new image.
+    def composite_bloom(self, background, key, origin, scale=1, *, emission=True, clip=None, in_place=False):
+        """Add emissive Bloom after the sprite and before overlays.
 
         Origin is the sprite's screen top-left. Clip is (left, top, right, bottom).
         Scale must be 1, 2 or 3; light power never changes this emissive-only effect.
+        Set in_place only for caller-owned frame buffers; otherwise return a copy.
         Disabled/empty Bloom returns the unchanged input without allocating a copy.
         """
         if self.closed:
@@ -147,6 +152,6 @@ class SpriteRenderer:
         patch = Image.merge('RGB', channels)
         if background.mode == 'RGBA':
             patch.putalpha(original.getchannel('A'))
-        result = background.copy()
+        result = background if in_place else background.copy()
         result.paste(patch, box[:2])
         return result

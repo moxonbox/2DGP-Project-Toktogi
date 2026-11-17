@@ -101,7 +101,10 @@ class PondView:
         frame.alpha_composite(sprite, origin)
         output=self.effects(frame,game,origin)
         if output is not frame:frame.close();frame=output
-        screen.alpha_composite(frame, FIELD.topleft)
+        # Source-over onto the opaque clear: avoid an RGB copy, then restore opaque alpha.
+        alpha=frame.getchannel('A')
+        screen.paste(frame,FIELD.topleft,alpha)
+        screen.putalpha(255);alpha.close()
         frame.close()
         self.overlay(screen,game)
 

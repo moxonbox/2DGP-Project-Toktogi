@@ -179,8 +179,7 @@ class Viewer:
             image = image.resize((128 * scale, 128 * scale), Image.Resampling.NEAREST)
         self.screen.alpha_composite(image, tuple(map(round, origin)))
         if self.bloom and MODES[self.mode][0]=='lit':
-            combined=self.assets.renderer.composite_bloom(self.screen,key,origin,scale,emission=self.emission,clip=self.preview_clip)
-            self.screen.paste(combined)
+            self.assets.renderer.composite_bloom(self.screen,key,origin,scale,emission=self.emission,clip=self.preview_clip,in_place=True)
         if self.markers:
             markers, support = self.assets.sample(key)
             for name, data in markers.items():

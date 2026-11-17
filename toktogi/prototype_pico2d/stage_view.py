@@ -13,6 +13,7 @@ class StageView(PondView):
     def __init__(self,assets,world,pond,asset_root=None):
         super().__init__(assets,world,pond,asset_root,make_leaves=False)
         self.art=None; self.halo=None
+        self.hud_key=None;self.hud_parts=[]
         try:
             self.art=StageArt(world,asset_root)
             font=Path(os.environ.get('TOKTOGI_FONT',str(Path(os.environ.get('WINDIR','C:/Windows'))/'Fonts/malgun.ttf')))
@@ -68,9 +69,29 @@ class StageView(PondView):
         return self.camera.point(light[0]+drift,light[1]),1.15,.25
 
     def effects(self,frame,game,origin):
-        return self.assets.renderer.composite_bloom(frame,game.visual(),origin)
+        return self.assets.renderer.composite_bloom(frame,game.visual(),origin,in_place=True)
 
     def overlay(self,screen,game):
+        key=(screen.size,self.world.level_id,tuple(self.world.states.values()),game.bites,
+             game.launch_count,self.pond.repels,game.run,self.pond.phase,
+             tuple(sorted(game.ready_work())),game.notice if 4<game.time<game.notice_until else None)
+        if key!=self.hud_key:
+            for image,_ in self.hud_parts:image.close()
+            layer=Image.new('RGBA',screen.size)
+            self._paint_overlay(layer,game)
+            boxes=[(0,0,screen.width,FIELD.y),(0,FIELD.bottom,screen.width,screen.height),
+                   (0,FIELD.y,FIELD.x,FIELD.bottom),(FIELD.right,FIELD.y,screen.width,FIELD.bottom)]
+            if game.run in ('Paused','Failed','Cleared'):
+                boxes.append((FIELD.x+225,FIELD.y+160,FIELD.right-224,FIELD.y+266))
+            self.hud_parts=[(layer.crop(box),box[:2]) for box in boxes]
+            layer.close();self.hud_key=key
+        for image,at in self.hud_parts:
+            if at==(FIELD.x+225,FIELD.y+160):
+                mask=image.getchannel('A').point([0]+[255]*255)
+                screen.paste(image,at,mask);mask.close()
+            else:screen.paste(image,at)
+
+    def _paint_overlay(self,screen,game):
         draw=ImageDraw.Draw(screen)
         draw.rectangle((0,FIELD.y,FIELD.x-1,FIELD.bottom),fill=(12,23,27,255))
         draw.rectangle((FIELD.right,FIELD.y,screen.width,FIELD.bottom),fill=(12,23,27,255))
@@ -105,6 +126,8 @@ class StageView(PondView):
             draw.text((box[0]+30,box[1]+62),'P / Esc 계속' if game.run=='Paused' else 'R 체크포인트 재시작',font=self.font,fill=(162,190,176))
 
     def close(self):
+        for image,_ in getattr(self,'hud_parts',[]):image.close()
+        self.hud_parts=[]
         if getattr(self,'art',None):self.art.close()
         if getattr(self,'halo',None):self.halo.close();self.halo=None
         super().close()

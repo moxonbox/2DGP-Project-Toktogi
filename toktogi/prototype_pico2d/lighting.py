@@ -13,22 +13,26 @@ def calc(expression,**values):
 def fields(images,ink,srgb_table,*,flat_normal=False):
     sprite=images['sprite'];base=images['base'].copy()
     for xy in ink:base.putpixel(xy,sprite.getpixel(xy))
-    normal=[images['normal'].getchannel(c).point([i*2/255-1 for i in range(256)],'F') for c in 'RGB']
+    # Shade only covered pixels; keep their original coordinates for the light vector.
+    box=base.getchannel('A').getbbox() or (0,0,1,1)
+    base=base.crop(box)
+    normal=[images['normal'].crop(box).getchannel(c).point([i*2/255-1 for i in range(256)],'F') for c in 'RGB']
     inv=calc(lambda v:(v['x']*v['x']+v['y']*v['y']+v['z']*v['z'])**-.5,x=normal[0],y=normal[1],z=normal[2])
     normal=[calc(lambda v:v['n']*v['u'],n=n,u=inv) for n in normal]
     if flat_normal:
         normal=[Image.new('F',base.size,value) for value in (0.,0.,1.)]
     albedo=[base.getchannel(c).point(list(srgb_table),'F') for c in 'RGB']
-    rough=images['rm'].getchannel('R').point([max(.10,i/255) for i in range(256)],'F')
-    metal=images['rm'].getchannel('G').point([i/255 for i in range(256)],'F')
-    glow=[images['emissive'].getchannel(c).point([i/255 for i in range(256)],'F') for c in 'RGB']
-    mask=images['base'].getchannel('A').point([0]+[255]*255)
-    x,y=X,Y
-    if base.size != (128,128):
+    rough=images['rm'].crop(box).getchannel('R').point([max(.10,i/255) for i in range(256)],'F')
+    metal=images['rm'].crop(box).getchannel('G').point([i/255 for i in range(256)],'F')
+    glow=[images['emissive'].crop(box).getchannel(c).point([i/255 for i in range(256)],'F') for c in 'RGB']
+    mask=images['base'].getchannel('A').crop(box).point([0]+[255]*255)
+    if sprite.size == (128,128):
+        x,y=X.crop(box),Y.crop(box)
+    else:
         w,h=base.size
-        x=Image.frombytes('F',(w,h),array('f',(i for _ in range(h) for i in range(w))).tobytes())
-        y=Image.frombytes('F',(w,h),array('f',(j for j in range(h) for _ in range(w))).tobytes())
-    return sprite,mask,x,y,*normal,albedo,rough,metal,glow
+        x=Image.frombytes('F',(w,h),array('f',(i+box[0] for _ in range(h) for i in range(w))).tobytes())
+        y=Image.frombytes('F',(w,h),array('f',(j+box[1] for j in range(h) for _ in range(w))).tobytes())
+    return sprite,mask,x,y,*normal,albedo,rough,metal,glow,box
 
 
 def srgb(value):
@@ -38,7 +42,7 @@ def srgb(value):
 
 
 def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale):
-    sprite,mask,x,y,nx,ny,nz,rgb,rough,metal,glow=fields
+    sprite,mask,x,y,nx,ny,nz,rgb,rough,metal,glow,box=fields
     dx=calc(lambda v:v['a']-v['x'],a=float(lx),x=x)
     dy=calc(lambda v:v['a']+v['y'],a=float(ly),y=y)
     d2=calc(lambda v:v['x']*v['x']+v['y']*v['y']+116.*116.,x=dx,y=dy)
@@ -62,6 +66,8 @@ def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale)
         radiance=calc(lambda v:v['r']*v['df']+v['s']*(v['f']+(v['di']+v['r']*v['m'])*(1.-v['f']))+v['e']*v['es'],
                       r=albedo,df=diffuse,s=specular,f=fresnel,di=dielectric,m=metal,e=emit,es=float(emission_scale if emission else 0.))
         channels.append(srgb(radiance))
-    color=Image.composite(Image.merge('RGB',channels),sprite.convert('RGB'),mask)
-    color.putalpha(sprite.getchannel('A'))
-    return color
+    original=sprite.crop(box)
+    color=Image.composite(Image.merge('RGB',channels),original.convert('RGB'),mask)
+    color.putalpha(original.getchannel('A'))
+    result=sprite.copy();result.paste(color,box[:2])
+    return result

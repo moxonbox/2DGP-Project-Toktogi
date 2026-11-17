@@ -2,7 +2,7 @@
 from pathlib import Path
 import contextlib,hashlib,json,sys,time
 
-def verify():
+def verify(*,asset_root=None):
     root=Path(__file__).resolve().parent
     started=time.perf_counter()
     from verify_prototype import verify as legacy
@@ -12,6 +12,19 @@ def verify():
     from verify_materials import verify as materials
     with (root/'verification.log').open('w',encoding='utf-8') as output,contextlib.redirect_stdout(output):legacy()
     report={'legacy':'verification.json','timeline':timeline(),'world':world(),'input':inputs(),'materials':materials()}
+    from materials import Assets
+    from verify_world_game import verify as gameplay
+    from verify_replays import verify as replays
+    from verify_environment import verify as environment
+    from camera import verify as camera
+    assets=Assets(root/'toktogi_assets.zip')
+    try:
+        original=root.parent/'prototype/game.py'
+        report['world_game']=gameplay(assets,original if original.is_file() else None)
+        report['replays'],trace=replays(assets)
+    finally:assets.close()
+    report['environment']=environment(asset_root)
+    report['camera']=camera()
     assert not any(name in sys.modules for name in ('pygame','sdl2','pico2d'))
     report['no_video_imports']=True
     report['seconds']=round(time.perf_counter()-started,3)

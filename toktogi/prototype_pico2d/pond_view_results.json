@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "screenshots": {
+    "idle": "7e0ee4e873eda6164bc29e2927491e858fdf2a707c08ee36ed1331b2099c8f2a",
+    "warning": "176956b00fd793eae94946fba0179d5b1f5f8bca886dd473b4541ffacae03269",
+    "jump": "21aa04d7b13d32e521cae3a02c665176dcb71cf0e48219e6180ae66d2f15b944"
+  },
+  "water_y": 380.0,
+  "leaf_support_y": 360,
+  "below_water_alpha_factor": 0.35,
+  "player_and_world_unchanged_by_draw": true,
+  "authored_fish_frames_unmodified": true,
+  "visual_status": "Procedural test leaves and flat water; not production lotus assets.",
+  "physical_window_validation": "not performed"
+}

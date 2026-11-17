@@ -16,17 +16,20 @@ toktogi/prototype_pico2d/Start-Toktogi.cmd --profile legacy
 toktogi/prototype_pico2d/Start-Toktogi.cmd --verify
 ```
 
-기본은 `stage_01/pond_duckweed`와 `stage_02/lotus_leaf`의 연속 코스다.
+기본은 `pond_test`: 수면 위 시험 연잎 6개와 C261의 입 돌출·도약 공격 구간이다.
+경고 뒤 고정 위치를 공격하며 Space 도약으로 피하거나 가까운 입에 E/X로 반격한다.
+`--profile seamless`는 `stage_01/pond_duckweed`와 `stage_02/lotus_leaf`의 기존 연속 코스다.
 `--profile legacy`는 기존 단일 코스·Camera=(0,0)·261개 검수 항목을 비교한다.
-기본 F2와 HTML은 원본 261개+새 경계 리플레이 2개=263개다.
+seamless F2와 HTML은 원본 261개+새 경계 리플레이 2개=263개다.
 Python·시작 스크립트는 임의 cwd에서 실행된다. 파일명 `_`와 C011 식별자는 그대로 사용한다.
 한글 폰트는 Windows 맑은 고딕을 사용한다. 네이티브 출력은 `TOKTOGI_FONT`로 명시할 수 있다.
 
 ## 조작
 
-- 방향키: 이동·조준, 좌우 Shift: 제동.
+- WASD: 이동·조준(화살표는 플레이 입력에서 제외), 좌우 Shift: 제동.
 - Space DOWN: 도약 준비 취소·짝 시작, UP: 도약 요청. 반복/고립 UP은 효과를 만들지 않는다.
-- E: 접점 활성화/수집, F: 유지 섭식, G: 손질, X: 공격, Q: 반전, Z: 지상 360° 회전.
+- E: 가까운 적 공격 우선, 대상 활성화/수집, 유지 섭식, 대상 없으면 손질. X도 공격, Q 반전, Z 지상 360°.
+- E DOWN 때 선택한 명령은 UP까지 유지한다. F/G는 플레이에서 사용하지 않는다.
 - P/Esc: 일시정지, R: 체크포인트 재시작, F1/F2/Tab: 플레이·검수 장면.
 - F2: 방향키로 항목/프레임, Space 재생, V 방향, M 패스, L 광원, F3 접점, Ctrl+F 검색.
 - 평탄 Normal/Bloom 버튼은 F2 재질 검사다. Bloom은 초기 꺼짐이며 발광만 합성한다.
@@ -54,7 +57,7 @@ dummy 결과를 실제 창·물리 키·IME 후보창·모니터 DPI·장치 성
 
 ## 에셋과 잔여 인수
 
-개구리밥은 현재 INDEX가 지정하는 `asset/A/A01_plant_lemna_minor/2D/environment-r02`를 검증해 준비한다.
+개구리밥은 후보에서 명시적으로 고정한 `asset/A/A01_plant_lemna_minor/2D/environment-r02`를 검증해 준비한다.
 manifest·PNG·출처 Blend SHA, 앵커, 크기, 패스를 검사하며 경계 전환에서 파일을 읽지 않는다.
 월드의 수평 충돌체는 유지한다. 배율·앵커·임시 상태는 `acceptance.json`의 environment.bindings에 기록한다.
 연꽃 제작물은 아직 없다. Stage02는 `provisional_duckweed_for_lotus`이며 최종 연꽃 제작/바인딩 합격이 아니다.
@@ -74,3 +77,11 @@ toktogi/prototype_pico2d/.venv/Scripts/python.exe document/tools/architecture/bu
 기존 실행본 복원은 `toktogi/prototype/Start-Toktogi.cmd`로 전환한다. 기존 코드는 변경하지 않았다.
 후보 복원은 Git의 해당 커밋에서 코드·ZIP·잠금·requirements·World·보고서를 한 묶음으로 복원한다.
 최초 비교 기준은 `baseline.json`, 원래 저장소 커밋은 `d07501f`다. 혼합 버전의 ZIP/잠금은 시작 시 거부한다.
+
+## 최신 추가 구현 검증
+
+2026-11-17 23:45 종료 요청에 따라 추가분은 집중 검사만 수행했다. 전체 회귀는 추가 구현 전 결과다.
+`controls_results.json`·`pond_results.json`: WASD/E, 두 공격의 도약 회피·반격·단일 피격·Pause/R 통과.
+연잎은 asset에 최종 연꽃 제작물이 없어 테스트용 절개 잎 도형이며 양산 에셋으로 집계하지 않는다.
+C261은 asset의 male/right 원본 Sprite 6액션 72셀과 실제 mouth_tip을 재사용한다. NumPy를 추가하지 않았다.
+F2 이동 광원/Bloom의 dummy p95는 22.01/24.70ms로 16.7ms 목표 미달이며 실기 인수는 미검증이다.

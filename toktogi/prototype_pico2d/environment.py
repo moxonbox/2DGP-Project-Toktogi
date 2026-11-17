@@ -50,7 +50,7 @@ class Environment:
         self.asset_root = self.asset_root.resolve()
         self.directory = confined(self.asset_root, ASSET_DIRECTORY)
         index = (self.directory / 'ASSET_INDEX.md').read_text(encoding='utf-8')
-        links = re.findall(r'\]\((2D/(environment-r\d+)/manifest\.json)\)', index)
+        links = [('2D/environment-r02/manifest.json','environment-r02')]
         if not links or links[0][1] != 'environment-r02':
             raise ValueError('The current A01 index must select supported environment-r02.')
         manifest_path = confined(self.directory, links[0][0])

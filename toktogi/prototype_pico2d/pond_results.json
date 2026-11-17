@@ -1,0 +1,33 @@
+{
+  "peek_idle_hit": {
+    "hits": 1,
+    "launches": 0
+  },
+  "peek_jump_avoids": {
+    "hits": 0,
+    "launches": 1
+  },
+  "jump_idle_hit": {
+    "hits": 1,
+    "launches": 0
+  },
+  "jump_jump_avoids": {
+    "hits": 0,
+    "launches": 1
+  },
+  "counter_pause_reset": {
+    "repel_once": true,
+    "pause_frozen": true,
+    "epoch_reset": true
+  },
+  "peek_key_counter": {
+    "repels": 1,
+    "attack_hits": 1,
+    "player_hits": 0
+  },
+  "jump_key_counter": {
+    "repels": 1,
+    "attack_hits": 1,
+    "player_hits": 0
+  }
+}

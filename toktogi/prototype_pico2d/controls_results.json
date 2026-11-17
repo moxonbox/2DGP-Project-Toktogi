@@ -1,0 +1,9 @@
+{
+  "WASD": true,
+  "arrows_disabled": true,
+  "E_feed_release": true,
+  "E_activate": true,
+  "E_shell_and_fish_attack": true,
+  "pause_restart": true,
+  "pond_draw": true
+}

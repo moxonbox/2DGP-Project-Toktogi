@@ -164,14 +164,18 @@ class Viewer:
         self.button('금속성  ' + ('원본' if self.metallic is None else f'{self.metallic:.2f}'), x + 135, top + 235, 116, lambda: self.cycle('metallic', (None, 0.0, 0.5, 1.0)))
         self.button('발광 ' + ('켜짐' if self.emission else '꺼짐'), x + 14, top + 273, 116, lambda: setattr(self, 'emission', not self.emission), self.emission)
         self.button('강도 ' + f'{self.power:.1f}', x + 135, top + 273, 116, lambda: self.cycle('power', (1.0, 0.4, 1.65)))
-        self.text('L  광원 전환    M  패스 전환', x + 14, top + 320, 13, MUTED)
+        self.button('평탄 Normal',x+14,top+310,116,lambda:setattr(self,'flat_normal',not self.flat_normal),self.flat_normal)
+        self.button('Bloom',x+135,top+310,116,lambda:setattr(self,'bloom',not self.bloom),self.bloom)
 
     def sprite(self, key, origin, light, scale=1):
         local_light = tuple((origin[i] + (light[i] - origin[i]) / scale for i in (0, 1)))
-        image = self.assets.render(key, MODES[self.mode][0], origin, local_light, self.roughness, self.metallic, self.power, self.emission)
+        image = self.assets.render(key, MODES[self.mode][0], origin, local_light, self.roughness, self.metallic, self.power, self.emission,flat_normal=self.flat_normal)
         if scale > 1:
             image = image.resize((128 * scale, 128 * scale), Image.Resampling.NEAREST)
         self.screen.alpha_composite(image, tuple(map(round, origin)))
+        if self.bloom and MODES[self.mode][0]=='lit':
+            combined=self.assets.renderer.composite_bloom(self.screen,key,origin,scale,emission=self.emission,clip=self.preview_clip)
+            self.screen.paste(combined)
         if self.markers:
             markers, support = self.assets.sample(key)
             for name, data in markers.items():
@@ -189,7 +193,7 @@ class Viewer:
         self.rect((20, 77, 334, 560))
         self.rect((34, 89, 306, 38), (39, 64, 53) if v.searching else (28, 51, 41), 7)
         self.buttons.append((Rect(34, 89, 306, 38), self.focus_search))
-        self.text(v.search[-27:] + '▏' if v.searching else v.search[-30:] or '검색  ·  Ctrl+F', 44, 99, 15, TINT)
+        self.text((v.search+v.composition)[-27:] + '▏' if v.searching else v.search[-30:] or '검색  ·  Ctrl+F', 44, 99, 15, TINT)
         self.text(f'{len(v.filtered)} / {len(v.names)}   ·   클립 {len(self.assets.clips)}   ·   전환 {len(self.assets.sequences)}', 35, 137, 14, MUTED)
         offset = max(0, min(v.selected - 6, len(v.filtered) - 15))
         for i in range(offset, min(offset + 15, len(v.filtered))):
@@ -229,7 +233,12 @@ class Viewer:
         origin = (center.centerx - 128 * scale // 2, center.centery - 128 * scale // 2)
         foot_y = origin[1] + self.assets.pivot[1] * scale
         ImageDraw.Draw(self.screen).line(((center.left + 42, foot_y), (center.right - 42, foot_y)), fill=(145, 167, 139), width=1)
+        self.preview_clip=crop_box(center)
+        before=self.screen.copy()
         self.sprite(key, origin, light, scale)
+        inside=self.screen.crop(self.preview_clip)
+        self.screen.paste(before)
+        self.screen.paste(inside,center.topleft)
         ImageDraw.Draw(self.screen).ellipse(circle_bounds(light, 5), outline=TINT, width=1)
         self.button('일시정지' if v.playing else '재생', 395, 558, 89, v.toggle, v.playing)
         self.button('이전', 491, 558, 57, lambda: v.move_frame(-1))

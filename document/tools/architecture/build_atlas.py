@@ -2,21 +2,26 @@
 from pathlib import Path
 from zipfile import ZipFile
 from html import escape
+from html.parser import HTMLParser
 from io import BytesIO
 from os.path import relpath
 import ast
+import argparse
 import base64
 import json
 import re
-import sys
 
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[2]
 DOCUMENT = PROJECT / 'document'
-DEST = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else DOCUMENT / 'ToktogiProjectArchitecture.html'
-SPEC = DOCUMENT / 'markdown/001_toktogi_game_design_spec.md'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('output', nargs='?', type=Path)
+parser.add_argument('--candidate', action='store_true', help='Read the published prototype_pico2d candidate, not legacy results.')
+args = parser.parse_args()
+DEST = args.output.resolve() if args.output else DOCUMENT / ('ToktogiPico2DArchitecture.html' if args.candidate else 'ToktogiProjectArchitecture.html')
+SPEC = DOCUMENT / 'markdown/game-design/001_toktogi_game_design_spec.md'
 
 
 def read_section(path, anchor):
@@ -79,6 +84,15 @@ for section, link, _ in source_rows:
 expected_sections = {'architecture', 'framework', 'files', 'controls', 'states', 'motion', 'materials', 'specs', 'evidence'}
 if sources.keys() != expected_sections:
     raise ValueError(f'Unexpected or missing HTML sections: {sources.keys() ^ expected_sections}')
+if args.candidate:
+    candidate = PROJECT / 'toktogi/prototype_pico2d'
+    overrides = {'architecture':'main.py', 'files':'main.py',
+                 'motion':'ToktogiMotionPreview.html', 'evidence':'verification.json'}
+    missing = [str(candidate / name) for name in (*overrides.values(), 'build_motion_preview.py')
+               if not (candidate / name).is_file()]
+    if missing:
+        raise FileNotFoundError('Publish candidate verification and motion HTML first: ' + ', '.join(dict.fromkeys(missing)))
+    sources.update((section, (candidate / name, '')) for section, name in overrides.items())
 GAME = sources['files'][0].parent
 
 def extract_json(path, anchor):
@@ -100,7 +114,7 @@ with ZipFile(GAME / 'toktogi_runtime_poses.zip') as z:
     supplemental = json.loads(z.read('runtime_poses.json'))
     supplement_cells = sum(name.endswith('.png') for name in z.namelist())
 checks = json.loads(sources['evidence'][0].read_bytes())
-spin = json.loads((PROJECT / 'asset/C/C01_toktogi/3D/framework-r4/spin_interkey_validation.json').read_bytes())
+spin = json.loads((PROJECT / 'asset/C/C011_toktogi/3D/framework-r4/spin_interkey_validation.json').read_bytes())
 regression = sum(len(checks[key]) for key in ('review_regressions','gameplay_r2','gameplay_r3','gameplay_r4','framework_r1'))
 groups = {
     'main': ('실행', '명령행에서 플레이 또는 회귀 검증을 시작한다.'),
@@ -127,6 +141,26 @@ groups = {
     'verify_gameplay_r4': ('검증', '탄성 타이밍·조준·도약 전개의 가독성을 확인한다.'),
     'verify_framework': ('검증', 'Q·Z·섭식 전환·코스 재사용·리플레이를 확인한다.'),
 }
+if args.candidate:
+    groups.update({
+        'app': ('실행', '장면·입력 수명과 Pico2D 백엔드·Pillow 화면을 조립한다.'),
+        'world': ('규칙', '두 Level의 안정 객체 키·진행·체크포인트·양방향 경계를 관리한다.'),
+        'camera': ('표시', '월드 좌표를 연속 추적하고 공통 화면 좌표로 변환한다.'),
+        'environment': ('에셋', '식물 manifest·PNG·충돌 바인딩을 검사하고 지형을 미리 합성한다.'),
+        'pico_backend': ('출력', 'Pico2D와 같은 SDL renderer에서 RGBA·글꼴·좌표·해제를 관리한다.'),
+        'geometry': ('표시', 'Pillow 표시에서 사용하는 사각형·원·crop 좌표를 계산한다.'),
+        'replays': ('모션', '기존 입력 네 가지와 초기 상태가 기록된 경계 두 가지를 재생한다.'),
+        'verify_all': ('검증', 'CPU 관문을 실행하고 실기 인수와 분리한 acceptance.json을 기록한다.'),
+        'verify_world': ('검증', '객체 키·지지 동일성·경계·잘못된 월드 배치를 검사한다.'),
+        'verify_world_game': ('검증', '기존·두 Level 완주와 대상 효과·경계 행동·재도전을 검사한다.'),
+        'verify_replays': ('검증', '경계 기록 재현과 261/263개 카탈로그를 대조한다.'),
+        'verify_backend': ('검증', '실제 SDL renderer 업로드·폰트·좌표·자원 해제를 검사한다.'),
+        'verify_native_input': ('검증', 'SDL 입력 경로를 검사하며 물리 입력 실기 인수와 구분한다.'),
+        'verify_input': ('검증', '시각·입력 순번·세대·취소·IME 모델을 검사한다.'),
+        'verify_materials': ('검증', '번들·5패스·Normal 비교·Bloom과 CPU 픽셀 근거를 검사한다.'),
+        'verify_environment': ('검증', '식물 에셋과 두 Level 지형 바인딩을 검사한다.'),
+        'verify_timeline': ('검증', '120Hz 틱·긴 지연·남은 누적 시간을 검사한다.'),
+    })
 modules = []
 module_symbols = {}
 definitions = (ast.FunctionDef, ast.AsyncFunctionDef)
@@ -185,7 +219,27 @@ nodes = {
     'course':node('코스와 충돌', '정적 발판의 순수 충돌 계산을 제공한다. 시작과 체크포인트의 지지 자세 및 Capsule 여유를 검사한다.', '발판 박스와 Capsule 위치·속도', '수평 정지점, 바닥·천장 후보, 코스 대상', [src('course','class Course'),src('physics','def capsule_overlaps('),src('physics','def sweep_y(')]),
     'assets':node('에셋 저장소', '기반 ZIP과 보조 ZIP을 열고 SHA256, 서명, 프레임·마커·PNG 헤더를 검사한다.', 'integrated-r5 원본 및 r4 보조 ZIP, source lock', '5패스 셀과 Track, 접지·작업 마커', [src('materials','class Assets'),src('materials','def validate_tracks('),src('motion','def validate_playable(')]),
     'replay':node('검수와 리플레이', '같은 Game의 입력을 120Hz로 재생해 셀 순서와 사건 시간을 수집한다.', '대표 상황과 시각이 붙은 입력, 런타임 모션', 'F2의 재질 검수와 HTML의 Sprite 재생', [src('replays','def game_replays('),src('motion_viewer','class Viewer'),src('build_motion_preview','previews=')]),
-    'author':node('Blender 제작', '왼쪽·오른쪽 Z의 지지발 목표를 월드 좌표에서 유지하고 5ms마다 본 키를 굽는다.', '원본 리그·카메라·UV·웨이트', '128px 5패스와 앵커, 지오메트리 해시', [source('asset/C/C01_toktogi/3D/framework-r4/build_spin_r4.py','def plan_contacts('),source('asset/C/C01_toktogi/3D/framework-r4/check_saved.py','geometry_hash')]),
+    'author':node('Blender 제작', '왼쪽·오른쪽 Z의 지지발 목표를 월드 좌표에서 유지하고 5ms마다 본 키를 굽는다.', '원본 리그·카메라·UV·웨이트', '128px 5패스와 앵커, 지오메트리 해시', [source('asset/C/C011_toktogi/3D/framework-r4/build_spin_r4.py','def plan_contacts('),source('asset/C/C011_toktogi/3D/framework-r4/check_saved.py','geometry_hash')]),
+}
+if args.candidate:
+    nodes['rules']['reads'] = '논리 입력, World의 안정 객체 키, 통합 충돌·접촉 마커'
+    nodes['render'] = node('화면·카메라·출력', 'Pillow CPU RGBA를 공통 Camera로 배치하고 Pico2D의 동일 renderer에 올린다.',
+                           '128px 셀·월드 광원·카메라·식물 지형', 'RGBA와 Pico2D 최종 present',
+                           [src('play_view','class PlayView'),src('camera','class Camera'),src('pico_backend','class Backend')])
+    nodes['course'] = node('월드·충돌', '두 Level을 함께 로드하며 지지 객체와 진행 중 작업을 경계에서 유지한다.',
+                           'Course·World·식물 바인딩·Capsule', '지지·효과 대상·level/stage 문맥·체크포인트',
+                           [src('world','class World'),src('environment','class Environment'),src('physics','def sweep_y(')])
+    nodes['replay']['refs'].append(src('replays','def world_replays('))
+
+candidate_details = {
+    'App.__init__':'Assets·Game(World)·PlayView(Camera)·Viewer를 조립하고 native 실행에서 Backend를 연다.',
+    'Game.__init__':'World와 MotionSet을 연결하고 모든 시작·체크포인트의 지지와 Capsule 여유를 검사한다.',
+    'App.run':'Pico2D 최종 출력 루프를 돌린다. 종료 때 텍스처·폰트·Assets·canvas를 정리한다.',
+    'EventClock.events':'단일 SDL 원시 큐의 시각·포커스·텍스트·순번을 엔진 독립 이벤트로 보존한다.',
+    'Game.step':'기존 틱 순서 뒤 경계 통과를 판정한다. 실패·R이 우선하며 Action·Track·입력을 재시작하지 않는다.',
+    'PlayView.draw':'월드·개체·광원·그림자에 같은 Camera 변환을 적용해 Pillow 화면을 만든다.',
+    'shade':'Normal·RM·Emissive를 CPU에서 평가하고 Sprite Alpha를 유지하는 Pillow RGBA를 만든다.',
+    'game_replays':'기존 네 입력 기록을 보존한다. world_replays의 두 경계 기록은 별도로 집계한다.',
 }
 
 framework = []
@@ -195,6 +249,8 @@ for title, entries in re.findall(r'^### ([^\n]+)\n(.*?)(?=^### |\Z)', read_secti
     if header == ['파일', '심볼', '동작']:
         items = []
         for file, symbol, detail in rows:
+            if args.candidate:
+                detail = candidate_details.get(symbol, detail)
             symbols = module_symbols[file]
             line = f' <small>L{symbols[symbol]}</small>' if symbol else ''
             name = escape(symbol or file)
@@ -203,6 +259,8 @@ for title, entries in re.findall(r'^### ([^\n]+)\n(.*?)(?=^### |\Z)', read_secti
     elif header == ['파일', '객체', '연결되는 객체', '관계'] and not objects:
         items = []
         for file, symbol, related, detail in rows:
+            if args.candidate and symbol == 'Game':
+                related, detail = 'World · Course · MotionSet', 'World의 안정 지지·대상 키와 진행을 사용하며 Course 호환 진입점을 보존합니다.'
             if symbol not in module_symbols[file]:
                 raise ValueError(f'Unknown object {symbol} in {file}')
             items.append(
@@ -214,6 +272,14 @@ for title, entries in re.findall(r'^### ([^\n]+)\n(.*?)(?=^### |\Z)', read_secti
         raise ValueError(f'Unexpected framework table: {title}')
 if not (framework and objects):
     raise ValueError('Framework requires call order and object relationships')
+if args.candidate:
+    links = [('world.py','World.advance','틱 뒤 level/stage 문맥만 변경한다.'),
+             ('camera.py','Camera.step','시뮬레이션 시간으로 이동하며 Pause에서 고정한다.'),
+             ('environment.py','Environment.terrain','두 Level 식물 지형을 시작 전에 준비한다.'),
+             ('pico_backend.py','Backend.present','같은 SDL renderer로 RGBA를 올리고 Pico2D가 present한다.')]
+    items = [f'<li><a href="#files/{file}"><code>{symbol}</code></a> <small>L{module_symbols[file][symbol]}</small><p>{detail}</p></li>'
+             for file,symbol,detail in links]
+    framework.append('<article class="panel"><h3>Pico2D 후보의 추가 연결</h3><ol class="call-flow">'+''.join(items)+'</ol></article>')
 
 play_controls, viewer_controls = tables(read_section(*sources['controls']))
 state_document = read_section(*sources['states'])
@@ -263,6 +329,11 @@ replays = [
     ('game_turn_left_right_left','Q · 왼쪽에서 오른쪽','Q','중립 반전 480ms. 서로 다른 지지 자세를 100ms씩 표시한다.'),
     ('game_turn_right_left_right','Q · 오른쪽에서 왼쪽','Q','중립 반전 480ms. 서로 다른 지지 자세를 100ms씩 표시한다.'),
 ]
+if args.candidate:
+    replays += [
+        ('replay_world_walk_cross','개구리밥 → 연꽃잎 · 보행','→ DOWN · → UP','연결 발판 x=995에서 초기화한 경계 시험이며 전체 완주 기록과 구분한다.'),
+        ('replay_world_air_cross','개구리밥 → 연꽃잎 · 공중','→ 유지 · Space DOWN/UP','같은 연결 발판에서 도약한다. World revision·초기 지지·대상 키를 모션 HTML에 기록한다.'),
+    ]
 tiles = []
 for key,title,keys,detail in replays:
     report = motions['motions'][key]
@@ -287,8 +358,36 @@ hero=png_uri(hero_src.crop((x,y,x+128,y+128)))
 values = {
     'atlas': png_uri(atlas), 'columns':columns, 'videos':videos, 'nodes':nodes, 'modules':modules,
     'states': states, 'initialState': initial, 'moduleBase': href(GAME) + '/',
+    'profile': 'pico2d-candidate' if args.candidate else 'legacy',
+    'sources': {section:href(*ref) for section,ref in sources.items()},
 }
 template=(HERE/'atlas.template.html').read_text(encoding='utf8')
+template = (template.replace('../prototype/', href(GAME)+'/')
+            .replace('asset/C/C01_toktogi', 'asset/C/C011_toktogi')
+            .replace('prototype/Start-Toktogi.cmd', 'toktogi/prototype/Start-Toktogi.cmd')
+            .replace('markdown/architecture/toktogi_state_machine.md', href(*sources['states']))
+            .replace('markdown/architecture/2Dshader.md', href(*sources['materials']))
+            .replace('상태 머신 입력표', 'Control 조작·입력표'))
+if args.candidate:
+    template = (template.replace('FRAMEWORK-R4 · 2026.11.17', 'PICO2D CANDIDATE · CPU 근거 / 실기 인수 별도')
+                .replace('toktogi/prototype/Start-Toktogi.cmd', 'toktogi/prototype_pico2d/main.py')
+                .replace('Course · Capsule', 'World · Course · Capsule')
+                .replace('PlayView · Renderer', 'Camera · Pico2D')
+                .replace('Pygame 2.6.1', 'Pico2D 1.5.1 · PySDL2 0.9.17')
+                .replace('framework-r4 확인 범위', 'Pico2D 후보의 CPU 회귀 기록')
+                .replace('현재 프로젝트 소스 기준', '후보 CPU 기록 · 실기 인수 별도')
+                .replace('현행 소스 회귀 결과', '후보 verification.json')
+                .replace('초기화, 입력과 시뮬레이션, 플레이 렌더링, F2 검수의 호출 순서입니다.',
+                         '기존 framework-r4 계약을 기준으로 후보의 변경된 호출과 추가 World·Camera·Backend 연결을 표시합니다.')
+                .replace('실기기 입력 지연과 물리 모니터의 표시 특성은 별도 검증 항목이다.',
+                         '이 구조도는 CPU 회귀와 저장 제작 근거를 표시한다. SDL 합성·실제 키·IME·DPI·물리 모니터 인수는 별도이며 이 페이지 생성으로 합격 처리하지 않는다.')
+                .replace(f'{href(GAME)}/PATCH_NOTES.md', href(GAME/'README.md'))
+                .replace('r4 변경 기록', '후보 설치·검증 안내'))
+    acceptance = GAME/'acceptance.json'
+    note = ('CPU 통합 근거: <a href="'+escape(href(acceptance))+'">acceptance.json</a>. '
+            if acceptance.is_file() else 'CPU 통합 acceptance.json은 아직 게시되지 않았다. ')
+    template = template.replace('<h3>Pico2D 후보의 CPU 회귀 기록</h3>', '<h3>Pico2D 후보의 CPU 회귀 기록</h3><p class="subtle">'+note+
+                                '아래 기본 코스 수치는 legacy 비교 프로필이다. 두 Level 완주·경계 검사는 acceptance.json의 world_game·replays를 확인한다.</p>')
 spec_map = read_section(*sources['specs'])
 spec_cards = []
 for heading, entries in re.findall(r'^### ([^\n]+)\n(.*?)(?=^### |\Z)', spec_map, re.M | re.S):
@@ -344,5 +443,41 @@ body={
 }
 document=re.sub(r'@@([A-Z_]+)@@',lambda m:body[m[1]],template)
 assert not re.search(r'@@[A-Z_]+@@',document)
+
+class Audit(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.ids, self.sections, self.links = set(), set(), []
+
+    def handle_starttag(self, tag, attributes):
+        attributes = dict(attributes)
+        if identifier := attributes.get('id'):
+            if identifier in self.ids:
+                raise ValueError(f'Duplicate generated ID: {identifier}')
+            self.ids.add(identifier)
+            if tag == 'section':
+                self.sections.add(identifier)
+        if tag == 'a' and 'href' in attributes:
+            self.links.append(attributes['href'])
+        if 'src' in attributes and not attributes['src'].startswith('data:image/'):
+            raise ValueError('Generated media must be embedded.')
+
+audit = Audit()
+audit.feed(document)
+if audit.sections != expected_sections:
+    raise ValueError('Generated sections differ from the nine source IDs.')
+for target in audit.links:
+    path, _, anchor = target.partition('#')
+    if path:
+        linked = (DOCUMENT/path).resolve()
+        if not linked.is_file():
+            raise ValueError(f'Broken generated source link: {target}')
+        if anchor and linked.suffix == '.md' and f'<a id="{anchor}"></a>' not in linked.read_text(encoding='utf8'):
+            raise ValueError(f'Broken generated Markdown anchor: {target}')
+    elif anchor.startswith('files/'):
+        if anchor[6:] not in module_symbols:
+            raise ValueError(f'Unknown module link: {target}')
+    elif anchor not in audit.ids:
+        raise ValueError(f'Broken generated section link: {target}')
 DEST.write_text(document,encoding='utf8')
-print(f'{DEST} | {DEST.stat().st_size:,} bytes | {len(modules)} modules | {len(tiles)} embedded animation cells')
+print(f'{DEST} | {values["profile"]} | {DEST.stat().st_size:,} bytes | {len(modules)} modules | {len(tiles)} embedded animation cells | {len(audit.links)} checked links')

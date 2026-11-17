@@ -1,6 +1,6 @@
 # ToktogiPrototype Pico2D 재구현 명세
 
-2026-11-17 · v1.2 · **문서 보완 / Pico2D 구현·실기 인수 전**. 현행 framework-r4의 게임 규칙과 integrated-r5·framework-r4 에셋을 승계한다.
+2026-11-17 · v1.3 · **Pico2D 후보 구현 / 자동 검증·추가분 집중 검사 / 실기 미검증**. 현행 framework-r4의 게임 규칙과 integrated-r5·framework-r4 에셋을 승계한다.
 목표는 재사용 가능한 모듈, 360° 회전·동작 연결, 128px 5패스 조명을 보존하고 개구리밥·연꽃잎의 두 Level을 끊김 없이 연결하는 것이다.
 
 ## 1. 기준과 문서 분담
@@ -178,3 +178,12 @@ toktogi/prototype_pico2d/.venv/Scripts/python.exe toktogi/prototype_pico2d/build
 - 저장된 [07·08 지오메트리](../../asset/C/C011_toktogi/2D/integrated-r5/geometry_validation.json)의 r5 07 후보 30쌍과 [Z 연속 자세](../../asset/C/C011_toktogi/3D/framework-r4/spin_interkey_validation.json)의 r4 왼쪽 19자세는 제작 QA 잔여다. 후보를 실제 관통으로 단정하거나 이식만으로 해결 처리하지 않는다.
 - DEC-06·정확 저장/복원·동적/경사 IK·번호 규칙 미정은 계속 보류한다. 새 교차·피벗 튐·명암 저하는 기존 잔여와 구분해 수정한다.
 - v1.2 확인 범위는 문서/소스 대조, 로컬 링크·앵커·구조도 입력 형식, 번들 해시·개수·정합 검사다. 새 Pico2D 설치·게임 실행·Blender 재개방·실기/성능 검사는 수행하지 않았다.
+
+## 14. 2026-11-17 추가 구현과 최신 상태
+
+- `toktogi/prototype_pico2d` 후보를 구현했다. 위 v1.2 조사 시점의 미구현 기록은 기준 이력이며 최신 상태는 후보 README/검증 JSON을 따른다.
+- 기본 `pond_test`는 수면 위 시험 연잎 6개와 C261의 간헐적 입 돌출·도약 공격이다. 경고 후 고정 위치를 공격하며 Space로 회피, E/X로 반격한다.
+- 플레이 조작은 WASD와 상황별 E(가까운 적 공격 우선·활성/수집·섭식·손질)로 변경했다. 기존 화살표/F/G 입력은 원본 회귀 fixture에만 남긴다.
+- C261은 asset의 male/right 6액션 72셀·mouth_tip을 재사용한다. 최종 연꽃 에셋 부재로 연잎은 시험 도형이며 양산 인수로 처리하지 않는다.
+- 추가 전 전체 CPU·native dummy 검사 통과. 추가 후에는 종료 시각 요청에 따라 조작·회피·반격·Pause/R·화면 집중 검사만 수행했다.
+- Computer-Use 미사용 요청을 따랐다. 실제 키/IME/DPI·장치 성능, 연꽃 양산은 미검증이다. F2 이동 광원/Bloom dummy p95 22.01/24.70ms로 목표 미달이다.

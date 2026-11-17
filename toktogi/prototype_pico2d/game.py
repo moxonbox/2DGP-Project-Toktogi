@@ -3,6 +3,7 @@ from math import copysign, hypot
 from course import COURSE, BEACON, BEACON_TOUCH, CHECKPOINT, COLLECT, COLLECT_TOUCH, FOOD, FOOD_TOUCH, LEVEL, SHELL, Platform
 from physics import STEP, GRAVITY, CAP_RADIUS, CAP_HEIGHT, approach, capsule_overlaps, overhang, segment_box, sweep_x, sweep_y
 from motion import MotionSet, Track, validate_playable
+from world import World
 
 JUMP_SPEED = 426
 ELASTIC_SPEED = 541
@@ -16,12 +17,15 @@ ATTACK_ACTIVE = (.078,.162)
 
 
 class Game:
-    def __init__(self,assets,course=COURSE):
+    def __init__(self,assets,course=COURSE,*,world=None):
         self.assets = assets
         validate_playable(assets)
         self.motion = MotionSet(assets)
-        self.course = course
-        for x,platform in ((course.spawn_x,course.platforms[0]),(course.checkpoint[0],course.platforms[course.checkpoint_platform])):
+        self.world = world if world is not None else World(course)
+        course = self.course
+        starts = ((course.spawn_x,self.world.spawn_platform),
+                  *((c.point[0],c.platform) for c in self.world.checkpoints))
+        for x,platform in starts:
             self.x,self.view,self.support=x,'right',platform
             if not self.stable_feet(assets.tracks['idle','right']):
                 raise ValueError('Course spawn and checkpoint need room for a supported idle pose.')
@@ -29,9 +33,48 @@ class Game:
                 raise ValueError('Course spawn and checkpoint must clear other solid platforms.')
         self.reset()
 
+    @property
+    def course(self):
+        return self.world.course
+
+    @course.setter
+    def course(self,value):
+        self.world.rebind_legacy(value)
+
+    @property
+    def food(self):
+        return self.world.value('food')
+
+    @food.setter
+    def food(self,value):
+        self.world.set_value('food',value)
+
+    @property
+    def beacon(self):
+        return self.world.value('beacon')
+
+    @beacon.setter
+    def beacon(self,value):
+        self.world.set_value('beacon',value)
+
+    @property
+    def shell(self):
+        return self.world.value('shell')
+
+    @shell.setter
+    def shell(self,value):
+        self.world.set_value('shell',value)
+
+    @property
+    def collected(self):
+        return self.world.value('collect')
+
+    @collected.setter
+    def collected(self,value):
+        self.world.set_value('collect',value)
+
     def reset(self, checkpoint=False):
-        self.support = self.course.platforms[self.course.checkpoint_platform] if checkpoint else self.course.platforms[0]
-        self.x,self.y = self.course.checkpoint if checkpoint else (self.course.spawn_x,float(self.course.platforms[0].y))
+        self.support,(self.x,self.y) = self.world.reset(checkpoint)
         self.vx=self.vy=0.
         self.time=self.recovery=self.goal_hold=0.
         self.held=set()
@@ -68,11 +111,7 @@ class Game:
         self.was_walking=False
         self.launched=False
         self.launch_count=self.elastic_count=self.bites=self.attack_hits=0
-        self.food=4
-        self.beacon=checkpoint
         self.checkpoint=checkpoint
-        self.shell=True
-        self.collected=False
         self.hurt_until=0.
         self.hit_until=0.
         self.reject_until=0.
@@ -271,15 +310,19 @@ class Game:
         suffix='_right' if self.view=='right' else ''
         activate,collect='interact_activate'+suffix,'interact_collect'+suffix
         target=None
-        if key=='f' and self.food and self.work_contact('feed_cycle',self.course.food_touch,.22):
-            clip,target='feed_pre','food'
-            tracks=(self.assets.tracks[name,self.view] for name in ('feed_pre','feed_cycle'))
-        elif key=='e' and not self.beacon and self.work_contact(activate,self.course.beacon_touch,.20):
-            clip,target=activate,'beacon'
-            tracks=(self.assets.tracks[clip,self.view],)
-        elif key=='e' and not self.collected and self.work_contact(collect,self.course.collect_touch,.20):
-            clip,target=collect,'collect'
-            tracks=(self.assets.tracks[clip,self.view],)
+        if key in ('f','e'):
+            choices=(('food','feed_cycle','feed_pre',.22),) if key=='f' else (
+                ('beacon',activate,activate,.20),('collect',collect,collect,.20))
+            for kind,contact,clip,seconds in choices:
+                target=next((e for e in self.world.targets(kind)
+                             if (bool(self.world.states[e.key]) if kind=='food' else not self.world.states[e.key])
+                             and self.work_contact(contact,e.touch,seconds)),None)
+                if target is not None:
+                    break
+            if target is None:
+                return None,None,'대상 가까이에서 방향과 지지를 확인하세요.'
+            target=target.kind if self.world.legacy else target.key
+            tracks=(self.assets.tracks[name,self.view] for name in ('feed_pre','feed_cycle')) if key=='f' else (self.assets.tracks[clip,self.view],)
         elif key=='g':
             if self.view!='left' or not self.stable_feet(self.assets.groom):
                 return None,None,'넓은 발판에서 왼쪽을 향하면 손질할 수 있습니다.'
@@ -327,7 +370,7 @@ class Game:
                 self.vx=0.
                 self.action='Idle'
             return
-        clip,_,reason=self.work_candidate(key)
+        clip,target,reason=self.work_candidate(key)
         if reason:
             self.reject(reason)
             return
@@ -342,7 +385,8 @@ class Game:
         self.turn_origin=None
         self.pending_work=None
         self.edge_pose=None
-        self.work={'key':key,'stage':clip,'age':0.,'started_at':self.time,'position':(self.x,self.y),'committed':False}
+        self.work={'key':key,'stage':clip,'age':0.,'started_at':self.time,'position':(self.x,self.y),'committed':False,
+                   'target':self.world.entity(target).key if target is not None else None}
         if attack_entry:
             self.work['attack_entry']=attack_entry
         if entry:
@@ -390,6 +434,7 @@ class Game:
 
     def work_tick(self,dt):
         task=self.work
+        target=self.world.entity(task['target']) if task['target'] is not None else None
         key,stage=task['key'],task['stage']
         previous=task['age']
         old_position=task['position']
@@ -408,27 +453,27 @@ class Game:
                 task.update(stage=task.pop('next'),age=0.,started_at=self.time)
                 self.set_clip(task['stage'])
             return
-        if key=='f' and (not self.food or not self.work_contact('feed_cycle',self.course.food_touch,.22)):
+        if key=='f' and (not self.world.states[target.key] or not self.work_contact('feed_cycle',target.touch,.22)):
             self.end_work()
             return
         if stage=='feed_cycle':
             if age+1e-9>=.22 and not task['committed']:
                 task['committed']=True
-                self.food-=1
+                self.world.states[target.key]-=1
                 self.bites+=1
-                self.tell(f'섭식 · 먹이 {self.food}회분 남음')
+                self.tell(f'섭식 · 먹이 {self.world.states[target.key]}회분 남음')
             if age+1e-9>=self.duration(stage):
                 task.update(age=max(0.,age-self.duration(stage)),started_at=task['started_at']+self.duration(stage),committed=False)
                 self.visual_time=task['age']
         elif key=='e' and not task['committed'] and age+1e-9>=.20:
             task['committed']=True
-            if stage.startswith('interact_activate') and self.work_contact(stage,self.course.beacon_touch,age):
-                self.beacon=True
+            if stage.startswith('interact_activate') and self.work_contact(stage,target.touch,age):
+                self.world.states[target.key]=True
                 self.tell('중간 등불을 켰습니다.')
-            if stage.startswith('interact_collect') and self.work_contact(stage,self.course.collect_touch,age):
-                self.collected=True
+            if stage.startswith('interact_collect') and self.work_contact(stage,target.touch,age):
+                self.world.states[target.key]=True
                 self.tell('잎 위의 씨앗을 수집했습니다.')
-        elif key=='x' and self.shell and not task['committed']:
+        elif key=='x' and not task['committed']:
             start,end=max(previous,ATTACK_ACTIVE[0]),min(age,ATTACK_ACTIVE[1])
             if start<end:
                 # Fixed two-direction game trajectory; display view/scale does not set hits.
@@ -439,12 +484,16 @@ class Game:
                     x=old_position[0]+(self.x-old_position[0])*fraction
                     y=old_position[1]+(self.y-old_position[1])*fraction
                     return x+direction*(29.55-.55*u),y-11.66-7.92*min(1,u*2)
-                box=(self.course.shell[0]-19,self.course.shell[1]-18,self.course.shell[0]+19,self.course.shell[1]+3)
-                if segment_box(point(start),point(end),box,include_end=end<ATTACK_ACTIVE[1]):
-                    task['committed']=True
-                    self.attack_hits+=1
-                    self.shell=False
-                    self.tell('가시 껍질을 부쉈습니다.')
+                for target in self.world.targets('shell'):
+                    x,y=target.point
+                    box=(x-19,y-18,x+19,y+3)
+                    if self.world.states[target.key] and segment_box(point(start),point(end),box,include_end=end<ATTACK_ACTIVE[1]):
+                        task['committed']=True
+                        task['target']=target.key
+                        self.attack_hits+=1
+                        self.world.states[target.key]=False
+                        self.tell('가시 껍질을 부쉈습니다.')
+                        break
         duration=self.assets.groom.duration if stage=='groom' else self.duration(stage,'feed_cycle' if stage=='feed_pre' else None)
         if age+1e-9>=duration and stage!='feed_cycle':
             if stage=='feed_pre':
@@ -454,7 +503,7 @@ class Game:
                 self.cancel_work()
                 self.set_clip('idle')
 
-    def hit(self):
+    def hit(self,target=None):
         name='hit_ground' if self.support else 'hit_air'
         self.cancel_work()
         self.transition=None
@@ -467,7 +516,7 @@ class Game:
         self.offer=None
         self.hurt_until=self.time+.36
         self.hit_until=self.time+.85
-        self.vx=-160 if self.x<self.course.shell[0] else 160
+        self.vx=-160 if self.x<(target.point[0] if target is not None else self.course.shell[0]) else 160
         self.vy=-165
         self.support=None
         self.set_clip(name)
@@ -520,7 +569,7 @@ class Game:
         self.recovery=.27 if impact>370 else .19
         self.set_clip('land_hard' if impact>370 else 'land_soft')
         self.offer=(platform,self.time) if platform.kind=='elastic' else None
-        if platform is self.course.platforms[self.course.checkpoint_platform] and self.beacon:
+        if self.world.landed(platform):
             self.checkpoint=True
         if self.offer and self.elastic_at is not None and self.time-self.elastic_at<=PRE_WINDOW and self.time>=self.hurt_until:
             direction=int('right' in self.held)-int('left' in self.held)
@@ -530,6 +579,14 @@ class Game:
         self.elastic_at=None
 
     def step(self,dt=STEP,on_input=None):
+        previous=(self.x,self.y)
+        epoch=self.world.run_epoch
+        playing=self.run=='Playing'
+        self._step(dt,on_input)
+        if playing and self.run=='Playing' and self.world.run_epoch==epoch:
+            self.world.advance(previous,(self.x,self.y))
+
+    def _step(self,dt=STEP,on_input=None):
         if self.run=='Paused':
             return
         self.visual_time+=dt
@@ -614,8 +671,11 @@ class Game:
             self.close_input()
             self.set_clip('failed')
             return
-        if self.shell and self.time>=self.hit_until and abs(self.x-self.course.shell[0])<19 and abs(self.y-self.course.shell[1])<10:
-            self.hit()
+        if self.time>=self.hit_until:
+            for target in self.world.targets('shell'):
+                if self.world.states[target.key] and abs(self.x-target.point[0])<19 and abs(self.y-target.point[1])<10:
+                    self.hit(target)
+                    break
         if on_input is not None:
             on_input()
             requested=int('right' in self.held)-int('left' in self.held)
@@ -628,10 +688,12 @@ class Game:
                 self.cancel_work()
             else:
                 self.work_tick(dt)
-        if self.support and self.support.kind=='goal' and self.beacon and abs(self.vx)<1 and self.course.goal_span[0]<self.x<self.course.goal_span[1]:
+        if (self.support and self.support.kind=='goal' and self.world.level_id==self.world.final_level_id
+                and self.world.goal_ready() and abs(self.vx)<1 and self.course.goal_span[0]<self.x<self.course.goal_span[1]):
             self.goal_hold+=dt
             if self.goal_hold>=.20:
                 self.run='Cleared'
+                self.world.completed_stages.add(self.world.stage_id)
                 self.close_input()
                 self.set_clip('goal')
                 return

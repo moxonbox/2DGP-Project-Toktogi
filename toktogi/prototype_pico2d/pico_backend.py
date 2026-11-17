@@ -307,6 +307,7 @@ class Backend:
                 label = self._label(text, size, color)
                 if center:
                     x -= label.w / 2
+                    y -= label.h / 2
                 label.draw_to_origin(round(x), self.height - round(y) - label.h)
             result = self._capture() if capture else None
             self.pico.update_canvas()

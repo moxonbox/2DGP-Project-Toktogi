@@ -185,7 +185,7 @@ def verify(asset_root=None):
                       window(sdl.SDL_WINDOWEVENT_FOCUS_GAINED, 20), key('space', 30, False)], .04)
             assert app.focused and app.game.run == 'Paused'
             assert app.game.launch_count == 0 and not app.game.held
-            dispatch([key('p', 50), key('p', 51, False), key('right', 60)], .04)
+            dispatch([key('p', 50), key('p', 51, False), key('d', 60)], .04)
             assert app.game.run == 'Playing' and 'right' in app.game.held
             checks['native_focus_cancel_orphan_up_and_new_down'] = True
 

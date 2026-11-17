@@ -5,7 +5,7 @@ import os
 os.environ.update(SDL_VIDEODRIVER='dummy', SDL_AUDIODRIVER='dummy', PYGAME_HIDE_SUPPORT_PROMPT='1')
 import json
 from collections import Counter
-from app import App, ROOT
+from legacy_test_app import App, ROOT
 from game import LEVEL, STEP, FOOD
 
 def verify():

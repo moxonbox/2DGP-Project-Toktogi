@@ -13,27 +13,38 @@ from replays import game_replays,world_replays
 from timeline import FixedStepTimeline
 
 ROOT=Path(__file__).resolve().parent
-GAME_KEYS={k:k for k in ('left','right','up','down','space','e','f','g','x','q','z')}
+GAME_KEYS={'a':'left','d':'right','w':'up','s':'down','space':'space','e':'e','x':'x','q':'q','z':'z'}
 GAME_KEYS.update(lshift='shift',rshift='shift')
 CONTROL_KEYS=('p','escape','r','f1','f2','tab')
 
-def route_event(event):
-    if event.type=='focus_gained' or event.type in ('key_down','key_up') and event.key in GAME_KEYS:return 'tick'
+def route_event(event,bindings=GAME_KEYS):
+    if event.type=='focus_gained' or event.type in ('key_down','key_up') and event.key in bindings:return 'tick'
     if event.type in ('quit','focus_lost') or event.type=='key_down' and event.key in CONTROL_KEYS and event.key!='f1':return 'close'
     return 'after'
 
 class App:
+    game_keys=GAME_KEYS
+    contextual_e=True
     def __init__(self,assets_path=ROOT/'toktogi_assets.zip',course=COURSE,*,pose_path=None,native=False,profile='legacy',asset_root=None):
         self.backend=None;self.assets=None
         try:
             self.assets=Assets(assets_path,pose_path)
             from world import World
-            world=World.seamless() if profile=='seamless' else World(course)
+            if profile=='pond_test':
+                from pond import test_world
+                world=test_world()
+            else:world=World.seamless() if profile=='seamless' else World(course)
             self.game=Game(self.assets,world=world)
+            if profile=='pond_test':
+                from pond import Pond
+                self.game.pond=Pond(world)
             course=world.course
             self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets))+(list(world_replays(self.assets)) if profile=='seamless' else []))
             self.screen=Image.new('RGBA',SCREEN)
-            self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
+            if profile=='pond_test':
+                from pond_view import PondView
+                self.play_view=PondView(self.assets,world,self.game.pond,asset_root=asset_root)
+            else:self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
             self.play_view.step(self.game,0)
             self.scene='game';self.buttons=self.viewer.buttons
             self.timeline=FixedStepTimeline(STEP)
@@ -69,7 +80,7 @@ class App:
         else:self.timeline.push(event,at)
 
     def update(self,dt):
-        self.timeline.advance(dt,self._event,self.step_scene,route_event)
+        self.timeline.advance(dt,self._event,self.step_scene,lambda e:route_event(e,self.game_keys))
         self.viewer.light_time+=dt
 
     def step_scene(self,dt,on_input):
@@ -138,9 +149,9 @@ class App:
             elif self.scene=='game':
                 if down and key=='r':self.close_context();self.game.reset(self.game.checkpoint)
                 elif down and key=='p':self.game.pause();self.close_context()
-                elif key in GAME_KEYS and self.game.run=='Playing':
+                elif key in self.game_keys and self.game.run=='Playing':
                     physical=e.scancode if e.scancode is not None else key
-                    binding=GAME_KEYS[key]
+                    binding=self.command(key) if down else self.physical_keys.get(physical)
                     if down:
                         if e.repeat or physical in self.physical_keys:return
                         already=binding in self.physical_keys.values()
@@ -178,7 +189,17 @@ class App:
     def close(self):
         if hasattr(self,'viewer'):self.viewer.text_surface.cache_clear()
         if hasattr(self,'play_view') and self.play_view.environment:self.play_view.environment.close()
+        if hasattr(self,'play_view') and hasattr(self.play_view,'close'):self.play_view.close()
         try:
             if self.assets:self.assets.close();self.assets=None
         finally:
             if self.backend:self.backend.close();self.backend=None
+
+    def command(self,key):
+        if key!='e' or not self.contextual_e:return self.game_keys[key]
+        g=self.game
+        if g.pond and g.pond.enemy_near(g):return 'x'
+        if any(g.world.states[e.key] and abs(e.point[0]-g.x)<70 and abs(e.point[1]-g.y)<60 for e in g.world.targets('shell')):return 'x'
+        if g.work_candidate('e')[0]:return 'e'
+        if g.work_candidate('f')[0]:return 'f'
+        return 'g'

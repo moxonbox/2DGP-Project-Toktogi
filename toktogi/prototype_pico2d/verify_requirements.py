@@ -2,7 +2,7 @@ from input_clock import Event
 from geometry import crop_box
 """Exercise the framework-r4 portions of previously untraced v2.1 requirements."""
 from dataclasses import replace
-from app import CONTROL_KEYS, GAME_KEYS
+from legacy_test_app import CONTROL_KEYS, GAME_KEYS
 from course import COURSE
 from game import Game
 from physics import STEP

@@ -25,6 +25,12 @@ def verify(*,asset_root=None):
     finally:assets.close()
     report['environment']=environment(asset_root)
     report['camera']=camera()
+    from verify_pond import verify as pond
+    from verify_controls import verify as controls
+    assets=Assets(root/'toktogi_assets.zip')
+    try:report['pond']=pond(assets)
+    finally:assets.close()
+    report['controls']=controls(asset_root)
     assert not any(name in sys.modules for name in ('pygame','sdl2','pico2d'))
     report['no_video_imports']=True
     report['seconds']=round(time.perf_counter()-started,3)

@@ -9,7 +9,7 @@ from time import perf_counter
 def verify():
     os.environ['SDL_VIDEODRIVER'] = 'dummy'
     os.environ['SDL_AUDIODRIVER'] = 'dummy'
-    from app import App, ROOT, STEP, MODES
+    from legacy_test_app import App, ROOT, STEP, MODES
     from play_view import FIELD, PLAY_CLEAR
     from game import BEACON, COLLECT, FOOD, LEVEL, SHELL, PRE_WINDOW, POST_WINDOW
     app = App()

@@ -6,7 +6,7 @@ os.environ.update(SDL_VIDEODRIVER='dummy', SDL_AUDIODRIVER='dummy', PYGAME_HIDE_
 import json, math, statistics
 from zipfile import ZipFile
 from time import perf_counter
-from app import App, ROOT
+from legacy_test_app import App, ROOT
 from game import LEVEL, STEP, BEACON_TOUCH, FOOD_TOUCH
 
 def verify(*, quiet=False):

@@ -11,7 +11,7 @@ import shutil
 import tempfile
 from time import perf_counter
 from materials import Assets
-from app import App, ROOT
+from legacy_test_app import App, ROOT
 from game import LEVEL, STEP, FOOD_TOUCH, BEACON_TOUCH, COLLECT_TOUCH, SHELL, segment_box
 
 def verify(*, quiet=False):

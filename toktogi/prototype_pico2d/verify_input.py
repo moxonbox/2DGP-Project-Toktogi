@@ -1,5 +1,5 @@
 """Input lifetime checks independent of SDL and presentation rate."""
-from app import App
+from legacy_test_app import App
 from input_clock import Event,EventClock
 from timeline import FixedStepTimeline
 from physics import STEP

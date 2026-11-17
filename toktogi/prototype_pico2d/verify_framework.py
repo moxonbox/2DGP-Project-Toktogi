@@ -6,7 +6,7 @@ import os
 from dataclasses import replace
 from math import dist
 os.environ.update(SDL_VIDEODRIVER='dummy', SDL_AUDIODRIVER='dummy', PYGAME_HIDE_SUPPORT_PROMPT='1')
-from app import App, ROOT
+from legacy_test_app import App, ROOT
 from course import COURSE, LEVEL, Platform
 from game import Game
 from physics import STEP, sweep_x

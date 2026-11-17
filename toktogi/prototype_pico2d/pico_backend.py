@@ -290,8 +290,11 @@ class Backend:
                 raise RuntimeError(f"invalid locked texture pointer/pitch: {pitch.value}")
             source = ctypes.c_char_p(raw)
             source_address = ctypes.cast(source, ctypes.c_void_p).value
-            for row in range(self.height):
-                ctypes.memmove(pixels.value + row * pitch.value, source_address + row * row_bytes, row_bytes)
+            if pitch.value == row_bytes:
+                ctypes.memmove(pixels.value, source_address, len(raw))
+            else:
+                for row in range(self.height):
+                    ctypes.memmove(pixels.value + row * pitch.value, source_address + row * row_bytes, row_bytes)
         finally:
             sdl.SDL_UnlockTexture(self.image.texture)
         clip = sdl.SDL_Rect()

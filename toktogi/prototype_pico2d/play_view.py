@@ -107,7 +107,11 @@ class PlayView:
         screen.paste((*PLAY_CLEAR,255),(0,0,*screen.size))
         frame=Image.new('RGBA',SCREEN,(*PLAY_CLEAR,255));draw=ImageDraw.Draw(frame)
         if self.environment:
-            frame.alpha_composite(self.environment.image,self.point(*self.environment.origin))
+            # Crop before alpha composition so offscreen terrain does not allocate a world-sized scratch image.
+            x,y=self.point(*self.environment.origin)
+            visible=self.environment.image.crop((FIELD.x-x,FIELD.y-y,FIELD.right-x,FIELD.bottom-y))
+            frame.alpha_composite(visible,FIELD.topleft)
+            visible.close()
         else:
             for p in g.course.platforms:
                 x0,y=self.point(p.x0,p.y);x1,bottom=self.point(p.x1,p.bottom)

@@ -23,7 +23,12 @@ def fields(images,ink,srgb_table,*,flat_normal=False):
     metal=images['rm'].getchannel('G').point([i/255 for i in range(256)],'F')
     glow=[images['emissive'].getchannel(c).point([i/255 for i in range(256)],'F') for c in 'RGB']
     mask=images['base'].getchannel('A').point([0]+[255]*255)
-    return sprite,mask,X,Y,*normal,albedo,rough,metal,glow
+    x,y=X,Y
+    if base.size != (128,128):
+        w,h=base.size
+        x=Image.frombytes('F',(w,h),array('f',(i for _ in range(h) for i in range(w))).tobytes())
+        y=Image.frombytes('F',(w,h),array('f',(j for j in range(h) for _ in range(w))).tobytes())
+    return sprite,mask,x,y,*normal,albedo,rough,metal,glow
 
 
 def srgb(value):

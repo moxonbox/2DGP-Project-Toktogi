@@ -7,14 +7,14 @@ from play_view import FIELD, PLAY_CLEAR
 
 
 class PondView:
-    def __init__(self, assets, world, pond, asset_root=None):
+    def __init__(self, assets, world, pond, asset_root=None, *, make_leaves=True):
         self.assets, self.world, self.pond = assets, world, pond
         self.camera = Camera(world)
         self.environment = None
         self.fish = FishAssets(asset_root)
         self.leaves = {}
         self.closed = False
-        for platform in world.course.platforms:
+        for platform in (world.course.platforms if make_leaves else ()):
             width = max(8, round(platform.x1 - platform.x0))
             leaf = Image.new('RGBA', (width + 2, 44))
             draw = ImageDraw.Draw(leaf)
@@ -53,20 +53,9 @@ class PondView:
         if self.closed:
             raise RuntimeError('PondView is closed.')
         screen.paste(PLAY_CLEAR, (0, 0, *screen.size))
-        frame = Image.new('RGBA', FIELD.size, (*PLAY_CLEAR, 255))
-        draw = ImageDraw.Draw(frame)
-        water = self.camera.point(0, self.pond.water_y)[1]
-        draw.rectangle((0, max(0, water), FIELD.w, FIELD.h), fill=(46, 89, 97, 255))
-        if 0 <= water < FIELD.h:
-            draw.line((0, water, FIELD.w, water), fill=(117, 159, 158, 255), width=2)
-        # World-anchored water marks move with the same camera as actors and leaves.
-        for world_x in range(-120, 2100, 120):
-            x, y = self.camera.point(world_x, self.pond.water_y + 35 + (world_x // 120 % 3) * 25)
-            draw.line((x, y, x + 32, y), fill=(66, 111, 119, 255), width=1)
+        frame = self.background(game)
         self._fish(frame)
-        for platform in self.world.course.platforms:
-            x, y = self.camera.point(platform.x0, platform.y)
-            frame.alpha_composite(self.leaves[id(platform)], (x, y - 9))
+        self.platforms(frame,game)
         draw = ImageDraw.Draw(frame)
         if self.pond.phase == 'warn':
             x, y = self.camera.point(self.pond.target_x, self.pond.water_y)
@@ -105,12 +94,42 @@ class PondView:
         if game.support:
             frame.alpha_composite(shadow, (x-32, y-3))
         shadow.close()
-        sprite = self.assets.render(game.visual(), 'lit', origin, (x-45, y-87), power=.82, ambient=.34)
+        light,power,ambient=self.light(game)
+        sprite = self.assets.render(game.visual(), 'lit', origin, light, power=power, ambient=ambient)
         if game.time < game.reject_until:
             sprite = ImageChops.add(sprite, Image.new('RGBA', sprite.size, (30, 6, 0, 0)))
         frame.alpha_composite(sprite, origin)
+        output=self.effects(frame,game,origin)
+        if output is not frame:frame.close();frame=output
         screen.alpha_composite(frame, FIELD.topleft)
         frame.close()
+        self.overlay(screen,game)
+
+    def background(self,game):
+        frame = Image.new('RGBA', FIELD.size, (*PLAY_CLEAR, 255))
+        draw = ImageDraw.Draw(frame)
+        water = self.camera.point(0, self.pond.water_y)[1]
+        draw.rectangle((0, max(0, water), FIELD.w, FIELD.h), fill=(46, 89, 97, 255))
+        if 0 <= water < FIELD.h:
+            draw.line((0, water, FIELD.w, water), fill=(117, 159, 158, 255), width=2)
+        # World-anchored water marks move with the same camera as actors and leaves.
+        for world_x in range(-120, 2100, 120):
+            x, y = self.camera.point(world_x, self.pond.water_y + 35 + (world_x // 120 % 3) * 25)
+            draw.line((x, y, x + 32, y), fill=(66, 111, 119, 255), width=1)
+        return frame
+
+    def platforms(self,frame,game):
+        for platform in self.world.course.platforms:
+            x, y = self.camera.point(platform.x0, platform.y)
+            frame.alpha_composite(self.leaves[id(platform)], (x, y - 9))
+
+    def light(self,game):
+        x,y=self.camera.point(game.x,game.y)
+        return (x-45,y-87),.82,.34
+
+    def effects(self,frame,game,origin):return frame
+
+    def overlay(self,screen,game):pass
 
     def close(self):
         if self.closed:

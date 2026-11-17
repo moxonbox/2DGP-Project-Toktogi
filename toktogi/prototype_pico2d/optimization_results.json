@@ -1,0 +1,61 @@
+{
+  "habitat_motion": {
+    "frames": 180,
+    "median_ms": 11.697699985234067,
+    "p95_ms": 15.389600011985749,
+    "max_ms": 25.439899996854365
+  },
+  "viewer_light_bloom": {
+    "frames": 180,
+    "median_ms": 12.405849964125082,
+    "p95_ms": 16.69319998472929,
+    "max_ms": 43.496199999935925
+  },
+  "pixel_references": 24,
+  "pixel_changed_channels": 0,
+  "controls": {
+    "max_speed_px_s": 72,
+    "accelerate_ms": 100.0,
+    "stop_ms": 66.67,
+    "reverse_direction_ms": 50.0,
+    "hud_states": 4,
+    "bloom_scales": 3,
+    "scope": "120 Hz simulation response; excludes device/poll latency."
+  },
+  "driver": "windows",
+  "renderer": "direct3d",
+  "scope": "Hidden Windows renderer; render+upload+present; no profiling, sleep, screenshots in timing.",
+  "p95_budget_ms": 16.666666666666668,
+  "p95_target_met": {
+    "habitat_motion": true,
+    "viewer_light_bloom": false
+  },
+  "habitat_checks": {
+    "passed": true,
+    "physical_gaps": 9,
+    "context_E_interactions": [
+      "food",
+      "beacon",
+      "collect",
+      "food",
+      "beacon",
+      "collect",
+      "food",
+      "beacon",
+      "collect"
+    ],
+    "checkpoint_restore": true,
+    "goal_clear": true,
+    "groom_and_turn": true,
+    "context_E_attack": true,
+    "animated_material": true,
+    "shore_safe": true,
+    "habitat_fish_dodge_cases": 4,
+    "frame_file_io": 0,
+    "non_square_material_light_response": true,
+    "draw_median_ms": 8.52949998807162,
+    "draw_p95_ms": 16.64129999699071,
+    "computer_use": false
+  },
+  "limitations": "Hidden-window render workload only; excludes input polling/physics, startup and sustained physical-device acceptance. F2 p95 is 0.027 ms above the exact 60 Hz budget; cold-frame maxima remain."
+}

@@ -22,7 +22,7 @@ def verify(output):
         # Each adjacent gap is crossed by the original physics and Space action.
         gaps=[]
         for i in range(9):
-            g=Game(app.assets,world=habitat_world())
+            g=Game(app.assets,world=habitat_world(),walk_speed=72.)
             source,target=g.course.platforms[i:i+2]
             # Isolate jump geometry; contextual combat is checked below.
             g.world.set_value('shell',False)

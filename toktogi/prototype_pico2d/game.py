@@ -1,5 +1,5 @@
 """Fixed-step platformer rules. Animation reads simulation state and never moves the player."""
-from math import copysign, hypot
+from math import copysign, hypot, isfinite
 from course import COURSE, BEACON, BEACON_TOUCH, CHECKPOINT, COLLECT, COLLECT_TOUCH, FOOD, FOOD_TOUCH, LEVEL, SHELL, Platform
 from physics import STEP, GRAVITY, CAP_RADIUS, CAP_HEIGHT, approach, capsule_overlaps, overhang, segment_box, sweep_x, sweep_y
 from motion import MotionSet, Track, validate_playable
@@ -8,7 +8,6 @@ from world import World
 JUMP_SPEED = 426
 ELASTIC_SPEED = 541
 WALK_SPEED = 24.
-RECOVERY_SPEED = WALK_SPEED*.55
 POST_WINDOW = .165
 PRE_WINDOW = .10
 
@@ -17,7 +16,9 @@ ATTACK_ACTIVE = (.078,.162)
 
 
 class Game:
-    def __init__(self,assets,course=COURSE,*,world=None):
+    def __init__(self,assets,course=COURSE,*,world=None,walk_speed=WALK_SPEED):
+        if not isfinite(walk_speed) or walk_speed<=0:raise ValueError('Walk speed must be positive and finite.')
+        self.walk_speed=float(walk_speed)
         self.assets = assets
         validate_playable(assets)
         self.motion = MotionSet(assets)
@@ -663,10 +664,11 @@ class Game:
                     self.transition_kind='feed_move'
                     self.transition_time=0.
             spinning=self.transition and self.turn_origin and self.full_turn
-            speed=direction*(RECOVERY_SPEED if self.recovery else WALK_SPEED) if not self.work and not braking and not spinning else 0.
+            speed=direction*(self.walk_speed*.55 if self.recovery else self.walk_speed) if not self.work and not braking and not spinning else 0.
             if self.balancing:
                 speed=direction*min(abs(speed),abs((lo if direction>0 else hi)-self.x)/dt)
-            self.vx=approach(self.vx,speed,dt*(1700 if braking else 760 if speed else 1200))
+            reversing=self.walk_speed!=WALK_SPEED and self.vx*speed<0
+            self.vx=approach(self.vx,speed,dt*(1700 if braking or reversing else 760 if speed else 1200))
             if self.transition and self.turn_origin:
                 lo,hi=self.turn_foot_offsets
                 end=self.x+self.vx*dt

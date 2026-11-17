@@ -37,7 +37,7 @@ class App:
                 from pond import test_world
                 world=test_world()
             else:world=World.seamless() if profile=='seamless' else World(course)
-            self.game=Game(self.assets,world=world)
+            self.game=Game(self.assets,world=world,walk_speed=72. if profile=='habitat' else 24.)
             if profile in ('pond_test','habitat'):
                 from pond import Pond
                 self.game.pond=Pond(world,active_span=(1030,2110) if profile=='habitat' else None,

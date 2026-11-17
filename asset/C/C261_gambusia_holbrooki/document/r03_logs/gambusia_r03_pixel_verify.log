@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "frames": 2304,
+  "changed_pixels_by_pass": {
+    "sprite": 58737686,
+    "base": 61832859,
+    "normal": 4993250,
+    "ao": 5892252,
+    "orm": 6284890,
+    "emissive": 158027,
+    "depth": 4127360,
+    "watermask": 381249
+  },
+  "alpha_changed_pixels": 384988,
+  "max_alpha_change_fraction": 0.027052238805970148,
+  "markers_pivots_time_equal": true,
+  "body_palette_invalid_pixels": 0,
+  "outline_invalid_pixels": 0,
+  "body_mean_luma_gain": {
+    "female": {
+      "r01": 118.71322319879374,
+      "r03": 177.09348443291336,
+      "gain": 58.3802612341196
+    },
+    "male": {
+      "r01": 118.68064293957507,
+      "r03": 176.45669397601975,
+      "gain": 57.77605103644467
+    }
+  },
+  "changed_frames": 2304,
+  "expected_changes": "GPT pigment, larger eyes, outward gill normals, Sprite soft fill and brighter glints; data passes regenerated from corrected model",
+  "geometry_outside_eyes_and_gills_max_error_bu": {
+    "female": 0.0,
+    "male": 0.0
+  },
+  "seconds": 233.91795110004023
+}

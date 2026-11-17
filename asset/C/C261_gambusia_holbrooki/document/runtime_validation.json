@@ -1,6 +1,6 @@
 {
   "status": "FUNCTIONAL_PASS_PERFORMANCE_REVIEW",
-  "bundle_load_seconds": 1.1805556999752298,
+  "bundle_load_seconds": 1.3545915000140667,
   "physics": {
     "female": {
       "fps": {
@@ -214,26 +214,26 @@
     }
   ],
   "corrupted_bundle_rejected": "broken.zip: bundle checksum mismatch",
-  "corrupted_payload_rejected": "gambusia_holbrooki_r01.zip: 2D/air/female_airborne_arc_end/front/0.png: payload checksum mismatch",
-  "C011_BRDF_max_channel_error": 1,
-  "warmup_seconds": 0.4901598000433296,
+  "corrupted_payload_rejected": "gambusia_holbrooki_r03.zip: 2D/air/female_airborne_arc_end/front/0.png: payload checksum mismatch",
+  "C011_BRDF_max_channel_error": 0,
+  "warmup_seconds": 0.4870383000234142,
   "performance": {
     "frames": 120,
     "mode": "female 640 cell, moving light + water + RGBA transfer + SDL dummy blit",
-    "p95_ms": 18.549650014028884,
-    "max_ms": 20.23299998836592,
-    "mean_ms": 13.877546666481066,
+    "p95_ms": 13.086149978335015,
+    "max_ms": 18.876499962061644,
+    "mean_ms": 10.81814999730947,
     "meets_16_7_ms": false,
-    "renderer_cache_bytes": 98329419,
+    "renderer_cache_bytes": 98494539,
     "raw_bundle_bytes": 20535312384,
     "actual_GPU": "NOT_RUN",
     "browser": "NOT_RUN",
     "Pico2D": "NOT_IMPLEMENTED"
   },
   "process_memory": {
-    "working_set_bytes": 305242112,
-    "peak_working_set_bytes": 313171968,
-    "private_bytes": 1058078720
+    "working_set_bytes": 304132096,
+    "peak_working_set_bytes": 313548800,
+    "private_bytes": 1057148928
   },
-  "elapsed_seconds": 12.015567999973428
+  "elapsed_seconds": 12.376618600043003
 }

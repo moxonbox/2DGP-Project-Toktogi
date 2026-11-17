@@ -1,0 +1,46 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "frond": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "root_single": {
+      "vertices": 60,
+      "triangles": 116
+    },
+    "root_cap": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "root_attachment": {
+      "vertices": 242,
+      "triangles": 480
+    }
+  },
+  "triangle_count": 1556,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -1.6894429922103882,
+      -0.9858630895614624,
+      -1.2875148057937622
+    ],
+    [
+      1.6894429922103882,
+      0.9858630895614624,
+      0.13748584687709808
+    ]
+  ],
+  "extent_bu": [
+    3.3788859844207764,
+    1.9717261791229248,
+    1.4250006675720215
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 15,
+  "blend_sha256": "7b2d2e5a547afabc6b50ad5c9e4b1ee820ee02d7ba32d208e880f8b5af3cde15",
+  "static_root": true
+}

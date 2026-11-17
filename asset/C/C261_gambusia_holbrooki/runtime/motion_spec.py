@@ -1,7 +1,7 @@
 """Authored poses and timings; these are game design values, not fish biology."""
 import math
 
-REVISION='gambusia-r01'
+REVISION='gambusia-r03'
 ASSET_ID='C261_gambusia_holbrooki'
 PIXELS_PER_BU=128/1.78
 VARIANTS={'female':{'sl_mm':60,'sl_bu':.965396*6,'cell':640},

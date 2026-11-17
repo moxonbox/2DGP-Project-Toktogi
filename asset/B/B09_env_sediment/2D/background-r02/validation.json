@@ -1,0 +1,296 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "detritus_0",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "detritus_1",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "detritus_2",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "fine_grain_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_10",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_11",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_12",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_13",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_6",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_7",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "fine_grain_9",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_6",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "sediment_floor",
+      "vertices": 386,
+      "triangles": 768
+    }
+  ],
+  "triangles": 3480,
+  "bones": 0,
+  "views": {
+    "left": {
+      "cell": [
+        448,
+        192
+      ],
+      "margin": 12,
+      "normal_error": 0.006526487833136696,
+      "surface_pixels": 49466,
+      "seconds": 0.6788043999695219
+    },
+    "right": {
+      "cell": [
+        432,
+        208
+      ],
+      "margin": 14,
+      "normal_error": 0.006270230608479643,
+      "surface_pixels": 49664,
+      "seconds": 0.7016470999806188
+    },
+    "yaw_045": {
+      "cell": [
+        336,
+        224
+      ],
+      "margin": 12,
+      "normal_error": 0.006331360245143802,
+      "surface_pixels": 46214,
+      "seconds": 0.6997472000075504
+    },
+    "yaw_090": {
+      "cell": [
+        384,
+        224
+      ],
+      "margin": 13,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 47778,
+      "seconds": 0.7170582000399008
+    },
+    "yaw_135": {
+      "cell": [
+        480,
+        192
+      ],
+      "margin": 15,
+      "normal_error": 0.006526487833136807,
+      "surface_pixels": 51012,
+      "seconds": 0.6997458999976516
+    },
+    "yaw_180": {
+      "cell": [
+        448,
+        208
+      ],
+      "margin": 19,
+      "normal_error": 0.006278843038372117,
+      "surface_pixels": 49882,
+      "seconds": 0.7307694999617524
+    },
+    "yaw_225": {
+      "cell": [
+        336,
+        224
+      ],
+      "margin": 12,
+      "normal_error": 0.006636952745543656,
+      "surface_pixels": 46568,
+      "seconds": 0.7136917000170797
+    },
+    "yaw_270": {
+      "cell": [
+        384,
+        224
+      ],
+      "margin": 13,
+      "normal_error": 0.006588408677871249,
+      "surface_pixels": 47681,
+      "seconds": 0.6030209999880753
+    },
+    "yaw_315": {
+      "cell": [
+        480,
+        192
+      ],
+      "margin": 19,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 50572,
+      "seconds": 0.6072644999949262
+    },
+    "ortho_front": {
+      "cell": [
+        336,
+        112
+      ],
+      "margin": 15,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 14956,
+      "seconds": 0.5141731000039726
+    },
+    "ortho_back": {
+      "cell": [
+        336,
+        112
+      ],
+      "margin": 15,
+      "normal_error": 0.006086819413139377,
+      "surface_pixels": 14956,
+      "seconds": 0.6154171999660321
+    },
+    "ortho_left": {
+      "cell": [
+        480,
+        112
+      ],
+      "margin": 12,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 21665,
+      "seconds": 0.6518360000336543
+    },
+    "ortho_right": {
+      "cell": [
+        480,
+        112
+      ],
+      "margin": 12,
+      "normal_error": 0.006216941482118599,
+      "surface_pixels": 21665,
+      "seconds": 0.6379008000367321
+    },
+    "ortho_top": {
+      "cell": [
+        480,
+        336
+      ],
+      "margin": 12,
+      "normal_error": 0.006526487833136807,
+      "surface_pixels": 99428,
+      "seconds": 0.8355959000182338
+    },
+    "ortho_underside": {
+      "cell": [
+        480,
+        336
+      ],
+      "margin": 12,
+      "normal_error": 0.006588408677871249,
+      "surface_pixels": 99428,
+      "seconds": 0.8809012999990955
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r02": {
+      "relative": "//textures\\env_sediment_basecolor_r02.png",
+      "sha256": "75c23a9dfa2bb116da6eb03c96202d3c360f4dddab3f46e6272cda5a3a4139d4",
+      "packed_matches": true
+    },
+    "env_sediment_sheet_r01.png": {
+      "relative": "//..\\sheet\\env_sediment_sheet_r01.png",
+      "sha256": "0af619adcfb6b518ee8965ac3d6130882b4444e535bb51e51f421f6e1855cbd3",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 25625600,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

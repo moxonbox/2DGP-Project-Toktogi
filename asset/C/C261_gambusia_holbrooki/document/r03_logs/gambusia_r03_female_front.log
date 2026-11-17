@@ -1,0 +1,48 @@
+00:02.844  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\gambusia_holbrooki_r03\3D\gambusia_holbrooki_r03.blend"
+EXPORT female/front/hover_or_school: 18 cells
+EXPORT female/front/cruise: 18 cells
+EXPORT female/front/turn: 18 cells
+EXPORT female/front/surface_rise: 18 cells
+EXPORT female/front/surface_peek: 18 cells
+EXPORT female/front/surface_gape: 18 cells
+EXPORT female/front/surface_submerge: 18 cells
+EXPORT female/front/surface_snap: 18 cells
+EXPORT female/front/swallow: 18 cells
+EXPORT female/front/forage_cruise: 18 cells
+EXPORT female/front/evade_or_dive: 18 cells
+EXPORT female/front/breach_launch: 18 cells
+EXPORT female/front/airborne_arc: 18 cells
+EXPORT female/front/surface_fall: 18 cells
+EXPORT female/front/water_reentry: 18 cells
+EXPORT female/front/out_of_water: 18 cells
+{
+  "variant": "female",
+  "view": "front",
+  "frames": 288,
+  "minimum_margin": 36,
+  "normal_error": 0.006636952745543656,
+  "clips": {
+    "hover_or_school": 18,
+    "cruise": 18,
+    "turn": 18,
+    "surface_rise": 18,
+    "surface_peek": 18,
+    "surface_gape": 18,
+    "surface_submerge": 18,
+    "surface_snap": 18,
+    "swallow": 18,
+    "forage_cruise": 18,
+    "evade_or_dive": 18,
+    "breach_launch": 18,
+    "airborne_arc": 18,
+    "surface_fall": 18,
+    "water_reentry": 18,
+    "out_of_water": 18
+  },
+  "source_blend_sha256": "80ca4806792446172fef421b2f053f631049afbe7210e0f9829e9e95ae8ace2a",
+  "status": "PASS",
+  "seconds": 311.77284699998563
+}
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

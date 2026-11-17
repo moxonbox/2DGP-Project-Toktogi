@@ -1,0 +1,120 @@
+{
+  "id": "B08",
+  "name": "plant_persicaria_thunbergii",
+  "folder": "B08_plant_persicaria_thunbergii",
+  "selected_length_mm": 1000,
+  "presentation_factor": 0.008,
+  "measure_kind": "shoot_extent_design_proxy",
+  "game_scale": 1,
+  "scale_policy": "distant_background",
+  "details": {
+    "measurement_note": "Source is stem arc length; chosen display extent is an artistic proxy, not measured leaf size."
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r01",
+  "schema": 1,
+  "length_bu": 7.723168000000001,
+  "bounds_bu": [
+    [
+      -4.20805025100708,
+      -1.8584882020950317,
+      0.30746135115623474
+    ],
+    [
+      4.267050266265869,
+      1.9527076482772827,
+      1.8767297267913818
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "stem_node_0": [
+      -3.8615840000000006,
+      0.0,
+      0.7723168000000001
+    ],
+    "stem_node_1": [
+      -2.5743893333333334,
+      0.5618125431473958,
+      1.0426276800000003
+    ],
+    "stem_node_2": [
+      -1.2871946666666667,
+      -0.46759302512658735,
+      0.7723168000000001
+    ],
+    "stem_node_3": [
+      0.0,
+      -0.17263782675152017,
+      1.0426276800000003
+    ],
+    "stem_node_4": [
+      1.2871946666666672,
+      0.6112783960686249,
+      0.7723168000000001
+    ],
+    "stem_node_5": [
+      2.5743893333333334,
+      -0.33612531479561863,
+      1.0426276800000003
+    ],
+    "stem_node_6": [
+      3.8615840000000006,
+      -0.3315234231974067,
+      0.7723168000000001
+    ],
+    "flower_tip_0": [
+      -3.8615840000000006,
+      0.0,
+      1.81494448
+    ],
+    "flower_tip_6": [
+      3.8615840000000006,
+      -0.3315234231974067,
+      1.81494448
+    ]
+  },
+  "triangles": 8868,
+  "mesh_count": 83,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_persicaria_thunbergii_basecolor_r01.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_persicaria_thunbergii_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "bdb9cec887f8865c51da75f011a930159ad6bdd63df020c7c357f3dcd35b692a",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "82a548",
+    "vein": "b6c96c",
+    "stem": "61783d",
+    "root": "b4a079",
+    "underside": "825476",
+    "hair": "c8d58d",
+    "flower": "e5b5c7",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; no asymmetric measured texture",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

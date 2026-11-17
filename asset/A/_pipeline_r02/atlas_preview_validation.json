@@ -1,0 +1,79 @@
+[
+  {
+    "asset_id": "plant_lemna_minor",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      192.0,
+      165.2953
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_still_water",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      320.0,
+      319.2249
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_shore_slope",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      256.0,
+      285.6189
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_wet_wood",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      256.0,
+      277.2979
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_wet_stone",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      160.0,
+      188.0235
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_wet_leaf_litter",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      224.0,
+      236.1541
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  },
+  {
+    "asset_id": "env_algae_patch",
+    "game_views": 9,
+    "atlas_rect_roundtrips": 45,
+    "turntable_frames_verified": 8,
+    "game_pivot": [
+      96.0,
+      96.0
+    ],
+    "view_camera": "one fixed camera for all game headings"
+  }
+]

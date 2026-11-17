@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "asset_id": "C261_gambusia_holbrooki",
+  "revision": "gambusia-r03",
+  "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec",
+  "source_blend_sha256": "80ca4806792446172fef421b2f053f631049afbe7210e0f9829e9e95ae8ace2a",
+  "signature": "ff6c44e78ecd5e72d2ab83f1d3c42ed93a59cbb87c2c1c04a1aa1e84fd2ae997",
+  "bundle_sha256": "98b8931837b0b1bc84bcb8fbb39fc1e6579085f381ac4d1b1b7a5ed3d7ebc312"
+}

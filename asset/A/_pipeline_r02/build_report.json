@@ -1,0 +1,348 @@
+{
+  "plant_lemna_minor": {
+    "blender": "5.3.0",
+    "geometry": {
+      "frond": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "root_single": {
+        "vertices": 60,
+        "triangles": 116
+      },
+      "root_cap": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "root_attachment": {
+        "vertices": 242,
+        "triangles": 480
+      }
+    },
+    "triangle_count": 1556,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -1.6894429922103882,
+        -0.9858630895614624,
+        -1.2875148057937622
+      ],
+      [
+        1.6894429922103882,
+        0.9858630895614624,
+        0.13748584687709808
+      ]
+    ],
+    "extent_bu": [
+      3.3788859844207764,
+      1.9717261791229248,
+      1.4250006675720215
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "7b2d2e5a547afabc6b50ad5c9e4b1ee820ee02d7ba32d208e880f8b5af3cde15",
+    "static_root": true
+  },
+  "env_still_water": {
+    "blender": "5.3.0",
+    "geometry": {
+      "surface_skin": {
+        "vertices": 1025,
+        "triangles": 1920
+      },
+      "surface_boundary": {
+        "vertices": 256,
+        "triangles": 382
+      }
+    },
+    "triangle_count": 2302,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -3.571965217590332,
+        -2.2204108238220215,
+        -0.0231695044785738
+      ],
+      [
+        3.571965217590332,
+        2.2204108238220215,
+        0.012000000104308128
+      ]
+    ],
+    "extent_bu": [
+      7.143930435180664,
+      4.440821647644043,
+      0.03516950458288193
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "05e1a56713fa0810e66046f9160a09d68873bd49fa50ccea1bd6085cfeeb20a3",
+    "static_root": true
+  },
+  "env_shore_slope": {
+    "blender": "5.3.0",
+    "geometry": {
+      "slope_base": {
+        "vertices": 291,
+        "triangles": 578
+      },
+      "gravel_0": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_1": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_2": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_3": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_4": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_5": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "gravel_6": {
+        "vertices": 162,
+        "triangles": 320
+      },
+      "shallow_puddle": {
+        "vertices": 242,
+        "triangles": 480
+      }
+    },
+    "triangle_count": 3298,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.8961880207061768,
+        -1.429707407951355,
+        -0.07999999821186066
+      ],
+      [
+        2.8961880207061768,
+        1.429707407951355,
+        0.965395987033844
+      ]
+    ],
+    "extent_bu": [
+      5.7923760414123535,
+      2.85941481590271,
+      1.0453959703445435
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "94498922f4832acb16dd46e17421e3abbf510d0fa202a29437a09eff0faffba0",
+    "static_root": true
+  },
+  "env_wet_wood": {
+    "blender": "5.3.0",
+    "geometry": {
+      "branch_main": {
+        "vertices": 160,
+        "triangles": 316
+      },
+      "branch_spur": {
+        "vertices": 48,
+        "triangles": 92
+      },
+      "broken_end": {
+        "vertices": 48,
+        "triangles": 92
+      },
+      "rear_end": {
+        "vertices": 48,
+        "triangles": 92
+      },
+      "bark_ridge_0": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "bark_ridge_1": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "bark_ridge_2": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "bark_ridge_3": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "bark_ridge_4": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "bark_ridge_5": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "knot_ring": {
+        "vertices": 102,
+        "triangles": 200
+      }
+    },
+    "triangle_count": 1920,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.4617738723754883,
+        -0.48561161756515503,
+        -0.2099366933107376
+      ],
+      [
+        2.437304735183716,
+        0.5479381084442139,
+        1.1765856742858887
+      ]
+    ],
+    "extent_bu": [
+      4.899078369140625,
+      1.0335497856140137,
+      1.3865224123001099
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "9c1846c3b05283da9b78c3bc2ad8404e25f04243e7051aa5983fe15b37cc5a7b",
+    "static_root": true
+  },
+  "env_wet_stone": {
+    "blender": "5.3.0",
+    "geometry": {
+      "rock_core": {
+        "vertices": 162,
+        "triangles": 320
+      }
+    },
+    "triangle_count": 320,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -1.4480940103530884,
+        -1.061935544013977,
+        -0.19307920336723328
+      ],
+      [
+        1.4480940103530884,
+        1.061935544013977,
+        1.0131042003631592
+      ]
+    ],
+    "extent_bu": [
+      2.8961880207061768,
+      2.123871088027954,
+      1.2061834335327148
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "f87f33b4d0a8771d61739e7ac2e4bfc6bab5b2a44edc296c0cd36a6146fb7f17",
+    "static_root": true
+  },
+  "env_wet_leaf_litter": {
+    "blender": "5.3.0",
+    "geometry": {
+      "leaf_plane_thickened": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "leaf_midrib": {
+        "vertices": 108,
+        "triangles": 212
+      },
+      "broken_petiole": {
+        "vertices": 24,
+        "triangles": 44
+      }
+    },
+    "triangle_count": 736,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.4820094108581543,
+        -0.9731189608573914,
+        0.03750000149011612
+      ],
+      [
+        2.1721410751342773,
+        0.9731191396713257,
+        0.6325438022613525
+      ]
+    ],
+    "extent_bu": [
+      4.654150485992432,
+      1.9462380409240723,
+      0.5950437784194946
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "2ac4ae455a7bd0c74a4e0549b461e3a9d9d7fc42a40395bb5e1cbd885e9cf28a",
+    "static_root": true
+  },
+  "env_algae_patch": {
+    "blender": "5.3.0",
+    "geometry": {
+      "patch_decal": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "biofilm_lobe_0": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "biofilm_lobe_1": {
+        "vertices": 242,
+        "triangles": 480
+      },
+      "biofilm_lobe_2": {
+        "vertices": 242,
+        "triangles": 480
+      }
+    },
+    "triangle_count": 1920,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -0.8447214961051941,
+        -0.5551027059555054,
+        -0.0115847522392869
+      ],
+      [
+        0.8447214961051941,
+        0.5551027059555054,
+        0.0145967872813344
+      ]
+    ],
+    "extent_bu": [
+      1.6894429922103882,
+      1.1102054119110107,
+      0.0261815395206213
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 15,
+    "blend_sha256": "225ab63162a3ba9bf0dde6f86fe0e780c2c3f738bb3c929eb517bff7baf8f902",
+    "static_root": true
+  }
+}

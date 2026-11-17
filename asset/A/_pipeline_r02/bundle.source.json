@@ -1,0 +1,8 @@
+{
+  "revision": "environment-r02",
+  "bundle_sha256": "8cd9c49d37aa00ec5e9a8b9626ff585c95f482ba29024859b37fe9b9d8750a2e",
+  "manifest_signature": "2174a378e6191ddd3cad7a5691403731136397f0590e8dbcd31e58d34d38b882",
+  "files": 500,
+  "zip_bytes": 26952360,
+  "zip_readback": "PASS"
+}

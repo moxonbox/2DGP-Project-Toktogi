@@ -1,0 +1,47 @@
+{
+  "tool": "built-in GPT Image",
+  "model_version": null,
+  "seed": null,
+  "assets": [
+    {
+      "file": "imagegen/user_appearance_target.png",
+      "sha256": "97501a8ccb1bbdc3cc203e596692c9ef0ff457038f320ab3a7102715564b1c42",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "role": "visual reference"
+    },
+    {
+      "file": "imagegen/female_sprite_style_key.png",
+      "sha256": "e9d0c4faf5798981a30a60ddc2d5831957a01a2b72869a201ac13e8b8b9d45ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "role": "visual reference"
+    },
+    {
+      "file": "imagegen/female_uv_atlas_raw.png",
+      "sha256": "1f6b4ad83d872e1517261a73a4319692f38dfe8bae3139b236bc0079889a5a49",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "unlit UV pigment source"
+    },
+    {
+      "file": "imagegen/male_uv_atlas_raw.png",
+      "sha256": "1ee24ff72b268a285cfd2f11abe5ef6e18bd88cec8c8d948a21692fec0ec0a15",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "role": "unlit UV pigment source"
+    }
+  ]
+}

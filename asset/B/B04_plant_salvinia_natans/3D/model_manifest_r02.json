@@ -1,0 +1,86 @@
+{
+  "id": "B04",
+  "name": "plant_salvinia_natans",
+  "folder": "B04_plant_salvinia_natans",
+  "selected_length_mm": 10,
+  "presentation_factor": 1,
+  "measure_kind": "one_floating_leaf_length",
+  "game_scale": 1,
+  "scale_policy": "display_relative",
+  "details": {
+    "floating_leaf_count": 2,
+    "true_roots": 0
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r02",
+  "schema": 1,
+  "length_bu": 9.65396,
+  "bounds_bu": [
+    [
+      -9.557415962219238,
+      -2.896186113357544,
+      -6.384973049163818
+    ],
+    [
+      9.557418823242188,
+      2.8961880207061768,
+      1.2350186109542847
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "floating_pair": [
+      0,
+      0,
+      0
+    ],
+    "submerged_frond": [
+      0,
+      0,
+      -0.965396
+    ]
+  },
+  "triangles": 12864,
+  "mesh_count": 128,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_salvinia_natans_basecolor_r02.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_salvinia_natans_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "2b4c2e12f31b6eadd874399864ad1b284498be08c177d6701ec2511c9ef98f4a",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "94ad63",
+    "vein": "a5bf79",
+    "stem": "637b4a",
+    "root": "ad9d79",
+    "underside": "865777",
+    "hair": "bdce94",
+    "flower": "e3b5c4",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; fixed broad mottling and role detail; tube seam preserved",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

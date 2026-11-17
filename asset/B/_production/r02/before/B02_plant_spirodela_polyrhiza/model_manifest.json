@@ -1,0 +1,87 @@
+{
+  "id": "B02",
+  "name": "plant_spirodela_polyrhiza",
+  "folder": "B02_plant_spirodela_polyrhiza",
+  "selected_length_mm": 6,
+  "presentation_factor": 1,
+  "measure_kind": "frond_length",
+  "game_scale": 1,
+  "scale_policy": "display_relative",
+  "details": {
+    "root_length_mm": 35,
+    "root_count": 7,
+    "vein_count": 7
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r01",
+  "schema": 1,
+  "length_bu": 5.792376,
+  "bounds_bu": [
+    [
+      -2.896186351776123,
+      -2.41348934173584,
+      -33.78913879394531
+    ],
+    [
+      2.8961875438690186,
+      2.413490056991577,
+      0.40020644664764404
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "upper_frond": [
+      0,
+      0,
+      0.37650444
+    ],
+    "root_bundle": [
+      0,
+      0,
+      0
+    ]
+  },
+  "triangles": 1172,
+  "mesh_count": 15,
+  "bone_count": 0,
+  "root_count": 7,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_spirodela_polyrhiza_basecolor_r01.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_spirodela_polyrhiza_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "7f392e296454ea684901b87d1c9487709f8d390d6a6885055754c2deb6ec4344",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "82a548",
+    "vein": "b6c96c",
+    "stem": "61783d",
+    "root": "b4a079",
+    "underside": "825476",
+    "hair": "c8d58d",
+    "flower": "e5b5c7",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; no asymmetric measured texture",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

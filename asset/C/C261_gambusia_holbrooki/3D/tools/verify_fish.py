@@ -29,6 +29,12 @@ for sex,profile in VARIANTS.items():
     assert len(rig.data.bones)==26 and tuple(obj.scale)==tuple(rig.scale)==(1,1,1)
     assert all(abs(sum(g.weight for g in v.groups)-1)<1e-5 for v in obj.data.vertices)
     names=[p['name'] for p in data['parts']]
+    gill_normals={}
+    for side,sign in (('L',1),('R',-1)):
+        part=next(p for p in data['parts'] if p['name']=='operculum_'+side)
+        vertices=list(obj.data.vertices)[part['first_vertex']:part['first_vertex']+part['vertex_count']]
+        mean=float(np.mean([v.normal.y for v in vertices]));assert mean*sign>.8,(sex,side,mean)
+        gill_normals[side]=mean
     assert sum(n.startswith('eye_') for n in names)==2
     required=['dorsal_fin','caudal_fin','pectoral_L','pectoral_R','pelvic_L','pelvic_R','anal_fin' if sex=='female' else 'gonopodium']
     assert all(n in names for n in required)
@@ -65,7 +71,7 @@ for sex,profile in VARIANTS.items():
     report['variants'][sex]={'SL_bu':length,'TL_bu':data['TL_bu'],'triangles':data['triangles'],'bones':26,
         'poses_checked':checked,'phase_and_sequence_join_error_bu':max_join,'loop_error_bu':max_loop,'seek_error_bu':max_seek,
         'loop_derivative_error_bu_per_cycle':max_velocity,'jaw_open_displacement_bu':jaw_motion,
-        'required_fins':required,'unweighted_vertices':0,'normalized_weights':True,'UV_bounds':'PASS'}
+        'required_fins':required,'unweighted_vertices':0,'normalized_weights':True,'UV_bounds':'PASS','outward_gill_normal_y':gill_normals}
 assert len(bpy.data.actions)==96
 assert all(i.packed_file for i in bpy.data.images if i.source=='FILE')
 (ROOT/'3D/saved_validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

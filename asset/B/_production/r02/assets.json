@@ -1,0 +1,183 @@
+[
+  {
+    "id": "B01",
+    "name": "plant_lemna_perpusilla",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B01 Lemna perpusilla, a small asymmetrical oval green duckweed frond, single frond only, exactly ONE thin hanging root with a small winged sheath at its base. Selected design frond 2.5 by 1.6 mm, root length unknown and merely illustrative. No lily pad notch; subtle three veins; root count one in every view.",
+    "folder": "B01_plant_lemna_perpusilla",
+    "selected_length_mm": 2.5,
+    "presentation_factor": 1,
+    "measure_kind": "frond_length",
+    "game_scale": 1,
+    "scale_policy": "display_relative",
+    "details": {},
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B02",
+    "name": "plant_spirodela_polyrhiza",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B02 Spirodela polyrhiza, one broad flattened oval duckweed frond, green top and purple underside, SEVEN separate long dangling roots and SEVEN subtle veins. Selected frond 6 by 5 mm, roots 35 mm long; keep all 7 roots consistent. Show full roots in front/side and an inset underside. Not Lemna.",
+    "folder": "B02_plant_spirodela_polyrhiza",
+    "selected_length_mm": 6,
+    "presentation_factor": 1,
+    "measure_kind": "frond_length",
+    "game_scale": 1,
+    "scale_policy": "display_relative",
+    "details": {
+      "root_length_mm": 35,
+      "root_count": 7,
+      "vein_count": 7
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B03",
+    "name": "plant_wolffia_arrhiza",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B03 Wolffia arrhiza, a single tiny smooth rootless oval green floating body, selected 1.0 by 0.7 mm, plump ellipsoidal volume with slightly flattened top. ABSOLUTELY NO roots, hairs, stems, conventional leaves or veins in any view. A simple green grain.",
+    "folder": "B03_plant_wolffia_arrhiza",
+    "selected_length_mm": 1,
+    "presentation_factor": 1,
+    "measure_kind": "frond_length",
+    "game_scale": 1,
+    "scale_policy": "display_relative",
+    "details": {
+      "root_count": 0
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B04",
+    "name": "plant_salvinia_natans",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B04 Salvinia natans module, exactly TWO opposite oval floating leaves linked at their base to a short stem, plus one finely divided submerged leaf underneath. The underwater branching organ is a submerged LEAF not roots. Selected floating leaves each 10 by 6 mm. Upper surfaces have orderly subtle water-repellent hairs. Do not depict long straight true roots.",
+    "folder": "B04_plant_salvinia_natans",
+    "selected_length_mm": 10,
+    "presentation_factor": 1,
+    "measure_kind": "one_floating_leaf_length",
+    "game_scale": 1,
+    "scale_policy": "display_relative",
+    "details": {
+      "floating_leaf_count": 2,
+      "true_roots": 0
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B05",
+    "name": "plant_ceratophyllum_demersum",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B05 Ceratophyllum demersum short submerged stem fragment: ROOTLESS, four nodes, each with a whorl of 6 narrow green leaves that fork twice. A bushy underwater bottlebrush silhouette made of forked leaves. No broad leaves, no flowers, no roots. Whole size is a design variable, do not print biological dimensions.",
+    "folder": "B05_plant_ceratophyllum_demersum",
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "stem_fragment_design",
+    "game_scale": 1,
+    "scale_policy": "design_module",
+    "details": {
+      "design_length_bu": 5,
+      "root_count": 0,
+      "whorl_count": 4
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B06",
+    "name": "plant_typha_orientalis",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B06 Typha orientalis: a single upright reed-like stem ending in a solid elongated cylindrical brown cattail inflorescence, surrounded by six long tapering strap-shaped green leaves from the base. Broad gracefully arcing strap leaves. Show the entire mature plant including base, no pot. Selected whole height 1.2 m, thus enormous relative to a 1 mm springtail; never imply same-size plant and springtail.",
+    "folder": "B06_plant_typha_orientalis",
+    "selected_length_mm": 1200,
+    "presentation_factor": 0.006,
+    "measure_kind": "whole_plant_height",
+    "game_scale": 1,
+    "scale_policy": "distant_background",
+    "details": {
+      "selected_height_m": 1.2
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B07",
+    "name": "plant_phragmites_australis",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B07 Phragmites australis: one tall upright jointed pale-green cane, alternating long narrow lanceolate leaves at nodes, and a fine branching tan conical feathery panicle on top. NOT a solid cattail cylinder. Show full plant and base with tiny rhizome hint. Selected whole height 2 m; no pot.",
+    "folder": "B07_plant_phragmites_australis",
+    "selected_length_mm": 2000,
+    "presentation_factor": 0.0045,
+    "measure_kind": "whole_plant_height",
+    "game_scale": 1,
+    "scale_policy": "distant_background",
+    "details": {
+      "selected_height_m": 2
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B08",
+    "name": "plant_persicaria_thunbergii",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B08 Persicaria thunbergii: low scrambling angular reddish-green zigzag stem with downward-pointing small prickles at nodes, alternate arrowhead-shaped green leaves, two small clusters of pale pink and white flowers at ends. Not a tall reed, not a dense flowering shrub. Stem length around 1 m in source, shown as an illustrative shoot module, individual leaf sizes unknown.",
+    "folder": "B08_plant_persicaria_thunbergii",
+    "selected_length_mm": 1000,
+    "presentation_factor": 0.008,
+    "measure_kind": "shoot_extent_design_proxy",
+    "game_scale": 1,
+    "scale_policy": "distant_background",
+    "details": {
+      "measurement_note": "Source is stem arc length; chosen display extent is an artistic proxy, not measured leaf size."
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B09",
+    "name": "env_sediment",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B09 An editable 3D reference for a compact underwater sediment tile: low irregular slab of gray-brown silt and clay, visible subtle horizontal sediment layers on sides, 6 rounded gravel pebbles and a few dark organic fragments scattered on top. No water plane, no animals, no plants, no biome diorama. A calm clean game background surface; sediment particle sizes and tile size are design choices, no physical scale claim.",
+    "folder": "B09_env_sediment",
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "tile_width_design",
+    "game_scale": 1,
+    "scale_policy": "design_module",
+    "details": {
+      "design_length_bu": 6
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B0A",
+    "name": "env_periphyton_biofilm",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B0A A thin attached periphyton biofilm layer: irregular pale olive-green to brown translucent organic patch, subtle sparse dot colonies, gently ragged lobed boundary, flat coating adhering to a substrate. Show top, edge thickness, underside and detail on neutral demonstration surface. Do not make moss, grass, tentacles or independent animals. Microbe composition and physical size UNKNOWN; no food claim.",
+    "folder": "B0A_env_periphyton_biofilm",
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "patch_width_design",
+    "game_scale": 1,
+    "scale_policy": "design_module",
+    "details": {
+      "design_length_bu": 3,
+      "semi_transparent": true
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  },
+  {
+    "id": "B0B",
+    "name": "env_diatoms_micro",
+    "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B0B A conceptual microscopy-only decorative diatom surface pattern: sparse warm golden-brown translucent glassy oval and elongated shell-like motifs in an irregular flat attached patch, very restrained internal striations. No specific species identification, no size scale, no giant organisms or swimming characters. Show top pattern, oblique surface, shallow side, detail. Clearly caption MICROSCOPY CONCEPT / SCALE UNASSIGNED.",
+    "folder": "B0B_env_diatoms_micro",
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "microscopy_only",
+    "game_scale": 1,
+    "scale_policy": "microscopy_only",
+    "details": {
+      "design_length_bu": 3,
+      "physical_scale_unassigned": true
+    },
+    "sheet_review": "reviewed_with_geometry_corrections",
+    "revision": "background-r02"
+  }
+]

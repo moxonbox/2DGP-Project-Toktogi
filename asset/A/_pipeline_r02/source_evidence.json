@@ -1,0 +1,14 @@
+{
+  "C011_manifest": {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/playable_manifest.json",
+    "sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef"
+  },
+  "pipeline": {
+    "path": "document/markdown/AssetPipeLine.md",
+    "sha256": "bd83bc2c489070702bced19bf54d6019f6c5e56e885ac958ac9b73741efa8239"
+  },
+  "previous_bundle": {
+    "path": "asset/A/_pipeline_r01/asset_A_environment_r01.zip",
+    "sha256": "f21b16fa4b825fe39d3aec5966a52f2d9e0735735417b0d1f4816412336e2091"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variant": "female",
+  "view": "top",
+  "frames": 288,
+  "minimum_margin": 56,
+  "normal_error": 0.006650333382466123,
+  "clips": {
+    "hover_or_school": 18,
+    "cruise": 18,
+    "turn": 18,
+    "surface_rise": 18,
+    "surface_peek": 18,
+    "surface_gape": 18,
+    "surface_submerge": 18,
+    "surface_snap": 18,
+    "swallow": 18,
+    "forage_cruise": 18,
+    "evade_or_dive": 18,
+    "breach_launch": 18,
+    "airborne_arc": 18,
+    "surface_fall": 18,
+    "water_reentry": 18,
+    "out_of_water": 18
+  },
+  "source_blend_sha256": "80ca4806792446172fef421b2f053f631049afbe7210e0f9829e9e95ae8ace2a",
+  "status": "PASS",
+  "seconds": 327.77014350000536
+}

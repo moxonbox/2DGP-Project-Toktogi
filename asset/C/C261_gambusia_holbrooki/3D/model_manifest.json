@@ -1,7 +1,7 @@
 {
   "asset_id": "C261_gambusia_holbrooki",
   "object_id": "predator_gambusia_holbrooki",
-  "revision": "gambusia-r01",
+  "revision": "gambusia-r03",
   "pipeline": "AssetPipeLine v2.3",
   "blender": "5.3.0",
   "variants": {

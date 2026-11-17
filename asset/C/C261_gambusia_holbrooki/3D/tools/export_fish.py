@@ -24,7 +24,7 @@ assert SEX in VARIANTS and VIEW in ('left','right','front','top')
 MODEL=json.loads(bpy.data.texts['ASSET_MANIFEST.json'].as_string())
 PROFILE=MODEL['variants'][SEX];SIZE=PROFILE['cell'];SL=PROFILE['sl_bu'];PAD=2;CELL=SIZE+4
 PASSES=('sprite','base','normal','ao','orm','emissive','depth','watermask')
-OUT=ROOT/'2D/gambusia-r01';OUT.mkdir(exist_ok=True)
+OUT=ROOT/'2D/gambusia-r03';OUT.mkdir(exist_ok=True)
 PALETTE=np.array([list(bytes.fromhex(h)) for h in '24302d 39443d 50594a 68715f 808a7a 9aa495 aeb7ac c1c9bf d2d7cb e0e3d5 eaeadb f3f1e3 fbf7e9'.split()])
 scene=bpy.context.scene;camera=scene.camera;skin=bpy.data.objects['Fish_'+SEX]
 yaw=2.00151174696589 if VIEW=='right' else 0.
@@ -53,7 +53,7 @@ def read_texture(path):
     return srgb_to_linear(np.flipud(rows[:,1:].reshape(height,width,4))[:,:,:3]/255.)
 
 
-texture=read_texture(ROOT/f'3D/textures/gambusia_{SEX}_basecolor_r01.png')
+texture=read_texture(ROOT/f'3D/textures/gambusia_{SEX}_basecolor_r03.png')
 
 
 def sample_texture(uv):
@@ -141,7 +141,10 @@ for action in DESIGNS:
             depth=np.rint(np.clip((height+SL)/(2*SL),0,1)*65535).astype(np.uint16)
             maps['depth'][:,:,0]=(depth>>8).astype(np.uint8);maps['depth'][:,:,1]=(depth&255).astype(np.uint8)
             maps['watermask'][:,:,0]=np.where(coverage&(height>0),255,0);maps['watermask'][:,:,1]=np.where(coverage&(height<=0),255,0)
-            light=np.array([-.36,.57,.73]);dot=np.clip(normal@light,0,1);band=np.digitize(dot,[.14,.42,.72])
+            # Reference-directed soft fill affects Sprite only; data normals stay physical.
+            light=np.array([.10,-.35,.93]);light/=np.linalg.norm(light)
+            wrap=np.where(fin,2.,.25)
+            dot=np.clip((normal@light+wrap)/(1+wrap),0,1);band=np.digitize(dot,[.14,.42,.72])
             multipliers=np.array([[.36,.42,.51],[.53,.60,.66],[.73,.77,.80],[.95,.95,.92]])
             colors=np.rint(linear_to_srgb(lin*multipliers[band])*255).astype(np.uint8)
             body=mask&~fin&~eye&(id_opaque>=0)
@@ -150,7 +153,7 @@ for action in DESIGNS:
             body_values[material[indices]==0]=PALETTE[nearest[material[indices]==0]];colors[body]=body_values
             glint=eye&((((texuv[:,:,0]-.815)/.017)**2+((texuv[:,:,1]-.48)/.022)**2<1)|(((texuv[:,:,0]-.925)/.017)**2+((texuv[:,:,1]-.48)/.022)**2<1))
             gain=min(1,float(eye.sum())/32)
-            colors[glint]=np.rint(np.array([182,191,194])*gain).astype(np.uint8)
+            colors[glint]=np.rint(np.array([243,241,230])*gain).astype(np.uint8)
             maps['emissive'][glint,:3]=np.rint(255*.12*gain).astype(np.uint8)
             maps['sprite'][:,:,:3]=colors;maps['sprite'][:,:,3]=surface_alpha
             padded=np.pad(coverage,2);dilated=np.zeros_like(coverage)

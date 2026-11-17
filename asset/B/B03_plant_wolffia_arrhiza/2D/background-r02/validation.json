@@ -1,0 +1,181 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "frond",
+      "vertices": 482,
+      "triangles": 960
+    }
+  ],
+  "triangles": 960,
+  "bones": 0,
+  "views": {
+    "left": {
+      "cell": [
+        96,
+        64
+      ],
+      "margin": 13,
+      "normal_error": 0.005719896677428116,
+      "surface_pixels": 1705,
+      "seconds": 0.2321778000332415
+    },
+    "right": {
+      "cell": [
+        96,
+        64
+      ],
+      "margin": 13,
+      "normal_error": 0.0052916508878742,
+      "surface_pixels": 1700,
+      "seconds": 0.17701019998639822
+    },
+    "yaw_045": {
+      "cell": [
+        80,
+        80
+      ],
+      "margin": 13,
+      "normal_error": 0.00590749151945269,
+      "surface_pixels": 1466,
+      "seconds": 0.1796242999844253
+    },
+    "yaw_090": {
+      "cell": [
+        96,
+        80
+      ],
+      "margin": 18,
+      "normal_error": 0.006086819413139599,
+      "surface_pixels": 1552,
+      "seconds": 0.17067670001415536
+    },
+    "yaw_135": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 13,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 1789,
+      "seconds": 0.16668729996308684
+    },
+    "yaw_180": {
+      "cell": [
+        96,
+        64
+      ],
+      "margin": 13,
+      "normal_error": 0.005719896677427894,
+      "surface_pixels": 1704,
+      "seconds": 0.21868970000650734
+    },
+    "yaw_225": {
+      "cell": [
+        80,
+        80
+      ],
+      "margin": 13,
+      "normal_error": 0.006025674917319757,
+      "surface_pixels": 1462,
+      "seconds": 0.17805809999117628
+    },
+    "yaw_270": {
+      "cell": [
+        96,
+        80
+      ],
+      "margin": 18,
+      "normal_error": 0.0055981378551529515,
+      "surface_pixels": 1554,
+      "seconds": 0.17412029998376966
+    },
+    "yaw_315": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 13,
+      "normal_error": 0.005781059762439034,
+      "surface_pixels": 1790,
+      "seconds": 0.22224580001784489
+    },
+    "ortho_front": {
+      "cell": [
+        80,
+        64
+      ],
+      "margin": 14,
+      "normal_error": 0.005536278670188022,
+      "surface_pixels": 1148,
+      "seconds": 0.19772809999994934
+    },
+    "ortho_back": {
+      "cell": [
+        80,
+        64
+      ],
+      "margin": 14,
+      "normal_error": 0.005414025440695802,
+      "surface_pixels": 1148,
+      "seconds": 0.13610719999996945
+    },
+    "ortho_left": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 15,
+      "normal_error": 0.0056587298725438995,
+      "surface_pixels": 1630,
+      "seconds": 0.15834899997571483
+    },
+    "ortho_right": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 15,
+      "normal_error": 0.005781059762439034,
+      "surface_pixels": 1630,
+      "seconds": 0.1632818999933079
+    },
+    "ortho_top": {
+      "cell": [
+        112,
+        80
+      ],
+      "margin": 14,
+      "normal_error": 0.006453608379858755,
+      "surface_pixels": 2622,
+      "seconds": 0.20345670002279803
+    },
+    "ortho_underside": {
+      "cell": [
+        112,
+        80
+      ],
+      "margin": 14,
+      "normal_error": 0.005969373805238876,
+      "surface_pixels": 2622,
+      "seconds": 0.18934889999218285
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r02": {
+      "relative": "//textures\\plant_wolffia_arrhiza_basecolor_r02.png",
+      "sha256": "b7a7478d592f6fd7906c0cda852d3eae9afd62a04cc0af5f89d905691d17192f",
+      "packed_matches": true
+    },
+    "plant_wolffia_arrhiza_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_wolffia_arrhiza_sheet_r01.png",
+      "sha256": "74245adc14b1d003eafa787690492535641948c6513480f36ca9257316adfad9",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 2068480,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

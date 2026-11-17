@@ -1,7 +1,7 @@
 {
   "asset_id": "C261_gambusia_holbrooki",
   "object_id": "predator_gambusia_holbrooki",
-  "revision": "gambusia-r01",
+  "revision": "gambusia-r03",
   "pipeline": {
     "version": "2.3",
     "path": "../../../document/markdown/AssetPipeLine.md",
@@ -9,7 +9,8 @@
   },
   "size": {
     "path": "../../../document/markdown/AssetSize.md",
-    "sha256": "b3277c28c89025b787f215a913fbb078d2d87a34d1f6628b561bac49c8a8c466"
+    "sha256": "9762f9dc26f35193a3b8ba8880867eab9a965b0eaef98742a237696ec96caac9",
+    "review": "Current v1.1 read again: C261 SL maxima, C011 proxy and density unchanged; approved art factor 0.1 retained"
   },
   "selection": {
     "taxon": "Gambusia holbrooki",
@@ -170,5 +171,62 @@
       "readable pectoral fans and smaller pelvic fins",
       "UV-fixed fin rays and speckles"
     ]
+  },
+  "predecessor": {
+    "revision": "gambusia-r01",
+    "archive": "3D/versions/gambusia-r01.7z",
+    "restoration": "3D/versions/restore_map.json"
+  },
+  "imagegen_improvement": {
+    "tool": "built-in GPT Image",
+    "model_version": null,
+    "seed": null,
+    "date": "2026-11-17",
+    "method": "GPT Image unlit UV pigment edit + reference-directed native eye/gill refinement + full native pose/view re-export",
+    "preserved": [
+      "rig",
+      "motion timing",
+      "cameras",
+      "cell size",
+      "pixel density",
+      "body palette",
+      "outline",
+      "SL markers",
+      "simulation policy"
+    ],
+    "changes": [
+      "large rounded glossy eyes",
+      "outward gill normals and raised pale gill cover",
+      "narrow olive back and luminous ivory silver flanks/belly",
+      "thin fin rays and sparse dots",
+      "Sprite-only front soft fill and ivory glints"
+    ],
+    "generated_sources": [
+      "imagegen/female_uv_atlas_raw.png",
+      "imagegen/male_uv_atlas_raw.png"
+    ],
+    "direct_style_key_runtime": false,
+    "appearance_target": "imagegen/user_appearance_target.png"
+  },
+  "sprite_lighting": {
+    "reason": "user supplied appearance target: luminous cheek/belly with dark olive back; species-specific art direction permitted by pipeline section 8",
+    "normalized_direction_source": [
+      0.1,
+      -0.35,
+      0.93
+    ],
+    "wrapped_dot": "clamp((dot(N,L)+0.25)/1.25,0,1)",
+    "thresholds_unchanged": true,
+    "linear_multipliers_unchanged": true,
+    "glint_sRGB": [
+      243,
+      241,
+      230
+    ],
+    "emissive_strength": 0.12,
+    "default_gameplay_mode": "sprite",
+    "physical_relit_mode": "retained on L; separate continuous lighting, not identical to Sprite",
+    "fin_wrap": 2.0,
+    "body_wrap": 0.25
   }
 }

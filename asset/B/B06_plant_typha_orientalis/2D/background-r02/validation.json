@@ -1,0 +1,246 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "cylindrical_inflorescence",
+      "vertices": 96,
+      "triangles": 188
+    },
+    {
+      "name": "leaf_sheath_0",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "leaf_sheath_1",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "leaf_sheath_2",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "leaf_sheath_3",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "leaf_sheath_4",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "leaf_sheath_5",
+      "vertices": 54,
+      "triangles": 104
+    },
+    {
+      "name": "strap_leaf_1",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "strap_leaf_2",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "strap_leaf_3",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "strap_leaf_4",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "strap_leaf_5",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "strap_leaf_6",
+      "vertices": 136,
+      "triangles": 268
+    },
+    {
+      "name": "vertical_stem",
+      "vertices": 130,
+      "triangles": 256
+    }
+  ],
+  "triangles": 2676,
+  "bones": 0,
+  "views": {
+    "left": {
+      "cell": [
+        288,
+        512
+      ],
+      "margin": 16,
+      "normal_error": 0.006588408677871249,
+      "surface_pixels": 23435,
+      "seconds": 0.5389153999858536
+    },
+    "right": {
+      "cell": [
+        224,
+        512
+      ],
+      "margin": 14,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 24148,
+      "seconds": 0.538133000023663
+    },
+    "yaw_045": {
+      "cell": [
+        240,
+        512
+      ],
+      "margin": 13,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 21016,
+      "seconds": 0.566212399979122
+    },
+    "yaw_090": {
+      "cell": [
+        256,
+        512
+      ],
+      "margin": 19,
+      "normal_error": 0.006278843038372117,
+      "surface_pixels": 24223,
+      "seconds": 0.5053912000148557
+    },
+    "yaw_135": {
+      "cell": [
+        240,
+        512
+      ],
+      "margin": 18,
+      "normal_error": 0.006331360245143802,
+      "surface_pixels": 23533,
+      "seconds": 0.5558549999841489
+    },
+    "yaw_180": {
+      "cell": [
+        288,
+        512
+      ],
+      "margin": 16,
+      "normal_error": 0.006402657720362415,
+      "surface_pixels": 23237,
+      "seconds": 0.503677400003653
+    },
+    "yaw_225": {
+      "cell": [
+        240,
+        512
+      ],
+      "margin": 13,
+      "normal_error": 0.006392486168711242,
+      "surface_pixels": 20993,
+      "seconds": 0.5760837999987416
+    },
+    "yaw_270": {
+      "cell": [
+        256,
+        512
+      ],
+      "margin": 19,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 23890,
+      "seconds": 0.5464506999705918
+    },
+    "yaw_315": {
+      "cell": [
+        240,
+        512
+      ],
+      "margin": 18,
+      "normal_error": 0.006575841667598947,
+      "surface_pixels": 23324,
+      "seconds": 0.4819615000160411
+    },
+    "ortho_front": {
+      "cell": [
+        256,
+        544
+      ],
+      "margin": 15,
+      "normal_error": 0.006025674917319757,
+      "surface_pixels": 25318,
+      "seconds": 0.5651400000206195
+    },
+    "ortho_back": {
+      "cell": [
+        256,
+        544
+      ],
+      "margin": 15,
+      "normal_error": 0.006025674917319757,
+      "surface_pixels": 25318,
+      "seconds": 0.5101011000224389
+    },
+    "ortho_left": {
+      "cell": [
+        224,
+        544
+      ],
+      "margin": 15,
+      "normal_error": 0.006464570847540818,
+      "surface_pixels": 25445,
+      "seconds": 0.4983026999980211
+    },
+    "ortho_right": {
+      "cell": [
+        224,
+        544
+      ],
+      "margin": 15,
+      "normal_error": 0.006464570847540818,
+      "surface_pixels": 25445,
+      "seconds": 0.4843117999844253
+    },
+    "ortho_top": {
+      "cell": [
+        224,
+        256
+      ],
+      "margin": 14,
+      "normal_error": 0.006526487833136696,
+      "surface_pixels": 14036,
+      "seconds": 0.43313650001073256
+    },
+    "ortho_underside": {
+      "cell": [
+        224,
+        256
+      ],
+      "margin": 14,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 14036,
+      "seconds": 0.4943968000006862
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r02": {
+      "relative": "//textures\\plant_typha_orientalis_basecolor_r02.png",
+      "sha256": "5bb6d7eb17d8c6522a5d71e0f3dd007c45c0539e29a0377db8532859117fc352",
+      "packed_matches": true
+    },
+    "plant_typha_orientalis_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_typha_orientalis_sheet_r01.png",
+      "sha256": "3a52df41c6a47a794b90fc4c9420e12c9b292bb07358893a86e5fc2178552cd7",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 36003840,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

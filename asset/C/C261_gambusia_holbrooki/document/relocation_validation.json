@@ -1,13 +1,10 @@
 {
   "status": "PASS",
-  "verified_previous_delivery_manifest_sha256": "b057625e91f4006821b33ec699c2f3c8df54a152a498e5df4a05f851e510b4b6",
-  "publish": {
-    "status": "PASS",
-    "destination": "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\asset\\C\\C261_gambusia_holbrooki",
-    "copied_files": 5358,
-    "verified_files": 5361,
-    "bytes": 1651489659
-  },
+  "copied_files": 5363,
+  "retired_live_files": 1457,
+  "predecessor_restored_files": 5362,
+  "archive_sha256": "859298d39cc1e9630cf36ea3ffc04cc9092cf89555e215a66befc08324a882e7",
+  "runtime_signature": "ff6c44e78ecd5e72d2ab83f1d3c42ed93a59cbb87c2c1c04a1aa1e84fd2ae997",
   "native_reopen": {
     "status": "PASS",
     "packed_images": [
@@ -21,15 +18,10 @@
       "select_pose.py",
       "motion_spec.py",
       "export_fish.py",
-      "verify_fish.py"
+      "verify_fish.py",
+      "imagegen_surface.py"
     ],
-    "relocated_file": "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\asset\\C\\C261_gambusia_holbrooki\\3D\\gambusia_holbrooki_r01.blend",
+    "relocated_file": "C:\\Users\\user\\Desktop\\BEng_Work\\022_2D_PyGame\\2DGP-Project-Toktogi\\asset\\C\\C261_gambusia_holbrooki\\3D\\gambusia_holbrooki_r03.blend",
     "saved_changes": false
-  },
-  "runtime_reopen": {
-    "status": "PASS",
-    "relocated_bundle_signature": "a60979e4b0c67f4615f110e4a389a908aac9a09e5c6f2a623a549820d6f58e20",
-    "both_variants_loaded": true,
-    "original_specs_unchanged": true
   }
 }

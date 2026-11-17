@@ -1,0 +1,42 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "leaf_plane_thickened": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "leaf_midrib": {
+      "vertices": 108,
+      "triangles": 212
+    },
+    "broken_petiole": {
+      "vertices": 24,
+      "triangles": 44
+    }
+  },
+  "triangle_count": 736,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -2.4820094108581543,
+      -0.9731189608573914,
+      0.03750000149011612
+    ],
+    [
+      2.1721410751342773,
+      0.9731191396713257,
+      0.6325438022613525
+    ]
+  ],
+  "extent_bu": [
+    4.654150485992432,
+    1.9462380409240723,
+    0.5950437784194946
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 15,
+  "blend_sha256": "2ac4ae455a7bd0c74a4e0549b461e3a9d9d7fc42a40395bb5e1cbd885e9cf28a",
+  "static_root": true
+}

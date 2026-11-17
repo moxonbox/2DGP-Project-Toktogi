@@ -1,0 +1,260 @@
+[
+  {
+    "asset_id": "plant_lemna_minor",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "05ef361bf4f8d901cfc91962636ba3f6889257a5769bd4037a1b78fe2eb219b0",
+      "05ef361bf4f8d901cfc91962636ba3f6889257a5769bd4037a1b78fe2eb219b0",
+      "05ef361bf4f8d901cfc91962636ba3f6889257a5769bd4037a1b78fe2eb219b0",
+      "05ef361bf4f8d901cfc91962636ba3f6889257a5769bd4037a1b78fe2eb219b0",
+      "05ef361bf4f8d901cfc91962636ba3f6889257a5769bd4037a1b78fe2eb219b0"
+    ],
+    "triangles": 1556,
+    "packed_images": [
+      {
+        "image": "M_plant_lemna_minor.png",
+        "bytes": 9409,
+        "external_matches": true
+      },
+      {
+        "image": "plant_lemna_minor_sheet_r01.png",
+        "bytes": 1322973,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "7b2d2e5a547afabc6b50ad5c9e4b1ee820ee02d7ba32d208e880f8b5af3cde15"
+  },
+  {
+    "asset_id": "env_still_water",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "0198c53e4e0b05fd38e9afb8086365ba33ecbc0d2b6f668e7aee9b4722a5fca7",
+      "0198c53e4e0b05fd38e9afb8086365ba33ecbc0d2b6f668e7aee9b4722a5fca7",
+      "0198c53e4e0b05fd38e9afb8086365ba33ecbc0d2b6f668e7aee9b4722a5fca7",
+      "0198c53e4e0b05fd38e9afb8086365ba33ecbc0d2b6f668e7aee9b4722a5fca7",
+      "0198c53e4e0b05fd38e9afb8086365ba33ecbc0d2b6f668e7aee9b4722a5fca7"
+    ],
+    "triangles": 2302,
+    "packed_images": [
+      {
+        "image": "env_still_water_sheet_r01.png",
+        "bytes": 1244864,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_still_water.png",
+        "bytes": 8663,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "05e1a56713fa0810e66046f9160a09d68873bd49fa50ccea1bd6085cfeeb20a3"
+  },
+  {
+    "asset_id": "env_shore_slope",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "74874210d10c14700f544d23c2cf174ad7d806cc9db9b586ee0440d47f1e7cb9",
+      "74874210d10c14700f544d23c2cf174ad7d806cc9db9b586ee0440d47f1e7cb9",
+      "74874210d10c14700f544d23c2cf174ad7d806cc9db9b586ee0440d47f1e7cb9",
+      "74874210d10c14700f544d23c2cf174ad7d806cc9db9b586ee0440d47f1e7cb9",
+      "74874210d10c14700f544d23c2cf174ad7d806cc9db9b586ee0440d47f1e7cb9"
+    ],
+    "triangles": 3298,
+    "packed_images": [
+      {
+        "image": "env_shore_slope_sheet_r01.png",
+        "bytes": 1346542,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_shore_slope.png",
+        "bytes": 7510,
+        "external_matches": true
+      },
+      {
+        "image": "M_gravel.png",
+        "bytes": 8023,
+        "external_matches": true
+      },
+      {
+        "image": "M_puddle.png",
+        "bytes": 8133,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "94498922f4832acb16dd46e17421e3abbf510d0fa202a29437a09eff0faffba0"
+  },
+  {
+    "asset_id": "env_wet_wood",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "0b38acb004d806fc010975f78760ec53e71dbd9bd64967bd34fd3c402b6fd431",
+      "0b38acb004d806fc010975f78760ec53e71dbd9bd64967bd34fd3c402b6fd431",
+      "0b38acb004d806fc010975f78760ec53e71dbd9bd64967bd34fd3c402b6fd431",
+      "0b38acb004d806fc010975f78760ec53e71dbd9bd64967bd34fd3c402b6fd431",
+      "0b38acb004d806fc010975f78760ec53e71dbd9bd64967bd34fd3c402b6fd431"
+    ],
+    "triangles": 1920,
+    "packed_images": [
+      {
+        "image": "env_wet_wood_sheet_r01.png",
+        "bytes": 1318881,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_wood.png",
+        "bytes": 16535,
+        "external_matches": true
+      },
+      {
+        "image": "M_wood_end.png",
+        "bytes": 35669,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "9c1846c3b05283da9b78c3bc2ad8404e25f04243e7051aa5983fe15b37cc5a7b"
+  },
+  {
+    "asset_id": "env_wet_stone",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "a6337aa1cc762f29756df6a75b7922c0c9ada2c77bd16be7dbefb6f03ab359d1",
+      "a6337aa1cc762f29756df6a75b7922c0c9ada2c77bd16be7dbefb6f03ab359d1",
+      "a6337aa1cc762f29756df6a75b7922c0c9ada2c77bd16be7dbefb6f03ab359d1",
+      "a6337aa1cc762f29756df6a75b7922c0c9ada2c77bd16be7dbefb6f03ab359d1",
+      "a6337aa1cc762f29756df6a75b7922c0c9ada2c77bd16be7dbefb6f03ab359d1"
+    ],
+    "triangles": 320,
+    "packed_images": [
+      {
+        "image": "env_wet_stone_sheet_r01.png",
+        "bytes": 1343103,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_stone.png",
+        "bytes": 7392,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "f87f33b4d0a8771d61739e7ac2e4bfc6bab5b2a44edc296c0cd36a6146fb7f17"
+  },
+  {
+    "asset_id": "env_wet_leaf_litter",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "8f806240b1a05cf923614493c1787e04f7cce3d3310002c12affa7f8823064e8",
+      "8f806240b1a05cf923614493c1787e04f7cce3d3310002c12affa7f8823064e8",
+      "8f806240b1a05cf923614493c1787e04f7cce3d3310002c12affa7f8823064e8",
+      "8f806240b1a05cf923614493c1787e04f7cce3d3310002c12affa7f8823064e8",
+      "8f806240b1a05cf923614493c1787e04f7cce3d3310002c12affa7f8823064e8"
+    ],
+    "triangles": 736,
+    "packed_images": [
+      {
+        "image": "env_wet_leaf_litter_sheet_r01.png",
+        "bytes": 1363760,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_leaf_litter.png",
+        "bytes": 15992,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "2ac4ae455a7bd0c74a4e0549b461e3a9d9d7fc42a40395bb5e1cbd885e9cf28a"
+  },
+  {
+    "asset_id": "env_algae_patch",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "e235c2d32fe5e672a34ea458c2c70c3aacaf24b925fc792062120d6800d8c803",
+      "e235c2d32fe5e672a34ea458c2c70c3aacaf24b925fc792062120d6800d8c803",
+      "e235c2d32fe5e672a34ea458c2c70c3aacaf24b925fc792062120d6800d8c803",
+      "e235c2d32fe5e672a34ea458c2c70c3aacaf24b925fc792062120d6800d8c803",
+      "e235c2d32fe5e672a34ea458c2c70c3aacaf24b925fc792062120d6800d8c803"
+    ],
+    "triangles": 1920,
+    "packed_images": [
+      {
+        "image": "env_algae_patch_sheet_r01.png",
+        "bytes": 1276713,
+        "external_matches": true
+      },
+      {
+        "image": "M_algae_ochre.png",
+        "bytes": 9929,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_algae_patch.png",
+        "bytes": 10091,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "view_selector": "PASS: all 15 views forward/reverse, unknown rejected, original mesh restored",
+    "source_blend_sha256": "225ab63162a3ba9bf0dde6f86fe0e780c2c3f738bb3c929eb517bff7baf8f902"
+  }
+]

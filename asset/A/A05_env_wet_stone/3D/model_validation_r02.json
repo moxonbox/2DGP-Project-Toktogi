@@ -1,0 +1,34 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "rock_core": {
+      "vertices": 162,
+      "triangles": 320
+    }
+  },
+  "triangle_count": 320,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -1.4480940103530884,
+      -1.061935544013977,
+      -0.19307920336723328
+    ],
+    [
+      1.4480940103530884,
+      1.061935544013977,
+      1.0131042003631592
+    ]
+  ],
+  "extent_bu": [
+    2.8961880207061768,
+    2.123871088027954,
+    1.2061834335327148
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 15,
+  "blend_sha256": "f87f33b4d0a8771d61739e7ac2e4bfc6bab5b2a44edc296c0cd36a6146fb7f17",
+  "static_root": true
+}

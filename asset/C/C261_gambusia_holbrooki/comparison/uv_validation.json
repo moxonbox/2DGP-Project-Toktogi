@@ -2,7 +2,7 @@
   "female": {
     "triangles": 4160,
     "zero_UV_area": 776,
-    "negative_UV_winding": 1632,
+    "negative_UV_winding": 1392,
     "zero_UV_by_part": {
       "body_head_continuous": 36,
       "caudal_fin": 92,
@@ -28,7 +28,7 @@
   "male": {
     "triangles": 4164,
     "zero_UV_area": 732,
-    "negative_UV_winding": 1728,
+    "negative_UV_winding": 1488,
     "zero_UV_by_part": {
       "body_head_continuous": 36,
       "caudal_fin": 92,

@@ -1,0 +1,34 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "surface_skin": {
+      "vertices": 8,
+      "triangles": 12
+    }
+  },
+  "triangle_count": 12,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -3.571965217590332,
+      -2.2204108238220215,
+      -0.0115847522392869
+    ],
+    [
+      3.571965217590332,
+      2.2204108238220215,
+      0.0115847522392869
+    ]
+  ],
+  "extent_bu": [
+    7.143930435180664,
+    4.440821647644043,
+    0.0231695044785738
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 7,
+  "blend_sha256": "c89e4cf2c491c0920e295fb44c23647f96b925609a78dc1bc39678994b1d5d8f",
+  "static_root": true
+}

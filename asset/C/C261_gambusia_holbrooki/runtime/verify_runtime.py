@@ -22,7 +22,7 @@ def memory_usage():
     return {'working_set_bytes':counters.WorkingSetSize,'peak_working_set_bytes':counters.PeakWorkingSetSize,'private_bytes':counters.PrivateUsage}
 
 def run():
-    start=time.perf_counter();bundle=FishBundle(ROOT/'2D/gambusia-r01/gambusia_holbrooki_r01.zip')
+    start=time.perf_counter();bundle=FishBundle(ROOT/'2D/gambusia-r03/gambusia_holbrooki_r03.zip')
     report={'status':'PASS','bundle_load_seconds':time.perf_counter()-start,'physics':{},'manifest_negative':[]}
     for variant in VARIANTS:
         results={}

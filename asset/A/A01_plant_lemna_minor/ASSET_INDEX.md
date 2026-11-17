@@ -1,12 +1,11 @@
-# A01 나도좀개구리밥 — 에셋 색인
+# A01_plant_lemna_minor — 나도좀개구리밥
 
-2026-11-17 · environment-r01 · **정적 제작 후보 / 게임 미연결**
+현재 제작본 **environment-r02** · 2026-11-17. 엽상체를 비대칭 곡면으로 다듬고 단일 뿌리·뿌리골무·부착부를 보완했다. 희미한 세 맥은 UV에 고정했다. 1×에서 점선처럼 보이던 가는 돌출 맥은 제거했다.
 
-- [제작 범위·규격·보류](document/production_r01.md)
-- [편집용 Blender](3D/plant_lemna_minor_r01.blend) · [메시 검사](3D/model_validation.json)
-- [GPT Image 시트](sheet/plant_lemna_minor_sheet_r01.png) · [실제 Blender 시점](sheet/plant_lemna_minor_blender_views_r01.png) · [생성 프롬프트](sheet/prompt.txt)
-- [5패스 manifest](2D/environment-r01/manifest.json) · [게임 시점 Sprite](2D/environment-r01/single_frond/game_left/sprite.png)
-- [C011 1×·회색조 비교](2D/environment-r01/style_compare.png) · [공유 광원 비교](2D/environment-r01/shared_light_compare.png)
-- [A 전체 색인](../ASSET_INDEX.md)
+- [모델](3D/plant_lemna_minor_r02.blend) · [제작 기록](document/production_r02.md) · [계약](document/production_contract_r02.json)
+- [C011와 9방향 비교](2D/environment-r02/game_views_C011.png) · [회전 APNG](2D/environment-r02/turntable.png) · [전후 비교](2D/environment-r02/before_after.png)
+- [6면 시트](sheet/plant_lemna_minor_blender_views_r02.png) · [UV 체크](2D/environment-r02/uv_checker_compare.png)
+- [manifest/5패스 아틀라스 좌표](2D/environment-r02/manifest.json) · [Sprite 아틀라스](2D/environment-r02/game_atlas_sprite.png)
+- [r01 제작 기록](document/production_r01.md) · [원본 GPT 시트](sheet/plant_lemna_minor_sheet_r01.png) · [전체 A 색인](../ASSET_INDEX.md)
 
-범위: single_frond 정적 1표본 × 7시점. 428삼각형·0본. 기존 문서와 파일명·밑줄을 보존했다.
+게임 9시점 + 검수 6시점 = 15셀. 셀 384px, 5패스, 삼각형 1,556, 본 0. r01 파일은 원래 위치에 보존했다. 게임 연결·실기 검증·DEC-06은 보류다.

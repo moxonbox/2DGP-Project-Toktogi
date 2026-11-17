@@ -1,0 +1,66 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "slope_base": {
+      "vertices": 291,
+      "triangles": 578
+    },
+    "gravel_0": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_1": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_2": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_3": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_4": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_5": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "gravel_6": {
+      "vertices": 162,
+      "triangles": 320
+    },
+    "shallow_puddle": {
+      "vertices": 242,
+      "triangles": 480
+    }
+  },
+  "triangle_count": 3298,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -2.8961880207061768,
+      -1.429707407951355,
+      -0.07999999821186066
+    ],
+    [
+      2.8961880207061768,
+      1.429707407951355,
+      0.965395987033844
+    ]
+  ],
+  "extent_bu": [
+    5.7923760414123535,
+    2.85941481590271,
+    1.0453959703445435
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 15,
+  "blend_sha256": "94498922f4832acb16dd46e17421e3abbf510d0fa202a29437a09eff0faffba0",
+  "static_root": true
+}

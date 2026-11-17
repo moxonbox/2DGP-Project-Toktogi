@@ -6,7 +6,7 @@ import bpy
 def select_pose(variant='female',action='hover_or_school',phase='mid',u=0.):
     if not math.isfinite(u) or not 0<=u<=1:
         raise ValueError('pose fraction must be finite and within 0..1')
-    name=f'GH_{variant}_{action}_{phase}_r01'
+    name=f'GH_{variant}_{action}_{phase}_r03'
     if name not in bpy.data.actions:
         raise ValueError('unsupported Action: '+name)
     for sex in ('female','male'):

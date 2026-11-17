@@ -1,0 +1,286 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "frond",
+      "vertices": 482,
+      "triangles": 960
+    },
+    {
+      "name": "root_01",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_02",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_03",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_04",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_05",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_06",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_07",
+      "vertices": 184,
+      "triangles": 364
+    },
+    {
+      "name": "root_cap_01",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_02",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_03",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_04",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_05",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_06",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_cap_07",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "vein_01",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_02",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_03",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_04",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_05",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_06",
+      "vertices": 108,
+      "triangles": 212
+    },
+    {
+      "name": "vein_07",
+      "vertices": 108,
+      "triangles": 212
+    }
+  ],
+  "triangles": 5832,
+  "bones": 0,
+  "views": {
+    "left": {
+      "cell": [
+        432,
+        2416
+      ],
+      "margin": 16,
+      "normal_error": 0.006453608379858755,
+      "surface_pixels": 106622,
+      "seconds": 1.5681801000027917
+    },
+    "right": {
+      "cell": [
+        432,
+        2400
+      ],
+      "margin": 16,
+      "normal_error": 0.00639248616871102,
+      "surface_pixels": 104890,
+      "seconds": 1.5652178999735042
+    },
+    "yaw_045": {
+      "cell": [
+        384,
+        2416
+      ],
+      "margin": 14,
+      "normal_error": 0.006216941482118599,
+      "surface_pixels": 95467,
+      "seconds": 1.5484802999999374
+    },
+    "yaw_090": {
+      "cell": [
+        400,
+        2416
+      ],
+      "margin": 14,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 99510,
+      "seconds": 1.7970777999726124
+    },
+    "yaw_135": {
+      "cell": [
+        448,
+        2384
+      ],
+      "margin": 13,
+      "normal_error": 0.006278843038371895,
+      "surface_pixels": 106397,
+      "seconds": 2.2377770000020973
+    },
+    "yaw_180": {
+      "cell": [
+        432,
+        2400
+      ],
+      "margin": 16,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 106125,
+      "seconds": 2.2709111000294797
+    },
+    "yaw_225": {
+      "cell": [
+        384,
+        2416
+      ],
+      "margin": 14,
+      "normal_error": 0.006270230608479643,
+      "surface_pixels": 95214,
+      "seconds": 1.914556999981869
+    },
+    "yaw_270": {
+      "cell": [
+        400,
+        2416
+      ],
+      "margin": 14,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 99688,
+      "seconds": 2.1676526999799535
+    },
+    "yaw_315": {
+      "cell": [
+        448,
+        2384
+      ],
+      "margin": 12,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 106525,
+      "seconds": 1.8937250000308268
+    },
+    "ortho_front": {
+      "cell": [
+        384,
+        2496
+      ],
+      "margin": 13,
+      "normal_error": 0.005907491519452579,
+      "surface_pixels": 64170,
+      "seconds": 1.4801147999824025
+    },
+    "ortho_back": {
+      "cell": [
+        384,
+        2496
+      ],
+      "margin": 13,
+      "normal_error": 0.00634074845087973,
+      "surface_pixels": 64170,
+      "seconds": 1.4198623999836855
+    },
+    "ortho_left": {
+      "cell": [
+        448,
+        2496
+      ],
+      "margin": 13,
+      "normal_error": 0.006086819413139377,
+      "surface_pixels": 86020,
+      "seconds": 1.5966923999949358
+    },
+    "ortho_right": {
+      "cell": [
+        448,
+        2496
+      ],
+      "margin": 13,
+      "normal_error": 0.006216941482118599,
+      "surface_pixels": 86019,
+      "seconds": 1.6067506999825127
+    },
+    "ortho_top": {
+      "cell": [
+        448,
+        384
+      ],
+      "margin": 14,
+      "normal_error": 0.005969373805238876,
+      "surface_pixels": 112812,
+      "seconds": 0.9632823000429198
+    },
+    "ortho_underside": {
+      "cell": [
+        448,
+        384
+      ],
+      "margin": 14,
+      "normal_error": 0.006086819413139599,
+      "surface_pixels": 112812,
+      "seconds": 0.9108536000130698
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r02": {
+      "relative": "//textures\\plant_spirodela_polyrhiza_basecolor_r02.png",
+      "sha256": "d5844a72df4da9a3cb98ce42cb7d9b6db293a81fb11417b9184530e1f62c697a",
+      "packed_matches": true
+    },
+    "plant_spirodela_polyrhiza_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_spirodela_polyrhiza_sheet_r01.png",
+      "sha256": "7f392e296454ea684901b87d1c9487709f8d390d6a6885055754c2deb6ec4344",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 270781440,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

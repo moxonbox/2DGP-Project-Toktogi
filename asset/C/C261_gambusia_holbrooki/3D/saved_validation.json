@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "source_blend_sha256": "bbd850e5cea27549cce2b218663dc9e030a70684916af9c4e91ce5ccf8384ecc",
+  "source_blend_sha256": "80ca4806792446172fef421b2f053f631049afbe7210e0f9829e9e95ae8ace2a",
   "variants": {
     "female": {
       "SL_bu": 5.7923760414123535,
@@ -24,7 +24,11 @@
       ],
       "unweighted_vertices": 0,
       "normalized_weights": true,
-      "UV_bounds": "PASS"
+      "UV_bounds": "PASS",
+      "outward_gill_normal_y": {
+        "L": 0.9023596197366714,
+        "R": -0.9023596019971938
+      }
     },
     "male": {
       "SL_bu": 3.3788859844207764,
@@ -48,7 +52,11 @@
       ],
       "unweighted_vertices": 0,
       "normalized_weights": true,
-      "UV_bounds": "PASS"
+      "UV_bounds": "PASS",
+      "outward_gill_normal_y": {
+        "L": 0.9068177023104259,
+        "R": -0.9068176909571602
+      }
     }
   },
   "limits": [

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-17",
+  "revision": "background-r02",
+  "blender": "5.3.0",
+  "mcp": "Cannot connect to Blender at 127.0.0.1:9876",
+  "fallback": "installed Blender background CLI",
+  "computer_use": false,
+  "image_generation": "existing r01 sheets reused; no new generation",
+  "visual_review": [
+    "overview.png",
+    "before_after.png",
+    "c011_directions_1x.png",
+    "per-asset 15-view boards"
+  ],
+  "status": "production_and_standalone_verified; main game deferred"
+}

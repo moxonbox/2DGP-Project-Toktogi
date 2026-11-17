@@ -1,0 +1,9 @@
+00:01.391  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\gambusia_holbrooki_r03\3D\gambusia_holbrooki_r03.blend"
+C:\Users\user\Documents\ChatGPT\2DGP\gambusia_holbrooki_r03\3D\tools\imagegen_surface.py:35: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not material.name.startswith(sex+'_') or not material.use_nodes:continue
+00:02.922  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_36660_7c132fe8dde1fee424f230b7a8ceca8e.png.png"
+Info: Saved as "gambusia_holbrooki_r03.blend"
+{"tool": "built-in GPT Image", "variants": {"female": {"raw_size": [1254, 1254], "working_size": [1024, 1024], "conversion": "Blender Image.scale; sRGB RGBA8, filter-zero lossless PNG; generated raw retained", "generated_sha256": "1f6b4ad83d872e1517261a73a4319692f38dfe8bae3139b236bc0079889a5a49"}, "male": {"raw_size": [1254, 1254], "working_size": [1024, 1024], "conversion": "Blender Image.scale; sRGB RGBA8, filter-zero lossless PNG; generated raw retained", "generated_sha256": "1ee24ff72b268a285cfd2f11abe5ef6e18bd88cec8c8d948a21692fec0ec0a15"}}}
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

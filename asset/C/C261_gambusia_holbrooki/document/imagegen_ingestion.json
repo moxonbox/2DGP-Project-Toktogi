@@ -1,0 +1,29 @@
+{
+  "tool": "built-in GPT Image",
+  "variants": {
+    "female": {
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "working_size": [
+        1024,
+        1024
+      ],
+      "conversion": "Blender Image.scale; sRGB RGBA8, filter-zero lossless PNG; generated raw retained",
+      "generated_sha256": "1f6b4ad83d872e1517261a73a4319692f38dfe8bae3139b236bc0079889a5a49"
+    },
+    "male": {
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "working_size": [
+        1024,
+        1024
+      ],
+      "conversion": "Blender Image.scale; sRGB RGBA8, filter-zero lossless PNG; generated raw retained",
+      "generated_sha256": "1ee24ff72b268a285cfd2f11abe5ef6e18bd88cec8c8d948a21692fec0ec0a15"
+    }
+  }
+}

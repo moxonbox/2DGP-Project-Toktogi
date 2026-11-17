@@ -25,7 +25,7 @@ scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.22,.22,.22,1
 scene.world.node_tree.nodes['Background'].inputs[1].default_value=.45
 physics=bpy.data.objects.new('physics_root',None);scene.collection.objects.link(physics)
 visual=bpy.data.objects.new('visual_root',None);scene.collection.objects.link(visual);visual.parent=physics
-manifest={'asset_id':'C261_gambusia_holbrooki','object_id':'predator_gambusia_holbrooki','revision':'gambusia-r01',
+manifest={'asset_id':'C261_gambusia_holbrooki','object_id':'predator_gambusia_holbrooki','revision':'gambusia-r03',
           'pipeline':'AssetPipeLine v2.3','blender':bpy.app.version_string,'variants':{},'actions':catalog(),
           'front':'-X','up':'+Z','left':'+Y','physics_owner':'simulation','effects_owner':'simulation',
           'design_scale':.1,'measure_kind':'SL; snout to caudal-fin base; TL measured separately',
@@ -149,14 +149,14 @@ for sex,profile in VARIANTS.items():
         for r in (.01,.33,.66,1):
             for j in range(21):
                 angle=math.tau*j/20;x=-.285+.065*r*math.cos(angle);z=-.005+.10*r*math.sin(angle)*(1 if female else .72)
-                y=body_surface(x,z,sign)+sign*.0025
+                y=body_surface(x,z,sign)+sign*(.0025+.008*(1-r*r))
                 pts.append((x,y,z))
                 height=np.interp(x,original_rings[:,0],original_rings[:,2 if z>=0 else 3])*(1 if female else .72)
                 theta=math.acos(max(-1,min(1,z/height)));theta=theta if sign>0 else math.tau-theta
-                uvs.append((.02+(x+.5)*.69,.02+.96*theta/math.tau))
+                uvs.append((.02+(x+.5)*.69,.5+(.02+.96*theta/math.tau-.5)*.72))
         for r in range(3):
             for j in range(20):
-                a=r*21+j;b=a+21;polys.append((a,b,b+1,a+1) if sign>0 else (a,a+1,b+1,b))
+                a=r*21+j;b=a+21;polys.append((a,a+1,b+1,b) if sign>0 else (a,b,b+1,a+1))
         add_part('operculum_'+side,pts,polys,uvs,'operculum_'+side,0)
         crease=[]
         for angle in np.linspace(-1.2,1.25,14):
@@ -167,13 +167,13 @@ for sex,profile in VARIANTS.items():
             tangent=(crease[min(i+1,len(crease)-1)]-crease[max(0,i-1)]).normalized()
             first=tangent.cross(Vector((0,1,0))).normalized();second=tangent.cross(first).normalized()
             for j in range(6):
-                points.append(tuple(p+.0018*(first*math.cos(math.tau*j/6)+second*math.sin(math.tau*j/6))))
+                points.append(tuple(p+.0028*(first*math.cos(math.tau*j/6)+second*math.sin(math.tau*j/6))))
                 uvs.append((.80,.30))
         for i in range(len(crease)-1):
             for j in range(6):polys.append((i*6+j,i*6+(j+1)%6,(i+1)*6+(j+1)%6,(i+1)*6+j))
         add_part('operculum_crease_'+side,points,polys,uvs,'operculum_'+side,0)
         ez=.075*(1 if female else .72);ey=body_surface(-.37,ez,sign)+sign*.002
-        ellipsoid('eye_'+side,(-.37,ey,ez),(.038,.014,.040),'eye_'+side,2,tile=(.76,.44,.22,.18))
+        ellipsoid('eye_'+side,(-.37,ey,ez),(.050,.024,.047),'eye_'+side,2,tile=(.76,.44,.22,.18))
     ellipsoid('mouth_cavity',(-.474,0,.059),(.016,.022,.012),'head',3,tile=(.90,.02,.06,.10))
     for name,tip,height in [('jaw_upper',-.496,.065),('jaw_lower',-.500,.058)]:
         pts=[];uvs=[];polys=[]
@@ -221,9 +221,10 @@ for sex,profile in VARIANTS.items():
     eyes=(u>.74)&(v>.43)&(v<.63);rgb[eyes]=[.035,.045,.055]
     cavity=(u>.89)&(v<.14);rgb[cavity]=[.06,.05,.05]
     rgba=np.concatenate((np.clip(rgb,0,1),np.ones((1024,1024,1))),axis=-1)
-    texture_path=ROOT/f'3D/textures/gambusia_{sex}_basecolor_r01.png'
+    texture_path=ROOT/f'3D/textures/gambusia_{sex}_basecolor_r03.png'
     png(texture_path,np.flipud(np.rint(rgba*255).astype(np.uint8)),True)
-    texture=bpy.data.images.load(str(texture_path));texture.name='BaseColor_'+sex;texture.pack();texture.filepath='//textures/'+texture_path.name
+    from imagegen_surface import texture as imagegen_texture
+    texture,_=imagegen_texture(ROOT,sex)
     for name,roughness,opacity in [('Body',.73,1),('Fins',.56,.84),('Eyes',.35,1),('Mouth',.85,1)]:
         material=bpy.data.materials.new(sex+'_'+name);material.use_nodes=True;material['roughness']=roughness;material['opacity']=opacity
         material.diffuse_color=(.6,.64,.62,opacity)
@@ -244,7 +245,7 @@ for sex,profile in VARIANTS.items():
                 for b in rig.pose.bones:
                     b.rotation_euler=values.get(b.name,(0,0,0));b.location=(0,0,0);b.scale=(1,1,1)
                     b.keyframe_insert('rotation_euler',frame=1+duration*60*fraction)
-            clip=rig.animation_data.action;clip.name=f'GH_{sex}_{action}_{phase}_r01';clip.use_fake_user=True;clip['duration_s']=duration
+            clip=rig.animation_data.action;clip.name=f'GH_{sex}_{action}_{phase}_r03';clip.use_fake_user=True;clip['duration_s']=duration
             loop=phase=='mid' and action in LOOPS
             for layer in clip.layers:
                 for strip in layer.strips:
@@ -272,12 +273,12 @@ for name,position,power,size in [('Key',(-5,-5,10),1600,8),('Fill',(4,4,7),1100,
     obj=bpy.data.objects.new(name,data);scene.collection.objects.link(obj);obj.location=position;obj.rotation_euler=(-obj.location).to_track_quat('-Z','Y').to_euler()
 scene.render.engine='CYCLES';scene.cycles.samples=24;scene.render.resolution_x=960;scene.render.resolution_y=640;scene.render.resolution_percentage=100;scene.render.film_transparent=True
 text=bpy.data.texts.new('ASSET_MANIFEST.json');text.write(json.dumps(manifest,indent=2))
-for path in [Path(__file__),ROOT/'3D/tools/select_pose.py',ROOT/'runtime/motion_spec.py',ROOT/'3D/tools/export_fish.py',ROOT/'3D/tools/verify_fish.py']:
+for path in [Path(__file__),ROOT/'3D/tools/select_pose.py',ROOT/'runtime/motion_spec.py',ROOT/'3D/tools/export_fish.py',ROOT/'3D/tools/verify_fish.py',ROOT/'3D/tools/imagegen_surface.py']:
     bpy.data.texts.load(str(path))
 from select_pose import select_pose
 select_pose()
 scene.frame_end=97
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'3D/gambusia_holbrooki_r01.blend'))
+bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'3D/gambusia_holbrooki_r03.blend'))
 (ROOT/'3D/model_manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
 for sex in VARIANTS:
     select_pose(sex);camdata.ortho_scale=VARIANTS[sex]['sl_bu']*1.55

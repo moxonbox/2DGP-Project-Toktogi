@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "assets": 11,
+  "game_views_per_asset": 9,
+  "anchors_checked": 414,
+  "maximum_anchor_error_px": 7.013459912741382e-05,
+  "tolerance_px": 0.002,
+  "method": "Independent NumPy Euler-camera and world-Z-yaw projection from model anchors.",
+  "source_sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef",
+  "right_is_yaw_180": false
+}

@@ -1,0 +1,5 @@
+00:02.094  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\gambusia_holbrooki_r03\3D\gambusia_holbrooki_r03.blend"
+{"status": "PASS", "packed_images": ["BaseColor_female", "BaseColor_male", "Reference_female", "Reference_male"], "embedded_tools": ["build_fish.py", "select_pose.py", "motion_spec.py", "export_fish.py", "verify_fish.py", "imagegen_surface.py"], "relocated_file": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\gambusia_holbrooki_r03\\3D\\gambusia_holbrooki_r03.blend", "saved_changes": false}
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

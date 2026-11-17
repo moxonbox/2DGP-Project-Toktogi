@@ -5,7 +5,7 @@ from io import BytesIO
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'runtime'))
 from fish_bundle import FishBundle
-t=time.perf_counter();bundle=FishBundle(ROOT/'2D/gambusia-r01/gambusia_holbrooki_r01.zip')
+t=time.perf_counter();bundle=FishBundle(ROOT/'2D/gambusia-r03/gambusia_holbrooki_r03.zip')
 count=0;size=0
 for path in bundle.manifest['files']:
     data=bundle.read(path);size+=len(data);count+=1

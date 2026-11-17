@@ -10,10 +10,10 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'runtime'))
 from motion_spec import ASSET_ID,REVISION,VARIANTS,VIEWS,DESIGNS,PHASES,SEQUENCES,LOOPS,phase_duration
 from fish_bundle import PASSES,signature,validate,sha
-OUT=ROOT/'2D/gambusia-r01'
+OUT=ROOT/'2D/gambusia-r03'
 model=json.loads((ROOT/'3D/model_manifest.json').read_text())
 contract=json.loads((ROOT/'document/source_contract.json').read_text(encoding='utf-8'))
-source=sha(ROOT/'3D/gambusia_holbrooki_r01.blend')
+source=sha(ROOT/'3D/gambusia_holbrooki_r03.blend')
 manifest={'schema':1,'asset_id':ASSET_ID,'object_id':'predator_gambusia_holbrooki','revision':REVISION,
  'base_signature':contract['reference']['base_signature'],'source_blend_sha256':source,'passes':list(PASSES),
  'variants':VARIANTS,'views':{},'clips':{},'sequences':SEQUENCES,'files':{},'geometry':{},'contract':contract,
@@ -39,10 +39,10 @@ for sex in VARIANTS:
         for key,info in part['clips'].items():
             variant,action,phase=key.split('/')
             clip=manifest['clips'].setdefault(key,{'duration':phase_duration(action,phase),'loop':action in LOOPS and phase=='mid','views':{}})
-            info['pass_files']={p:'2D/gambusia-r01/'+path for p,path in info['pass_files'].items()}
+            info['pass_files']={p:'2D/gambusia-r03/'+path for p,path in info['pass_files'].items()}
             clip['views'][view]=info
             payload.update(info['pass_files'].values())
-            payload.add(f'2D/gambusia-r01/{sex}_{action}_{phase}_{view}.png')
+            payload.add(f'2D/gambusia-r03/{sex}_{action}_{phase}_{view}.png')
             for sample in info['samples']:
                 payload.add(sample['file'])
                 sample.update(waterline_state='computed from pose + physics water level',splash_marker=None,cycle_id=None)
@@ -60,7 +60,7 @@ manifest['memory']={'raw_rgba_bytes':sum(v['cell']**2*4*len(PASSES)*len(DESIGNS)
  'policy':'stream individual cells; do not decode all atlases simultaneously','working_set_budget_bytes':512*1024**2}
 manifest['signature']=signature(manifest);validate(manifest)
 (OUT/'manifest.json').write_text(json.dumps(manifest,separators=(',',':')),encoding='utf-8')
-archive=OUT/'gambusia_holbrooki_r01.zip'
+archive=OUT/'gambusia_holbrooki_r03.zip'
 with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=3) as z:
     z.write(OUT/'manifest.json','manifest.json')
     for path in sorted(payload):z.write(ROOT/path,path)

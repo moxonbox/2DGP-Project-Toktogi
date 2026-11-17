@@ -1,12 +1,11 @@
-# A06 젖은 낙엽 — 에셋 색인
+# A06_env_wet_leaf_litter — 젖은 낙엽
 
-2026-11-17 · environment-r01 · **정적 제작 후보 / 게임 미연결**
+현재 제작본 **environment-r02** · 2026-11-17. 잎 가장자리를 비대칭으로 말고 끝·찢김·짧은 잎자루를 조형했다. 중맥은 얕은 메시, 측맥은 고정 UV로 분리해 1×에서 과도한 검은 점선을 줄였다.
 
-- [제작 범위·규격·보류](document/production_r01.md)
-- [편집용 Blender](3D/env_wet_leaf_litter_r01.blend) · [메시 검사](3D/model_validation.json)
-- [GPT Image 시트](sheet/env_wet_leaf_litter_sheet_r01.png) · [실제 Blender 시점](sheet/env_wet_leaf_litter_blender_views_r01.png) · [생성 프롬프트](sheet/prompt.txt)
-- [5패스 manifest](2D/environment-r01/manifest.json) · [게임 시점 Sprite](2D/environment-r01/rest_leaf/game_left/sprite.png)
-- [C011 1×·회색조 비교](2D/environment-r01/style_compare.png) · [공유 광원 비교](2D/environment-r01/shared_light_compare.png)
-- [A 전체 색인](../ASSET_INDEX.md)
+- [모델](3D/env_wet_leaf_litter_r02.blend) · [제작 기록](document/production_r02.md) · [계약](document/production_contract_r02.json)
+- [C011와 9방향 비교](2D/environment-r02/game_views_C011.png) · [회전 APNG](2D/environment-r02/turntable.png) · [전후 비교](2D/environment-r02/before_after.png)
+- [6면 시트](sheet/env_wet_leaf_litter_blender_views_r02.png) · [UV 체크](2D/environment-r02/uv_checker_compare.png)
+- [manifest/5패스 아틀라스 좌표](2D/environment-r02/manifest.json) · [Sprite 아틀라스](2D/environment-r02/game_atlas_sprite.png)
+- [r01 제작 기록](document/production_r01.md) · [원본 GPT 시트](sheet/env_wet_leaf_litter_sheet_r01.png) · [전체 A 색인](../ASSET_INDEX.md)
 
-범위: rest_leaf 정적 1표본 × 7시점. 192삼각형·0본. 기존 문서와 파일명·밑줄을 보존했다.
+게임 9시점 + 검수 6시점 = 15셀. 셀 448px, 5패스, 삼각형 736, 본 0. r01 파일은 원래 위치에 보존했다. 게임 연결·실기 검증·DEC-06은 보류다.

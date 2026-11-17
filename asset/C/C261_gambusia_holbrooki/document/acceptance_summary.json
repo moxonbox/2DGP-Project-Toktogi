@@ -1,31 +1,43 @@
 {
-  "functional_status": "PASS",
-  "native_model_status": "PASS",
-  "packaging_status": "PASS",
+  "revision": "gambusia-r03",
+  "functional": "PASS",
+  "sprite_contract": "PASS",
+  "original_archive_restore": "PASS",
+  "original_restored_files": 5362,
+  "native_model": "PASS",
+  "packaging": "PASS",
+  "frames": 2304,
+  "palette_invalid_pixels": 0,
+  "minimum_margin_px": 23,
+  "geometry_outside_eyes_gills_error_bu": {
+    "female": 0.0,
+    "male": 0.0
+  },
+  "default_gameplay_mode": "sprite",
   "moving_light_budget": "REVIEW",
-  "moving_light_120_frames": {
+  "moving_light": {
     "frames": 120,
     "mode": "female 640 cell, moving light + water + RGBA transfer + SDL dummy blit",
-    "p95_ms": 18.549650014028884,
-    "max_ms": 20.23299998836592,
-    "mean_ms": 13.877546666481066,
+    "p95_ms": 13.086149978335015,
+    "max_ms": 18.876499962061644,
+    "mean_ms": 10.81814999730947,
     "meets_16_7_ms": false,
-    "renderer_cache_bytes": 98329419,
+    "renderer_cache_bytes": 98494539,
     "raw_bundle_bytes": 20535312384,
     "actual_GPU": "NOT_RUN",
     "browser": "NOT_RUN",
     "Pico2D": "NOT_IMPLEMENTED"
   },
-  "warm_pond_idle_120_frames": {
+  "pond_idle": {
     "frames": 120,
-    "p95_ms": 8.344844993553124,
-    "max_ms": 9.278199984692037,
-    "mean_ms": 6.363072500971612,
+    "p95_ms": 9.837734990287572,
+    "max_ms": 23.538000008556992,
+    "mean_ms": 8.660631666619642,
     "scope": "full optional pond Game + C011 + fish + water + SDL dummy flip",
-    "meets_16_7_ms": true
+    "meets_16_7_ms": false
   },
   "actual_browser": "NOT_RUN",
   "actual_GPU": "NOT_RUN",
   "Pico2D": "NOT_IMPLEMENTED",
-  "blender_MCP": "UNAVAILABLE"
+  "appearance": "reference-directed interpretation at existing native cells and palette; not a pixel-identical copy"
 }

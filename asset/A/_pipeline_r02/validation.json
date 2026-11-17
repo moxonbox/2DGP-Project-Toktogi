@@ -1,0 +1,1130 @@
+{
+  "date": "2026-11-17",
+  "assets": [
+    {
+      "asset_id": "plant_lemna_minor",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            83,
+            123,
+            305,
+            262
+          ],
+          "normal_unit_error": 0.005907491519452579
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            79,
+            124,
+            301,
+            263
+          ],
+          "normal_unit_error": 0.005907491519452468
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            119,
+            115,
+            271,
+            269
+          ],
+          "normal_unit_error": 0.0057218677708220644
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            98,
+            118,
+            278,
+            268
+          ],
+          "normal_unit_error": 0.0062090972580421955
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            70,
+            129,
+            313,
+            258
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            79,
+            126,
+            301,
+            246
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            113,
+            115,
+            265,
+            238
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            106,
+            119,
+            286,
+            239
+          ],
+          "normal_unit_error": 0.005719896677427894
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            71,
+            131,
+            314,
+            249
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            119,
+            139,
+            264,
+            245
+          ],
+          "normal_unit_error": 0.005536278670187911
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            120,
+            139,
+            265,
+            245
+          ],
+          "normal_unit_error": 0.005352840026259464
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            71,
+            139,
+            313,
+            245
+          ],
+          "normal_unit_error": 0.0056587298725438995
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            71,
+            139,
+            313,
+            245
+          ],
+          "normal_unit_error": 0.005536278670187911
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            69,
+            119,
+            315,
+            265
+          ],
+          "normal_unit_error": 0.005969373805239098
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            69,
+            119,
+            315,
+            265
+          ],
+          "normal_unit_error": 0.006086819413139599
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_still_water",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            18,
+            219,
+            622,
+            421
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            18,
+            219,
+            622,
+            421
+          ],
+          "normal_unit_error": 0.004434611554624324
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            109,
+            215,
+            531,
+            425
+          ],
+          "normal_unit_error": 0.004434611554624324
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            47,
+            208,
+            593,
+            432
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            35,
+            242,
+            605,
+            398
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            18,
+            219,
+            622,
+            421
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            109,
+            215,
+            531,
+            425
+          ],
+          "normal_unit_error": 0.004434611554624324
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            47,
+            208,
+            593,
+            432
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            35,
+            242,
+            605,
+            398
+          ],
+          "normal_unit_error": 0.004423470589472789
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            160,
+            319,
+            480,
+            321
+          ],
+          "normal_unit_error": 0.0002614037425383575
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            160,
+            319,
+            480,
+            321
+          ],
+          "normal_unit_error": 0.0002614037425383575
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            63,
+            319,
+            577,
+            321
+          ],
+          "normal_unit_error": 0.0002614037425383575
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            63,
+            319,
+            577,
+            321
+          ],
+          "normal_unit_error": 0.0002614037425383575
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            63,
+            160,
+            577,
+            480
+          ],
+          "normal_unit_error": 0.0002614037425383575
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            63,
+            160,
+            577,
+            480
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_shore_slope",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            28,
+            148,
+            485,
+            363
+          ],
+          "normal_unit_error": 0.0062090972580421955
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            27,
+            148,
+            484,
+            363
+          ],
+          "normal_unit_error": 0.006464570847540818
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            117,
+            137,
+            396,
+            375
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            61,
+            136,
+            450,
+            376
+          ],
+          "normal_unit_error": 0.00633136024514358
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            30,
+            168,
+            482,
+            343
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            27,
+            213,
+            484,
+            364
+          ],
+          "normal_unit_error": 0.006331360245143802
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            116,
+            202,
+            395,
+            375
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            62,
+            201,
+            451,
+            376
+          ],
+          "normal_unit_error": 0.006526487833136807
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            30,
+            201,
+            482,
+            344
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            151,
+            216,
+            361,
+            296
+          ],
+          "normal_unit_error": 0.006031259943679035
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            151,
+            216,
+            361,
+            296
+          ],
+          "normal_unit_error": 0.005907491519452579
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            46,
+            217,
+            466,
+            296
+          ],
+          "normal_unit_error": 0.005719896677428116
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            46,
+            217,
+            466,
+            296
+          ],
+          "normal_unit_error": 0.005907491519452579
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            46,
+            151,
+            466,
+            361
+          ],
+          "normal_unit_error": 0.006086819413139377
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            46,
+            151,
+            466,
+            361
+          ],
+          "normal_unit_error": 0.006270230608479643
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_wood",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            94,
+            206,
+            419,
+            322
+          ],
+          "normal_unit_error": 0.006453608379858755
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            97,
+            205,
+            415,
+            322
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            193,
+            179,
+            321,
+            348
+          ],
+          "normal_unit_error": 0.006278843038372006
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            142,
+            187,
+            370,
+            340
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            80,
+            211,
+            432,
+            302
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            93,
+            181,
+            418,
+            324
+          ],
+          "normal_unit_error": 0.006526487833136807
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            191,
+            161,
+            318,
+            351
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            142,
+            161,
+            370,
+            343
+          ],
+          "normal_unit_error": 0.006402657720362193
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            80,
+            182,
+            432,
+            305
+          ],
+          "normal_unit_error": 0.006093149935492148
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            217,
+            204,
+            295,
+            308
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            217,
+            204,
+            295,
+            308
+          ],
+          "normal_unit_error": 0.006402657720362304
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            78,
+            204,
+            434,
+            308
+          ],
+          "normal_unit_error": 0.006514726879262689
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            78,
+            204,
+            434,
+            308
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            78,
+            217,
+            434,
+            295
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            78,
+            217,
+            434,
+            295
+          ],
+          "normal_unit_error": 0.006093149935492259
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_stone",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            50,
+            100,
+            253,
+            224
+          ],
+          "normal_unit_error": 0.006464570847540929
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            62,
+            102,
+            263,
+            222
+          ],
+          "normal_unit_error": 0.006402657720362304
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            78,
+            95,
+            239,
+            227
+          ],
+          "normal_unit_error": 0.006278843038372006
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            75,
+            100,
+            253,
+            226
+          ],
+          "normal_unit_error": 0.00633136024514358
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            54,
+            101,
+            262,
+            221
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            67,
+            99,
+            270,
+            220
+          ],
+          "normal_unit_error": 0.006402657720362304
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            81,
+            96,
+            242,
+            224
+          ],
+          "normal_unit_error": 0.00621694148211871
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            67,
+            93,
+            245,
+            223
+          ],
+          "normal_unit_error": 0.00615504378139875
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            58,
+            101,
+            266,
+            219
+          ],
+          "normal_unit_error": 0.006086819413139377
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            82,
+            115,
+            238,
+            205
+          ],
+          "normal_unit_error": 0.006464570847540818
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            82,
+            115,
+            238,
+            205
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            54,
+            115,
+            266,
+            205
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            54,
+            115,
+            266,
+            205
+          ],
+          "normal_unit_error": 0.006278843038372117
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            54,
+            82,
+            266,
+            238
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            54,
+            82,
+            266,
+            238
+          ],
+          "normal_unit_error": 0.006392486168711242
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_leaf_litter",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            74,
+            164,
+            359,
+            264
+          ],
+          "normal_unit_error": 0.006025674917319979
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            89,
+            167,
+            379,
+            263
+          ],
+          "normal_unit_error": 0.005842219128255444
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            147,
+            158,
+            294,
+            291
+          ],
+          "normal_unit_error": 0.006216941482118599
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            130,
+            162,
+            328,
+            281
+          ],
+          "normal_unit_error": 0.0062090972580421955
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            69,
+            169,
+            401,
+            246
+          ],
+          "normal_unit_error": 0.006093149935492148
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            89,
+            174,
+            374,
+            253
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            154,
+            157,
+            301,
+            276
+          ],
+          "normal_unit_error": 0.0062090972580424175
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            121,
+            166,
+            318,
+            268
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            47,
+            171,
+            379,
+            241
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            152,
+            201,
+            296,
+            247
+          ],
+          "normal_unit_error": 0.005969373805238987
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            152,
+            201,
+            296,
+            247
+          ],
+          "normal_unit_error": 0.005781059762439034
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            55,
+            201,
+            392,
+            247
+          ],
+          "normal_unit_error": 0.006086819413139377
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            56,
+            201,
+            393,
+            247
+          ],
+          "normal_unit_error": 0.005719896677427894
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            55,
+            152,
+            393,
+            296
+          ],
+          "normal_unit_error": 0.006453608379858755
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            55,
+            152,
+            393,
+            296
+          ],
+          "normal_unit_error": 0.005969373805238876
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_algae_patch",
+      "cells": 15,
+      "views": [
+        {
+          "view": "left",
+          "sprite_bbox": [
+            30,
+            79,
+            143,
+            109
+          ],
+          "normal_unit_error": 0.005781059762439034
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            38,
+            81,
+            139,
+            117
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "yaw_045",
+          "sprite_bbox": [
+            51,
+            73,
+            137,
+            116
+          ],
+          "normal_unit_error": 0.005719896677427894
+        },
+        {
+          "view": "yaw_090",
+          "sprite_bbox": [
+            49,
+            79,
+            132,
+            120
+          ],
+          "normal_unit_error": 0.006278843038372006
+        },
+        {
+          "view": "yaw_135",
+          "sprite_bbox": [
+            35,
+            81,
+            151,
+            113
+          ],
+          "normal_unit_error": 0.005230458024859441
+        },
+        {
+          "view": "yaw_180",
+          "sprite_bbox": [
+            49,
+            83,
+            162,
+            113
+          ],
+          "normal_unit_error": 0.005414025440695802
+        },
+        {
+          "view": "yaw_225",
+          "sprite_bbox": [
+            55,
+            76,
+            141,
+            119
+          ],
+          "normal_unit_error": 0.0056587298725438995
+        },
+        {
+          "view": "yaw_270",
+          "sprite_bbox": [
+            60,
+            72,
+            143,
+            113
+          ],
+          "normal_unit_error": 0.005597559347107595
+        },
+        {
+          "view": "yaw_315",
+          "sprite_bbox": [
+            41,
+            79,
+            157,
+            111
+          ],
+          "normal_unit_error": 0.005781059762439034
+        },
+        {
+          "view": "ortho_front",
+          "sprite_bbox": [
+            64,
+            95,
+            130,
+            97
+          ],
+          "normal_unit_error": 0.005350724198155632
+        },
+        {
+          "view": "ortho_back",
+          "sprite_bbox": [
+            62,
+            95,
+            128,
+            97
+          ],
+          "normal_unit_error": 0.004485260626889587
+        },
+        {
+          "view": "ortho_left",
+          "sprite_bbox": [
+            46,
+            95,
+            145,
+            97
+          ],
+          "normal_unit_error": 0.004740780952421142
+        },
+        {
+          "view": "ortho_right",
+          "sprite_bbox": [
+            47,
+            95,
+            146,
+            97
+          ],
+          "normal_unit_error": 0.0048020036369751384
+        },
+        {
+          "view": "ortho_top",
+          "sprite_bbox": [
+            35,
+            56,
+            157,
+            136
+          ],
+          "normal_unit_error": 0.005907491519452468
+        },
+        {
+          "view": "ortho_bottom",
+          "sprite_bbox": [
+            35,
+            56,
+            157,
+            136
+          ],
+          "normal_unit_error": 0.0056587298725438995
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    }
+  ],
+  "asset_count": 7,
+  "cell_count": 105,
+  "game_cells": 63,
+  "inspection_cells": 42,
+  "pass_count": 5,
+  "raw_rgba_bytes": 426393600,
+  "performance": {
+    "frames": 120,
+    "backend": "Pygame SDL dummy; no GPU/window measurement",
+    "seven_static_blit_p95_ms": 1.9348000059835613,
+    "seven_static_blit_max_ms": 2.9092999757267535,
+    "single_stone_320px_relight_p95_ms": 34.67709996039048,
+    "single_stone_320px_relight_max_ms": 41.23849997995421,
+    "relight_16_7ms_pass": false,
+    "display_hardware_validation": "NOT_RUN"
+  },
+  "game_integration": "NOT_RUN; existing C011 Assets only accepts 128px",
+  "DEC_06": "DEFERRED",
+  "physics_and_action_effects": "NOT_RUN; static export has no events"
+}

@@ -1,0 +1,1250 @@
+{
+  "schema": "toktogi.background/1",
+  "asset_id": "env_diatoms_micro",
+  "folder_id": "B0B",
+  "revision": "background-r02",
+  "passes": [
+    "sprite",
+    "base",
+    "normal",
+    "rm",
+    "emissive"
+  ],
+  "source_blend_sha256": "35b6c754a9c61d726fb856c05df43c53c134b5de413c09db473d893128e09b92",
+  "static": true,
+  "interaction": false,
+  "collision": null,
+  "events": [],
+  "scale": {
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "microscopy_only",
+    "scale_policy": "microscopy_only",
+    "length_bu": 3,
+    "bu_per_pixel": 0.01390625,
+    "game_scale": 1
+  },
+  "filter": "nearest",
+  "alpha": "straight",
+  "mirror_allowed": false,
+  "views": {
+    "left": {
+      "file": "2D/background-r02/static/static/left/0.png",
+      "cell": [
+        240,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/left/sprite.png",
+        "base": "2D/background-r02/passes/left/base.png",
+        "normal": "2D/background-r02/passes/left/normal.png",
+        "rm": "2D/background-r02/passes/left/rm.png",
+        "emissive": "2D/background-r02/passes/left/emissive.png"
+      },
+      "pivot": [
+        123.09674832290887,
+        47.192120063462006
+      ],
+      "bbox": [
+        18,
+        15,
+        222,
+        81
+      ],
+      "base_bbox": [
+        18,
+        15,
+        222,
+        81
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          123.09674832290887,
+          47.192120063462006
+        ],
+        "substrate_uv": [
+          123.09674832290887,
+          47.192120063462006
+        ],
+        "microscope_focus": [
+          123.09674832290887,
+          47.192120063462006
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.043064156365451356,
+        -0.011234580367481456
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "toktogi",
+      "ortho_scale": 3.3375,
+      "rect": [
+        0,
+        0,
+        240,
+        96
+      ],
+      "outline_px": 0
+    },
+    "right": {
+      "file": "2D/background-r02/static/static/right/0.png",
+      "cell": [
+        240,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/right/sprite.png",
+        "base": "2D/background-r02/passes/right/base.png",
+        "normal": "2D/background-r02/passes/right/normal.png",
+        "rm": "2D/background-r02/passes/right/rm.png",
+        "emissive": "2D/background-r02/passes/right/emissive.png"
+      },
+      "pivot": [
+        121.6138851502558,
+        49.174562649711476
+      ],
+      "bbox": [
+        20,
+        16,
+        220,
+        80
+      ],
+      "base_bbox": [
+        20,
+        16,
+        220,
+        80
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          121.6138851502558,
+          49.174562649711476
+        ],
+        "substrate_uv": [
+          121.6138851502558,
+          49.174562649711476
+        ],
+        "microscope_focus": [
+          121.6138851502558,
+          49.174562649711476
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.022443090370744656,
+        0.01633376184755017
+      ],
+      "yaw_rad": 2.00151174696589,
+      "view_kind": "toktogi",
+      "ortho_scale": 3.3375,
+      "rect": [
+        0,
+        0,
+        240,
+        96
+      ],
+      "outline_px": 0
+    },
+    "yaw_045": {
+      "file": "2D/background-r02/static/static/yaw_045/0.png",
+      "cell": [
+        192,
+        112
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_045/sprite.png",
+        "base": "2D/background-r02/passes/yaw_045/base.png",
+        "normal": "2D/background-r02/passes/yaw_045/normal.png",
+        "rm": "2D/background-r02/passes/yaw_045/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_045/emissive.png"
+      },
+      "pivot": [
+        95.87651806699105,
+        57.17231728521899
+      ],
+      "bbox": [
+        19,
+        16,
+        173,
+        96
+      ],
+      "base_bbox": [
+        19,
+        16,
+        173,
+        96
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          95.87651806699105,
+          57.17231728521899
+        ],
+        "substrate_uv": [
+          95.87651806699105,
+          57.17231728521899
+        ],
+        "microscope_focus": [
+          95.87651806699105,
+          57.17231728521899
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        0.0017171706309057067,
+        0.016302537247576576
+      ],
+      "yaw_rad": 0.7853981633974483,
+      "view_kind": "toktogi",
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        112
+      ],
+      "outline_px": 0
+    },
+    "yaw_090": {
+      "file": "2D/background-r02/static/static/yaw_090/0.png",
+      "cell": [
+        208,
+        112
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_090/sprite.png",
+        "base": "2D/background-r02/passes/yaw_090/base.png",
+        "normal": "2D/background-r02/passes/yaw_090/normal.png",
+        "rm": "2D/background-r02/passes/yaw_090/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_090/emissive.png"
+      },
+      "pivot": [
+        101.92078370168487,
+        54.791343530974075
+      ],
+      "bbox": [
+        16,
+        19,
+        192,
+        93
+      ],
+      "base_bbox": [
+        16,
+        19,
+        192,
+        93
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          101.92078370168487,
+          54.791343530974075
+        ],
+        "substrate_uv": [
+          101.92078370168487,
+          54.791343530974075
+        ],
+        "microscope_focus": [
+          101.92078370168487,
+          54.791343530974075
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        0.028914101648444768,
+        -0.01680787902239178
+      ],
+      "yaw_rad": 1.5707963267948966,
+      "view_kind": "toktogi",
+      "ortho_scale": 2.8924999999999996,
+      "rect": [
+        0,
+        0,
+        208,
+        112
+      ],
+      "outline_px": 0
+    },
+    "yaw_135": {
+      "file": "2D/background-r02/static/static/yaw_135/0.png",
+      "cell": [
+        256,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_135/sprite.png",
+        "base": "2D/background-r02/passes/yaw_135/base.png",
+        "normal": "2D/background-r02/passes/yaw_135/normal.png",
+        "rm": "2D/background-r02/passes/yaw_135/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_135/emissive.png"
+      },
+      "pivot": [
+        131.27778908371326,
+        48.00309514891131
+      ],
+      "bbox": [
+        19,
+        20,
+        237,
+        76
+      ],
+      "base_bbox": [
+        19,
+        20,
+        237,
+        76
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          131.27778908371326,
+          48.00309514891131
+        ],
+        "substrate_uv": [
+          131.27778908371326,
+          48.00309514891131
+        ],
+        "microscope_focus": [
+          131.27778908371326,
+          48.00309514891131
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.04558175444538759,
+        4.304191454790329e-05
+      ],
+      "yaw_rad": 2.356194490192345,
+      "view_kind": "toktogi",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        96
+      ],
+      "outline_px": 0
+    },
+    "yaw_180": {
+      "file": "2D/background-r02/static/static/yaw_180/0.png",
+      "cell": [
+        240,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_180/sprite.png",
+        "base": "2D/background-r02/passes/yaw_180/base.png",
+        "normal": "2D/background-r02/passes/yaw_180/normal.png",
+        "rm": "2D/background-r02/passes/yaw_180/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_180/emissive.png"
+      },
+      "pivot": [
+        116.90325018535125,
+        49.90810685568751
+      ],
+      "bbox": [
+        18,
+        14,
+        222,
+        82
+      ],
+      "base_bbox": [
+        18,
+        14,
+        222,
+        82
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          116.90325018535125,
+          49.90810685568751
+        ],
+        "substrate_uv": [
+          116.90325018535125,
+          49.90810685568751
+        ],
+        "microscope_focus": [
+          116.90325018535125,
+          49.90810685568751
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        0.04306417710995902,
+        0.02653461096190443
+      ],
+      "yaw_rad": 3.141592653589793,
+      "view_kind": "toktogi",
+      "ortho_scale": 3.3375,
+      "rect": [
+        0,
+        0,
+        240,
+        96
+      ],
+      "outline_px": 0
+    },
+    "yaw_225": {
+      "file": "2D/background-r02/static/static/yaw_225/0.png",
+      "cell": [
+        192,
+        112
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_225/sprite.png",
+        "base": "2D/background-r02/passes/yaw_225/base.png",
+        "normal": "2D/background-r02/passes/yaw_225/normal.png",
+        "rm": "2D/background-r02/passes/yaw_225/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_225/emissive.png"
+      },
+      "pivot": [
+        96.12348745043181,
+        54.76697429712289
+      ],
+      "bbox": [
+        19,
+        16,
+        173,
+        96
+      ],
+      "base_bbox": [
+        19,
+        16,
+        173,
+        96
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          96.12348745043181,
+          54.76697429712289
+        ],
+        "substrate_uv": [
+          96.12348745043181,
+          54.76697429712289
+        ],
+        "microscope_focus": [
+          96.12348745043181,
+          54.76697429712289
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.0017172473575672864,
+        -0.01714676368063478
+      ],
+      "yaw_rad": 3.9269908169872414,
+      "view_kind": "toktogi",
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        112
+      ],
+      "outline_px": 0
+    },
+    "yaw_270": {
+      "file": "2D/background-r02/static/static/yaw_270/0.png",
+      "cell": [
+        208,
+        112
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_270/sprite.png",
+        "base": "2D/background-r02/passes/yaw_270/base.png",
+        "normal": "2D/background-r02/passes/yaw_270/normal.png",
+        "rm": "2D/background-r02/passes/yaw_270/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_270/emissive.png"
+      },
+      "pivot": [
+        106.07921426687142,
+        57.09562593148346
+      ],
+      "bbox": [
+        16,
+        18,
+        192,
+        94
+      ],
+      "base_bbox": [
+        16,
+        18,
+        192,
+        94
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          106.07921426687142,
+          57.09562593148346
+        ],
+        "substrate_uv": [
+          106.07921426687142,
+          57.09562593148346
+        ],
+        "microscope_focus": [
+          106.07921426687142,
+          57.09562593148346
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.028914073398680684,
+        0.015236048109691869
+      ],
+      "yaw_rad": 4.71238898038469,
+      "view_kind": "toktogi",
+      "ortho_scale": 2.8924999999999996,
+      "rect": [
+        0,
+        0,
+        208,
+        112
+      ],
+      "outline_px": 0
+    },
+    "yaw_315": {
+      "file": "2D/background-r02/static/static/yaw_315/0.png",
+      "cell": [
+        256,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/yaw_315/sprite.png",
+        "base": "2D/background-r02/passes/yaw_315/base.png",
+        "normal": "2D/background-r02/passes/yaw_315/normal.png",
+        "rm": "2D/background-r02/passes/yaw_315/rm.png",
+        "emissive": "2D/background-r02/passes/yaw_315/emissive.png"
+      },
+      "pivot": [
+        124.72220202304959,
+        48.524191540664155
+      ],
+      "bbox": [
+        19,
+        19,
+        237,
+        77
+      ],
+      "base_bbox": [
+        19,
+        19,
+        237,
+        77
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          124.72220202304959,
+          48.524191540664155
+        ],
+        "substrate_uv": [
+          124.72220202304959,
+          48.524191540664155
+        ],
+        "microscope_focus": [
+          124.72220202304959,
+          48.524191540664155
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        0.04558187811696668,
+        0.007289538612360896
+      ],
+      "yaw_rad": 5.497787143782138,
+      "view_kind": "toktogi",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        96
+      ],
+      "outline_px": 0
+    },
+    "ortho_front": {
+      "file": "2D/background-r02/static/static/ortho_front/0.png",
+      "cell": [
+        192,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_front/sprite.png",
+        "base": "2D/background-r02/passes/ortho_front/base.png",
+        "normal": "2D/background-r02/passes/ortho_front/normal.png",
+        "rm": "2D/background-r02/passes/ortho_front/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_front/emissive.png"
+      },
+      "pivot": [
+        93.21510845336402,
+        25.689737364969034
+      ],
+      "bbox": [
+        20,
+        22,
+        155,
+        26
+      ],
+      "base_bbox": [
+        20,
+        22,
+        155,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          93.21510845336402,
+          25.689737364969034
+        ],
+        "substrate_uv": [
+          93.21510845336402,
+          25.689737364969034
+        ],
+        "microscope_focus": [
+          93.21510845336402,
+          25.689737364969034
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        0.03872739807040659,
+        0.02349791023160064
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        48
+      ],
+      "outline_px": 0
+    },
+    "ortho_back": {
+      "file": "2D/background-r02/static/static/ortho_back/0.png",
+      "cell": [
+        192,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_back/sprite.png",
+        "base": "2D/background-r02/passes/ortho_back/base.png",
+        "normal": "2D/background-r02/passes/ortho_back/normal.png",
+        "rm": "2D/background-r02/passes/ortho_back/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_back/emissive.png"
+      },
+      "pivot": [
+        98.78489154663598,
+        25.689737364969034
+      ],
+      "bbox": [
+        37,
+        22,
+        172,
+        26
+      ],
+      "base_bbox": [
+        37,
+        22,
+        172,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          98.78489154663598,
+          25.689737364969034
+        ],
+        "substrate_uv": [
+          98.78489154663598,
+          25.689737364969034
+        ],
+        "microscope_focus": [
+          98.78489154663598,
+          25.689737364969034
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        -0.4999999701976776,
+        -0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        -0.03872739807040659,
+        0.02349791023160064
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        48
+      ],
+      "outline_px": 0
+    },
+    "ortho_left": {
+      "file": "2D/background-r02/static/static/ortho_left/0.png",
+      "cell": [
+        256,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_left/sprite.png",
+        "base": "2D/background-r02/passes/ortho_left/base.png",
+        "normal": "2D/background-r02/passes/ortho_left/normal.png",
+        "rm": "2D/background-r02/passes/ortho_left/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_left/emissive.png"
+      },
+      "pivot": [
+        127.13480528084236,
+        25.68973746568524
+      ],
+      "bbox": [
+        15,
+        22,
+        241,
+        26
+      ],
+      "base_bbox": [
+        15,
+        22,
+        241,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.13480528084236,
+          25.68973746568524
+        ],
+        "substrate_uv": [
+          127.13480528084236,
+          25.68973746568524
+        ],
+        "microscope_focus": [
+          127.13480528084236,
+          25.68973746568524
+        ]
+      },
+      "rotation_quaternion": [
+        0.7071067690849304,
+        0.7071067690849304,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        0.0120316140632859,
+        0.023497911632185398
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        48
+      ],
+      "outline_px": 0
+    },
+    "ortho_right": {
+      "file": "2D/background-r02/static/static/ortho_right/0.png",
+      "cell": [
+        256,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_right/sprite.png",
+        "base": "2D/background-r02/passes/ortho_right/base.png",
+        "normal": "2D/background-r02/passes/ortho_right/normal.png",
+        "rm": "2D/background-r02/passes/ortho_right/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_right/emissive.png"
+      },
+      "pivot": [
+        128.86519471642168,
+        25.68973568299052
+      ],
+      "bbox": [
+        15,
+        22,
+        241,
+        26
+      ],
+      "base_bbox": [
+        15,
+        22,
+        241,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.86519471642168,
+          25.68973568299052
+        ],
+        "substrate_uv": [
+          128.86519471642168,
+          25.68973568299052
+        ],
+        "microscope_focus": [
+          128.86519471642168,
+          25.68973568299052
+        ]
+      },
+      "rotation_quaternion": [
+        -3.0908619663705394e-08,
+        3.0908619663705394e-08,
+        -0.7071067690849304,
+        -0.7071067690849304
+      ],
+      "camera_center_plane_bu": [
+        -0.01203161402523889,
+        0.023497886841586928
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        48
+      ],
+      "outline_px": 0
+    },
+    "ortho_top": {
+      "file": "2D/background-r02/static/static/ortho_top/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_top/sprite.png",
+        "base": "2D/background-r02/passes/ortho_top/base.png",
+        "normal": "2D/background-r02/passes/ortho_top/normal.png",
+        "rm": "2D/background-r02/passes/ortho_top/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_top/emissive.png"
+      },
+      "pivot": [
+        127.13480522927273,
+        98.78489187862097
+      ],
+      "bbox": [
+        15,
+        20,
+        241,
+        172
+      ],
+      "base_bbox": [
+        15,
+        20,
+        241,
+        172
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.13480522927273,
+          98.78489187862097
+        ],
+        "substrate_uv": [
+          127.13480522927273,
+          98.78489187862097
+        ],
+        "microscope_focus": [
+          127.13480522927273,
+          98.78489187862097
+        ]
+      },
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        0.012031614780426025,
+        0.038727402687072754
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    },
+    "ortho_underside": {
+      "file": "2D/background-r02/static/static/ortho_underside/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/background-r02/passes/ortho_underside/sprite.png",
+        "base": "2D/background-r02/passes/ortho_underside/base.png",
+        "normal": "2D/background-r02/passes/ortho_underside/normal.png",
+        "rm": "2D/background-r02/passes/ortho_underside/rm.png",
+        "emissive": "2D/background-r02/passes/ortho_underside/emissive.png"
+      },
+      "pivot": [
+        128.8651937755645,
+        98.7848928150536
+      ],
+      "bbox": [
+        15,
+        20,
+        241,
+        172
+      ],
+      "base_bbox": [
+        15,
+        20,
+        241,
+        172
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.8651937755645,
+          98.7848928150536
+        ],
+        "substrate_uv": [
+          128.8651937755645,
+          98.7848928150536
+        ],
+        "microscope_focus": [
+          128.8651937755645,
+          98.7848928150536
+        ]
+      },
+      "rotation_quaternion": [
+        1.910685465164705e-15,
+        -4.371138828673793e-08,
+        -1.0,
+        4.371138828673793e-08
+      ],
+      "camera_center_plane_bu": [
+        -0.012031600941443732,
+        0.03872741570933913
+      ],
+      "yaw_rad": 0.0,
+      "view_kind": "inspection",
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    }
+  },
+  "files": {
+    "2D/background-r02/passes/left/sprite.png": "1d37c1fc627e0f78a049ef2ace4935908cc665c21b2d04ace8dbc182ccca9151",
+    "2D/background-r02/passes/left/base.png": "a2224080bf0e7de7635358a2f9305b7e5327609dfaec744e2d6e046f34f9f8ff",
+    "2D/background-r02/passes/left/normal.png": "0210c7e48ca1826d915450a1414dcaeb820dba43bceeae0378cde76c065f17bf",
+    "2D/background-r02/passes/left/rm.png": "6be4b45b12ad0d395800316b8d24e49ba464062f0253d1ab2671d40bdb62e949",
+    "2D/background-r02/passes/left/emissive.png": "315e742292998ce51f651bad155d7edbb7e5921d59cc9ea2db676647cf2e5b03",
+    "2D/background-r02/static/static/left/0.png": "0d6fefcf717c0eeccb92eb7a9baee5c925988469f5c8969a79fa6870449f746e",
+    "2D/background-r02/passes/right/sprite.png": "55055a6945953afa37dbeaee6aa01aa73cd2c94bec1f4e3f4d836c013901f089",
+    "2D/background-r02/passes/right/base.png": "c9aaffc906fd3279864b1c017c77cb8723cbe0a27ef7592ef0e2d37f7524e096",
+    "2D/background-r02/passes/right/normal.png": "8d6206aa7c59bdbdfa13860b582fe009b36136ee73c1d60c5fd142caccaf2c35",
+    "2D/background-r02/passes/right/rm.png": "2615b3a1c9180b863d5d142abb5ede27a39b3b2d939bd81d57404067008e4543",
+    "2D/background-r02/passes/right/emissive.png": "315e742292998ce51f651bad155d7edbb7e5921d59cc9ea2db676647cf2e5b03",
+    "2D/background-r02/static/static/right/0.png": "3d54b8faa9457342156486a09098405ae83428a17fd6e2e44727031586301279",
+    "2D/background-r02/passes/yaw_045/sprite.png": "23e047676881e3d379706c9996b93f1ea344cc64f78a7d4f8fa5286f094def44",
+    "2D/background-r02/passes/yaw_045/base.png": "8c5618e9d3a1418502dddcffc42997268b3247159934e98b756e7604dd714c97",
+    "2D/background-r02/passes/yaw_045/normal.png": "ecf58f6ab6e0beb2e2cae69144668b65859126a8419f9bbdaef84dd842738dfb",
+    "2D/background-r02/passes/yaw_045/rm.png": "1c9d81c0dd7c789a9104a418b2b67c8e8562a185a567c2117991544c5bf80dc2",
+    "2D/background-r02/passes/yaw_045/emissive.png": "a9256be00b25d1837ed41a46b6feaaa32a69752385d64dc5c951a81bf5f0c36e",
+    "2D/background-r02/static/static/yaw_045/0.png": "a620031a675ac9a91afdedb827e0ec3687b1744300f4f8aa087d11dc8c7361a3",
+    "2D/background-r02/passes/yaw_090/sprite.png": "6d99abc2eb1702199ef022a9f355abeb007bb30f25795c280d44c9b9436c5239",
+    "2D/background-r02/passes/yaw_090/base.png": "9e5c6a1936cca27481d189cbc03c227c02185223e67060ea55124e6c217c880e",
+    "2D/background-r02/passes/yaw_090/normal.png": "065b251bc5d5e781584239760941d502d9e28769122663a9a8b35ce9caf8a974",
+    "2D/background-r02/passes/yaw_090/rm.png": "efd1359d20b36cfa2543b184ed01ad7bac31220d59fcfabe52b5e8d0008e379b",
+    "2D/background-r02/passes/yaw_090/emissive.png": "5482bcbe4ce02a2f920a090ca7b96522e11f67a091792eb00466eb4915e43cda",
+    "2D/background-r02/static/static/yaw_090/0.png": "f23d9b02a9bc5a1c90f8841c0fdc77d4c894e487f99f6382d19da2be53545f58",
+    "2D/background-r02/passes/yaw_135/sprite.png": "3962cc2739aeeb441e43233214ecfe861d54fb266591b49cb5866db66b7a9c76",
+    "2D/background-r02/passes/yaw_135/base.png": "afc321cf76c2ea049c5f59b370113451f3f7ad14c90f3e8e234fc901c4533a29",
+    "2D/background-r02/passes/yaw_135/normal.png": "c9782f789ec18a122615ca7150c0f601264f205db681b64f0843ffb0c4de0e5c",
+    "2D/background-r02/passes/yaw_135/rm.png": "1740e123a4f43ddaaeb92c28545ca41645480bf14c4ff0a2166ae1753dbbbf96",
+    "2D/background-r02/passes/yaw_135/emissive.png": "b42b9fa8fda84f7718100284ef803200b1f0090e27368a29513c785c8b984007",
+    "2D/background-r02/static/static/yaw_135/0.png": "3b91c1ab6a7c5b13b7bd9f9093ce1ef509ec7c053bee19cb373ba857e55d8eca",
+    "2D/background-r02/passes/yaw_180/sprite.png": "86ffb7f1b1f8e8cdf306f3ea2be7c277cc53d42f0c63f3d2a09390b147aa2544",
+    "2D/background-r02/passes/yaw_180/base.png": "67ff70f8b30175d7bcd0e7c8379b7552fed16e417a34bdbcdd78115f90d1070b",
+    "2D/background-r02/passes/yaw_180/normal.png": "e3cb532becfffca3b2767ff4a2753c09e6ac7381047ed0501b55c1904dd9daff",
+    "2D/background-r02/passes/yaw_180/rm.png": "c8c4d3ff35284427e53b19b0a015c45f6423f2b470c6d1b0e98e06e837e87665",
+    "2D/background-r02/passes/yaw_180/emissive.png": "315e742292998ce51f651bad155d7edbb7e5921d59cc9ea2db676647cf2e5b03",
+    "2D/background-r02/static/static/yaw_180/0.png": "baf72b2387d28d27e78268fbe00282f3ccbda8a17de4998f10729ffe99b2688f",
+    "2D/background-r02/passes/yaw_225/sprite.png": "2aabd94f0f1266ff8428ca2c53321870ece6b51ccdfe20c629f153883c43782a",
+    "2D/background-r02/passes/yaw_225/base.png": "2578e6927d8b18e402c8787c52cf53fa220182fe799eae9b9469c85eff6023e7",
+    "2D/background-r02/passes/yaw_225/normal.png": "c847b1a6cb3304477148834a946861688d60357718b0c15f44e24322acad1316",
+    "2D/background-r02/passes/yaw_225/rm.png": "12af4d83a4e046ab1e5a9011eb5baa5c5e56da1332100f3d5b72bd71f03b17a1",
+    "2D/background-r02/passes/yaw_225/emissive.png": "a9256be00b25d1837ed41a46b6feaaa32a69752385d64dc5c951a81bf5f0c36e",
+    "2D/background-r02/static/static/yaw_225/0.png": "fd8387b8a08899444007f2d9b0c5c8c93677507c009001f5355869c8847033f3",
+    "2D/background-r02/passes/yaw_270/sprite.png": "5ee77cebf67d599dd59808f0d9258bb9e64917469bc63af837b67cc9104bdb6c",
+    "2D/background-r02/passes/yaw_270/base.png": "83e99c25d9dd689e398b7d3401a63f0eb4b3d4e8a080dd8703ff19fb23df505f",
+    "2D/background-r02/passes/yaw_270/normal.png": "a2dc6eba1bfcce5eb9dfb43da472c3a3ed6dc34386fdd5823391a5f08de3a9a0",
+    "2D/background-r02/passes/yaw_270/rm.png": "5ba958153df3aa1840d70d54f3607d6f1d7d5806db5fb0ab4f22ca84cc75b588",
+    "2D/background-r02/passes/yaw_270/emissive.png": "5482bcbe4ce02a2f920a090ca7b96522e11f67a091792eb00466eb4915e43cda",
+    "2D/background-r02/static/static/yaw_270/0.png": "0f366b0e9479ae1ff0f8d1ae962fdaa3f815b58bd23f8b6c30d196e36ef4b6d9",
+    "2D/background-r02/passes/yaw_315/sprite.png": "6d522785f645e2143580e770003a8b2464b17d86e1b2b9458983a0c2b0d8792e",
+    "2D/background-r02/passes/yaw_315/base.png": "cf74303b8846cfd9310954ccd754a05a91085c698b29de3272fbece684b38c78",
+    "2D/background-r02/passes/yaw_315/normal.png": "8623a387cc7aa019e9823d38027fe49ce0217bde59c44f947c955856694145a4",
+    "2D/background-r02/passes/yaw_315/rm.png": "66f25e7e4c88837678866c8b61dc6742c8ef3f3e8838818c9eb9ba826a280299",
+    "2D/background-r02/passes/yaw_315/emissive.png": "b42b9fa8fda84f7718100284ef803200b1f0090e27368a29513c785c8b984007",
+    "2D/background-r02/static/static/yaw_315/0.png": "3fddbf0ef6d53493d005e6a6d578eabfc03b02fd3e0a350e95a90ca3b816086c",
+    "2D/background-r02/passes/ortho_front/sprite.png": "d405baee1f393399c8aad0d4c84482339f5ce35eae95da48de98fc45a267b1cd",
+    "2D/background-r02/passes/ortho_front/base.png": "fa3303db35f1357f912477fd485d7e110df228b0b396237b835348607eaa3e1d",
+    "2D/background-r02/passes/ortho_front/normal.png": "1024c5993d6e2f67830ca2be77ac52eb690bdbaee2b985efe19bb2a5df9818b4",
+    "2D/background-r02/passes/ortho_front/rm.png": "6893989b7280517f97308c8615e038f927b1274a15b4b976de885482729cc613",
+    "2D/background-r02/passes/ortho_front/emissive.png": "28742e5877f27f73c8a6f0adeb500c867be70d006c1ed690628da7051653e5ff",
+    "2D/background-r02/static/static/ortho_front/0.png": "fec5e16537fca74cb8f341a1d0e26776f73b3c4ecd8212c6056cae656c563a71",
+    "2D/background-r02/passes/ortho_back/sprite.png": "ee38671d7cea863653398db2312bf3d1db4cccd90d2341e6cc79ac69341133ba",
+    "2D/background-r02/passes/ortho_back/base.png": "b4a9b9b23c96c8a577bbc2d81c7738ca277085036fb19353dae183630b906d69",
+    "2D/background-r02/passes/ortho_back/normal.png": "55a2e7350956ac0ac8b96ad946578b47d87bdfc1f1b405d04a3530abf84f5e5d",
+    "2D/background-r02/passes/ortho_back/rm.png": "182da6fcdd03442a88a8526cd53cf2162dcf4fb656efd91e47a0253db72da9b1",
+    "2D/background-r02/passes/ortho_back/emissive.png": "28742e5877f27f73c8a6f0adeb500c867be70d006c1ed690628da7051653e5ff",
+    "2D/background-r02/static/static/ortho_back/0.png": "46fe3fc13dba8f59173295574893cc6af571b890c1787a8ae961be340a7524cd",
+    "2D/background-r02/passes/ortho_left/sprite.png": "c98bb658a7269c926bb0a6527a5e63129670196bd763cbe35a35874ab7e557c0",
+    "2D/background-r02/passes/ortho_left/base.png": "142daf1338043974806ece20b9a70412145d25604775507a4c36b0238e64c132",
+    "2D/background-r02/passes/ortho_left/normal.png": "971de2b38688783eebb63a64ec3bf79f94140a80558d3883b3326f65c4693170",
+    "2D/background-r02/passes/ortho_left/rm.png": "ce7ec9e06b157929f50624c76ea2da4fafec9d829bb4d2003145c5ca19a1eb0d",
+    "2D/background-r02/passes/ortho_left/emissive.png": "6de29755d415ec0472c7198d278393cb1869271689d88d269eb73e863d18f1a8",
+    "2D/background-r02/static/static/ortho_left/0.png": "4127b99f5b9a586e936d2f97d7af98e08ea9ab837cbe76ac9e3acb8c5b3b70e3",
+    "2D/background-r02/passes/ortho_right/sprite.png": "4f826ed0e5492c36488730cc82c02b5d4e7aaad61f0f6f1595c326d506c4c0d8",
+    "2D/background-r02/passes/ortho_right/base.png": "44f9ea7cc3cf51e25f4430c7462164bfcff374f6bb8815883f51796eefbdfd71",
+    "2D/background-r02/passes/ortho_right/normal.png": "68c67d769e155bc4664160b37a07409bf62af49f12a0e3ee1e45b7cff14751ea",
+    "2D/background-r02/passes/ortho_right/rm.png": "298468bc9b387b72fdcf2863c2d131084ece7946224d2a97b1ef15d43f84281b",
+    "2D/background-r02/passes/ortho_right/emissive.png": "6de29755d415ec0472c7198d278393cb1869271689d88d269eb73e863d18f1a8",
+    "2D/background-r02/static/static/ortho_right/0.png": "bd04ebf00326e0dff5d05f8d168afce991a9a6bc6ff8fa3dc74272c1253a15f0",
+    "2D/background-r02/passes/ortho_top/sprite.png": "807b09dafbabceb08997c0ca23b567c64e53c5c2d528aa33e2a45d6e4d755d5a",
+    "2D/background-r02/passes/ortho_top/base.png": "eb51a0d5e429d3d1622d25caa5ce6adba1e6f43db4068584da23c43f9db2081f",
+    "2D/background-r02/passes/ortho_top/normal.png": "4074a33a6ccbded5b1093599267b9d92ce64f246c06070ca3b128ac3cc949d9f",
+    "2D/background-r02/passes/ortho_top/rm.png": "002f0a987caa2528562e968ab16adb18cdef0d735ccc86d00855429d072e2d3e",
+    "2D/background-r02/passes/ortho_top/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/background-r02/static/static/ortho_top/0.png": "48cd9be956da891dd70c867b0837ebea74f9f9057a51da84465d2902994f92bc",
+    "2D/background-r02/passes/ortho_underside/sprite.png": "2b0861a7e3baf1868dc6ab57aa51072592e8bec1c5e13454243cab7aa47756e2",
+    "2D/background-r02/passes/ortho_underside/base.png": "643f624ededdaea1a49c12b30fd84b86bb9afe3ac39826cb48de18f3caf9ed40",
+    "2D/background-r02/passes/ortho_underside/normal.png": "eba2bbf9b0ba1f79ce72bd7d829a6123d3641da73e68b277e88518a5311dedad",
+    "2D/background-r02/passes/ortho_underside/rm.png": "231990f5d0e7944262f1a63df1fff14ac40cec07a54d0de18024673780719aca",
+    "2D/background-r02/passes/ortho_underside/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/background-r02/static/static/ortho_underside/0.png": "f132a6b2040300d4d3f0a87389e98a038b5928923f4a4204b1b724e48837905d"
+  },
+  "channels": {
+    "sprite": "sRGB, four light bands then 13 colors per material role; fixed UV detail; #22313B outline except attached coatings",
+    "base": "unlit sRGB + surface coverage Alpha",
+    "normal": "linear UNORM; R right, G up, B toward camera; A=255; mask Base A",
+    "rm": "linear R roughness G metallic=0 B=0 A=255; mask Base A",
+    "emissive": "linear black RGB A=255; mask Base A"
+  },
+  "lighting": {
+    "direction": [
+      -0.36,
+      0.57,
+      0.73
+    ],
+    "thresholds": [
+      0.14,
+      0.42,
+      0.72
+    ],
+    "linear_multipliers": [
+      [
+        0.36,
+        0.42,
+        0.51
+      ],
+      [
+        0.53,
+        0.6,
+        0.66
+      ],
+      [
+        0.73,
+        0.77,
+        0.8
+      ],
+      [
+        0.95,
+        0.95,
+        0.92
+      ]
+    ],
+    "shared_runtime_comparison": {
+      "power": 0.82,
+      "ambient": 0.34
+    }
+  },
+  "status": {
+    "production": "exported",
+    "standalone_loader": "verified_separately",
+    "main_game": "not_integrated",
+    "DEC-06": "deferred"
+  },
+  "heading_profile": {
+    "cyclic_views": [
+      "left",
+      "yaw_045",
+      "yaw_090",
+      "yaw_135",
+      "yaw_180",
+      "yaw_225",
+      "yaw_270",
+      "yaw_315"
+    ],
+    "yaw_period_rad": 6.283185307179586,
+    "legacy_view": "right",
+    "heading_axis": "world +Z",
+    "locomotion_clips": [
+      "air_apex",
+      "air_fall",
+      "air_rise",
+      "elastic_release",
+      "idle",
+      "jump_pre",
+      "jump_release",
+      "land_hard",
+      "land_soft",
+      "walk",
+      "walk_start"
+    ]
+  },
+  "view_contract_source_sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef",
+  "game_views": [
+    "left",
+    "right",
+    "yaw_045",
+    "yaw_090",
+    "yaw_135",
+    "yaw_180",
+    "yaw_225",
+    "yaw_270",
+    "yaw_315"
+  ]
+}

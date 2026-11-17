@@ -1,0 +1,81 @@
+{
+  "id": "B0A",
+  "name": "env_periphyton_biofilm",
+  "folder": "B0A_env_periphyton_biofilm",
+  "selected_length_mm": null,
+  "presentation_factor": null,
+  "measure_kind": "patch_width_design",
+  "game_scale": 1,
+  "scale_policy": "design_module",
+  "details": {
+    "design_length_bu": 3,
+    "semi_transparent": true
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r02",
+  "schema": 1,
+  "length_bu": 3,
+  "bounds_bu": [
+    [
+      -1.55753493309021,
+      -1.01394522190094,
+      -0.008999999612569809
+    ],
+    [
+      1.581598162651062,
+      1.0914000272750854,
+      0.012000000104308128
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "substrate_uv": [
+      0,
+      0,
+      0
+    ]
+  },
+  "triangles": 1608,
+  "mesh_count": 8,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/env_periphyton_biofilm_basecolor_r02.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/env_periphyton_biofilm_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "83e79a456acf7040f5b42d1deac99384ecbea593ddb5439088b1349e71c572fb",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "8cac62",
+    "vein": "a5bf79",
+    "stem": "637b4a",
+    "root": "ad9d79",
+    "underside": "865777",
+    "hair": "bdce94",
+    "flower": "e3b5c4",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; fixed broad mottling and role detail; tube seam preserved",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

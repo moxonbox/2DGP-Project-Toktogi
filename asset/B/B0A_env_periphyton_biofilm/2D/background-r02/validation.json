@@ -1,0 +1,216 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "attached_film",
+      "vertices": 386,
+      "triangles": 768
+    },
+    {
+      "name": "film_colony_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_6",
+      "vertices": 62,
+      "triangles": 120
+    }
+  ],
+  "triangles": 1608,
+  "bones": 0,
+  "views": {
+    "left": {
+      "cell": [
+        240,
+        96
+      ],
+      "margin": 15,
+      "normal_error": 0.005783738502963209,
+      "surface_pixels": 9222,
+      "seconds": 0.29748860001564026
+    },
+    "right": {
+      "cell": [
+        240,
+        96
+      ],
+      "margin": 16,
+      "normal_error": 0.005903374775555692,
+      "surface_pixels": 9215,
+      "seconds": 0.31763629999477416
+    },
+    "yaw_045": {
+      "cell": [
+        192,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 9191,
+      "seconds": 0.32104080001590773
+    },
+    "yaw_090": {
+      "cell": [
+        208,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.006147960193154667,
+      "surface_pixels": 9213,
+      "seconds": 0.3023068999755196
+    },
+    "yaw_135": {
+      "cell": [
+        256,
+        96
+      ],
+      "margin": 19,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 9209,
+      "seconds": 0.2779541999916546
+    },
+    "yaw_180": {
+      "cell": [
+        240,
+        96
+      ],
+      "margin": 15,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 9198,
+      "seconds": 0.28972579998662695
+    },
+    "yaw_225": {
+      "cell": [
+        192,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.006340748450879619,
+      "surface_pixels": 9179,
+      "seconds": 0.29304810002213344
+    },
+    "yaw_270": {
+      "cell": [
+        208,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.005964526705017681,
+      "surface_pixels": 9200,
+      "seconds": 0.2942950000287965
+    },
+    "yaw_315": {
+      "cell": [
+        256,
+        96
+      ],
+      "margin": 19,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 9207,
+      "seconds": 0.30458110000472516
+    },
+    "ortho_front": {
+      "cell": [
+        192,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.0049856493129019075,
+      "surface_pixels": 189,
+      "seconds": 0.2506248999852687
+    },
+    "ortho_back": {
+      "cell": [
+        192,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.005414025440695802,
+      "surface_pixels": 189,
+      "seconds": 0.23279570002341643
+    },
+    "ortho_left": {
+      "cell": [
+        256,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.0052270404453435,
+      "surface_pixels": 327,
+      "seconds": 0.2594102000002749
+    },
+    "ortho_right": {
+      "cell": [
+        256,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.0056587298725438995,
+      "surface_pixels": 327,
+      "seconds": 0.25965500000165775
+    },
+    "ortho_top": {
+      "cell": [
+        256,
+        192
+      ],
+      "margin": 15,
+      "normal_error": 0.006025674917319757,
+      "surface_pixels": 24868,
+      "seconds": 0.4185884000035003
+    },
+    "ortho_underside": {
+      "cell": [
+        256,
+        192
+      ],
+      "margin": 15,
+      "normal_error": 0.005536278670187911,
+      "surface_pixels": 24868,
+      "seconds": 0.4201099000056274
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r02": {
+      "relative": "//textures\\env_periphyton_biofilm_basecolor_r02.png",
+      "sha256": "75c23a9dfa2bb116da6eb03c96202d3c360f4dddab3f46e6272cda5a3a4139d4",
+      "packed_matches": true
+    },
+    "env_periphyton_biofilm_sheet_r01.png": {
+      "relative": "//..\\sheet\\env_periphyton_biofilm_sheet_r01.png",
+      "sha256": "83e79a456acf7040f5b42d1deac99384ecbea593ddb5439088b1349e71c572fb",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 6696960,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

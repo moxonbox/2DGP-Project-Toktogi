@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-17",
+  "computer_use": false,
+  "new_imagegen_calls": 0,
+  "image_source": "r01 seven GPT sheets and prompts retained",
+  "blender_mcp": "connection unavailable at 127.0.0.1:9876",
+  "blender_build": "Blender 5.3 CLI, background factory-startup disable-autoexec threads=2",
+  "source_game_modified": false,
+  "scope": "seven static A assets, model/detail/15 views"
+}

@@ -1,5 +1,5 @@
 """Optional pond profile; reuses the game's input clock, player and collision code."""
-import argparse,math,sys,time
+import argparse,math,os,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 from fish_bundle import FishBundle
@@ -13,6 +13,8 @@ def main():
     if args.verify:
         from verify_runtime import run
         run();return
+    if args.smoke:
+        os.environ['SDL_VIDEODRIVER']='dummy';os.environ['SDL_AUDIODRIVER']='dummy'
     sys.path.insert(0,str(args.project/'toktogi/prototype'))
     from app import App,pg
     from course import Course,Platform
@@ -23,9 +25,9 @@ def main():
     class GambusiaApp(App):
         def __init__(self):
             super().__init__(course=pond)
-            self.fish_bundle=FishBundle(ROOT/'2D/gambusia-r01/gambusia_holbrooki_r01.zip')
+            self.fish_bundle=FishBundle(ROOT/'2D/gambusia-r03/gambusia_holbrooki_r03.zip')
             self.fish_renderer=FishRenderer(self.fish_bundle);self.fish=FishSim(self.fish_bundle,water=Water(-6,6,0,-7),breach_enabled=True)
-            self.fish.x=1.;self.effect_index=0;self.font=pg.font.SysFont('malgungothic',17);self.render_mode='relit'
+            self.fish.x=1.;self.effect_index=0;self.font=pg.font.SysFont('malgungothic',17);self.render_mode='sprite'
             self.world=pg.Surface(self.screen.get_size())
             pg.display.set_caption('Gambusia pond · 1 표층 / 2 돌파 / 3 포획 / 4 회피 / M 암수 / L 조명')
 
@@ -99,6 +101,10 @@ def main():
         import numpy as np
         from verify_runtime import memory_usage
         try:
+            assert pg.display.get_driver()=='dummy'
+            assert instance.render_mode=='sprite'
+            instance._event(pg.event.Event(pg.KEYDOWN,key=pg.K_l));assert instance.render_mode=='relit'
+            instance._event(pg.event.Event(pg.KEYDOWN,key=pg.K_l));assert instance.render_mode=='sprite'
             warm_start=time.perf_counter()
             for _ in range(240):instance.update(1/60);instance.draw()
             warm_seconds=time.perf_counter()-warm_start
@@ -118,7 +124,7 @@ def main():
             assert instance.game.hit_until>before,'player capsule contact did not commit a hit'
             instance.game.reset();instance.fish=FishSim(instance.fish_bundle,water=Water(-6,6,0,-7),breach_enabled=True);instance.fish.set_action('surface_gape','mid');instance.fish.age=.6;instance.fish.z=-instance.fish.geometry()['mouth_tip'][2]+.006*instance.fish.sl
             instance.draw();pg.image.save(instance.screen,str(ROOT/'comparison/pond_game_preview.png'))
-            result={'status':'PASS','driver':pg.display.get_driver(),'player_capsule_contact':True,'pause_and_F2_freeze':True,'default_game_source_modified':False,'actual_window_GPU':'NOT_RUN'}
+            result={'status':'PASS','driver':pg.display.get_driver(),'player_capsule_contact':True,'pause_and_F2_freeze':True,'default_sprite_and_relit_toggle':True,'default_game_source_modified':False,'actual_window_GPU':'NOT_RUN'}
             result['performance']={'frames':120,'p95_ms':float(np.percentile(timings,95)),'max_ms':max(timings),'mean_ms':float(np.mean(timings)),'scope':'full optional pond Game + C011 + fish + water + SDL dummy flip','meets_16_7_ms':max(timings)<=16.7}
             result['load_seconds']=load_seconds;result['warmup_seconds']=warm_seconds
             result['process_memory']=memory_usage()

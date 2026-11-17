@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-17",
+  "reviewer": "assistant visual inspection",
+  "additional_samples": [
+    "A04 and A06 game_views_C011",
+    "A05 shared_light_compare"
+  ],
+  "assets": [
+    {
+      "asset_id": "plant_lemna_minor",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "엽상체를 비대칭 곡면으로 다듬고 단일 뿌리·뿌리골무·부착부를 보완했다. 희미한 세 맥은 UV에 고정했다. 1×에서 점선처럼 보이던 가는 돌출 맥은 제거했다."
+    },
+    {
+      "asset_id": "env_still_water",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "수면에 낮은 주기 곡면과 고정 잔물결 무늬를 넣었다. 상면과 경계·밑면을 분리해 판 가장자리의 잘못된 스무딩을 줄였다. 물 흐름이나 부력 애니메이션은 아니다."
+    },
+    {
+      "asset_id": "env_shore_slope",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "경사면 높이를 불규칙하게 조형하고 얕은 홈·둥근 자갈 7개·낮은 쪽의 작은 물웅덩이를 추가했다. 수변의 색·거칠기 전이를 부드럽게 했다."
+    },
+    {
+      "asset_id": "env_wet_wood",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "가지를 휘고 가늘어지는 비정형 단면으로 바꿨다. 옆가지·양쪽 절단면의 나이테·얕은 나무껍질 능선·옹이를 추가했다. 가는 능선의 1px 끊김을 줄이도록 폭과 매립 깊이를 조정했다."
+    },
+    {
+      "asset_id": "env_wet_stone",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "돌의 측면은 평면 투영에 따른 늘어짐이 남는다. 약한 비방향성 얼룩에는 허용했으며, 큰 방향성 문양을 넣을 때 측면 UV를 별도 전개해야 한다.",
+      "mesh_details": "각진 상자형 돌을 비대칭의 둥근 강돌로 바꿨다. 넓은 상면과 얕은 표면 변형·광물 얼룩·작은 UV 균열을 넣었다. 상면 지지 마커는 최종 메시에서 측정했다."
+    },
+    {
+      "asset_id": "env_wet_leaf_litter",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "잎 가장자리를 비대칭으로 말고 끝·찢김·짧은 잎자루를 조형했다. 중맥은 얕은 메시, 측맥은 고정 UV로 분리해 1×에서 과도한 검은 점선을 줄였다."
+    },
+    {
+      "asset_id": "env_algae_patch",
+      "reviewed": "overview_1x, left and ortho_top UV checker",
+      "uv_limit": "작은 뿌리·자갈·능선·맥·색 조각은 별도 UV 섬으로 체크 밀도가 더 높다. 부위별 밀도 차이와 반복 밑면은 의도적이다.",
+      "mesh_details": "얇은 부착막의 가장자리를 여러 엽상 돌출로 바꾸고 옅은 황토색 조각 3개와 고정 얼룩을 추가했다. 이끼 줄기·잎 같은 다른 생물 구조는 추가하지 않았다."
+    }
+  ],
+  "actual_game_and_hardware": "NOT_RUN"
+}

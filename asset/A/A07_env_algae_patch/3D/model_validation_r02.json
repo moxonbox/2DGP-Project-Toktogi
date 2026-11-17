@@ -1,0 +1,46 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "patch_decal": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "biofilm_lobe_0": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "biofilm_lobe_1": {
+      "vertices": 242,
+      "triangles": 480
+    },
+    "biofilm_lobe_2": {
+      "vertices": 242,
+      "triangles": 480
+    }
+  },
+  "triangle_count": 1920,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -0.8447214961051941,
+      -0.5551027059555054,
+      -0.0115847522392869
+    ],
+    [
+      0.8447214961051941,
+      0.5551027059555054,
+      0.0145967872813344
+    ]
+  ],
+  "extent_bu": [
+    1.6894429922103882,
+    1.1102054119110107,
+    0.0261815395206213
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar projection for slabs, fronds and rounded stones; longitudinal seam for tubes, planar caps; intentional repeated underside and separate detail islands with higher checker density",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 15,
+  "blend_sha256": "225ab63162a3ba9bf0dde6f86fe0e780c2c3f738bb3c929eb517bff7baf8f902",
+  "static_root": true
+}

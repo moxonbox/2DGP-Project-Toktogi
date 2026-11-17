@@ -1,0 +1,69 @@
+{
+  "coordinate_contract": {
+    "status": "deferred_DEC_06",
+    "production_export_allowed": false,
+    "experiment_profile": "orthographic_128_eight_headings_r5",
+    "pivot_pixels_top_left": [
+      64,
+      88
+    ],
+    "image_axis": "x right, y down",
+    "world_up": "+Z",
+    "world_units_per_pixel": 0.013906249776482582,
+    "camera_location": [
+      -2.44451642036438,
+      -3.813446044921875,
+      2.143212080001831
+    ],
+    "camera_rotation_euler": [
+      1.195510983467102,
+      4.938385700370418e-09,
+      -0.5700404644012451
+    ],
+    "ortho_scale": 1.7799999713897705,
+    "normal_space": "camera axes: R right, G up (opposite image row), B toward camera",
+    "normal_decode": "normalize(RGB/255*2-1), only when Base alpha > 0",
+    "mirror_allowed": false
+  },
+  "views": {
+    "left": 0.0,
+    "right": 2.00151174696589,
+    "yaw_045": 0.7853981633974483,
+    "yaw_090": 1.5707963267948966,
+    "yaw_135": 2.356194490192345,
+    "yaw_180": 3.141592653589793,
+    "yaw_225": 3.9269908169872414,
+    "yaw_270": 4.71238898038469,
+    "yaw_315": 5.497787143782138
+  },
+  "heading_profile": {
+    "cyclic_views": [
+      "left",
+      "yaw_045",
+      "yaw_090",
+      "yaw_135",
+      "yaw_180",
+      "yaw_225",
+      "yaw_270",
+      "yaw_315"
+    ],
+    "yaw_period_rad": 6.283185307179586,
+    "legacy_view": "right",
+    "heading_axis": "world +Z",
+    "locomotion_clips": [
+      "air_apex",
+      "air_fall",
+      "air_rise",
+      "elastic_release",
+      "idle",
+      "jump_pre",
+      "jump_release",
+      "land_hard",
+      "land_soft",
+      "walk",
+      "walk_start"
+    ]
+  },
+  "source_sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef",
+  "source": "asset/C/C011_toktogi/2D/integrated-r5/playable_manifest.json"
+}

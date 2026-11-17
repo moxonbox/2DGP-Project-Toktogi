@@ -5,10 +5,14 @@ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'runtime'))
 from fish_bundle import sha
 
 def payload():
-    for folder in ('2D','3D','comparison','document','previews','runtime','sheet'):
+    for folder in ('2D','3D','comparison','document','previews','runtime','sheet','imagegen'):
         for path in (ROOT/folder).rglob('*'):
             if not path.is_file() or '__pycache__' in path.parts or path.suffix in ('.pyc','.blend1'):continue
+            if 'logs' in path.parts or path.name=='relocation_validation.json':continue
+            if path.name in ('gambusia_holbrooki_r01.blend','gambusia_holbrooki_r02.blend','model_female.png','model_male.png'):continue
+            if path.parent.name=='textures' and path.name.endswith(('_r01.png','_r02.png')):continue
             if path.name.startswith('part_') and path.suffix=='.json':continue
+            if path.name.startswith('validation_') and path.name not in {f'validation_{sex}_{view}.json' for sex in ('female','male') for view in ('left','right','front','top')}:continue
             if path.name in ('validation_female_left_surface_gape.json','part_female_left_surface_gape.json'):continue
             yield path
     for name in ('ASSET_INDEX.md','GambusiaMotionPreview.html','PlayGambusia.cmd','requirements.txt'):yield ROOT/name
@@ -16,7 +20,7 @@ def payload():
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--destination',type=Path);args=parser.parse_args()
     files={path.relative_to(ROOT).as_posix():{'sha256':sha(path),'bytes':path.stat().st_size} for path in sorted(payload())}
-    ledger={'schema':1,'asset_id':'C261_gambusia_holbrooki','revision':'gambusia-r01','files':files,
+    ledger={'schema':1,'asset_id':'C261_gambusia_holbrooki','revision':'gambusia-r03','files':files,
             'total_files':len(files),'total_bytes':sum(v['bytes'] for v in files.values()),'excludes':['delivery_manifest.json itself','temporary logs/caches/plain export-worker JSON/unarchived drafts']}
     ledger_path=ROOT/'delivery_manifest.json';ledger_path.write_text(json.dumps(ledger,indent=2),encoding='utf-8')
     if not args.destination:print(json.dumps({k:v for k,v in ledger.items() if k!='files'},indent=2));return

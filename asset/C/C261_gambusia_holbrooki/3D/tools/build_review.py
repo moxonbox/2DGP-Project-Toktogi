@@ -19,16 +19,9 @@ def write_board():
             x=(i%3)*426;y=65+(i//3)*480
             board.paste(pic,(x,y+40),pic);draw.text((x+22,y),view.upper(),font=FONT,fill='white')
         board.save(ROOT/f'sheet/blender_{sex}_sheet.png')
-    board=Image.new('RGB',(1280,1060),(63,72,79));draw=ImageDraw.Draw(board)
-    for row,sex in enumerate(VARIANTS):
-        for col,kind in enumerate(('before','after')):
-            path=ROOT/f'comparison/{sex}_before_detail.png' if kind=='before' else ROOT/f'3D/model_{sex}.png'
-            pic=Image.open(path).convert('RGBA');pic.thumbnail((640,470));board.paste(pic,(col*640,row*520+40),pic)
-            draw.text((col*640+20,row*520+12),f'{sex.upper()} | {kind.upper()} SHEET DETAIL',font=FONT,fill='white')
-    board.save(ROOT/'comparison/model_detail_before_after.png')
 
 def main():
-    write_board();bundle=FishBundle(ROOT/'2D/gambusia-r01/gambusia_holbrooki_r01.zip');renderer=FishRenderer(bundle)
+    write_board();bundle=FishBundle(ROOT/'2D/gambusia-r03/gambusia_holbrooki_r03.zip');renderer=FishRenderer(bundle)
     project=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT.parents[2]
     tok=Image.open(project/'asset/C/C011_toktogi/2D/idle/idle/left/0.png').convert('RGBA').crop((0,0,128,128))
     board=Image.new('RGBA',(1100,950),(62,73,79,255));draw=ImageDraw.Draw(board)

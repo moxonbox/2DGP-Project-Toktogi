@@ -1,13 +1,11 @@
 # B04 — plant_salvinia_natans
 
-2026-11-17 · background-r01 · **정적 에셋 제작·독립 번들 검증 완료 / 본게임 연결 보류**
+2026-11-17 · **background-r02: 모델·디테일 보완 / 톡토기 9방향 + 정투영 6방향**
 
-한 부유 잎 10×6mm를 선택했다. 잎 2개·짧은 연결 줄기·분지된 수중 잎을 구현했다. 수중 잎은 진짜 뿌리가 아니다. 수중 잎 길이와 털 15개/잎은 표현용 설계값이다.
+한 쌍의 오목한 잎·주맥/측맥·잎당 8무리×3가닥 곡선 털·입체 분지 수중 잎을 보완했다. 털 수와 수중 잎 크기는 각색이며 수중 잎은 뿌리가 아니다.
 
-- [제작 계약](document/production_contract_r01.md) · [기존 외형 명세](document/plant_salvinia_natans_model.md) · [기존 동작 후보](document/plant_salvinia_natans_movement.md)
-- [편집 가능한 Blender](3D/plant_salvinia_natans_r01.blend) · [모델/크기/팔레트](3D/model_manifest.json) · [기본색 텍스처](3D/textures/plant_salvinia_natans_basecolor_r01.png)
-- [GPT 시트](sheet/plant_salvinia_natans_sheet_r01.png) · [프롬프트·입력·해시](sheet/generation_r01.json) · [Blender 정투영 검수 시트](sheet/plant_salvinia_natans_blender_reference_r01.png)
-- [게임 방향 Sprite](2D/previews/game.png) · [5패스 적층 셀](2D/static/static/game/0.png) · [2D manifest](2D/manifest.json) · [저장본/출력 검사](2D/validation.json)
-- [공통 번들·재현·검증](../_production/README.md) · [전체 에셋 목록](../ASSET_INDEX.md)
+- [제작 계약](document/production_contract_r02.md) · [Blender 원본](3D/plant_salvinia_natans_r02.blend) · [모델/크기/팔레트](3D/model_manifest_r02.json)
+- [15시점 검수판](sheet/plant_salvinia_natans_blender_reference_r02.png) · [left Sprite](2D/background-r02/previews/left.png) · [2D manifest](2D/background-r02/manifest.json) · [검증](2D/background-r02/validation.json)
+- [r02 공통 번들·검증·재현](../_production/r02/README.md) · [이전 r01 색인](ASSET_INDEX_r01.md) · [전체 B 목록](../ASSET_INDEX.md)
 
-기관·재질·픽셀 보정의 기준은 제작 계약이다. 기존 생물 자료의 미정 수치를 이번 제작값으로 덮어쓰지 않았다.
+정적 제작·독립 번들 검증 완료. 본게임/Pico2D·실기 성능은 미검증이다.

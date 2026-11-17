@@ -30,18 +30,25 @@ class App:
         try:
             self.assets=Assets(assets_path,pose_path)
             from world import World
-            if profile=='pond_test':
+            if profile=='habitat':
+                from stage_world import habitat_world
+                world=habitat_world()
+            elif profile=='pond_test':
                 from pond import test_world
                 world=test_world()
             else:world=World.seamless() if profile=='seamless' else World(course)
             self.game=Game(self.assets,world=world)
-            if profile=='pond_test':
+            if profile in ('pond_test','habitat'):
                 from pond import Pond
-                self.game.pond=Pond(world)
+                self.game.pond=Pond(world,active_span=(1030,2110) if profile=='habitat' else None,
+                                    water_y=400. if profile=='habitat' else 380.)
             course=world.course
             self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets))+(list(world_replays(self.assets)) if profile=='seamless' else []))
             self.screen=Image.new('RGBA',SCREEN)
-            if profile=='pond_test':
+            if profile=='habitat':
+                from stage_view import StageView
+                self.play_view=StageView(self.assets,world,self.game.pond,asset_root=asset_root)
+            elif profile=='pond_test':
                 from pond_view import PondView
                 self.play_view=PondView(self.assets,world,self.game.pond,asset_root=asset_root)
             else:self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)

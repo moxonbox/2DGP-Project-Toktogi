@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "physical_gaps": 9,
+  "context_E_interactions": [
+    "food",
+    "beacon",
+    "collect",
+    "food",
+    "beacon",
+    "collect",
+    "food",
+    "beacon",
+    "collect"
+  ],
+  "checkpoint_restore": true,
+  "goal_clear": true,
+  "groom_and_turn": true,
+  "context_E_attack": true,
+  "animated_material": true,
+  "shore_safe": true,
+  "habitat_fish_dodge_cases": 4,
+  "frame_file_io": 0,
+  "non_square_material_light_response": true,
+  "draw_median_ms": 10.193599970079958,
+  "draw_p95_ms": 22.169600008055568,
+  "computer_use": false
+}

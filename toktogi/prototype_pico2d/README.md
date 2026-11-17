@@ -16,7 +16,12 @@ toktogi/prototype_pico2d/Start-Toktogi.cmd --profile legacy
 toktogi/prototype_pico2d/Start-Toktogi.cmd --verify
 ```
 
-기본은 `pond_test`: 수면 위 시험 연잎 6개와 C261의 입 돌출·도약 공격 구간이다.
+기본은 `habitat`: 젖은 숲바닥 → 수면 잎길 → 갈대숲 귀환으로 이어지는 3,120px 코스다.
+A01–A07의 개구리밥·수면·나무·돌·낙엽·이끼, B04–B07 배경과 C261 r03을 연결한다.
+등불 3개를 켜고 마지막 깃발에서 멈추면 완료한다. 씨앗 3개·섭식·회전·손질은 선택 활동이다.
+쉼터 등불은 활성화 즉시 체크포인트를 저장한다. C261은 수면 구간에서만 공격한다.
+`--profile pond_test`는 이전의 평면 수면 시험 구간을 실행한다.
+[스테이지·재질 설계](../../document/markdown/HabitatStage.md)를 함께 참고한다.
 경고 뒤 고정 위치를 공격하며 Space 도약으로 피하거나 가까운 입에 E/X로 반격한다.
 `--profile seamless`는 `stage_01/pond_duckweed`와 `stage_02/lotus_leaf`의 기존 연속 코스다.
 `--profile legacy`는 기존 단일 코스·Camera=(0,0)·261개 검수 항목을 비교한다.
@@ -87,3 +92,5 @@ C261은 asset의 `gambusia-r03` male/right 원본 Sprite 6액션 72셀과 실제
 F2 이동 광원/Bloom의 dummy p95는 22.01/24.70ms로 16.7ms 목표 미달이며 실기 인수는 미검증이다.
 
 실행부와 배포 패커는 현재 C261 r03 명세와 해당 Sprite 72셀을 함께 사용한다. 실행 오류는 콘솔에 남고 키 입력을 기다린다.
+
+2026-11-18 habitat 추가: 발판은 원본 앵커·일정 배율·Nearest로 정렬한다. 수평 물리 발판은 유지한다. 환경 Normal/RM 재조명은 시작 시 5단계 캐시하며 톡토기는 같은 월드 광원으로 실시간 계산한다.

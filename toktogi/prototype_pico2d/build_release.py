@@ -11,10 +11,13 @@ def build(project,output):
     for folder in (candidate,project/'toktogi/prototype',project/'document/markdown'):
         files.extend(p for p in folder.rglob('*') if p.is_file() and p.suffix in extensions
                      and not set(p.relative_to(folder).parts)&{'.venv','__pycache__','dist'})
-    environment=project/'asset/A/A01_plant_lemna_minor'
-    data=json.loads((environment/'2D/environment-r02/manifest.json').read_bytes())
-    files.extend(p for p in (environment/'2D/environment-r02').rglob('*') if p.is_file())
-    files.extend((environment/'ASSET_INDEX.md',environment/data['source_blend']))
+    for environment in sorted((project/'asset/A').glob('A0[1-7]_*')):
+        data=json.loads((environment/'2D/environment-r02/manifest.json').read_bytes())
+        files.extend(p for p in (environment/'2D/environment-r02').rglob('*') if p.is_file())
+        files.extend((environment/'ASSET_INDEX.md',environment/data['source_blend']))
+    background=project/'asset/B/_production/r02'
+    files.extend(background/name for name in ('backgrounds_r02.zip','backgrounds_r02.source.json',
+                                               'tools/background_bundle.py'))
     architecture=project/'document/ToktogiPico2DArchitecture.html'
     if architecture.is_file():files.append(architecture)
     fish=project/'asset/C/C261_gambusia_holbrooki'

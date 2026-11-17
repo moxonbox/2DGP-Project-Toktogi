@@ -1,0 +1,17 @@
+{
+  "partial_record": true,
+  "provenance": "Exact measured values retained from the first verify_performance.py run, reported before the contiguous-upload and visible-environment-crop changes. The original full JSON was overwritten; no raw samples or source hashes are reconstructed.",
+  "driver": "dummy",
+  "renderer": "software",
+  "samples_per_phase": 120,
+  "p95_budget_ms": 16.7,
+  "maximum_budget_ms": 33.4,
+  "app_load_ms": 5043.789,
+  "phases": {
+    "play_idle": {"median_ms": 15.5876, "p95_ms": 19.9136, "max_ms": 36.093},
+    "viewer_moving_light": {"median_ms": 17.4027, "p95_ms": 21.3717, "max_ms": 23.5351},
+    "viewer_moving_light_bloom": {"median_ms": 18.5752, "p95_ms": 22.7297, "max_ms": 26.4896}
+  },
+  "all_dummy_budgets_met": false,
+  "real_device_acceptance": "pending"
+}

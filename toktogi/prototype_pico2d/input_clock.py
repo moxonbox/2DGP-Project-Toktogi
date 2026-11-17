@@ -1,5 +1,6 @@
 """Engine-neutral input; SDL is loaded only by the native queue adapter."""
 from dataclasses import dataclass
+import threading
 
 CTRL=0x00c0
 
@@ -22,22 +23,38 @@ class Event:
 
 class EventClock:
     def __init__(self,origin=None,position_transform=None):
-        import sdl2
-        self.sdl=sdl2
+        if origin is not None and (type(origin) is not int or not 0<=origin<=0xffffffff):
+            raise ValueError('SDL tick origin must be an unsigned 32-bit integer.')
+        self.sdl=None
+        self.thread=threading.get_ident()
         self.position_transform=position_transform or (lambda p:p)
-        self.origin=int(sdl2.SDL_GetTicks()) if origin is None else origin
+        self.origin=origin
         self.last=self.origin
         self.elapsed=0
 
-    def normalize(self,stamp,now):
+    def _advance(self,now):
+        if self.last is None:self.origin=self.last=now
         self.elapsed+=(now-self.last)&0xffffffff
         self.last=now
+
+    def normalize(self,stamp,now):
+        self._advance(now)
+        # Signed age keeps late events on their original side of the wrap.
         age=((now-stamp+0x80000000)&0xffffffff)-0x80000000
         return (self.elapsed-age)/1000
 
     def events(self):
         import ctypes
+        if threading.get_ident()!=self.thread:
+            raise RuntimeError('SDL input must be polled on the canvas thread.')
+        if self.sdl is None:
+            import sdl2dll
+            import sdl2
+            self.sdl=sdl2
         s=self.sdl
+        if not s.SDL_WasInit(s.SDL_INIT_VIDEO):
+            raise RuntimeError('SDL input requires an active canvas.')
+        self._advance(int(s.SDL_GetTicks()))
         raw=s.SDL_Event()
         result=[]
         while s.SDL_PollEvent(ctypes.byref(raw)):
@@ -57,6 +74,15 @@ class EventClock:
                 data=raw.text if kind==s.SDL_TEXTINPUT else raw.edit
                 e=Event('text_input' if kind==s.SDL_TEXTINPUT else 'text_editing',text=bytes(data.text).split(b'\0',1)[0].decode('utf-8'))
                 if kind==s.SDL_TEXTEDITING:e.start,e.length=int(data.start),int(data.length)
+            elif kind==s.SDL_TEXTEDITING_EXT:
+                data=raw.editExt
+                pointer=ctypes.cast(ctypes.byref(data,s.SDL_TextEditingExtEvent.text.offset),
+                                    ctypes.POINTER(ctypes.c_void_p)).contents.value
+                try:
+                    e=Event('text_editing',text=(data.text or b'').decode('utf-8'),
+                            start=int(data.start),length=int(data.length))
+                finally:
+                    s.SDL_free(pointer)
             elif kind in (s.SDL_MOUSEBUTTONDOWN,s.SDL_MOUSEBUTTONUP):
                 e=Event('mouse_down' if kind==s.SDL_MOUSEBUTTONDOWN else 'mouse_up',button=int(raw.button.button),pos=self.position_transform((raw.button.x,raw.button.y)))
             elif kind==s.SDL_MOUSEMOTION:e=Event('mouse_motion',pos=self.position_transform((raw.motion.x,raw.motion.y)))

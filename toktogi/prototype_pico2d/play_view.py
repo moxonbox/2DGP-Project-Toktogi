@@ -31,6 +31,10 @@ class PlayView:
         self.world=world or World(course)
         self.camera=Camera(self.world)
         self.environment=None
+        if not self.world.legacy:
+            from environment import Environment
+            self.environment=Environment(asset_root)
+            self.environment.terrain(self.world)
         self.terrain = platforms(course.platforms)
         self.goal = (course.goal_span[1] - 33, next((p.y for p in course.platforms if p.kind == 'goal')))
 

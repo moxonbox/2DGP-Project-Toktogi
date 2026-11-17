@@ -1,0 +1,4 @@
+pico2d==1.5.1
+Pillow==13.0.0
+PySDL2==0.9.17
+PySDL2-DLL==2.32.10

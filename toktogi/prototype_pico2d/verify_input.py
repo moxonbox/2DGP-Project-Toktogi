@@ -29,6 +29,9 @@ def verify():
         key('space',at=.05,timestamp=.05)
         app.update(.1);assert app.viewer.playing
         checks['delayed_native_old_context']=True
+        fresh();key('p',at=.01);key('p',False,at=.01);key('p',at=.03);app.update(.1)
+        assert app.game.run=='Playing'
+        checks['same_timestamp_control_release']=True
         runs=[]
         for hz in (10,15,20,30,60):
             for phase in (0,.003,.006):

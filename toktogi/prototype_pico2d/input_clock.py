@@ -85,7 +85,10 @@ class EventClock:
                     s.SDL_free(pointer)
             elif kind in (s.SDL_MOUSEBUTTONDOWN,s.SDL_MOUSEBUTTONUP):
                 e=Event('mouse_down' if kind==s.SDL_MOUSEBUTTONDOWN else 'mouse_up',button=int(raw.button.button),pos=self.position_transform((raw.button.x,raw.button.y)))
-            elif kind==s.SDL_MOUSEMOTION:e=Event('mouse_motion',pos=self.position_transform((raw.motion.x,raw.motion.y)))
+                e.raw_pos=(raw.button.x,raw.button.y)
+            elif kind==s.SDL_MOUSEMOTION:
+                e=Event('mouse_motion',pos=self.position_transform((raw.motion.x,raw.motion.y)))
+                e.raw_pos=(raw.motion.x,raw.motion.y)
             elif kind==s.SDL_MOUSEWHEEL:
                 sign=-1 if raw.wheel.direction==s.SDL_MOUSEWHEEL_FLIPPED else 1
                 e=Event('wheel',x=int(raw.wheel.x)*sign,y=int(raw.wheel.y)*sign)

@@ -91,6 +91,9 @@ class App:
 
     def _event(self,e):
         self.dispatch_time=getattr(e,'input_time',self.timeline.wall_time)
+        if e.type=='key_up' and e.key in CONTROL_KEYS:
+            self.control_keys.discard(e.key)
+            return
         contextual=e.type in ('key_down','key_up','text_input','text_editing','mouse_down','mouse_up','wheel')
         if contextual and e.timestamp is not None and e.timestamp<=self.context_cutoff:
             if e.type=='key_up':self.control_keys.discard(e.key)
@@ -107,6 +110,7 @@ class App:
         elif e.type=='focus_gained':self.focused=True
         elif not self.focused:return
         elif e.type in ('mouse_motion','mouse_down','mouse_up'):
+            if self.backend and hasattr(e,'raw_pos'):e.pos=self.backend.logical_point(e.raw_pos)
             self.viewer.pointer=e.pos
             if e.type=='mouse_down' and e.button==1:
                 for rect,callback in reversed(self.buttons):

@@ -102,6 +102,11 @@ class Viewer:
             self.time = track.duration
             self.playing = False
 
+    def fit_text(self,label,size,width,*,tail=False):
+        while label and self.fonts[size].getlength(label)>width:
+            label=label[1:] if tail else label[:-1]
+        return label
+
     def text(self,label,x,y,size=16,color=INK):
         if self.native_text:
             self.native_text(str(label),x,y,size=size,color=color)
@@ -193,7 +198,8 @@ class Viewer:
         self.rect((20, 77, 334, 560))
         self.rect((34, 89, 306, 38), (39, 64, 53) if v.searching else (28, 51, 41), 7)
         self.buttons.append((Rect(34, 89, 306, 38), self.focus_search))
-        self.text((v.search+v.composition)[-27:] + '▏' if v.searching else v.search[-30:] or '검색  ·  Ctrl+F', 44, 99, 15, TINT)
+        search=(v.search+v.composition)+'▏' if v.searching else v.search or '검색  ·  Ctrl+F'
+        self.text(self.fit_text(search,15,280,tail=True),44,99,15,TINT)
         self.text(f'{len(v.filtered)} / {len(v.names)}   ·   클립 {len(self.assets.clips)}   ·   전환 {len(self.assets.sequences)}', 35, 137, 14, MUTED)
         offset = max(0, min(v.selected - 6, len(v.filtered) - 15))
         for i in range(offset, min(offset + 15, len(v.filtered))):
@@ -201,7 +207,7 @@ class Viewer:
             rect = Rect(33, 166 + (i - offset) * 29, 307, 27)
             if i == v.selected or rect.collidepoint(self.pointer):
                 self.rect(rect, LIME if i == v.selected else (50, 75, 64), 5)
-            self.text(item.removesuffix('.png'), 42, rect.y + 3, 14, TEXT if i == v.selected else INK)
+            self.text(self.fit_text(item.removesuffix('.png'),14,285), 42, rect.y + 3, 14, TEXT if i == v.selected else INK)
             self.buttons.append((rect, lambda i=i: v.select(i)))
         area = Rect(371, 77, 609, 560)
         self.rect(area, PANEL)
@@ -219,7 +225,8 @@ class Viewer:
         key = track.cells[index]
         name = v.name.removesuffix('.png')
         title = LABELS.get(v.name, name)
-        self.text(title, 395, 94, 23 if self.fonts[23].getlength(title) < 553 else 18, TINT)
+        size=23 if self.fonts[23].getlength(title)<553 else 18
+        self.text(self.fit_text(title,size,553),395,94,size,TINT)
         self.text(f'{key[1]}    {index + 1} / {len(track.cells)} 프레임    {track.duration:.2f}초', 396, 128, 15, MUTED)
         if v.name in self.game_previews:
             note = '게임 입력 리플레이' if v.name in self.replay_events else '게임 재생 시간'

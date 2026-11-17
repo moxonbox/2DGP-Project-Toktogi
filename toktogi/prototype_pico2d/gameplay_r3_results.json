@@ -1,0 +1,99 @@
+{
+  "groom_turn_attack_direction": true,
+  "opposite_landing_compression_ticks": 20,
+  "opposite_rejump_shared_heading": true,
+  "reverse_turn_returns_early": true,
+  "repeated_turn_reversals": true,
+  "edge_aim_and_attack_admission": [
+    [
+      "left",
+      36,
+      "up",
+      [
+        "LF",
+        "LM",
+        "LH",
+        "RH"
+      ]
+    ],
+    [
+      "left",
+      36,
+      "down",
+      [
+        "LF",
+        "LM",
+        "LH",
+        "RH"
+      ]
+    ],
+    [
+      "left",
+      200,
+      "up",
+      [
+        "LF",
+        "RF",
+        "RM"
+      ]
+    ],
+    [
+      "left",
+      200,
+      "down",
+      [
+        "LF",
+        "RF",
+        "RM"
+      ]
+    ],
+    [
+      "right",
+      36,
+      "up",
+      [
+        "LF",
+        "LM"
+      ]
+    ],
+    [
+      "right",
+      36,
+      "down",
+      [
+        "LF",
+        "LM"
+      ]
+    ],
+    [
+      "right",
+      200,
+      "up",
+      [
+        "LH",
+        "RF",
+        "RM",
+        "RH"
+      ]
+    ],
+    [
+      "right",
+      200,
+      "down",
+      [
+        "LH",
+        "RF",
+        "RM",
+        "RH"
+      ]
+    ]
+  ],
+  "goal_requires_stop": true,
+  "work_hint_matches_admission": true,
+  "progress_key_edge_and_focus": true,
+  "pause_resumes_effect_free_pose_return": true,
+  "support_labels": {
+    "cells": 780,
+    "max_normal_error_px": 0.26124944240135195
+  }
+}

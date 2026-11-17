@@ -1,0 +1,42 @@
+{
+  "driver": "dummy",
+  "renderer": "software",
+  "checks": {
+    "seven_modes_flat_bloom_and_exact_return": {
+      "lit": "4823a0f0d9f4bd0cc37a6b1cc71fbb095cab40d1ff7f34bede2481c7a3290ddd",
+      "sprite": "9edd92a5c5673c422335bd1dbee0c2160c8633d3d988b9fed8438f01fe33751b",
+      "base": "f110cf19e7bb120fe357e13ffa473962c770ef51423ccd81c40dc8585a4423e9",
+      "normal": "7ad7c2ac51d249632527e39c0216e9f9ed25aebc5ff41e004ce991d05400e9f7",
+      "rm": "355869119663f20320eeb57037bfc0bcfba4fa09e57485162336de8a4a60920b",
+      "emissive": "ba70ade24784edd4d9144394cd16a8b7582c3bd4083e0ef6bf5f903ba1c651de",
+      "outline": "78c759c269156a67725bcb20bc971821dd3d210e298a5f53470308d64b0d1cbc"
+    },
+    "native_button_text_centered_inside_hit_rect": 24,
+    "native_korean_commit_composition_long_search_fit": true,
+    "same_timestamp_pause_release_then_first_resume": true,
+    "native_late_timestamp_stale_epoch_and_fresh_context": true,
+    "native_focus_cancel_orphan_up_and_new_down": true,
+    "native_resize_and_mouse_same_queue_dispatch_inverse": true,
+    "scene_exit_stops_text_input": true,
+    "idempotent_app_close_no_live_sdl": true,
+    "seamless_native_game_draw": true
+  },
+  "screenshots": {
+    "game_legacy.png": "2ff2755ef75ccaa2ae07a37fe240bcdaa003f49a08197ae16fa53a4c652ac443",
+    "viewer_native.png": "ddf076d21e7aab91c510ff291ee6b7f53b7dbf1d405ac3f5b8ab1bcc5f73471e",
+    "search_korean_fit.png": "d22989dde9b6c5135f78caf3c204f71dd08265a0cd40ee472c9397db875917d7",
+    "game_seamless.png": "8d0f90a6228350ee7b23f58ae40c577757f5851fc890f0f7aada06f59d22b904"
+  },
+  "source_sha256": {
+    "app.py": "ae31e3175edcf8660d7e071dd402b763345243cbdb660f1743c6bf83e6bdfa23",
+    "motion_viewer.py": "57f9d6b170459a2d5a10528c916852ccf684487f8604f306659f8dd5e8c0762e",
+    "input_clock.py": "4a1575c745b21e4a704c298d7c76f262ed0f413f9fb61562f23caababe1b26ef",
+    "pico_backend.py": "213c7eda6a4dcea50e9a74269550b08e00b28d1ffb0c886355b757145f793325"
+  },
+  "hardware_deferred": [
+    "physical window/keyboard/focus",
+    "Korean IME candidate placement",
+    "actual monitor DPI",
+    "hardware renderer performance"
+  ]
+}

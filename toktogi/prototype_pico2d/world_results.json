@@ -1,0 +1,7 @@
+{
+  "legacy_course_identity_and_rebind": true,
+  "swept_bidirectional_context_and_state": true,
+  "swept_height_and_portal_priority": true,
+  "checkpoint_identity_prerequisites_and_epoch": true,
+  "malformed_world_cases": 12
+}

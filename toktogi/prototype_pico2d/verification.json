@@ -28,7 +28,7 @@
   },
   "all_material_cells": {
     "rendered": 1444,
-    "elapsed_seconds": 11.871,
+    "elapsed_seconds": 10.333,
     "atlas_cache_cells": 36
   },
   "material_response_changed_pixels": {
@@ -38,9 +38,9 @@
     "emission": 87
   },
   "headless_cpu_frame_ms": {
-    "p50": 2.797,
-    "p95": 3.739,
-    "p99": 11.601
+    "p50": 2.5,
+    "p95": 3.355,
+    "p99": 10.696
   },
   "source_bundle_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec",
   "requirement_trace": {
@@ -295,8 +295,8 @@
       ]
     ],
     "warm_large_scene_render_ms": {
-      "median": 0.0008,
-      "max": 0.0097
+      "median": 0.0006,
+      "max": 0.007
     },
     "relative_light_cache_invalidation": true,
     "asset_bundle_source_lock": true
@@ -424,9 +424,9 @@
       "changed_channels": 2
     },
     "headless_cpu_moving_light_ms": {
-      "median": 13.287200010381639,
-      "p95": 15.227299998514354,
-      "max": 18.716600025072694,
+      "median": 12.538450013380498,
+      "p95": 14.577800000552088,
+      "max": 17.205300042405725,
       "samples": 120,
       "scope": "Pillow CPU update+draw; excludes SDL upload, OS presentation and polling",
       "p95_within_60hz_budget": true

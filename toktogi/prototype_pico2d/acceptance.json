@@ -1,0 +1,1327 @@
+{
+  "legacy": "verification.json",
+  "timeline": {
+    "ticks": 360,
+    "backlog_preserved": true,
+    "equal_time_order": true
+  },
+  "world": {
+    "legacy_course_identity_and_rebind": true,
+    "swept_bidirectional_context_and_state": true,
+    "swept_height_and_portal_priority": true,
+    "checkpoint_identity_prerequisites_and_epoch": true,
+    "malformed_world_cases": 12
+  },
+  "input": {
+    "orphan_up_dual_shift_cancel": true,
+    "explicit_stale_epoch_both_scenes": true,
+    "delayed_native_old_context": true,
+    "same_timestamp_control_release": true,
+    "pause_batch_and_start_phases": [
+      [
+        0,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.003,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.006,
+        "Playing",
+        142.716666667,
+        "Walk"
+      ],
+      [
+        0,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.003,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.006,
+        "Playing",
+        142.716666667,
+        "Walk"
+      ],
+      [
+        0,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.003,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.006,
+        "Playing",
+        142.716666667,
+        "Walk"
+      ],
+      [
+        0,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.003,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.006,
+        "Playing",
+        142.716666667,
+        "Walk"
+      ],
+      [
+        0,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.003,
+        "Playing",
+        142.916666667,
+        "Walk"
+      ],
+      [
+        0.006,
+        "Playing",
+        142.716666667,
+        "Walk"
+      ]
+    ],
+    "new_context_later_timestamp_and_old_same_time": true,
+    "ime_commit_and_focus_cancel": true
+  },
+  "materials": {
+    "schema": 1,
+    "passed": true,
+    "base_cells": 1444,
+    "pose_cells": 930,
+    "full_decoded_cells": 2374,
+    "load_ms": 2347.28,
+    "golden": {
+      "cases": 24,
+      "max_channel_error": 1,
+      "changed_channels": 2,
+      "alpha_changed": 0
+    },
+    "changed_pixels": {
+      "normal": 2467,
+      "light": 2434,
+      "emission": 87
+    },
+    "flat_normal": [
+      0,
+      0,
+      1
+    ],
+    "preview_modes": 7,
+    "bloom": {
+      "edge_changed_pixels": {
+        "1": 69,
+        "2": 276,
+        "3": 621
+      },
+      "real_cell_changed_pixels": 131,
+      "outside_emission_changed_pixels": 44,
+      "black_or_disabled_changed_pixels": 0,
+      "alpha_changed": 0,
+      "scales": [
+        1,
+        2,
+        3
+      ],
+      "clip_checked": true,
+      "linear_coverage_checked": true
+    },
+    "cache_sizes": {
+      "maps": 36,
+      "surface_fields": 24,
+      "lit": 96,
+      "bloom": 24
+    },
+    "rejected_inputs": [
+      "duplicate_json_key",
+      "nonfinite_json",
+      "image_RGB_(128, 640)_PNG",
+      "image_RGBA_(128, 128)_PNG",
+      "image_RGBA_(128, 640)_TIFF",
+      "truncated_png",
+      "zip_duplicate",
+      "zip_missing_metadata",
+      "zip_crc",
+      "duplicate_view",
+      "unsupported_view",
+      "nonpositive_duration",
+      "nonfinite_duration",
+      "missing_view",
+      "invalid_support",
+      "duplicate_support",
+      "missing_marker",
+      "nonfinite_marker",
+      "out_of_bounds_rect",
+      "wrong_rect_size",
+      "missing_png",
+      "invalid_png_header",
+      "unknown_profile_cell",
+      "source_checksum",
+      "nonfinite_light",
+      "invalid_bloom_scale",
+      "nonfinite_bloom_origin",
+      "invalid_bloom_clip",
+      "closed_assets",
+      "closed_renderer"
+    ],
+    "idempotent_close": true,
+    "pygame_imported": false,
+    "scope": "Pillow CPU checks; native SDL output and full-frame timing are separate."
+  },
+  "world_game": {
+    "effects": {
+      "independent_objects": 8,
+      "effects_from_keys": true,
+      "lost_contact_cancels": true
+    },
+    "boundaries": {
+      "paired_modes": [
+        "walk",
+        "air",
+        "prep",
+        "f",
+        "e",
+        "x",
+        "q",
+        "z"
+      ],
+      "exact_motion_state": true,
+      "reverse_crossings": 6,
+      "pause_restart_failure_priority": true
+    },
+    "checkpoint": {
+      "explicit_prerequisites_only": true,
+      "stable_support": true,
+      "epoch": 2
+    },
+    "legacy_api": {
+      "course_replacement": true,
+      "legacy_aliases": true,
+      "prep_requires_identity": true
+    },
+    "legacy_route": {
+      "seconds": 13.75,
+      "launches": 4,
+      "elastic_launches": 1,
+      "world_revision": "legacy-r4",
+      "portal_events": [],
+      "inputs": [
+        [
+          0,
+          "right",
+          true
+        ],
+        [
+          37,
+          "space",
+          true
+        ],
+        [
+          37,
+          "space",
+          false
+        ],
+        [
+          141,
+          "right",
+          false
+        ],
+        [
+          165,
+          "right",
+          true
+        ],
+        [
+          448,
+          "right",
+          false
+        ],
+        [
+          448,
+          "shift",
+          true
+        ],
+        [
+          472,
+          "shift",
+          false
+        ],
+        [
+          472,
+          "e",
+          true
+        ],
+        [
+          472,
+          "e",
+          false
+        ],
+        [
+          577,
+          "space",
+          true
+        ],
+        [
+          577,
+          "space",
+          false
+        ],
+        [
+          680,
+          "shift",
+          true
+        ],
+        [
+          693,
+          "shift",
+          false
+        ],
+        [
+          693,
+          "space",
+          true
+        ],
+        [
+          693,
+          "space",
+          false
+        ],
+        [
+          820,
+          "right",
+          false
+        ],
+        [
+          820,
+          "shift",
+          true
+        ],
+        [
+          844,
+          "shift",
+          false
+        ],
+        [
+          844,
+          "right",
+          true
+        ],
+        [
+          1141,
+          "right",
+          false
+        ],
+        [
+          1141,
+          "shift",
+          true
+        ],
+        [
+          1165,
+          "shift",
+          false
+        ],
+        [
+          1165,
+          "x",
+          true
+        ],
+        [
+          1165,
+          "x",
+          false
+        ],
+        [
+          1213,
+          "right",
+          true
+        ],
+        [
+          1494,
+          "right",
+          false
+        ],
+        [
+          1494,
+          "shift",
+          true
+        ],
+        [
+          1518,
+          "shift",
+          false
+        ],
+        [
+          1518,
+          "space",
+          true
+        ],
+        [
+          1518,
+          "space",
+          false
+        ],
+        [
+          1615,
+          "shift",
+          true
+        ]
+      ]
+    },
+    "seamless_route": {
+      "seconds": 34.183333,
+      "launches": 8,
+      "elastic_launches": 2,
+      "world_revision": "seamless-r1",
+      "portal_events": [
+        [
+          1,
+          "pond_lotus",
+          1,
+          "pond_duckweed",
+          "lotus_leaf"
+        ]
+      ],
+      "inputs": [
+        [
+          0,
+          "right",
+          true
+        ],
+        [
+          37,
+          "space",
+          true
+        ],
+        [
+          37,
+          "space",
+          false
+        ],
+        [
+          141,
+          "right",
+          false
+        ],
+        [
+          165,
+          "right",
+          true
+        ],
+        [
+          448,
+          "right",
+          false
+        ],
+        [
+          448,
+          "shift",
+          true
+        ],
+        [
+          472,
+          "shift",
+          false
+        ],
+        [
+          472,
+          "e",
+          true
+        ],
+        [
+          472,
+          "e",
+          false
+        ],
+        [
+          577,
+          "space",
+          true
+        ],
+        [
+          577,
+          "space",
+          false
+        ],
+        [
+          680,
+          "shift",
+          true
+        ],
+        [
+          693,
+          "shift",
+          false
+        ],
+        [
+          693,
+          "space",
+          true
+        ],
+        [
+          693,
+          "space",
+          false
+        ],
+        [
+          820,
+          "right",
+          false
+        ],
+        [
+          820,
+          "shift",
+          true
+        ],
+        [
+          844,
+          "shift",
+          false
+        ],
+        [
+          844,
+          "right",
+          true
+        ],
+        [
+          1141,
+          "right",
+          false
+        ],
+        [
+          1141,
+          "shift",
+          true
+        ],
+        [
+          1165,
+          "shift",
+          false
+        ],
+        [
+          1165,
+          "x",
+          true
+        ],
+        [
+          1165,
+          "x",
+          false
+        ],
+        [
+          1213,
+          "right",
+          true
+        ],
+        [
+          1494,
+          "right",
+          false
+        ],
+        [
+          1494,
+          "shift",
+          true
+        ],
+        [
+          1518,
+          "shift",
+          false
+        ],
+        [
+          1518,
+          "space",
+          true
+        ],
+        [
+          1518,
+          "space",
+          false
+        ],
+        [
+          1615,
+          "shift",
+          true
+        ],
+        [
+          1650,
+          "shift",
+          false
+        ],
+        [
+          1650,
+          "right",
+          true
+        ],
+        [
+          2490,
+          "space",
+          true
+        ],
+        [
+          2490,
+          "space",
+          false
+        ],
+        [
+          2594,
+          "right",
+          false
+        ],
+        [
+          2618,
+          "right",
+          true
+        ],
+        [
+          2901,
+          "right",
+          false
+        ],
+        [
+          2901,
+          "shift",
+          true
+        ],
+        [
+          2925,
+          "shift",
+          false
+        ],
+        [
+          2925,
+          "e",
+          true
+        ],
+        [
+          2925,
+          "e",
+          false
+        ],
+        [
+          3030,
+          "space",
+          true
+        ],
+        [
+          3030,
+          "space",
+          false
+        ],
+        [
+          3133,
+          "shift",
+          true
+        ],
+        [
+          3146,
+          "shift",
+          false
+        ],
+        [
+          3146,
+          "space",
+          true
+        ],
+        [
+          3146,
+          "space",
+          false
+        ],
+        [
+          3273,
+          "right",
+          false
+        ],
+        [
+          3273,
+          "shift",
+          true
+        ],
+        [
+          3297,
+          "shift",
+          false
+        ],
+        [
+          3297,
+          "right",
+          true
+        ],
+        [
+          3593,
+          "right",
+          false
+        ],
+        [
+          3593,
+          "shift",
+          true
+        ],
+        [
+          3617,
+          "shift",
+          false
+        ],
+        [
+          3617,
+          "x",
+          true
+        ],
+        [
+          3617,
+          "x",
+          false
+        ],
+        [
+          3665,
+          "right",
+          true
+        ],
+        [
+          3946,
+          "right",
+          false
+        ],
+        [
+          3946,
+          "shift",
+          true
+        ],
+        [
+          3970,
+          "shift",
+          false
+        ],
+        [
+          3970,
+          "space",
+          true
+        ],
+        [
+          3970,
+          "space",
+          false
+        ],
+        [
+          4067,
+          "shift",
+          true
+        ]
+      ]
+    },
+    "legacy_replays": {
+      "cases": 4,
+      "ticks": 725,
+      "exact": true
+    }
+  },
+  "replays": {
+    "legacy_replays": 4,
+    "world_replays": 2,
+    "legacy_catalog": 261,
+    "seamless_catalog": 263,
+    "live_game_unchanged": true,
+    "recordings": {
+      "replay_world_walk_cross": {
+        "ticks": 90,
+        "crossing_tick": 27,
+        "crossing_seconds": 0.2333333333333333,
+        "events": [
+          [
+            "portal:pond_lotus",
+            0.2333333333333333
+          ]
+        ],
+        "exact_reproduction": true
+      },
+      "replay_world_air_cross": {
+        "ticks": 100,
+        "crossing_tick": 15,
+        "crossing_seconds": 0.13333333333333333,
+        "events": [
+          [
+            "launch",
+            0.09999999999999999
+          ],
+          [
+            "portal:pond_lotus",
+            0.13333333333333333
+          ]
+        ],
+        "exact_reproduction": true
+      }
+    }
+  },
+  "environment": {
+    "schema": 1,
+    "passed": true,
+    "metadata": {
+      "asset_id": "plant_lemna_minor",
+      "revision": "environment-r02",
+      "manifest": "A/A01_plant_lemna_minor/2D/environment-r02/manifest.json",
+      "manifest_sha256": "d89ad09669e12d10d8841c56f2413ead6b4c5325370ce0e5b2a855118cc41e15",
+      "source_blend": "A/A01_plant_lemna_minor/3D/plant_lemna_minor_r02.blend",
+      "source_blend_sha256": "7b2d2e5a547afabc6b50ad5c9e4b1ee820ee02d7ba32d208e880f8b5af3cde15",
+      "production_export_allowed": false,
+      "game_integration": "pending_stage_and_DEC_06",
+      "collision_status": "not_bound_to_runtime",
+      "lotus_asset_present": false,
+      "stage_02_art_status": "lotus_asset_missing"
+    },
+    "decoded_cells": 15,
+    "decoded_atlases": 5,
+    "platforms": 11,
+    "image_size": [
+      1996,
+      1035
+    ],
+    "origin": [
+      -68,
+      -400
+    ],
+    "memory_bytes": 8386872,
+    "memory_limit_bytes": 33554432,
+    "prepared_sha256": "69e0aa9fbd314adf47d273c961b1a660cc0c9f7e9d9f21100f0f9307c9fa0fe7",
+    "bindings": [
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_00"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          118.0,
+          476
+        ],
+        "sprite_origin": [
+          36,
+          451
+        ],
+        "sprite_size": [
+          166,
+          104
+        ],
+        "scale": [
+          0.7477477477477478,
+          0.7482014388489209
+        ],
+        "anchor_rounding_error": [
+          -0.49549549549549,
+          -0.12035683453234469
+        ],
+        "horizontal_support": [
+          35,
+          201,
+          476
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_01"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          325.0,
+          404
+        ],
+        "sprite_origin": [
+          244,
+          379
+        ],
+        "sprite_size": [
+          164,
+          103
+        ],
+        "scale": [
+          0.7387387387387387,
+          0.7410071942446043
+        ],
+        "anchor_rounding_error": [
+          -0.47747747747746416,
+          -0.3595841726618687
+        ],
+        "horizontal_support": [
+          243,
+          407,
+          404
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_02"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          500.5,
+          331
+        ],
+        "sprite_origin": [
+          400,
+          300
+        ],
+        "sprite_size": [
+          205,
+          128
+        ],
+        "scale": [
+          0.9234234234234234,
+          0.920863309352518
+        ],
+        "anchor_rounding_error": [
+          0.15315315315314137,
+          -0.37890071942445047
+        ],
+        "horizontal_support": [
+          398,
+          603,
+          331
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_03"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          732.5,
+          209
+        ],
+        "sprite_origin": [
+          609,
+          171
+        ],
+        "sprite_size": [
+          251,
+          157
+        ],
+        "scale": [
+          1.1306306306306306,
+          1.129496402877698
+        ],
+        "anchor_rounding_error": [
+          -0.26126126126132476,
+          -0.44130791366904987
+        ],
+        "horizontal_support": [
+          607,
+          858,
+          209
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_04"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          959.0,
+          125
+        ],
+        "sprite_origin": [
+          820,
+          82
+        ],
+        "sprite_size": [
+          284,
+          178
+        ],
+        "scale": [
+          1.2792792792792793,
+          1.2805755395683454
+        ],
+        "anchor_rounding_error": [
+          0.4414414414413841,
+          -0.4175338129496424
+        ],
+        "horizontal_support": [
+          817,
+          1101,
+          125
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "pond_duckweed",
+          "platform_05"
+        ],
+        "stage_id": "stage_01",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          480.0,
+          515
+        ],
+        "sprite_origin": [
+          356,
+          477
+        ],
+        "sprite_size": [
+          252,
+          158
+        ],
+        "scale": [
+          1.135135135135135,
+          1.1366906474820144
+        ],
+        "anchor_rounding_error": [
+          -0.2702702702702595,
+          -0.20208057553952585
+        ],
+        "horizontal_support": [
+          354,
+          606,
+          515
+        ],
+        "production_export_allowed": false,
+        "status": "prototype_duckweed",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "lotus_leaf",
+          "platform_06"
+        ],
+        "stage_id": "stage_02",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          1225.0,
+          53
+        ],
+        "sprite_origin": [
+          1144,
+          28
+        ],
+        "sprite_size": [
+          164,
+          103
+        ],
+        "scale": [
+          0.7387387387387387,
+          0.7410071942446043
+        ],
+        "anchor_rounding_error": [
+          -0.47747747747757785,
+          -0.3595841726618687
+        ],
+        "horizontal_support": [
+          1143,
+          1307,
+          53
+        ],
+        "production_export_allowed": false,
+        "status": "provisional_duckweed_for_lotus",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "lotus_leaf",
+          "platform_07"
+        ],
+        "stage_id": "stage_02",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          1400.5,
+          -20
+        ],
+        "sprite_origin": [
+          1300,
+          -51
+        ],
+        "sprite_size": [
+          205,
+          128
+        ],
+        "scale": [
+          0.9234234234234234,
+          0.920863309352518
+        ],
+        "anchor_rounding_error": [
+          0.15315315315319822,
+          -0.3789007194244576
+        ],
+        "horizontal_support": [
+          1298,
+          1503,
+          -20
+        ],
+        "production_export_allowed": false,
+        "status": "provisional_duckweed_for_lotus",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "lotus_leaf",
+          "platform_08"
+        ],
+        "stage_id": "stage_02",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          1632.5,
+          -142
+        ],
+        "sprite_origin": [
+          1509,
+          -180
+        ],
+        "sprite_size": [
+          251,
+          157
+        ],
+        "scale": [
+          1.1306306306306306,
+          1.129496402877698
+        ],
+        "anchor_rounding_error": [
+          -0.26126126126132476,
+          -0.44130791366904987
+        ],
+        "horizontal_support": [
+          1507,
+          1758,
+          -142
+        ],
+        "production_export_allowed": false,
+        "status": "provisional_duckweed_for_lotus",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "lotus_leaf",
+          "platform_09"
+        ],
+        "stage_id": "stage_02",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          1783.5,
+          -226
+        ],
+        "sprite_origin": [
+          1718,
+          -246
+        ],
+        "sprite_size": [
+          133,
+          83
+        ],
+        "scale": [
+          0.5990990990990991,
+          0.5971223021582733
+        ],
+        "anchor_rounding_error": [
+          -0.1981981981982699,
+          -0.14413093525180898
+        ],
+        "horizontal_support": [
+          1717,
+          1850,
+          -226
+        ],
+        "production_export_allowed": false,
+        "status": "provisional_duckweed_for_lotus",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      },
+      {
+        "platform_key": [
+          "seamless-r1",
+          "lotus_leaf",
+          "platform_10"
+        ],
+        "stage_id": "stage_02",
+        "asset_id": "plant_lemna_minor",
+        "revision": "environment-r02",
+        "view": "left",
+        "sample": 0,
+        "anchor": "frond_top",
+        "anchor_world": [
+          1380.0,
+          164
+        ],
+        "sprite_origin": [
+          1256,
+          126
+        ],
+        "sprite_size": [
+          252,
+          158
+        ],
+        "scale": [
+          1.135135135135135,
+          1.1366906474820144
+        ],
+        "anchor_rounding_error": [
+          -0.2702702702702027,
+          -0.2020805755395827
+        ],
+        "horizontal_support": [
+          1254,
+          1506,
+          164
+        ],
+        "production_export_allowed": false,
+        "status": "provisional_duckweed_for_lotus",
+        "collision_binding": "existing_horizontal_platform; DEC-06 pending"
+      }
+    ],
+    "horizontal_colliders_unchanged": true,
+    "draw_io_calls": 0,
+    "rejected_inputs": [
+      "path_escape",
+      "absolute_path",
+      "checksum",
+      "wrong_dimensions",
+      "memory_budget"
+    ],
+    "scope": "CPU art/binding checks only; production export and DEC-06 remain pending."
+  },
+  "camera": {
+    "continuous_boundary": true,
+    "paused_camera": true,
+    "single_rounding": true
+  },
+  "no_video_imports": true,
+  "seconds": 52.862,
+  "native_acceptance": "Separate verify_backend.py / verify_native_input.py; real device acceptance pending",
+  "source_sha256": {
+    "app.py": "ae31e3175edcf8660d7e071dd402b763345243cbdb660f1743c6bf83e6bdfa23",
+    "build_motion_preview.py": "c3b830a5fed1aa540a9c0940f2708f5f626cb1af38ca86c014c74c7caa7c37f6",
+    "camera.py": "5c81614d3f9a388dacafcd37a7fafe3498aac44c949d52c9fd42b3cd5a93cc8f",
+    "course.py": "78af682112fc836a7ddb10664ec24c9db901e860eedfdd80284c0b884abdb9bc",
+    "environment.py": "dab474e372932ad894ccb49cbddcbd652a88d14448f1aaac1b9c76465ac09942",
+    "game.py": "8cebade9ec5247c96301bf6d2c711ec48b8bf221df91af2c7789cf86db2bbd1b",
+    "geometry.py": "e915d1e6be49e662e281cb5997edb3067abdce887417cb3a787836a3a3c3aa9c",
+    "input_clock.py": "4a1575c745b21e4a704c298d7c76f262ed0f413f9fb61562f23caababe1b26ef",
+    "lighting.py": "0166a2caae561484b24945fd9028001f94d1c3f56d3f28ff66f3f18cc758b056",
+    "main.py": "595e0c4c7ef505fb758aed32aafe36080cd88fc951eb4b503b7e552b5a57770a",
+    "materials.py": "b4f715ca49aca5e0542f8244b9a16eea120912d999f361f1ccfc88522e663b67",
+    "motion.py": "9df2bfd6a2f0deef501ce97d42b95fa230ecfc733ae3942233fa0d425ba0c718",
+    "motion_viewer.py": "57f9d6b170459a2d5a10528c916852ccf684487f8604f306659f8dd5e8c0762e",
+    "pack_assets.py": "520dbcd1b033636884fb0f7fbcc00aed1e79a1a508136d3a17225f84fc445785",
+    "physics.py": "2a11741cd9ccc6e904b030d2c80452c86bdd9a3172213256e71f6035a6983799",
+    "pico_backend.py": "213c7eda6a4dcea50e9a74269550b08e00b28d1ffb0c886355b757145f793325",
+    "play_view.py": "7ad18488cc1e28fe3370ae91510758f35e2b5edb38e8d65af57727b8129bca85",
+    "replays.py": "aea9529ddc1542f3cf64b4ae7c3f0f563771b4ad855d35aab202d18dcc29917e",
+    "sprite_renderer.py": "5ef38a463d92bf27d33535335c4da2f73261938dab0076fc6c6683d9910a9a89",
+    "timeline.py": "4da3158fdb0842ad02fce65fb1fde5a096f381499498f276936865c2128d2340",
+    "verify_all.py": "f5f750956a6051d1cfee10054f7019c13fea5a8bd386e5a532ffad2dd0470df6",
+    "verify_app_native.py": "215e1ca4d32ac99ed5065ec8fee5f1872419d505cda9cc97aad2ee69b5fdf87a",
+    "verify_backend.py": "1716d433bdee57137e7e469adbafc44d61d9a2c485b725dbdaf0e8765caa9a79",
+    "verify_environment.py": "6f453b016ca0c7c0bf923d3ba529b6bc8e84a9be209bde2a292133479d419390",
+    "verify_framework.py": "58a55de2af4d625d10e540559907d8d7736979484b571dd179952b79a4eeda4a",
+    "verify_gameplay_r2.py": "3a9cc95c3e8799fec2779b0438d81be07f211fa12df5d7df0aa3f7f9f6c21ba4",
+    "verify_gameplay_r3.py": "855fce97f42ef8490b872a3e9b9463d886a1642f58747c895270bb054af3d945",
+    "verify_gameplay_r4.py": "dc9adf75583cbb256e02c1a3deaaa0ff3a3fd0ae9eb50641c2777c029de7a55a",
+    "verify_input.py": "1c9852db08296a452830b7b42794465a4217e109c04ad4aba383a3fbd7d44b67",
+    "verify_materials.py": "f0d04c83410938794a0e3ee8974d3641d94fb289a6ad6ce455bdc4e7612e3bcd",
+    "verify_native_input.py": "acd0c2bac4fb30beafe2bf234275de71a02ef5e04d4a37b5e19a00e5488c4b3a",
+    "verify_prototype.py": "1ab98d9419f5dd5765255d72100bca23ff817f272896e0ffaa9d62baee06eb8c",
+    "verify_regressions.py": "87b03fa4a08b1614e3525bac4ccd6a6c981fbebde69cef5e8fb473123f6ea745",
+    "verify_replays.py": "4da4571aebdeb7f15ee2b402c2081bb951e093e54b7567a07bc13776354e9e21",
+    "verify_requirements.py": "a76cef5cd6953ff25cc2f9731de96cdd9cfa527706d356335f7f12d101ac4678",
+    "verify_timeline.py": "3c5b0f18c1226cea3400db5cddb40165372c21597ab5e17e5185c77591452542",
+    "verify_world.py": "f516ee9a21d2a57abd1f54819bdfe2eacde1a90e2e9a61940bd8768876c95c12",
+    "verify_world_game.py": "8fa1de49777c8677e81522cac9490a282bacd90653b7a89ca6f455f4ebf1c628",
+    "world.py": "bfe51a35fbe713ab4d20df86ad17ccadf079ed94b1d2c6ac20dcd77dd64857d2"
+  }
+}

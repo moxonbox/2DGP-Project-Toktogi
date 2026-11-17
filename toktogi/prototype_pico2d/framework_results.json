@@ -1,0 +1,55 @@
+{
+  "both_headings_full_spin": {
+    "left": {
+      "pose_count": 62,
+      "seconds": 1.5499999999999985
+    },
+    "right": {
+      "pose_count": 62,
+      "seconds": 1.5499999999999985
+    }
+  },
+  "idle_spin_current_pose_entry": true,
+  "walk_spin_walk_shared_boundary": true,
+  "ordered_spin_follow_ups": true,
+  "spin_guards_and_pause": true,
+  "course_lighting_changes_pixels": 2243,
+  "independent_course_and_renderer": true,
+  "feed_cancel_and_new_attack": {
+    "samples": 98,
+    "attack_delay_ticks": 0
+  },
+  "work_hint_and_admission": true,
+  "nearest_wall_and_configuration_validation": true,
+  "replanted_spin_10_60fps": {
+    "left": {
+      "stances": 12,
+      "max_z_px": 0.26124944240135195,
+      "max_slide_px": 7.191011351744133e-05,
+      "min_peak_lift_px": 2.5904180191643
+    },
+    "right": {
+      "stances": 12,
+      "max_z_px": 0.26124944240135195,
+      "max_slide_px": 0.00010169625780674305,
+      "min_peak_lift_px": 2.5904180191643
+    }
+  },
+  "q_idle_and_game_timing_previews": 16,
+  "connected_feed_and_readable_attack": {
+    "directions": 2,
+    "attack_effect_tick": 10,
+    "visible_at_all_10hz_phases": true
+  },
+  "four_live_input_replays": [
+    "replay_feed_attack",
+    "replay_walk_z",
+    "replay_q_reverse",
+    "replay_jump_land"
+  ],
+  "course_validation_and_cache_isolation": true,
+  "ledge_q_direction_share_support_gate": true,
+  "feed_to_move_restart_and_groom": true,
+  "course_spawn_and_checkpoint_clearance": true,
+  "q_both_support_sets_all_10hz_phases": true
+}

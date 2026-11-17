@@ -1,0 +1,81 @@
+{
+  "space_hold_preserves_walk_shift_brakes": [
+    172.0,
+    172.0,
+    172.0,
+    172.0
+  ],
+  "elastic_pre_post_same_direction_aim": [
+    [
+      "left",
+      1,
+      -139.0,
+      -562.0
+    ],
+    [
+      "left",
+      -1,
+      -197.0,
+      -520.0
+    ],
+    [
+      "right",
+      1,
+      139.0,
+      -562.0
+    ],
+    [
+      "right",
+      -1,
+      197.0,
+      -520.0
+    ]
+  ],
+  "q_attack_and_jump_use_destination": true,
+  "pending_jump_can_be_cancelled": true,
+  "feed_release_immediate_move": true,
+  "opposed_keys_keep_walk": true,
+  "first_ledge_headroom_and_jump_end": [
+    [
+      150,
+      104.979
+    ],
+    [
+      180,
+      104.979
+    ],
+    [
+      198,
+      104.979
+    ],
+    [
+      200,
+      104.979
+    ]
+  ],
+  "focus_closes_air_action": true,
+  "repeat_after_pause_does_not_attack": true,
+  "core_poses_every_display_phase": {
+    "10": {
+      "release": 1,
+      "apex": 1,
+      "rotation": 3
+    },
+    "15": {
+      "release": 1,
+      "apex": 1,
+      "rotation": 4
+    },
+    "30": {
+      "release": 3,
+      "apex": 3,
+      "rotation": 9
+    },
+    "60": {
+      "release": 6,
+      "apex": 6,
+      "rotation": 19
+    }
+  },
+  "flight_cells_have_no_ground_support": true
+}

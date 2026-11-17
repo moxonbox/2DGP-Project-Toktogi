@@ -1,5 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont, ImageChops
 from pathlib import Path
+from camera import Camera
+from world import World
 from geometry import Rect,bounds,circle_bounds,crop_box
 """Playfield renderer. Physics supplies world positions; the renderer owns lighting."""
 SCREEN = (1280, 744)
@@ -24,16 +26,29 @@ def platforms(level):
 
 class PlayView:
 
-    def __init__(self, assets, course):
+    def __init__(self, assets, course, *, world=None, asset_root=None):
         self.assets = assets
+        self.world=world or World(course)
+        self.camera=Camera(self.world)
+        self.environment=None
         self.terrain = platforms(course.platforms)
         self.goal = (course.goal_span[1] - 33, next((p.y for p in course.platforms if p.kind == 'goal')))
 
+    def step(self,g,dt):
+        self.camera.step(g,dt)
+
+    def point(self,x,y):
+        px,py=self.camera.point(x,y)
+        return FIELD.x+px,FIELD.y+py
+
     def light_at(self, x, y):
         drift = 2 * round(24 * max(0.0, min(1.0, x / FIELD.width))) - 24
-        return (FIELD.x + round(x) - 45 + drift, FIELD.y + round(y) - 87)
+        px,py=self.point(x,y)
+        return px-45+drift,py-87
 
     def draw(self, screen, g):
+        if not self.world.legacy:
+            return self.draw_world(screen,g)
         course = g.course
         screen.paste(PLAY_CLEAR, (0, 0, *screen.size))
         x, y = FIELD.topleft
@@ -83,3 +98,54 @@ class PlayView:
             image = image.copy()
             image = ImageChops.add(image, Image.new('RGBA', image.size, (30, 6, 0, 0)))
         screen.alpha_composite(image, tuple(map(round, origin)))
+
+    def draw_world(self,screen,g):
+        screen.paste((*PLAY_CLEAR,255),(0,0,*screen.size))
+        frame=Image.new('RGBA',SCREEN,(*PLAY_CLEAR,255));draw=ImageDraw.Draw(frame)
+        if self.environment:
+            frame.alpha_composite(self.environment.image,self.point(*self.environment.origin))
+        else:
+            for p in g.course.platforms:
+                x0,y=self.point(p.x0,p.y);x1,bottom=self.point(p.x1,p.bottom)
+                draw.polygon(((x0,y-14),(x1,y-14),(x1-8,bottom),(x0+8,bottom)),fill=(97,125,62))
+                draw.line(((x0+6,y-14),(x1-6,y-14)),fill=(166,193,104),width=2)
+        ready=g.ready_work()
+        for e in g.world.entities:
+            value=g.world.states[e.key];px,py=self.point(*e.point);tx,ty=self.point(*e.touch)
+            color=LIME if e.key in ready else (214,190,123)
+            if e.kind=='food':
+                for i in range(value):
+                    x=tx+i*5-7
+                    draw.line(((x+3,ty+3),(x+3,py)),fill=(118,141,83))
+                    draw.polygon(((x,ty+1),(x+2,ty-4),(x+6,ty),(x+3,ty+3)),fill=color)
+            elif e.kind=='beacon':
+                draw.line(((px,py),(px,py-24)),fill=(113,147,103),width=3)
+                draw.polygon(((px,py-33),(px+8,py-24),(px,py-15),(px-8,py-24)),fill=LIME if value else (145,149,124))
+                draw.ellipse((tx-4,ty-2,tx+4,ty+1),fill=LIME if value else color)
+            elif e.kind=='collect' and not value:
+                draw.ellipse((tx-4,ty-3,tx+4,ty+2),fill=color)
+            elif e.kind=='shell' and value:
+                draw.polygon(((px-16,py),(px-12,py-10),(px-6,py-7),(px,py-15),(px+6,py-7),(px+12,py-10),(px+16,py)),fill=(196,126,94))
+        px,py=self.point(*self.goal)
+        draw.line(((px,py),(px,py-24)),fill=(113,147,103),width=3)
+        draw.polygon(((px,py-33),(px+8,py-24),(px,py-15),(px-8,py-24)),fill=TINT if g.run=='Cleared' else LIME if g.world.goal_ready() else (145,149,124))
+        if g.checkpoint:
+            cp=next(c for c in g.world.checkpoints if c.checkpoint_id==g.world.checkpoint_id)
+            px,py=self.point(*cp.point)
+            draw.line(((px,py),(px,py-18)),fill=LIME,width=2)
+            draw.polygon(((px,py-18),(px+13,py-15),(px,py-9)),fill=LIME)
+        if g.offer and g.support and g.prep is None:
+            p=g.support;draw.line((self.point(p.x0+6,p.y-14),self.point(p.x1-6,p.y-14)),fill=LIME,width=2)
+        light=self.light_at(g.x,g.y)
+        floor=min((p.y for p in g.course.platforms if p.x0<=g.x<=p.x1 and p.y>=g.y-.1),default=None)
+        if floor is not None:
+            shadow=Image.new('RGBA',(74,18));lift=max(0,floor-g.y)
+            ImageDraw.Draw(shadow).ellipse((4,3,63,9),fill=(10,16,14,max(0,116-round(lift*1.6))))
+            sx,sy=self.point(g.x,floor)
+            shift=int((self.point(g.x,g.y)[0]-light[0])*.035*min(1,lift/30))
+            frame.alpha_composite(shadow,(sx-33+shift,sy-4))
+        px,py=self.point(g.x,g.y);origin=(px-self.assets.pivot[0],py-self.assets.pivot[1])
+        sprite=self.assets.render(g.visual(),'lit',origin,light,power=.82,ambient=.34)
+        if g.time<g.reject_until:sprite=ImageChops.add(sprite,Image.new('RGBA',sprite.size,(30,6,0,0)))
+        frame.alpha_composite(sprite,origin)
+        screen.paste(frame.crop(crop_box(FIELD)),FIELD.topleft)

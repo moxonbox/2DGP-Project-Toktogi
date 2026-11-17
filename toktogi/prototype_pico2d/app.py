@@ -23,14 +23,18 @@ def route_event(event):
     return 'after'
 
 class App:
-    def __init__(self,assets_path=ROOT/'toktogi_assets.zip',course=COURSE,*,pose_path=None,native=False,profile='legacy'):
+    def __init__(self,assets_path=ROOT/'toktogi_assets.zip',course=COURSE,*,pose_path=None,native=False,profile='legacy',asset_root=None):
         self.backend=None;self.assets=None
         try:
             self.assets=Assets(assets_path,pose_path)
-            self.game=Game(self.assets,course)
+            from world import World
+            world=World.seamless() if profile=='seamless' else World(course)
+            self.game=Game(self.assets,world=world)
+            course=world.course
             self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets)))
             self.screen=Image.new('RGBA',SCREEN)
-            self.play_view=PlayView(self.assets,course)
+            self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
+            self.play_view.step(self.game,0)
             self.scene='game';self.buttons=self.viewer.buttons
             self.timeline=FixedStepTimeline(STEP)
             self.running=True;self.focused=True
@@ -69,7 +73,9 @@ class App:
         self.viewer.light_time+=dt
 
     def step_scene(self,dt,on_input):
-        if self.scene=='game':self.game.step(dt,on_input if self.game.run=='Playing' else None)
+        if self.scene=='game':
+            self.game.step(dt,on_input if self.game.run=='Playing' else None)
+            self.play_view.step(self.game,dt)
         else:self.viewer.step(dt)
 
     def draw(self):
@@ -152,7 +158,7 @@ class App:
 
     def run(self):
         if self.backend is None:raise RuntimeError('Native run requires App(native=True).')
-        self.input_clock=EventClock(position_transform=self.backend.logical_point)
+        self.input_clock=EventClock(origin=int(self.backend.sdl.SDL_GetTicks()),position_transform=self.backend.logical_point)
         previous=perf_counter()
         try:
             while self.running:

@@ -22,6 +22,7 @@ class Game:
         validate_playable(assets)
         self.motion = MotionSet(assets)
         self.world = world if world is not None else World(course)
+        self.pond=None
         course = self.course
         starts = ((course.spawn_x,self.world.spawn_platform),
                   *((c.point[0],c.platform) for c in self.world.checkpoints))
@@ -119,6 +120,7 @@ class Game:
         self.notice_until=4.
         if checkpoint:
             self.set_clip('respawn')
+        if self.pond:self.pond.reset()
 
     def duration(self,clip,to=None):
         return self.motion.duration(clip,self.view,to)
@@ -494,6 +496,10 @@ class Game:
                         self.world.states[target.key]=False
                         self.tell('가시 껍질을 부쉈습니다.')
                         break
+                if not task['committed'] and self.pond and self.pond.counter(self,point(start),point(end)):
+                    task['committed']=True
+                    self.attack_hits+=1
+                    self.tell('물고기를 물러나게 했습니다.')
         duration=self.assets.groom.duration if stage=='groom' else self.duration(stage,'feed_cycle' if stage=='feed_pre' else None)
         if age+1e-9>=duration and stage!='feed_cycle':
             if stage=='feed_pre':
@@ -585,6 +591,7 @@ class Game:
         self._step(dt,on_input)
         if playing and self.run=='Playing' and self.world.run_epoch==epoch:
             self.world.advance(previous,(self.x,self.y))
+            if self.pond:self.pond.step(self,dt)
 
     def _step(self,dt=STEP,on_input=None):
         if self.run=='Paused':

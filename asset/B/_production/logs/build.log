@@ -1,0 +1,39 @@
+C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\_production\tools\build_backgrounds.py:270: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material=bpy.data.materials.new(role);material.use_nodes=True
+00:02.062  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_86f1c285775292eb45b0acb0ac12d669.png.png"
+00:02.406  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_62378fee76513b558445d83a2cddbc1e.png.png"
+00:02.703  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_44f33122828548d7d3aacb7a0875df35.png.png"
+00:03.078  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_a9441db20ba17ca65accacdef04f5df9.png.png"
+00:03.562  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_91e1481150021cd358d905eae76214cb.png.png"
+00:03.875  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_ef1c6623f356824d90b5c321bbb4f542.png.png"
+00:05.609  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_32093701097709bf7edf8915569756ee.png.png"
+00:06.719  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_dcf7723b4cc40505316f012608e2ec51.png.png"
+00:07.094  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_5efa140f62a1a1696c359a41f404dc0f.png.png"
+00:07.515  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_465b87029ff2a6e9dfb6b7b3fd154563.png.png"
+00:07.969  image.write      | ERROR OpenImageIO write failed: Could not open file "C:\Users\user\.thumbnails\large\blender_21092_0fc54180aed504e96626ffe5cb2b654d.png.png"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_lemna_perpusilla_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_spirodela_polyrhiza_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_wolffia_arrhiza_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_salvinia_natans_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_ceratophyllum_demersum_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_typha_orientalis_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_phragmites_australis_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "plant_persicaria_thunbergii_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "env_sediment_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "env_periphyton_biofilm_r01.blend"
+Extensions: writing cache failed ([Errno 13] Permission denied: 'C:\\Users\\user\\AppData\\Roaming\\Blender Foundation\\Blender\\5.3\\extensions\\.cache\\compat.dat').
+Info: Saved as "env_diatoms_micro_r01.blend"
+[{"id": "B01", "triangles": 924, "meshes": 7, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B01_plant_lemna_perpusilla\\3D\\plant_lemna_perpusilla_r01.blend"}, {"id": "B02", "triangles": 1172, "meshes": 15, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B02_plant_spirodela_polyrhiza\\3D\\plant_spirodela_polyrhiza_r01.blend"}, {"id": "B03", "triangles": 528, "meshes": 1, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B03_plant_wolffia_arrhiza\\3D\\plant_wolffia_arrhiza_r01.blend"}, {"id": "B04", "triangles": 2328, "meshes": 54, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B04_plant_salvinia_natans\\3D\\plant_salvinia_natans_r01.blend"}, {"id": "B05", "triangles": 4732, "meshes": 169, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B05_plant_ceratophyllum_demersum\\3D\\plant_ceratophyllum_demersum_r01.blend"}, {"id": "B06", "triangles": 760, "meshes": 8, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B06_plant_typha_orientalis\\3D\\plant_typha_orientalis_r01.blend"}, {"id": "B07", "triangles": 12968, "meshes": 135, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B07_plant_phragmites_australis\\3D\\plant_phragmites_australis_r01.blend"}, {"id": "B08", "triangles": 8868, "meshes": 83, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B08_plant_persicaria_thunbergii\\3D\\plant_persicaria_thunbergii_r01.blend"}, {"id": "B09", "triangles": 1164, "meshes": 11, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B09_env_sediment\\3D\\env_sediment_r01.blend"}, {"id": "B0A", "triangles": 2112, "meshes": 17, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B0A_env_periphyton_biofilm\\3D\\env_periphyton_biofilm_r01.blend"}, {"id": "B0B", "triangles": 1792, "meshes": 49, "blend": "C:\\Users\\user\\Documents\\ChatGPT\\2DGP\\background_B_r01_20261117\\asset\\B\\B0B_env_diatoms_micro\\3D\\env_diatoms_micro_r01.blend"}]
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

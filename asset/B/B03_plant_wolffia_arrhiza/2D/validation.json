@@ -1,0 +1,101 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "frond",
+      "vertices": 266,
+      "triangles": 528
+    }
+  ],
+  "triangles": 528,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        96,
+        64
+      ],
+      "margin": 14,
+      "normal_error": 0.0056587298725438995,
+      "surface_pixels": 1396,
+      "seconds": 0.0956039999728091
+    },
+    "front": {
+      "cell": [
+        80,
+        64
+      ],
+      "margin": 14,
+      "normal_error": 0.0051692614365355105,
+      "surface_pixels": 836,
+      "seconds": 0.08658740000100806
+    },
+    "back": {
+      "cell": [
+        80,
+        64
+      ],
+      "margin": 14,
+      "normal_error": 0.0051692614365355105,
+      "surface_pixels": 836,
+      "seconds": 0.07008470001164824
+    },
+    "left": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 19,
+      "normal_error": 0.006086819413139599,
+      "surface_pixels": 1204,
+      "seconds": 0.09475209994707257
+    },
+    "right": {
+      "cell": [
+        112,
+        64
+      ],
+      "margin": 19,
+      "normal_error": 0.006086819413139599,
+      "surface_pixels": 1204,
+      "seconds": 0.08187390002422035
+    },
+    "top": {
+      "cell": [
+        112,
+        80
+      ],
+      "margin": 14,
+      "normal_error": 0.005536278670188022,
+      "surface_pixels": 2616,
+      "seconds": 0.12114460003795102
+    },
+    "underside": {
+      "cell": [
+        112,
+        80
+      ],
+      "margin": 14,
+      "normal_error": 0.005536278670188022,
+      "surface_pixels": 2616,
+      "seconds": 0.09345420001773164
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_wolffia_arrhiza_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_wolffia_arrhiza_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_wolffia_arrhiza_sheet_r01.png",
+      "sha256": "74245adc14b1d003eafa787690492535641948c6513480f36ca9257316adfad9",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 972800,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

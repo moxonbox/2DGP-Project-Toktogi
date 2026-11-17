@@ -1,0 +1,568 @@
+{
+  "schema": "toktogi.background/1",
+  "asset_id": "env_periphyton_biofilm",
+  "folder_id": "B0A",
+  "revision": "background-r01",
+  "passes": [
+    "sprite",
+    "base",
+    "normal",
+    "rm",
+    "emissive"
+  ],
+  "source_blend_sha256": "37f50dd79320dfc67310e10ec03d97ce6f99f930f80f20f9b3eeb690fb3b3c9e",
+  "static": true,
+  "interaction": false,
+  "collision": null,
+  "events": [],
+  "scale": {
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "patch_width_design",
+    "scale_policy": "design_module",
+    "length_bu": 3,
+    "bu_per_pixel": 0.01390625,
+    "game_scale": 1
+  },
+  "filter": "nearest",
+  "alpha": "straight",
+  "mirror_allowed": false,
+  "views": {
+    "game": {
+      "file": "2D/static/static/game/0.png",
+      "cell": [
+        240,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/game/sprite.png",
+        "base": "2D/passes/game/base.png",
+        "normal": "2D/passes/game/normal.png",
+        "rm": "2D/passes/game/rm.png",
+        "emissive": "2D/passes/game/emissive.png"
+      },
+      "pivot": [
+        124.05164457450707,
+        46.558029811439084
+      ],
+      "bbox": [
+        17,
+        15,
+        223,
+        81
+      ],
+      "base_bbox": [
+        17,
+        15,
+        223,
+        81
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          124.05164457450707,
+          46.558029811439084
+        ],
+        "substrate_uv": [
+          124.05164457450707,
+          46.558029811439084
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.056343182364238964,
+        -0.02005239793467528
+      ],
+      "ortho_scale": 3.3375,
+      "rect": [
+        0,
+        0,
+        240,
+        96
+      ],
+      "outline_px": 0
+    },
+    "front": {
+      "file": "2D/static/static/front/0.png",
+      "cell": [
+        192,
+        32
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/front/sprite.png",
+        "base": "2D/passes/front/base.png",
+        "normal": "2D/passes/front/normal.png",
+        "rm": "2D/passes/front/rm.png",
+        "emissive": "2D/passes/front/emissive.png"
+      },
+      "pivot": [
+        92.3795334063508,
+        16.143820231148364
+      ],
+      "bbox": [
+        21,
+        15,
+        171,
+        17
+      ],
+      "base_bbox": [
+        21,
+        15,
+        171,
+        17
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          92.3795334063508,
+          16.143820231148364
+        ],
+        "substrate_uv": [
+          92.3795334063508,
+          16.143820231148364
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        0.05034711356793409,
+        0.002000000089406928
+      ],
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        32
+      ],
+      "outline_px": 0
+    },
+    "back": {
+      "file": "2D/static/static/back/0.png",
+      "cell": [
+        192,
+        32
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/back/sprite.png",
+        "base": "2D/passes/back/base.png",
+        "normal": "2D/passes/back/normal.png",
+        "rm": "2D/passes/back/rm.png",
+        "emissive": "2D/passes/back/emissive.png"
+      },
+      "pivot": [
+        99.6204665936492,
+        16.143820231148364
+      ],
+      "bbox": [
+        21,
+        15,
+        171,
+        17
+      ],
+      "base_bbox": [
+        21,
+        15,
+        171,
+        17
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          99.6204665936492,
+          16.143820231148364
+        ],
+        "substrate_uv": [
+          99.6204665936492,
+          16.143820231148364
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        -0.4999999701976776,
+        -0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        -0.05034711356793409,
+        0.002000000089406928
+      ],
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        32
+      ],
+      "outline_px": 0
+    },
+    "left": {
+      "file": "2D/static/static/left/0.png",
+      "cell": [
+        256,
+        32
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/left/sprite.png",
+        "base": "2D/passes/left/base.png",
+        "normal": "2D/passes/left/normal.png",
+        "rm": "2D/passes/left/rm.png",
+        "emissive": "2D/passes/left/emissive.png"
+      },
+      "pivot": [
+        128.1880045575155,
+        16.143820239720718
+      ],
+      "bbox": [
+        16,
+        15,
+        240,
+        17
+      ],
+      "base_bbox": [
+        16,
+        15,
+        240,
+        17
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.1880045575155,
+          16.143820239720718
+        ],
+        "substrate_uv": [
+          128.1880045575155,
+          16.143820239720718
+        ]
+      },
+      "rotation_quaternion": [
+        0.7071067690849304,
+        0.7071067690849304,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        -0.002614438377950279,
+        0.002000000208616237
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        32
+      ],
+      "outline_px": 0
+    },
+    "right": {
+      "file": "2D/static/static/right/0.png",
+      "cell": [
+        256,
+        32
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/right/sprite.png",
+        "base": "2D/passes/right/base.png",
+        "normal": "2D/passes/right/normal.png",
+        "rm": "2D/passes/right/rm.png",
+        "emissive": "2D/passes/right/emissive.png"
+      },
+      "pivot": [
+        127.81199540476499,
+        16.143818623224448
+      ],
+      "bbox": [
+        16,
+        15,
+        240,
+        17
+      ],
+      "base_bbox": [
+        16,
+        15,
+        240,
+        17
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.81199540476499,
+          16.143818623224448
+        ],
+        "substrate_uv": [
+          127.81199540476499,
+          16.143818623224448
+        ]
+      },
+      "rotation_quaternion": [
+        -3.0908619663705394e-08,
+        3.0908619663705394e-08,
+        -0.7071067690849304,
+        -0.7071067690849304
+      ],
+      "camera_center_plane_bu": [
+        0.0026144389024869152,
+        0.0019999777292149636
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        32
+      ],
+      "outline_px": 0
+    },
+    "top": {
+      "file": "2D/static/static/top/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/top/sprite.png",
+        "base": "2D/passes/top/base.png",
+        "normal": "2D/passes/top/normal.png",
+        "rm": "2D/passes/top/rm.png",
+        "emissive": "2D/passes/top/emissive.png"
+      },
+      "pivot": [
+        128.18800456872148,
+        99.62046702524249
+      ],
+      "bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "base_bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.18800456872148,
+          99.62046702524249
+        ],
+        "substrate_uv": [
+          128.18800456872148,
+          99.62046702524249
+        ]
+      },
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        -0.002614438533782959,
+        0.05034711956977844
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    },
+    "underside": {
+      "file": "2D/static/static/underside/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/underside/sprite.png",
+        "base": "2D/passes/underside/base.png",
+        "normal": "2D/passes/underside/normal.png",
+        "rm": "2D/passes/underside/rm.png",
+        "emissive": "2D/passes/underside/emissive.png"
+      },
+      "pivot": [
+        127.81199409564442,
+        99.62046894569318
+      ],
+      "bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "base_bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.81199409564442,
+          99.62046894569318
+        ],
+        "substrate_uv": [
+          127.81199409564442,
+          99.62046894569318
+        ]
+      },
+      "rotation_quaternion": [
+        1.910685465164705e-15,
+        -4.371138828673793e-08,
+        -1.0,
+        4.371138828673793e-08
+      ],
+      "camera_center_plane_bu": [
+        0.0026144571074446787,
+        0.05034714627604564
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    }
+  },
+  "files": {
+    "2D/passes/game/sprite.png": "140c249ae1738ab8c2e33ebe0cfbf1d3d17fad4c9d311fc8291629a17543028c",
+    "2D/passes/game/base.png": "6fe3015f0e72a47fff36f121739ade48b26eb1c962d16cafa48d7de53ac0642c",
+    "2D/passes/game/normal.png": "2d80de6b3fb8d392930d27105d427ee4c5562cb71feed5b5c004b361642cdd6e",
+    "2D/passes/game/rm.png": "bc51a20427b955f365b1a513526e22c1b56bc8788106435fc487e15a5f6fd8ec",
+    "2D/passes/game/emissive.png": "315e742292998ce51f651bad155d7edbb7e5921d59cc9ea2db676647cf2e5b03",
+    "2D/static/static/game/0.png": "52531d2695235cc7187a115ff2ef4cc9348d59979bba8cb8b71b1b4f7e7a9fb4",
+    "2D/passes/front/sprite.png": "e55dc34ee31ad802817b2cb55b1df0b13f9576a7476235ce1fb368a785ce2bfc",
+    "2D/passes/front/base.png": "ff1f6b1a12e6677450196b209e96d41cd8fceb43713d11c96690c823ca9b4103",
+    "2D/passes/front/normal.png": "b0fedb73d2cb646f6c4f2850b6d00b40e4abb5244aa7232169da5b004e9a4749",
+    "2D/passes/front/rm.png": "223f76a238aaf218fe14b2dd8d5e9cb123627361d91e5b11d799b5491e5be057",
+    "2D/passes/front/emissive.png": "c74aef45f0f66f3fb49d9d9d1eedb46719d8f946f93da41401cd0ea8f445a5d5",
+    "2D/static/static/front/0.png": "0b154e5e0d449b4b80c9361b77a902b2f0099cedc6df98473a9a3503ecd223b4",
+    "2D/passes/back/sprite.png": "74f9cb825ed2b231f6d3f8996172602400b0284e2dcd74600dda980f411837ec",
+    "2D/passes/back/base.png": "c2cdcad11c3425478d3e30aa62035941d803ac8a862dc65f62e963a6fd3c287f",
+    "2D/passes/back/normal.png": "0938b33cdf963009af589af98ba373fe27b7058d5d164c0488069c55f6769168",
+    "2D/passes/back/rm.png": "dd0d6628fff493dee75b83dfd5e4b95a6954b82a847a838dee6573312899dad3",
+    "2D/passes/back/emissive.png": "c74aef45f0f66f3fb49d9d9d1eedb46719d8f946f93da41401cd0ea8f445a5d5",
+    "2D/static/static/back/0.png": "21912684864562cc0319fd85ac4e8189b1a7687606844d97984eb62a338cd4e0",
+    "2D/passes/left/sprite.png": "7f9594de06117ff9a4768a858267540fc72e14593d09ac629ea2d3cc14333d3a",
+    "2D/passes/left/base.png": "6dc520346388e1674182cf368fa3d37b601d81a6023180de5017d1840e074acf",
+    "2D/passes/left/normal.png": "f2821ef52694afd23b131a2470d593f7d55fc4e86e1dbc621c7f0da5ceb3189e",
+    "2D/passes/left/rm.png": "d58da117b0a36979616a74dd0f06457425092013a5879668c8e2ac75907a5b25",
+    "2D/passes/left/emissive.png": "810c1d08be07e66025662007375145642bfef17e864beaca7e9dc997f145c464",
+    "2D/static/static/left/0.png": "7950fd2b7b4e8e5588e0bedb086fcc8d2d40331a5aa7ca197f9241c89cdd1d5f",
+    "2D/passes/right/sprite.png": "3343fa91f495fba5fb413ff211d8fbaa221148b1ca407c604fc4282e66c33b90",
+    "2D/passes/right/base.png": "59ca2552b8fcec94bda4051b14924c041396c6b960d5e684feaf39122347ef00",
+    "2D/passes/right/normal.png": "d05c728362a82c849b464b698ffab85a46c30e64d8e8760b0cb3824ade9f7399",
+    "2D/passes/right/rm.png": "6555422a90aa9967907f528bff0d1c6b4d9ab4f1fe3c173185f7e155d5a570ab",
+    "2D/passes/right/emissive.png": "810c1d08be07e66025662007375145642bfef17e864beaca7e9dc997f145c464",
+    "2D/static/static/right/0.png": "e8f84a399ea9537b7725fe56b509fec4f9e9d968abf7b046d56bc14754e18313",
+    "2D/passes/top/sprite.png": "f0bd9a5e18cf0a33d81d6cffefaeeb9b8630931adfa5e7b3fd438392325509fd",
+    "2D/passes/top/base.png": "3c214d6c29c5319846e2323aed649f7799dbaf08cfb603b8c882d8873570ae4c",
+    "2D/passes/top/normal.png": "281e810adce335fc2986e0bb8d8beef9258eb8698d731f6957585cbb9b20615c",
+    "2D/passes/top/rm.png": "0920d9799c4d1ab3204b48971203f77a57041ca78e3c4fb6fd567a34f634731b",
+    "2D/passes/top/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/static/static/top/0.png": "ed8097aaf36c32b4778c98fb232b69f922acc326a33158417cc1003317dec5c9",
+    "2D/passes/underside/sprite.png": "90f6b414c0e17f4304ca474172ce3f2a5875082c2fa31da97f0d9da8e37211bc",
+    "2D/passes/underside/base.png": "9782c82ee000974e567e7587daeb050869309bd55a2a566d7f952c2e5b99deb1",
+    "2D/passes/underside/normal.png": "cf4a293b6db4b338f8e648d99a5a866cd191852a5bbd027beb372ea19b4f6e30",
+    "2D/passes/underside/rm.png": "096187f2e70d6c673878d14633a592e3cf1ac8ef96f11a6a717c4b25615ae156",
+    "2D/passes/underside/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/static/static/underside/0.png": "7ff6a0eff984de4d6e05cf6f92f01cac1ec4fdad17fdb9563d8b07d058a33ba1"
+  },
+  "channels": {
+    "sprite": "sRGB, four bands, role palette; outline #22313B radius 2 except attached coatings",
+    "base": "unlit sRGB + surface coverage Alpha",
+    "normal": "linear UNORM; R right, G up, B toward camera; A=255; mask Base A",
+    "rm": "linear R roughness G metallic=0 B=0 A=255; mask Base A",
+    "emissive": "linear black RGB A=255; mask Base A"
+  },
+  "lighting": {
+    "direction": [
+      -0.36,
+      0.57,
+      0.73
+    ],
+    "thresholds": [
+      0.14,
+      0.42,
+      0.72
+    ],
+    "linear_multipliers": [
+      [
+        0.36,
+        0.42,
+        0.51
+      ],
+      [
+        0.53,
+        0.6,
+        0.66
+      ],
+      [
+        0.73,
+        0.77,
+        0.8
+      ],
+      [
+        0.95,
+        0.95,
+        0.92
+      ]
+    ],
+    "shared_runtime_comparison": {
+      "power": 0.82,
+      "ambient": 0.34
+    }
+  },
+  "status": {
+    "production": "exported",
+    "standalone_loader": "verified_separately",
+    "main_game": "not_integrated",
+    "DEC-06": "deferred"
+  }
+}

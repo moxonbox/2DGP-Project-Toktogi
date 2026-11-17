@@ -1,0 +1,7 @@
+{
+  "bundle_sha256": "206780f89b7a7697b898820f09c0f89a1b68076015972e67d5d1f7e2faa4eeed",
+  "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec",
+  "source_blend_sha256": "6edd5a7e2181717924cd129444627ff8009db1223c1f39ac81a23590b25831c8",
+  "runtime_blend_sha256": "f6dbeb7f0583cebc0dfc3b9fd015d01d9a61e4e48632eb0d5f2d812bf88f259d",
+  "revision": "framework-r4"
+}

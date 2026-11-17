@@ -1,0 +1,110 @@
+{
+  "id": "B06",
+  "name": "plant_typha_orientalis",
+  "folder": "B06_plant_typha_orientalis",
+  "selected_length_mm": 1200,
+  "presentation_factor": 0.006,
+  "measure_kind": "whole_plant_height",
+  "game_scale": 1,
+  "scale_policy": "distant_background",
+  "details": {
+    "selected_height_m": 1.2
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r01",
+  "schema": 1,
+  "length_bu": 6.950851200000001,
+  "bounds_bu": [
+    [
+      -1.2622673511505127,
+      -1.4576736688613892,
+      -0.0020000000949949026
+    ],
+    [
+      1.2622673511505127,
+      1.4576736688613892,
+      6.950850963592529
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "root_base": [
+      0,
+      0,
+      0
+    ],
+    "tip_strap_leaf_1": [
+      1.26167631149292,
+      0.39028221368789673,
+      3.614442825317383
+    ],
+    "tip_strap_leaf_2": [
+      0.33137592673301697,
+      1.4572302103042603,
+      4.031493663787842
+    ],
+    "tip_strap_leaf_3": [
+      -1.2237883806228638,
+      1.1336874961853027,
+      4.448544979095459
+    ],
+    "tip_strap_leaf_4": [
+      -1.26167631149292,
+      -0.39028221368789673,
+      3.614442825317383
+    ],
+    "tip_strap_leaf_5": [
+      -0.33137592673301697,
+      -1.4572302103042603,
+      4.031493663787842
+    ],
+    "tip_strap_leaf_6": [
+      1.2237883806228638,
+      -1.1336874961853027,
+      4.448544979095459
+    ]
+  },
+  "triangles": 760,
+  "mesh_count": 8,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_typha_orientalis_basecolor_r01.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_typha_orientalis_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "3a52df41c6a47a794b90fc4c9420e12c9b292bb07358893a86e5fc2178552cd7",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "82a548",
+    "vein": "b6c96c",
+    "stem": "61783d",
+    "root": "b4a079",
+    "underside": "825476",
+    "hair": "c8d58d",
+    "flower": "e5b5c7",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; no asymmetric measured texture",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

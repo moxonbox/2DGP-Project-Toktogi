@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "blender_version": "5.3.0",
+  "saved_file": "spider_pardosa_idle_r02.blend",
+  "source_blend_sha256": "7d95639f87ee29230490b7612b5ad440754b713e3cabfaa8f3697c5becb68443",
+  "measured": {
+    "triangles": 9192,
+    "vertices": 4750,
+    "bones": 77
+  },
+  "eye_layout": [
+    4,
+    2,
+    2
+  ],
+  "legs": 8,
+  "ik_chains": 8,
+  "loop_max_vertex_error_bu": 1.0509058367245299e-17,
+  "seek_max_vertex_error_bu": 0.0,
+  "between_key_samples": 193,
+  "max_foot_target_drift_bu": 4.06452219221734e-06,
+  "max_sole_vertex_drift_bu": 0.0006758624416399956,
+  "minimum_mesh_height_bu": -7.737427949905396e-06,
+  "cross_leg_surface_intersections": [],
+  "uv_zero_area_faces": 0,
+  "unweighted_vertices": 0,
+  "missing_external_files": [],
+  "limitations": [
+    "Cross-leg test at 4 native-frame spacing; contact every 0.5 frame.",
+    "UV islands are per-part padded charts. Texture density intentionally varies by anatomical part.",
+    "This verifies idle only; game physics, AI and other motion transitions remain outside this revision."
+  ]
+}

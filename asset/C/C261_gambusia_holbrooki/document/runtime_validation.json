@@ -1,0 +1,239 @@
+{
+  "status": "FUNCTIONAL_PASS_PERFORMANCE_REVIEW",
+  "bundle_load_seconds": 1.1805556999752298,
+  "physics": {
+    "female": {
+      "fps": {
+        "10": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -4.589966665486481,
+            -4.054663199999999
+          ]
+        },
+        "15": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -4.589966665486481,
+            -4.054663199999999
+          ]
+        },
+        "20": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -4.589966665486481,
+            -4.054663199999999
+          ]
+        },
+        "30": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -4.589966665486481,
+            -4.054663199999999
+          ]
+        },
+        "60": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -4.589966665486481,
+            -4.054663199999999
+          ]
+        }
+      },
+      "gape_body_fraction_above_max": 0.0,
+      "attack_feed_once": true,
+      "no_far_contact": true,
+      "pause_seek_restore_cancel": true,
+      "missed_water_no_teleport": true
+    },
+    "male": {
+      "fps": {
+        "10": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -2.677480554867116,
+            -2.3652202
+          ]
+        },
+        "15": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -2.677480554867116,
+            -2.3652202
+          ]
+        },
+        "20": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -2.677480554867116,
+            -2.3652202
+          ]
+        },
+        "30": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -2.677480554867116,
+            -2.3652202
+          ]
+        },
+        "60": {
+          "effects": {
+            "exit_ripple": 1,
+            "splash": 1,
+            "ripple": 1
+          },
+          "end": [
+            "cruise",
+            "mid",
+            -2.677480554867116,
+            -2.3652202
+          ]
+        }
+      },
+      "gape_body_fraction_above_max": 0.0,
+      "attack_feed_once": true,
+      "no_far_contact": true,
+      "pause_seek_restore_cancel": true,
+      "missed_water_no_teleport": true
+    }
+  },
+  "manifest_negative": [
+    {
+      "case": "schema",
+      "error": "manifest.json: unsupported schema/asset/revision"
+    },
+    {
+      "case": "signature",
+      "error": "manifest.json: signature mismatch"
+    },
+    {
+      "case": "missing_clip",
+      "error": "manifest.json: missing/unsupported clip"
+    },
+    {
+      "case": "missing_view",
+      "error": "female/cruise/mid: missing view"
+    },
+    {
+      "case": "missing_pass",
+      "error": "female/cruise/mid/left: missing pass"
+    },
+    {
+      "case": "missing_sample",
+      "error": "female/cruise/mid/left: missing sample"
+    },
+    {
+      "case": "bad_rect",
+      "error": "female/cruise/mid/left/0: invalid atlas rect"
+    },
+    {
+      "case": "zero_duration",
+      "error": "female/cruise/mid/left/0: invalid sample time"
+    },
+    {
+      "case": "nan_marker",
+      "error": "female/cruise/mid/left/0: nonfinite marker mouth_tip"
+    },
+    {
+      "case": "duplicate_cell",
+      "error": "female/cruise/mid/left/1: duplicate cell file"
+    },
+    {
+      "case": "bad_transition",
+      "error": "manifest.json: invalid transition"
+    },
+    {
+      "case": "missing_marker",
+      "error": "female/cruise/mid/left/0: missing marker mouth_tip"
+    },
+    {
+      "case": "nan_pivot",
+      "error": "female/left: invalid pivot"
+    },
+    {
+      "case": "bad_sample_time",
+      "error": "female/cruise/mid/left/0: invalid sampling"
+    },
+    {
+      "case": "duplicate_json_key",
+      "error": "duplicate JSON key: cell"
+    }
+  ],
+  "corrupted_bundle_rejected": "broken.zip: bundle checksum mismatch",
+  "corrupted_payload_rejected": "gambusia_holbrooki_r01.zip: 2D/air/female_airborne_arc_end/front/0.png: payload checksum mismatch",
+  "C011_BRDF_max_channel_error": 1,
+  "warmup_seconds": 0.4901598000433296,
+  "performance": {
+    "frames": 120,
+    "mode": "female 640 cell, moving light + water + RGBA transfer + SDL dummy blit",
+    "p95_ms": 18.549650014028884,
+    "max_ms": 20.23299998836592,
+    "mean_ms": 13.877546666481066,
+    "meets_16_7_ms": false,
+    "renderer_cache_bytes": 98329419,
+    "raw_bundle_bytes": 20535312384,
+    "actual_GPU": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "Pico2D": "NOT_IMPLEMENTED"
+  },
+  "process_memory": {
+    "working_set_bytes": 305242112,
+    "peak_working_set_bytes": 313171968,
+    "private_bytes": 1058078720
+  },
+  "elapsed_seconds": 12.015567999973428
+}

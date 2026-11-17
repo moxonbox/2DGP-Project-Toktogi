@@ -1,0 +1,54 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "slope_base": {
+      "vertices": 127,
+      "triangles": 250
+    },
+    "gravel_0": {
+      "vertices": 96,
+      "triangles": 188
+    },
+    "gravel_1": {
+      "vertices": 96,
+      "triangles": 188
+    },
+    "gravel_2": {
+      "vertices": 96,
+      "triangles": 188
+    },
+    "gravel_3": {
+      "vertices": 96,
+      "triangles": 188
+    },
+    "shallow_puddle": {
+      "vertices": 98,
+      "triangles": 192
+    }
+  },
+  "triangle_count": 1194,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -2.8961880207061768,
+      -1.4480940103530884,
+      -0.07999999821186066
+    ],
+    [
+      2.8961880207061768,
+      1.4480940103530884,
+      0.968088686466217
+    ]
+  ],
+  "extent_bu": [
+    5.7923760414123535,
+    2.8961880207061768,
+    1.0480886697769165
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 7,
+  "blend_sha256": "dd90a7946a60a2f48f1d5381246337546972399cb740b7c47eeb814a06d63159",
+  "static_root": true
+}

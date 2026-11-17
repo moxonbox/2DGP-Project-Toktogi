@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "current": {
+    "path": "../gambusia_holbrooki_r01.blend",
+    "sha256": "bbd850e5cea27549cce2b218663dc9e030a70684916af9c4e91ce5ccf8384ecc"
+  },
+  "archives": [
+    {
+      "archive": "before_sheet_detail.7z",
+      "archive_sha256": "febd8fb3d48d50cc1f77361da3274d990d742d1bb598517b7b2c457c0da9b4f7",
+      "entry": "gambusia_holbrooki_r01/_before_sheet_detail/gambusia_holbrooki_draft.blend",
+      "restored_sha256": "e00273ae126832d91528582f064c6d015e712cc1750afaadd8889a5a12320b3a",
+      "restore_verified": true,
+      "reason": "working draft before sheet detail correction"
+    },
+    {
+      "archive": "last_build_autosave.7z",
+      "archive_sha256": "7425927b9db925955ace658c4e136e4b35764444ca1f7f075b3f44863004d9d8",
+      "entry": "gambusia_holbrooki_r01/3D/gambusia_holbrooki_r01.blend1",
+      "restored_sha256": "32f75c39a06306f2e092c420af19da6521b936c95fa224f75ee0c7bf79b2f53d",
+      "restore_verified": true,
+      "reason": "last Blender autosave before final cavity correction"
+    }
+  ],
+  "note": "Unpublished work drafts; original C261 contained three unchanged specification documents only."
+}

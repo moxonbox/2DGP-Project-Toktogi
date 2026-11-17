@@ -1,0 +1,36 @@
+00:01.484  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B08_plant_persicaria_thunbergii\3D\plant_persicaria_thunbergii_r01.blend"
+B08 game 576 224
+B08 front 304 144
+B08 back 304 144
+B08 left 640 144
+B08 right 640 144
+B08 top 640 304
+B08 underside 640 304
+00:08.343  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B09_env_sediment\3D\env_sediment_r01.blend"
+B09 game 448 192
+B09 front 336 96
+B09 back 336 96
+B09 left 480 96
+B09 right 480 96
+B09 top 480 336
+B09 underside 480 336
+00:10.421  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B0A_env_periphyton_biofilm\3D\env_periphyton_biofilm_r01.blend"
+B0A game 240 96
+B0A front 192 32
+B0A back 192 32
+B0A left 256 32
+B0A right 256 32
+B0A top 256 192
+B0A underside 256 192
+00:12.437  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B0B_env_diatoms_micro\3D\env_diatoms_micro_r01.blend"
+B0B game 240 96
+B0B front 192 48
+B0B back 192 48
+B0B left 256 48
+B0B right 256 48
+B0B top 256 192
+B0B underside 256 192
+[{"id": "B08", "views": 7, "decoded_rgba_bytes": 15800320}, {"id": "B09", "views": 7, "decoded_rgba_bytes": 11304960}, {"id": "B0A", "views": 7, "decoded_rgba_bytes": 3000320}, {"id": "B0B", "views": 7, "decoded_rgba_bytes": 3287040}]
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

@@ -1,0 +1,184 @@
+{
+  "timestamped_inputs_5_120fps": [
+    [
+      [
+        5,
+        1,
+        1,
+        614.4,
+        173.0333333
+      ],
+      [
+        10,
+        1,
+        1,
+        614.4,
+        173.0333333
+      ],
+      [
+        30,
+        1,
+        1,
+        614.4,
+        173.0333333
+      ],
+      [
+        60,
+        1,
+        1,
+        614.4,
+        173.0333333
+      ],
+      [
+        120,
+        1,
+        1,
+        614.4,
+        173.0333333
+      ]
+    ],
+    [
+      [
+        5,
+        1,
+        0,
+        568.9973333,
+        305.9847778
+      ],
+      [
+        10,
+        1,
+        0,
+        568.9973333,
+        305.9847778
+      ],
+      [
+        30,
+        1,
+        0,
+        568.9973333,
+        305.9847778
+      ],
+      [
+        60,
+        1,
+        0,
+        568.9973333,
+        305.9847778
+      ],
+      [
+        120,
+        1,
+        0,
+        568.9973333,
+        305.9847778
+      ]
+    ]
+  ],
+  "catch_up_debt_preserved": true,
+  "preparation_boundary_cancel": true,
+  "native_sdl_timestamp_preserved": true,
+  "feed_count_5_120fps": [
+    [
+      5,
+      2,
+      2
+    ],
+    [
+      10,
+      2,
+      2
+    ],
+    [
+      30,
+      2,
+      2
+    ],
+    [
+      60,
+      2,
+      2
+    ],
+    [
+      120,
+      2,
+      2
+    ]
+  ],
+  "pause_commit_boundary_and_closed_input": true,
+  "air_action_separate_from_motion": true,
+  "moving_landing_visible": true,
+  "walk_stance_slip": [
+    {
+      "view": "left",
+      "max_stance_span_px": 2.661899999999889,
+      "stride_px": 7.656356078118033
+    },
+    {
+      "view": "right",
+      "max_stance_span_px": 2.8619999999997674,
+      "stride_px": 7.656356078118033
+    }
+  ],
+  "work_contact_admission_commit": [
+    [
+      "f",
+      "left",
+      159.8376
+    ],
+    [
+      "e",
+      "left",
+      342.6726
+    ],
+    [
+      "e",
+      "left",
+      548.4898
+    ],
+    [
+      "f",
+      "right",
+      100.1625
+    ],
+    [
+      "e",
+      "right",
+      340.2251
+    ],
+    [
+      "e",
+      "right",
+      546.0901
+    ]
+  ],
+  "attack_hit_miss_cancel": true,
+  "attack_active_end_excluded": true,
+  "phase_brake_and_groom_return": true,
+  "edge_idle_balanced_x": 170.133,
+  "ceiling_surface_overlap_px": 0,
+  "relit_contact_ink": [
+    [
+      11,
+      [
+        42,
+        51,
+        58
+      ]
+    ],
+    [
+      17,
+      [
+        43,
+        52,
+        60
+      ]
+    ]
+  ],
+  "warm_large_scene_render_ms": {
+    "median": 0.0006,
+    "max": 0.0081
+  },
+  "relative_light_cache_invalidation": true,
+  "asset_bundle_source_lock": true
+}

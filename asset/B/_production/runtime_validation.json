@@ -1,0 +1,44 @@
+{
+  "status": "PASS_STANDALONE_STATIC",
+  "assets": 11,
+  "cells": 77,
+  "passes": 5,
+  "decoded_rgba_bytes_all_views": 280222720,
+  "bundle_bytes": 7023805,
+  "negative_tests": [
+    "schema",
+    "missing_pass",
+    "nonfinite_pivot",
+    "out_of_bounds",
+    "missing_cell",
+    "duplicate_cell",
+    "payload_hash_mismatch",
+    "microscopy_gameplay_rejected"
+  ],
+  "startup_ms": 26.906499988399446,
+  "p95_composite_ms": 1.8108499789377672,
+  "max_composite_ms": 2.3313999990932643,
+  "frames": 120,
+  "sample_scene_assets": 4,
+  "device": "Windows-11-10.0.26200-SP0",
+  "scope": "Pillow CPU decode + static alpha composite. No SDL upload, main game, Pico2D or final device frame-budget claim.",
+  "cache_limit_cells": 8,
+  "main_game": "NOT_INTEGRATED",
+  "DEC-06": "DEFERRED",
+  "mcp": "TIMEOUT_CLI_FALLBACK",
+  "shared_light_comparison": {
+    "positions_px": [
+      [
+        260,
+        100
+      ],
+      [
+        680,
+        120
+      ]
+    ],
+    "power": 0.82,
+    "ambient": 0.34,
+    "same_world_light_per_object": true
+  }
+}

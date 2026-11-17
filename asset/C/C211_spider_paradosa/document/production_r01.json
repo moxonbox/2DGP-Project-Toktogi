@@ -1,0 +1,96 @@
+{
+  "revision": "idle-r01",
+  "date": "2026-11-17",
+  "asset_id": "C211_spider_paradosa",
+  "input_specs": {
+    "document\\spider_pardosa.md": "74f1bfb0316616b6c2c07881a4c096a3193029f22929cd256e3ca8980ea1fa83",
+    "document\\spider_pardosa_model.md": "dabef92dd4619f0f1269f9d600f407402bbe381356d1be7ba5f9d5a0c81d2719",
+    "document\\spider_pardosa_movement.md": "181327352ab53503aed3b58c291907b714ee7ba2dbdcc172924bea43cd1cfe5d"
+  },
+  "pipeline": {
+    "path": "../../../document/markdown/AssetPipeLine.md",
+    "sha256": "616a3fcbcb847384b01c09238323a87ba286410518ae5d7d59e5d41738b67229"
+  },
+  "supplied_sheet_review": {
+    "bottom.png": {
+      "sha256": "1b2afffea7c17db68d00486265267b9d75c88ccd6940b59d691bd96116266b0d",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "front.png": {
+      "sha256": "5352fe4136187cc9683d20d85ee78d5f157e6e026709e0a517eca82fbdd56b9e",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "left.png": {
+      "sha256": "88a518af1d10386903863a63f2ba817327ad0a8be34e4dd7f6bd20182b204cc2",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "rear.png": {
+      "sha256": "672d3eaaaaaae8383407062871463d7c822612ad23a33be6b3bddd07e2a63ea1",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "right.png": {
+      "sha256": "9f8d8297493fcab649dd6f9577c5c4e238cff49b06aee4f2e74bcf7953e3afa5",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "sheet.png": {
+      "sha256": "2d407ed8d83588c511697ff707cedb047749fbd06d00e1f8720c5fa04fe3eb7d",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    },
+    "top.png": {
+      "sha256": "c186b26bae0d57a03c522d174f548c88db333f03ace50daaf64f88a032ec1250",
+      "matches_prior_toktogi": true,
+      "used_for_modeling": false
+    }
+  },
+  "selected_sheet": {
+    "path": "sheet/spider_pardosa_sheet_r01.png",
+    "sha256": "065f5cafb65fd326984dd059cf88cb2422179bc44c1eb6b56f43137a8ac150c4",
+    "tool": "built-in image_gen GPT Image",
+    "model_version": null,
+    "seed": null,
+    "prompt": "sheet/spider_pardosa_sheet_r01_prompt.txt",
+    "selection": "Front shows 4+2+2 eyes. Top and bottom show four walking legs per side. Anatomy specified in model document overrides panel joint ambiguity."
+  },
+  "authoring": {
+    "blender": "5.3.0",
+    "method": "isolated background CLI",
+    "mcp_connection": "connection refused at localhost:9876",
+    "mcp_background": "120-second timeout",
+    "computer_use": false
+  },
+  "design_decisions": {
+    "taxon": "Pardosa sp.",
+    "stage": "stylized adult-like",
+    "sex": null,
+    "body_length_mm": null,
+    "body_length_bu": 2.25,
+    "texture_px": [
+      1024,
+      1024
+    ],
+    "views": [
+      "left",
+      "right"
+    ],
+    "tile_px": [
+      192,
+      192
+    ],
+    "duration_s": 2,
+    "sample_count_per_view": 24,
+    "sample_fps": 12,
+    "scope": "idle_scan mid loop"
+  },
+  "pending": [
+    "species and biological scale",
+    "fine setae LOD",
+    "game AI and collision connection",
+    "pre/end transition clips"
+  ]
+}

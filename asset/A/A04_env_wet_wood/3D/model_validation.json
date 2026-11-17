@@ -1,0 +1,46 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "branch_main": {
+      "vertices": 70,
+      "triangles": 136
+    },
+    "branch_spur": {
+      "vertices": 30,
+      "triangles": 56
+    },
+    "broken_end": {
+      "vertices": 28,
+      "triangles": 52
+    },
+    "knot": {
+      "vertices": 98,
+      "triangles": 192
+    }
+  },
+  "triangle_count": 436,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -2.4328842163085938,
+      -0.4999396800994873,
+      -0.24746106564998627
+    ],
+    [
+      2.433845043182373,
+      0.5049999952316284,
+      1.1787240505218506
+    ]
+  ],
+  "extent_bu": [
+    4.866729259490967,
+    1.0049396753311157,
+    1.426185131072998
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 7,
+  "blend_sha256": "7ee2c97c29e95a9712131880eceae9f307d7276bcad41151d98af62bb416eebd",
+  "static_root": true
+}

@@ -1,0 +1,102 @@
+{
+  "id": "B05",
+  "name": "plant_ceratophyllum_demersum",
+  "folder": "B05_plant_ceratophyllum_demersum",
+  "selected_length_mm": null,
+  "presentation_factor": null,
+  "measure_kind": "stem_fragment_design",
+  "game_scale": 1,
+  "scale_policy": "design_module",
+  "details": {
+    "design_length_bu": 5,
+    "root_count": 0,
+    "whorl_count": 4
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r01",
+  "schema": 1,
+  "length_bu": 5,
+  "bounds_bu": [
+    [
+      -1.6961790323257446,
+      -1.6936371326446533,
+      -0.0015198051696643233
+    ],
+    [
+      1.6961790323257446,
+      1.6936371326446533,
+      5.000532150268555
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "stem_mid": [
+      0.04,
+      0,
+      2.5
+    ],
+    "whorl_node_1": [
+      0,
+      0,
+      0.75
+    ],
+    "whorl_node_2": [
+      0,
+      0,
+      1.85
+    ],
+    "whorl_node_3": [
+      0,
+      0,
+      2.9499999999999997
+    ],
+    "whorl_node_4": [
+      0,
+      0,
+      4.050000000000001
+    ]
+  },
+  "triangles": 4732,
+  "mesh_count": 169,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_ceratophyllum_demersum_basecolor_r01.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_ceratophyllum_demersum_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "ef6d21d5c38b17857a382b55a0210725e7f3a959467e26a3f1c30c4e803cd01d",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "82a548",
+    "vein": "b6c96c",
+    "stem": "61783d",
+    "root": "b4a079",
+    "underside": "825476",
+    "hair": "c8d58d",
+    "flower": "e5b5c7",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; no asymmetric measured texture",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

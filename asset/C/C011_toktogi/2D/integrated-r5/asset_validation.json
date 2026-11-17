@@ -1,0 +1,199 @@
+{
+  "asset_revision": "integrated-r5",
+  "clips": 82,
+  "frames": 1444,
+  "triangles": 2732,
+  "deform_bones": 37,
+  "view_count": 9,
+  "minimum_display_border_px": 3,
+  "checked_pose_intersections": 504,
+  "intersection_frames": [],
+  "max_support_height_error_px_equivalent": 0.36422472495536684,
+  "worst_support_samples": [
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "walk",
+      5,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "brake_05",
+      0,
+      "RF"
+    ],
+    [
+      0.36422472495536684,
+      "brake_05",
+      0,
+      "RF"
+    ],
+    [
+      0.3361797806843712,
+      "walk",
+      4,
+      "RF"
+    ]
+  ],
+  "normal_decode_max_length_error": 0.006575841667598725,
+  "seek_cases_passed": 5,
+  "canonical_boundary_original_byte_max_delta": {
+    "turn_left_right/19": {
+      "sprite": 0,
+      "base": 1,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "turn_full_ccw/61": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "turn_full_cw/61": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "air_turn_ccw/8": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "air_turn_ccw/16": {
+      "sprite": 1,
+      "base": 0,
+      "normal": 1,
+      "rm": 0,
+      "emissive": 0
+    },
+    "air_turn_cw/8": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 1,
+      "rm": 0,
+      "emissive": 0
+    },
+    "air_turn_cw/16": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_antenna_clean/24": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_furca_clean/34": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_saliva_clean/26": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_carry/15": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_antenna_to_furca/0": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    },
+    "obs_antenna_to_furca/5": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 1,
+      "rm": 0,
+      "emissive": 0
+    },
+    "turn_right_left/19": {
+      "sprite": 0,
+      "base": 0,
+      "normal": 0,
+      "rm": 0,
+      "emissive": 0
+    }
+  },
+  "runtime_tests": "Pygame 128px cells, APNG timing and transition previews passed. Game input and physics not exercised.",
+  "production_export": "BLOCKED_BY_DEC_06",
+  "file_validation": {
+    "manifest_signature": true,
+    "decoded_atlases": 45,
+    "registered_frame_rectangles": 1444,
+    "clip_apngs": 82,
+    "source_blend_match": true,
+    "shared_surface_coverage": true
+  },
+  "runtime_validation": "runtime_validation.json"
+}

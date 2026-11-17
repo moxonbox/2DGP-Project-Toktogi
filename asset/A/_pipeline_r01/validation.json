@@ -1,0 +1,568 @@
+{
+  "date": "2026-11-17",
+  "assets": [
+    {
+      "asset_id": "plant_lemna_minor",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            79,
+            123,
+            305,
+            261
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            79,
+            122,
+            305,
+            262
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            112,
+            138,
+            272,
+            246
+          ],
+          "normal_unit_error": 0.005536278670188022
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            112,
+            138,
+            272,
+            246
+          ],
+          "normal_unit_error": 0.006278843038372006
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            71,
+            138,
+            313,
+            246
+          ],
+          "normal_unit_error": 0.005907491519452468
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            71,
+            138,
+            313,
+            246
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            69,
+            110,
+            315,
+            274
+          ],
+          "normal_unit_error": 0.006464570847540818
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_still_water",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            18,
+            219,
+            622,
+            421
+          ],
+          "normal_unit_error": 0.003392936800391766
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            18,
+            219,
+            622,
+            421
+          ],
+          "normal_unit_error": 0.003392936800391766
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            160,
+            319,
+            480,
+            321
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            160,
+            319,
+            480,
+            321
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            63,
+            319,
+            577,
+            321
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            63,
+            319,
+            577,
+            321
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            63,
+            160,
+            577,
+            480
+          ],
+          "normal_unit_error": 1.5378582249425676e-05
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_shore_slope",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            22,
+            146,
+            490,
+            366
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            22,
+            146,
+            490,
+            366
+          ],
+          "normal_unit_error": 0.006331360245143802
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            150,
+            216,
+            362,
+            296
+          ],
+          "normal_unit_error": 0.006453608379858755
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            150,
+            216,
+            362,
+            296
+          ],
+          "normal_unit_error": 0.005907491519452468
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            46,
+            216,
+            466,
+            296
+          ],
+          "normal_unit_error": 0.005907491519452579
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            46,
+            216,
+            466,
+            296
+          ],
+          "normal_unit_error": 0.005969373805238987
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            46,
+            150,
+            466,
+            362
+          ],
+          "normal_unit_error": 0.006278843038372006
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_wood",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            92,
+            193,
+            420,
+            319
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            94,
+            193,
+            418,
+            319
+          ],
+          "normal_unit_error": 0.006270230608479643
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            218,
+            203,
+            294,
+            309
+          ],
+          "normal_unit_error": 0.006086819413139377
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            218,
+            203,
+            294,
+            309
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            79,
+            203,
+            433,
+            309
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            79,
+            203,
+            433,
+            309
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            79,
+            218,
+            433,
+            294
+          ],
+          "normal_unit_error": 0.006270230608479643
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_stone",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            39,
+            85,
+            281,
+            235
+          ],
+          "normal_unit_error": 0.006147960193154667
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            39,
+            85,
+            281,
+            235
+          ],
+          "normal_unit_error": 0.006278843038372006
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            81,
+            115,
+            239,
+            205
+          ],
+          "normal_unit_error": 0.005719896677428116
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            81,
+            115,
+            239,
+            205
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            51,
+            115,
+            269,
+            205
+          ],
+          "normal_unit_error": 0.005969373805239098
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            51,
+            115,
+            269,
+            205
+          ],
+          "normal_unit_error": 0.005964526705017681
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            51,
+            81,
+            269,
+            239
+          ],
+          "normal_unit_error": 0.006278843038372006
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_wet_leaf_litter",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            82,
+            181,
+            366,
+            267
+          ],
+          "normal_unit_error": 0.00615504378139875
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            83,
+            182,
+            365,
+            266
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            139,
+            212,
+            309,
+            236
+          ],
+          "normal_unit_error": 0.006392486168711242
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            139,
+            212,
+            309,
+            236
+          ],
+          "normal_unit_error": 0.005781059762439034
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            66,
+            212,
+            381,
+            236
+          ],
+          "normal_unit_error": 0.006093149935492259
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            67,
+            212,
+            382,
+            236
+          ],
+          "normal_unit_error": 0.006086819413139599
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            65,
+            139,
+            383,
+            309
+          ],
+          "normal_unit_error": 0.006270230608479421
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    },
+    {
+      "asset_id": "env_algae_patch",
+      "cells": 7,
+      "views": [
+        {
+          "view": "game_left",
+          "sprite_bbox": [
+            39,
+            79,
+            153,
+            113
+          ],
+          "normal_unit_error": 0.005907491519452579
+        },
+        {
+          "view": "game_right",
+          "sprite_bbox": [
+            40,
+            78,
+            152,
+            114
+          ],
+          "normal_unit_error": 0.005719896677428116
+        },
+        {
+          "view": "front",
+          "sprite_bbox": [
+            68,
+            95,
+            125,
+            97
+          ],
+          "normal_unit_error": 0.004618324390354811
+        },
+        {
+          "view": "back",
+          "sprite_bbox": [
+            67,
+            95,
+            124,
+            97
+          ],
+          "normal_unit_error": 0.003991047660163116
+        },
+        {
+          "view": "left",
+          "sprite_bbox": [
+            52,
+            95,
+            139,
+            97
+          ],
+          "normal_unit_error": 0.003991047660163116
+        },
+        {
+          "view": "right",
+          "sprite_bbox": [
+            53,
+            95,
+            140,
+            97
+          ],
+          "normal_unit_error": 0.004670653754689891
+        },
+        {
+          "view": "top",
+          "sprite_bbox": [
+            34,
+            55,
+            158,
+            137
+          ],
+          "normal_unit_error": 0.006093149935492148
+        }
+      ],
+      "pixel_validation": "PASS",
+      "negative_input_checks": 4
+    }
+  ],
+  "asset_count": 7,
+  "cell_count": 49,
+  "pass_count": 5,
+  "raw_rgba_bytes": 198983680,
+  "performance": {
+    "frames": 120,
+    "backend": "Pygame SDL dummy; no GPU/window measurement",
+    "seven_static_blit_p95_ms": 1.5484000323340297,
+    "seven_static_blit_max_ms": 2.168099978007376,
+    "single_stone_320px_relight_p95_ms": 28.524400026071817,
+    "single_stone_320px_relight_max_ms": 37.143099994864315,
+    "relight_16_7ms_pass": false,
+    "display_hardware_validation": "NOT_RUN"
+  },
+  "game_integration": "NOT_RUN; existing C011 Assets only accepts 128px",
+  "DEC_06": "DEFERRED",
+  "physics_and_action_effects": "NOT_RUN; static export has no events"
+}

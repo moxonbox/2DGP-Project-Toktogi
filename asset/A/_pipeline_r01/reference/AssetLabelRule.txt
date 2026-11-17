@@ -1,0 +1,40 @@
+[ 에셋 디렉토리(dir) 구조 ]
+
+- asset
+	ㄴ 각 에셋 카테고리 (A, B, C)
+		ㄴ 각 에셋 dir (dir명 예시: C01_toktogi)
+			ㄴ 3D 모델 dir (dir 명: 3D)
+				ㄴ .blender
+				ㄴ .fbx
+				ㄴ 텍스처 dir
+				ㄴ versions (이전 버전 에셋 dir, 비중복 파일만 7z로 압축, 최신 버전과 중복 파일은 삭제)
+			ㄴ 2D 스프라이트 dir (dir 명: 2D)
+				ㄴ 모션 별 dir
+					ㄴ 해당 모션 프레임 dir
+			ㄴ 에셋 기획 상세 명세서 dir (dir 명: document)
+			ㄴ (3D 모델 생성용) 에셋 시트 dir (dir명: sheet)
+			ㄴ 해당 에셋 모션 .html (C 에셋만 해당)
+
+
+[ 에셋 넘버링 ]
+_ _ _ _ _ _ _ _ _			// 각 비트는 16진수.
+7 6 5 4 3 2 1 0			// 예: idle 톡토기 (C010___)
+
+- 7 비트: 에셋 카테고리
+	ㄴ A: asset (플레이어와 상호작용(예: 공격시 움직임) 가능)
+	ㄴ B: background asset (플레이어와 상호작용(배치/수정/애니메이션) 불가)
+	ㄴ C: character asset (캐릭터 및 관련 에셋(예: 의상))
+	ㄴ D: data (예: UI)
+	ㄴ E: effect asset
+
+- 6 비트: 에셋 종류 ( 0: None / 1: Friendly / 2: / 3: Enemy )
+
+- 5 비트: 에셋
+
+- 4 비트: 에셋 variation
+
+- 3 비트: 에셋 모션 variation
+
+- 2 비트: 에셋 모션 프레임
+- 1 비트: 에셋 모션 프레임
+- 0 비트: 에셋 모션 프레임

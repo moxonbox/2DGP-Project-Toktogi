@@ -1,0 +1,174 @@
+{
+  "asset_id": "C261_gambusia_holbrooki",
+  "object_id": "predator_gambusia_holbrooki",
+  "revision": "gambusia-r01",
+  "pipeline": {
+    "version": "2.3",
+    "path": "../../../document/markdown/AssetPipeLine.md",
+    "sha256": "bd83bc2c489070702bced19bf54d6019f6c5e56e885ac958ac9b73741efa8239"
+  },
+  "size": {
+    "path": "../../../document/markdown/AssetSize.md",
+    "sha256": "b3277c28c89025b787f215a913fbb078d2d87a34d1f6628b561bac49c8a8c466"
+  },
+  "selection": {
+    "taxon": "Gambusia holbrooki",
+    "stage": "adult",
+    "measure_kind": "SL",
+    "female_max_sl_mm": 60,
+    "male_max_sl_mm": 35,
+    "biological_TL_mm": null,
+    "reference_toktogi_max_mm": 1,
+    "art_factor": 0.1,
+    "display_SL_ratios": {
+      "female": 6,
+      "male": 3.5
+    },
+    "approved_by": "user in this chat",
+    "staging_unit": "relative C011 body proxy .965396 BU; not metric physical scale"
+  },
+  "reference": {
+    "asset": "C011_toktogi",
+    "revision": "integrated-r5",
+    "body_proxy_bu": 0.965396,
+    "pixels_per_bu": 71.91011235955057,
+    "outline": "#22313B, disk dx²+dy²<=5",
+    "light": {
+      "power": 0.82,
+      "ambient": 0.34,
+      "height_px": 116
+    },
+    "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec"
+  },
+  "palette": {
+    "id": "gambusia_olive_silver_r01",
+    "sRGB": [
+      "24302d",
+      "39443d",
+      "50594a",
+      "68715f",
+      "808a7a",
+      "9aa495",
+      "aeb7ac",
+      "c1c9bf",
+      "d2d7cb",
+      "e0e3d5",
+      "eaeadb",
+      "f3f1e3",
+      "fbf7e9"
+    ],
+    "scope": "Sprite body only; eyes/fins/outline exempt",
+    "distance_weights": [
+      0.25,
+      0.6,
+      0.15
+    ],
+    "dither": false,
+    "bands": [
+      0.14,
+      0.42,
+      0.72
+    ],
+    "linear_multipliers": [
+      [
+        0.36,
+        0.42,
+        0.51
+      ],
+      [
+        0.53,
+        0.6,
+        0.66
+      ],
+      [
+        0.73,
+        0.77,
+        0.8
+      ],
+      [
+        0.95,
+        0.95,
+        0.92
+      ]
+    ],
+    "texture_sampling": "bilinear linear RGB; nearest screen scaling"
+  },
+  "scope": {
+    "actions": 16,
+    "phases_per_action": 3,
+    "variants": [
+      "female",
+      "male"
+    ],
+    "views": [
+      "left",
+      "right",
+      "front",
+      "top"
+    ],
+    "production_coordinates": "DEC-06 deferred; four authored views declared",
+    "reproduction": "biological reference only; courtship/gestation/birth not adopted by movement catalog",
+    "juvenile": "not authored; no selected juvenile size/morphology"
+  },
+  "budgets": {
+    "triangles_per_variant": 10000,
+    "bones_per_variant": 40,
+    "texture": [
+      1024,
+      1024
+    ],
+    "resident_memory_bytes": 536870912,
+    "frame_ms": 16.7,
+    "margin_px": 8
+  },
+  "physics": {
+    "tick_hz": 120,
+    "world": "horizontal camera-plane BU and vertical +Z BU",
+    "breach_default": false,
+    "breach_demo_enabled": true,
+    "gravity_SL_s2": 3,
+    "launch_SL_s": 3.6,
+    "damage_HP": null,
+    "speeds_are": "authored game tuning, not species measurements",
+    "collision": "separate water bounds and mouth contact radius .04 SL; player capsule owned by existing game"
+  },
+  "license": {
+    "new_mesh_animation_textures": "created for this project",
+    "sheets": "GPT Image generated",
+    "external_photos": "none redistributed; linked descriptions only",
+    "reference_C011": "existing project asset; upstream rights unchanged"
+  },
+  "sources": [
+    {
+      "url": "https://fishesofaustralia.net.au/home/species/3636",
+      "role": "SL, fin placement, sex dimorphism; accessed 2026-11-17"
+    },
+    {
+      "url": "https://australian.museum/learn/animals/fishes/eastern-gambusia-gambusia-holbrooki-girard-1859/",
+      "role": "external morphology; not used to override SL definition"
+    }
+  ],
+  "sheet_generation": {
+    "tool": "built-in GPT Image",
+    "model_version": null,
+    "seed": null,
+    "date": "2026-11-17",
+    "reference_images": [
+      "../C011_toktogi/2D/integrated-r5/previews/idle.png",
+      "sheet/references/c011_blender_sheet.png"
+    ]
+  },
+  "detail_revision": {
+    "reason": "user requested matching the generated sheets",
+    "changes": [
+      "embedded flatter eyes",
+      "small upturned attached lips, recessed mouth cavity",
+      "conforming gill covers and narrow creases",
+      "rounded body rings and sex-specific belly",
+      "rounded attached tail fan",
+      "posterior dorsal fin attached to each sex profile",
+      "readable pectoral fans and smaller pelvic fins",
+      "UV-fixed fin rays and speckles"
+    ]
+  }
+}

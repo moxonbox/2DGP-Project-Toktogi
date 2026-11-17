@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model_identifier": null,
+  "seed": null,
+  "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B02 Spirodela polyrhiza, one broad flattened oval duckweed frond, green top and purple underside, SEVEN separate long dangling roots and SEVEN subtle veins. Selected frond 6 by 5 mm, roots 35 mm long; keep all 7 roots consistent. Show full roots in front/side and an inset underside. Not Lemna.",
+  "input_spec": "../document/plant_spirodela_polyrhiza_model.md",
+  "input_spec_sha256": "6fdcb96131948917d49e3da4c79bc2cf255cdba733f6fc3a63b6aded947e4c06",
+  "style_reference": "../../_production/reference/C011_idle.png",
+  "style_reference_sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+  "style_input_delivery": "Reference displayed in conversation; new-image call omitted explicit image-path arguments.",
+  "output": "plant_spirodela_polyrhiza_sheet_r01.png",
+  "output_sha256": "7f392e296454ea684901b87d1c9487709f8d390d6a6885055754c2deb6ec4344",
+  "review": "conditional_reference_with_production_spec_corrections",
+  "correction": "생성 그림의 뿌리 35mm 치수선과 화면 비례가 일치하지 않는다. 6mm 엽상체와 35mm 뿌리 수치를 모델에 직접 적용한다. 시트에서 겹친 측면 뿌리는 삭제하지 않는다.",
+  "selection_reason": "생물 명세의 큰 형태와 프로젝트 카툰 톤 참고. 실제 정투영·기관 수는 제작 계약과 Blender 출력이 우선한다.",
+  "license_note": "내장 생성 도구 산출물. 외부 사진·외부 모델을 복제하거나 새로 배포하지 않았다. 원자료의 법적 권리는 별도 검토하지 않았다."
+}

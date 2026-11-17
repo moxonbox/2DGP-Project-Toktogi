@@ -1,0 +1,511 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "angular_stem",
+      "vertices": 28,
+      "triangles": 52
+    },
+    {
+      "name": "arrow_leaf_0",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "arrow_leaf_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "arrow_leaf_2",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "arrow_leaf_3",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "arrow_leaf_4",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_0_-1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_0_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_1_-1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_1_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_2_-1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_2_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_3_-1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_3_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_4_-1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "basal_leaf_lobe_4_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "downward_prickle_0",
+      "vertices": 8,
+      "triangles": 12
+    },
+    {
+      "name": "downward_prickle_1",
+      "vertices": 8,
+      "triangles": 12
+    },
+    {
+      "name": "downward_prickle_2",
+      "vertices": 8,
+      "triangles": 12
+    },
+    {
+      "name": "downward_prickle_3",
+      "vertices": 8,
+      "triangles": 12
+    },
+    {
+      "name": "downward_prickle_4",
+      "vertices": 8,
+      "triangles": 12
+    },
+    {
+      "name": "flower_0_0_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_0_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_0_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_0_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_1_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_1_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_1_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_1_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_2_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_2_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_2_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_2_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_3_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_3_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_3_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_3_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_4_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_4_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_4_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_0_4_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_0_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_0_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_0_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_0_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_1_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_1_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_1_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_1_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_2_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_2_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_2_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_2_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_3_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_3_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_3_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_3_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_4_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_4_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_4_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_1_4_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "flower_peduncle_0",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "flower_peduncle_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "pollen_0_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_0_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_0_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_0_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_1_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_1_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_1_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "pollen_1_4",
+      "vertices": 62,
+      "triangles": 120
+    }
+  ],
+  "triangles": 8868,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        576,
+        224
+      ],
+      "margin": 14,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 17735,
+      "seconds": 0.815509199979715
+    },
+    "front": {
+      "cell": [
+        304,
+        144
+      ],
+      "margin": 13,
+      "normal_error": 0.006093149935492148,
+      "surface_pixels": 6095,
+      "seconds": 0.7156199999735691
+    },
+    "back": {
+      "cell": [
+        304,
+        144
+      ],
+      "margin": 13,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 6095,
+      "seconds": 0.8611719999462366
+    },
+    "left": {
+      "cell": [
+        640,
+        144
+      ],
+      "margin": 13,
+      "normal_error": 0.006331360245143802,
+      "surface_pixels": 14929,
+      "seconds": 1.0735818999819458
+    },
+    "right": {
+      "cell": [
+        640,
+        144
+      ],
+      "margin": 13,
+      "normal_error": 0.006278843038372117,
+      "surface_pixels": 14929,
+      "seconds": 1.0675481000216678
+    },
+    "top": {
+      "cell": [
+        640,
+        304
+      ],
+      "margin": 13,
+      "normal_error": 0.006086819413139599,
+      "surface_pixels": 33556,
+      "seconds": 1.0855499999597669
+    },
+    "underside": {
+      "cell": [
+        640,
+        304
+      ],
+      "margin": 13,
+      "normal_error": 0.006147960193154667,
+      "surface_pixels": 33556,
+      "seconds": 1.0061071999953128
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_persicaria_thunbergii_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_persicaria_thunbergii_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_persicaria_thunbergii_sheet_r01.png",
+      "sha256": "bdb9cec887f8865c51da75f011a930159ad6bdd63df020c7c357f3dcd35b692a",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 15800320,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

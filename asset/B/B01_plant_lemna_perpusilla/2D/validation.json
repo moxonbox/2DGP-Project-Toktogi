@@ -1,0 +1,131 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "frond",
+      "vertices": 266,
+      "triangles": 528
+    },
+    {
+      "name": "root_01",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_sheath_wing_-1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "root_sheath_wing_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "vein_01",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_02",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_03",
+      "vertices": 18,
+      "triangles": 32
+    }
+  ],
+  "triangles": 924,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        192,
+        128
+      ],
+      "margin": 15,
+      "normal_error": 0.006147960193154667,
+      "surface_pixels": 5866,
+      "seconds": 0.22613619995536283
+    },
+    "front": {
+      "cell": [
+        144,
+        112
+      ],
+      "margin": 15,
+      "normal_error": 0.005536278670188022,
+      "surface_pixels": 1591,
+      "seconds": 0.16200549999484792
+    },
+    "back": {
+      "cell": [
+        144,
+        112
+      ],
+      "margin": 15,
+      "normal_error": 0.005969373805238987,
+      "surface_pixels": 1591,
+      "seconds": 0.14300909999292344
+    },
+    "left": {
+      "cell": [
+        208,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.005660000888458083,
+      "surface_pixels": 2442,
+      "seconds": 0.1503614999819547
+    },
+    "right": {
+      "cell": [
+        208,
+        112
+      ],
+      "margin": 16,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 2442,
+      "seconds": 0.15978310001082718
+    },
+    "top": {
+      "cell": [
+        208,
+        144
+      ],
+      "margin": 14,
+      "normal_error": 0.005964526705017681,
+      "surface_pixels": 14988,
+      "seconds": 0.1720422999933362
+    },
+    "underside": {
+      "cell": [
+        208,
+        144
+      ],
+      "margin": 14,
+      "normal_error": 0.005964526705017903,
+      "surface_pixels": 14988,
+      "seconds": 0.15043940005125478
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_lemna_perpusilla_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_lemna_perpusilla_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_lemna_perpusilla_sheet_r01.png",
+      "sha256": "3bb4823ea1a105d653c4a226811f5eea767563210452c60e65c99f5b689b4173",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 3266560,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

@@ -1,0 +1,31 @@
+{
+  "functional_status": "PASS",
+  "native_model_status": "PASS",
+  "packaging_status": "PASS",
+  "moving_light_budget": "REVIEW",
+  "moving_light_120_frames": {
+    "frames": 120,
+    "mode": "female 640 cell, moving light + water + RGBA transfer + SDL dummy blit",
+    "p95_ms": 18.549650014028884,
+    "max_ms": 20.23299998836592,
+    "mean_ms": 13.877546666481066,
+    "meets_16_7_ms": false,
+    "renderer_cache_bytes": 98329419,
+    "raw_bundle_bytes": 20535312384,
+    "actual_GPU": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "Pico2D": "NOT_IMPLEMENTED"
+  },
+  "warm_pond_idle_120_frames": {
+    "frames": 120,
+    "p95_ms": 8.344844993553124,
+    "max_ms": 9.278199984692037,
+    "mean_ms": 6.363072500971612,
+    "scope": "full optional pond Game + C011 + fish + water + SDL dummy flip",
+    "meets_16_7_ms": true
+  },
+  "actual_browser": "NOT_RUN",
+  "actual_GPU": "NOT_RUN",
+  "Pico2D": "NOT_IMPLEMENTED",
+  "blender_MCP": "UNAVAILABLE"
+}

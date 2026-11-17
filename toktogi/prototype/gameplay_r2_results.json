@@ -1,0 +1,131 @@
+{
+  "irrelevant_events_preserve_cancel": {
+    "launches": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "bites": [
+      0,
+      0
+    ]
+  },
+  "shared_work_clock": {
+    "first_attack_elapsed": 0.08333333333333334,
+    "activation": {
+      "elapsed": 0.19999999999999998,
+      "distance_px": 3.36272100686336
+    }
+  },
+  "automatic_balance_app": {
+    "end_x": 170.133333333335,
+    "moving_actions": [
+      "Walk"
+    ]
+  },
+  "all_gait_work_natural_exits": 36,
+  "recovery_jump_uses_visible_landing": 18,
+  "direct_groom_return_10_60fps": [
+    {
+      "hz": 10,
+      "max_alpha_delta_px": 1150,
+      "final_delta_px": 180
+    },
+    {
+      "hz": 15,
+      "max_alpha_delta_px": 1119,
+      "final_delta_px": 180
+    },
+    {
+      "hz": 30,
+      "max_alpha_delta_px": 807,
+      "final_delta_px": 275
+    },
+    {
+      "hz": 60,
+      "max_alpha_delta_px": 807,
+      "final_delta_px": 275
+    }
+  ],
+  "arrow_reverse_has_visible_turn": true,
+  "moving_root_active_sweep_miss": true,
+  "pause_freezes_visible_pose": true,
+  "manual_edge_stance": [
+    {
+      "view": "left",
+      "x": 36,
+      "support": [
+        "LF",
+        "LM",
+        "LH",
+        "RH"
+      ],
+      "lifted": [
+        "RF",
+        "RM"
+      ],
+      "min_lift_px": 1.2082337272853056
+    },
+    {
+      "view": "left",
+      "x": 200,
+      "support": [
+        "LF",
+        "RF",
+        "RM"
+      ],
+      "lifted": [
+        "LH",
+        "LM",
+        "RH"
+      ],
+      "min_lift_px": 0.8415640584704163
+    },
+    {
+      "view": "right",
+      "x": 36,
+      "support": [
+        "LF",
+        "LM"
+      ],
+      "lifted": [
+        "LH",
+        "RF",
+        "RH",
+        "RM"
+      ],
+      "min_lift_px": 0.8415640584704163
+    },
+    {
+      "view": "right",
+      "x": 200,
+      "support": [
+        "LH",
+        "RF",
+        "RM",
+        "RH"
+      ],
+      "lifted": [
+        "LF",
+        "LM"
+      ],
+      "min_lift_px": 1.4099415956959285
+    }
+  ],
+  "world_feedback_without_hud": true,
+  "supplemental_pose_cells": 930,
+  "reference_shader_equivalence": {
+    "cases": 24,
+    "max_channel_error": 1,
+    "changed_channels": 2
+  },
+  "moving_light_viewer_frame_ms": {
+    "median": 11.89965000958182,
+    "p95": 13.026899949181825,
+    "max": 13.262299995403737,
+    "samples": 120,
+    "scope": "SDL dummy update+draw, excludes OS presentation and event polling",
+    "p95_within_60hz_budget": true
+  }
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "path": "document/markdown/AssetPipeLine.md",
+    "sha256": "bd83bc2c489070702bced19bf54d6019f6c5e56e885ac958ac9b73741efa8239"
+  },
+  {
+    "path": "document/markdown/AssetSize.md",
+    "sha256": "9762f9dc26f35193a3b8ba8880867eab9a965b0eaef98742a237696ec96caac9"
+  },
+  {
+    "path": "document/markdown/AssetLabelRule.txt",
+    "sha256": "37ac6573172dab9abc08c48569fbcfb0b34650431521a5319c31eedb80e31505"
+  },
+  {
+    "path": "document/markdown/StageLevel.md",
+    "sha256": "50c2ee6cfb97ceffd94d80876a16d7376cc91e78a01ba628f5d46f0a2b1b104c"
+  },
+  {
+    "path": "document/markdown/Rebuild.md",
+    "sha256": "cbb7bb002072545cad66572ba97fb44cdaba702520292df875a05a2a35c0651a"
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/playable_manifest.json",
+    "sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef"
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/previews/idle.png",
+    "sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c"
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/left_sprite.png",
+    "sha256": "9934e69f20b3cb5faf5628335032a70b51cbd5a35d58cfdfbb6032b1c28c4eaa",
+    "sample_rect": [
+      2,
+      2,
+      128,
+      128
+    ]
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/left_base.png",
+    "sha256": "47c894fe8ff855ad0f4a61f248cdd665b868929e0a71163938024f7d13348b1e",
+    "sample_rect": [
+      2,
+      2,
+      128,
+      128
+    ]
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/left_normal.png",
+    "sha256": "a12001bad61cbe82cd4fba11422704053d89dca88afdb82c588449dee018de2d",
+    "sample_rect": [
+      2,
+      2,
+      128,
+      128
+    ]
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/left_rm.png",
+    "sha256": "277ee56c165bc5781633874fb8ca524fd7159780b35ef4350c44aa3c23f3f4fc",
+    "sample_rect": [
+      2,
+      2,
+      128,
+      128
+    ]
+  },
+  {
+    "path": "asset/C/C011_toktogi/2D/integrated-r5/left_emissive.png",
+    "sha256": "0d26f31d06e5d3d7d411462c1e398e928bdb9358228728a50c296d6c33135ec6",
+    "sample_rect": [
+      2,
+      2,
+      128,
+      128
+    ]
+  },
+  {
+    "path": "toktogi/prototype/lighting.py",
+    "sha256": "483bd40c7bcfffbd79003d6e59dc2c7dce73e92e47a4d89fca2647961ad0a021"
+  },
+  {
+    "path": "asset/A/A01_plant_lemna_minor/document/plant_lemna_minor.md",
+    "sha256": "172410af66e3223275c55da911ff922cf356c90b64281ecb6c8735ed8a7515e5"
+  },
+  {
+    "path": "asset/A/A01_plant_lemna_minor/document/plant_lemna_minor_model.md",
+    "sha256": "42b7b59a5b5302b664102977e9ae5122655b31967515e4d916fc722419f723d7"
+  },
+  {
+    "path": "asset/A/A01_plant_lemna_minor/document/plant_lemna_minor_movement.md",
+    "sha256": "96de79139e9f5b8d0574957cd2b8e3894dac47e2a04fbe78be2cba9d4ce7aa54"
+  },
+  {
+    "path": "asset/A/A02_env_still_water/document/env_still_water.md",
+    "sha256": "f2e6164d748b5d3d6464ae086e2cfef2953ec787967ea1a3e98f3792ff7ff717"
+  },
+  {
+    "path": "asset/A/A02_env_still_water/document/env_still_water_model.md",
+    "sha256": "71dd6b883f10e4280a732e20c295329741aaca02891f32d674632a90797c0d39"
+  },
+  {
+    "path": "asset/A/A02_env_still_water/document/env_still_water_movement.md",
+    "sha256": "31e46f5117b7f02b3be9540cf0098bb2a5becad78c6d6712c88deb676e1eee07"
+  },
+  {
+    "path": "asset/A/A03_env_shore_slope/document/env_shore_slope.md",
+    "sha256": "72b10a0e2efa2b0366dac6fc82f84ca81f5e1e119a0b174ef6c2e7b2e68fd7f7"
+  },
+  {
+    "path": "asset/A/A03_env_shore_slope/document/env_shore_slope_model.md",
+    "sha256": "805179d89c03ff7c94b2006a4182f647e913c50023fb0c8364a524586c2858eb"
+  },
+  {
+    "path": "asset/A/A03_env_shore_slope/document/env_shore_slope_movement.md",
+    "sha256": "4d63829dd1c07a885384683a9dc33b54e32096d6dca6b1a34d56a4e5284d0e16"
+  },
+  {
+    "path": "asset/A/A04_env_wet_wood/document/env_wet_wood.md",
+    "sha256": "12ed9b5019c8fbc06c006c9b4f36d1314c095644cb697b6c5bc1589668497b0f"
+  },
+  {
+    "path": "asset/A/A04_env_wet_wood/document/env_wet_wood_model.md",
+    "sha256": "015fb839b88f5103dfd54d2e227af85864803a81def8319c0200649cc0141355"
+  },
+  {
+    "path": "asset/A/A04_env_wet_wood/document/env_wet_wood_movement.md",
+    "sha256": "aa8b25fe4950129ec779682273b02ebdbe03a52fd136d977e87419fe21631baa"
+  },
+  {
+    "path": "asset/A/A05_env_wet_stone/document/env_wet_stone.md",
+    "sha256": "dc667a6da55269d41df701d2f6544b1d946c65c3b4b881fb579fd6b4f6c90caf"
+  },
+  {
+    "path": "asset/A/A05_env_wet_stone/document/env_wet_stone_model.md",
+    "sha256": "4a6c4051bc4dfcef04447139d5a8bd8c6985fdcde2cb3a46bae86232f131603d"
+  },
+  {
+    "path": "asset/A/A05_env_wet_stone/document/env_wet_stone_movement.md",
+    "sha256": "0bc92e56d49c92f1a871cc13d0b7a77de56a1d7b5357e840b1df4c0d5dd2a3ff"
+  },
+  {
+    "path": "asset/A/A06_env_wet_leaf_litter/document/env_wet_leaf_litter.md",
+    "sha256": "cb2a7aa8eface91899fca477af935203b527d4f90e334a819345ea47160242a6"
+  },
+  {
+    "path": "asset/A/A06_env_wet_leaf_litter/document/env_wet_leaf_litter_model.md",
+    "sha256": "0a9c3811ef8310a485c66a3b392683a6a333c730a7c0b5848b1ae9e80dad4aca"
+  },
+  {
+    "path": "asset/A/A06_env_wet_leaf_litter/document/env_wet_leaf_litter_movement.md",
+    "sha256": "2519a2f985e58d0cba6f71f7dbef4e2957ab7bb019a0d3866fe3beb02c5be1fd"
+  },
+  {
+    "path": "asset/A/A07_env_algae_patch/document/env_algae_patch.md",
+    "sha256": "760278e00a6ea26f28a9de3a24a79277c15f3c8a8d0d3047769eab656b420b88"
+  },
+  {
+    "path": "asset/A/A07_env_algae_patch/document/env_algae_patch_model.md",
+    "sha256": "c6e9a4b91219eca801f911c23712b6e6c870555861bf69f4b95fb404f8a3c20d"
+  },
+  {
+    "path": "asset/A/A07_env_algae_patch/document/env_algae_patch_movement.md",
+    "sha256": "239e2733edcc6c3257c7c868195561c694d051a3337ded868a9b6430472d92e3"
+  },
+  {
+    "path": "asset/C/C011_toktogi/3D/toktogi_unified.blend",
+    "sha256": "fc6c9e29bc8c19ed73a5d33d1abea5b9fb1a2775e166341b1f76336d308d8399",
+    "use": "read-only camera/preview lighting reference"
+  }
+]

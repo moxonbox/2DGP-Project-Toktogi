@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>톡토기 | 프로젝트 구조 지도</title>
+<style>
+@@STYLE@@
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<header id="overview" class="masthead"><div class="mast-inner">
+<div class="eyebrow">FRAMEWORK-R4 · 2026.11.17</div><h1>톡토기 · 프로젝트 구조 지도</h1>
+<p>프레임워크 실행 흐름, Python 객체와 모듈, 조작키와 실제 모션</p>
+<div class="stats" aria-label="현재 배포 요약"><span>120Hz 고정 틱</span><span>@@MOTIONS@@개 모션 검수</span><span>@@CELLS@@개 128px 셀</span><span>@@REGRESSION@@개 회귀 검증</span></div>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<nav aria-label="안내서 탐색"><a href="#architecture" aria-current="page">전체 구조</a><a href="#framework">프레임워크 상세</a><a href="#files">Python 파일 구조</a><a href="#controls">게임 단축키</a><a href="#states">상태 머신</a><a href="#motion">모션 구조</a><a href="#materials">재질·조명</a><a href="#specs">명세서 구조</a><a href="#evidence">검증·근거</a></nav>
+<div class="nav-end"><a href="@@SOURCE_FRAMEWORK@@">프레임워크 명세</a><button id="print" type="button">전체 인쇄 / PDF</button></div></aside>
+<main id="main"><div class="content">
+
+<section id="architecture" class="view" aria-labelledby="arch-title"><div class="section-head"><h2 id="arch-title">전체 구조</h2><a href="@@SOURCE_ARCHITECTURE@@" class="subtle">실행 파일</a></div><p class="lead">입력은 120Hz 게임 규칙에 적용됩니다. 게임 상태에 맞는 128px 셀을 고르고 조명을 계산해 화면에 그립니다.</p>
+<div class="legend" aria-label="구조도 범례"><span><i style="--type:var(--ui)"></i>입력·장면</span><span><i style="--type:var(--cpu)"></i>게임·모션</span><span><i style="--type:var(--store)"></i>코스·에셋</span><span><i style="--type:var(--render)"></i>출력·검수</span></div>
+<div class="diagram" id="diagram" aria-label="톡토기 실행 흐름"><canvas id="edges" aria-hidden="true"></canvas><div class="flow" role="group" aria-label="주요 실행 흐름">
+<button class="node" style="--type:var(--ui)" type="button" data-node="entry" aria-pressed="false"><b>실행·장면</b><span>main · App<br>플레이 / 검수</span></button>
+<button class="node" style="--type:var(--ui)" type="button" data-node="clock" aria-pressed="false"><b>입력·시간</b><span>EventClock · Timeline<br>120Hz 틱</span></button>
+<button class="node" style="--type:var(--cpu)" type="button" data-node="rules" aria-pressed="false"><b>게임 규칙</b><span>Game<br>상태·효과</span></button>
+<button class="node" style="--type:var(--cpu)" type="button" data-node="motion" aria-pressed="false"><b>모션 선택</b><span>MotionSet · Track<br>셀 선택</span></button>
+<button class="node" style="--type:var(--render)" type="button" data-node="render" aria-pressed="false"><b>화면·조명</b><span>PlayView · Renderer<br>60Hz 목표</span></button>
+</div>
+<div class="dependencies" role="group" aria-label="제작·검수와 데이터 의존성">
+<button class="node" style="--type:var(--store)" type="button" data-node="author" aria-pressed="false"><b>Blender 제작</b><span>리그·5패스 출력</span></button>
+<button class="node" style="--type:var(--store)" type="button" data-node="assets" aria-pressed="false"><b>에셋 저장소</b><span>Assets · ZIP</span></button>
+<button class="node" style="--type:var(--store)" type="button" data-node="course" aria-pressed="false"><b>코스·충돌</b><span>Course · Capsule</span></button>
+<button class="node" style="--type:var(--render);grid-column:5" type="button" data-node="replay" aria-pressed="false"><b>검수·리플레이</b><span>F2 · HTML</span></button>
+</div></div>
+<div class="diagram-controls"><span>노드를 선택하면 연결과 구현 근거가 표시됩니다.</span><button type="button" id="node-reset" disabled>선택 해제</button></div>
+<div class="panel inspector" aria-live="polite"><div><h3 id="node-title">틱 안에서의 처리 순서</h3><p id="node-role">접촉·위험 판정 → 입력 → 발사·작업 효과 → 장면 전환</p><dl id="node-fields" hidden><dt>읽기</dt><dd id="node-in"></dd><dt>출력</dt><dd id="node-out"></dd></dl></div><ul id="node-sources" class="line-list" aria-label="구현 위치"><li><a href="../prototype/timeline.py">timeline.py</a></li><li><a href="../prototype/game.py">game.py</a></li></ul></div>
+<details class="panel details"><summary>화살표의 의미 보기</summary><div class="connections" id="connections"></div></details></section>
+
+<section id="framework" aria-labelledby="framework-title">
+<div class="section-head"><h2 id="framework-title">프레임워크 상세</h2><a href="@@SOURCE_FRAMEWORK@@">설계 명세</a></div>
+<p class="lead">초기화, 입력과 시뮬레이션, 플레이 렌더링, F2 검수의 호출 순서입니다. 심볼을 선택하면 Python 파일 구조로 이동합니다.</p>
+<div class="framework-grid">@@FRAMEWORK@@</div>
+<div class="panel tablewrap details"><h3>주요 객체의 관계</h3>
+<table><thead><tr><th scope="col">객체</th><th scope="col">연결되는 객체</th><th scope="col">관계</th></tr></thead><tbody>@@OBJECTS@@</tbody></table></div>
+</section>
+
+<section id="controls" aria-labelledby="controls-title"><div class="section-head"><h2 id="controls-title">게임 단축키</h2><span class="eyebrow">플레이 / F2 검수</span></div>
+<p class="hints"><span><kbd>←</kbd> <kbd>→</kbd> 보행</span><span><kbd>Space</kbd> 떼서 도약</span><span><kbd>Q</kbd> 반전 · <kbd>Z</kbd> 360°</span><span><kbd>F2</kbd> 검수</span> <a href="@@SOURCE_CONTROLS@@">상태 머신 입력표</a></p>
+<div class="split"><article class="panel tablewrap"><h3>플레이</h3>@@PLAY_CONTROLS@@</article>
+<div class="stack"><article class="panel tablewrap"><h3>F2 검수</h3>@@VIEWER_CONTROLS@@</article>
+<article class="panel"><h3>완주 흐름</h3><p class="subtle">첫 발판에서 위로 도약해 중간 등불을 켠다. 탄성 잎으로 높은 발판에 오르고 목표 영역에서 충분히 느린 상태를 0.20초 유지한다. 가시 껍질은 피하거나 X로 제거할 수 있다.</p><p class="subtle"><code>C</code>와 <code>V</code>는 플레이에서 미할당이다. 플레이 화면에는 키 안내 HUD가 없다.</p></article></div></div></section>
+
+<section id="states" aria-labelledby="state-title"><div class="section-head"><h2 id="state-title">상태 머신</h2><span class="eyebrow">행동 @@ACTION_COUNT@@개 · 진행 @@PROGRESS_COUNT@@개</span></div><p class="lead">행동 상태는 입력과 물리 사건이 바꿉니다. 아래 상태를 선택하면 다음 상태와 조건을 볼 수 있습니다. <a href="@@SOURCE_STATES@@">현행 상태 원문</a></p>
+<div class="state-line" role="group" aria-label="행동 상태 선택">@@STATES@@</div>
+<article class="panel state-detail" aria-live="polite"><h3 id="state-name">@@STATE_NAME@@</h3><p class="subtle" id="state-detail">@@STATE_DETAIL@@</p><ul id="state-transitions">@@STATE_EDGES@@</ul></article>
+<details class="panel" style="margin-top:9px"><summary>상태별 전이 한눈에 보기</summary><div class="tablewrap"><table><thead><tr><th scope="col">현재</th><th scope="col">다음과 조건</th></tr></thead><tbody>@@STATE_SUMMARY@@</tbody></table></div></details>
+<div class="run" aria-label="독립 진행 상태">@@PROGRESS_STATES@@</div>
+<div class="callout">@@STATE_NOTES@@</div></section>
+
+<section id="motion" aria-labelledby="motion-title"><div class="section-head"><h2 id="motion-title">모션 구조</h2><span class="eyebrow">Track · 128px · NEAREST</span></div><p class="lead">@@CLIPS@@개 원본 클립, @@SEQUENCES@@개 원본 시퀀스, @@PROFILES@@개 보조 프로필을 사용합니다. 실제 게임 시간표 @@GAME_TIMELINES@@개와 입력 리플레이 @@REPLAYS@@개를 더하면 총 @@MOTIONS@@항목입니다.</p>
+<div class="panel player"><div class="pixel-view" role="img" aria-label="선택한 128픽셀 톡토기 모션"><img id="player-poster" src="@@HERO@@" width="128" height="128" alt=""><canvas id="sprite" width="128" height="128" hidden></canvas></div><div class="player-info"><label class="label" for="clip">대표 모션과 전환</label><select id="clip">@@OPTIONS@@</select><h3 id="clip-title">섭식 복귀 → 공격</h3><p id="clip-detail" class="subtle"></p><p class="subtle"><span id="clip-keys"></span> <span class="mono" id="clip-time"></span></p><div id="clip-events" class="event-strip"></div><div class="transport"><button class="play" id="play" type="button">재생</button><button id="prev" type="button" aria-label="이전 프레임">이전</button><button id="next" type="button" aria-label="다음 프레임">다음</button><label>표시율<select id="fps" aria-label="미리보기의 표시율"><option value="60">60fps</option><option value="30">30fps</option><option value="15">15fps</option><option value="10">10fps</option></select></label></div><input class="seek" type="range" id="seek" min="1" max="1" value="1" aria-label="모션 프레임"><div id="clip-index" class="subtle" aria-live="off">1 프레임</div></div></div>
+<div class="panel tablewrap"><table class="phase-table"><thead><tr><th scope="col">행동</th><th scope="col">자세 연결</th><th scope="col">게임 시간·분기</th></tr></thead><tbody>
+<tr><th scope="row">보행 · Q · Z</th><td>대기 → 보행 시작 → 위상별 제동 → 반전 또는 한 바퀴</td><td>Z 본 회전은 좌우 각각 62셀·1.55초. 12개 지지 구간을 사용한다.</td></tr>
+<tr><th scope="row">일반·탄성 도약</th><td>준비 → 도약기관 전개 → 공중제비 → 정점·낙하 → 실제 착지</td><td>전개 핵심 100ms. 공중제비 330ms·역위 105ms. 회복 도약과 피격·천장 충돌은 다른 자세를 사용한다.</td></tr>
+<tr><th scope="row">섭식 → 복귀·공격</th><td><code>feed_pre</code> → <code>feed_cycle</code> → 현재 자세 기반 복귀</td><td>적격한 X는 섭식 복귀를 중단할 수 있다. 최대 75ms의 준비 표시에서 이전 섭식 자세를 연결한다.</td></tr>
+<tr><th scope="row">06–07 손질</th><td>더듬이 손질 → 지지 전환 → 도약기관 손질 → 중립</td><td>G 해제 시 현재 셀과 방향에 맞춘 보조 복귀 사용. 08 손질은 검수 항목.</td></tr>
+<tr><th scope="row">착지·재도약</th><td><code>land_soft</code> / <code>land_hard</code> → 회복</td><td>즉시 재도약 입력은 착지 셀에 대응하는 준비 트랙을 사용한다.</td></tr></tbody></table></div>
+<p class="subtle" style="margin-top:10px">이 플레이어는 배포 HTML의 Sprite 셀과 시간을 포함합니다. 표시율은 그리는 빈도만 바꿉니다. 전체 카탈로그와 재질 검수는 <a href="@@SOURCE_MOTION@@">전체 모션 프리뷰</a> 또는 게임 F2에서 확인하세요.</p></section>
+
+<section id="materials" aria-labelledby="material-title"><div class="section-head"><h2 id="material-title">재질·조명 구조</h2><span class="eyebrow">공통 피벗 · 5패스</span></div><p class="lead">Blender 출력과 런타임 셀은 좌표와 피벗을 공유합니다. 플레이와 F2가 같은 5패스를 읽어 색을 계산합니다.</p>
+<div class="material-grid"><article><h3>Sprite</h3><p>베이크된 색과 윤곽, 최종 실루엣 Alpha.</p></article><article><h3>Base</h3><p>sRGB 표면색과 표면 coverage.</p></article><article><h3>Normal</h3><p>카메라 기준 표면 방향. RGB를 벡터로 디코드.</p></article><article><h3>RM</h3><p>R은 Roughness, G는 Metallic. 선형 값.</p></article><article><h3>Emissive</h3><p>선형 발광값. 눈 하이라이트 표현에 사용.</p></article></div>
+<div class="callout"><strong>Blender → 패킹 → Assets → SpriteRenderer → 화면</strong><br>CPU 조명은 Base를 선형화하고 Normal·RM·Emissive와 합성한다. Sprite의 Alpha와 윤곽을 보존한다. 게임은 상단 추적광과 주변광을 사용하며, F2는 고정·마우스·이동 광원을 지원한다.</div>
+<div class="panel tablewrap details"><h3>재질과 후처리 구현 상태</h3>@@MATERIAL_STATUS@@<p class="subtle"><a href="@@SOURCE_MATERIALS@@">셰이더 구현 명세</a></p></div></section>
+
+<section id="files" aria-labelledby="files-title"><div class="section-head"><h2 id="files-title">Python 파일 구조</h2><span class="eyebrow">@@MODULES@@ PYTHON 모듈</span></div>
+<p class="lead">프로젝트 내부의 직접 import를 표시합니다. 정의 위치와 실제 실행 순서는 각각 아래 목록과 <a href="#framework">프레임워크 상세</a>에서 확인할 수 있습니다.</p>
+<label class="label" for="module-file">관계를 볼 파일</label>
+<select class="filter" id="module-file">@@FILE_OPTIONS@@</select>
+<div class="panel details" aria-live="polite">
+<div class="import-map" aria-label="선택한 파일의 import 구조">
+<div><h3>이 파일을 가져오는 곳</h3><ul id="module-in" class="module-rel"></ul></div>
+<div class="import-center"><h3><a id="module-source">Python 소스</a></h3><p id="module-role"></p></div>
+<div><h3>이 파일이 가져오는 곳</h3><ul id="module-out" class="module-rel"></ul></div>
+</div>
+<div id="module-definitions" class="definition-list"></div>
+</div>
+<div class="module-search"><label class="label" for="module-search">이름·역할·클래스·메서드 검색</label><input class="filter" id="module-search" type="search" placeholder="예: 충돌, MotionSet, Game.try_turn" autocomplete="off"><output class="count" id="module-count" aria-live="polite">@@MODULES@@개 모듈</output><div class="module-grid" id="modules"></div></div>
+<details class="panel details"><summary>프로젝트 파일과 수정 위치</summary><div class="split details">
+<article class="panel"><h3>프로젝트에서 열기</h3><pre class="tree">2DGP-Project-Toktogi/
+├─ <a href="@@SOURCE_ARCHITECTURE@@">prototype/Start-Toktogi.cmd</a>
+│  ├─ <a href="@@SOURCE_FILES@@">main.py</a> · 실행 또는 --verify
+│  ├─ <a href="../prototype/README.md">README.md</a> · 조작·설치·재사용
+│  ├─ <a href="../prototype/toktogi_assets.zip">toktogi_assets.zip</a> · 원본 @@ORIGINAL@@셀
+│  └─ <a href="../prototype/toktogi_runtime_poses.zip">toktogi_runtime_poses.zip</a> · 보조 @@SUPPLEMENTAL@@셀
+├─ <a href="../asset/C/C01_toktogi/3D/framework-r4/toktogi_framework_r4.blend">asset/C/C01_toktogi/3D/framework-r4/toktogi_framework_r4.blend</a>
+├─ <a href="@@SOURCE_FRAMEWORK@@">@@SOURCE_FRAMEWORK@@</a>
+├─ <a href="@@SOURCE_MOTION@@">ToktogiMotionPreview.html</a>
+└─ <a href="../artifact/ToktogiPrototype_framework-r4.zip">ToktogiPrototype_framework-r4.zip</a> · 당시 배포 묶음</pre></article>
+<article class="panel"><h3>바꿀 지점</h3><ul class="compact"><li>발판·체크포인트·목표 배치 <code>Course</code></li><li>충돌 수식·도약 속도 <code>physics.py</code> · <code>game.py</code></li><li>키 설정·플레이와 검수 전환 <code>app.py</code></li><li>동작 시간·보조 전환 <code>motion.py</code> · <code>replays.py</code></li><li>가시성·재질과 조명 <code>play_view.py</code> · <code>sprite_renderer.py</code></li></ul><p class="subtle" style="margin-top:10px">런타임은 Python 3.11+, Pygame 2.6.1, Pillow 13.0.0을 사용한다. <code>python main.py --verify</code>는 회귀 검증을 실행한다.</p></article></div></details></section>
+
+<section id="specs" aria-labelledby="specs-title">
+<div class="section-head"><h2 id="specs-title">명세서 구조</h2><a href="@@SOURCE_SPECS@@">통합 기획 명세</a></div>
+<p class="lead">통합 기획 명세의 문서 지도와 적용 범위입니다.</p>
+<div class="framework-grid">@@SPEC_CARDS@@</div>
+</section>
+
+<section id="evidence" aria-labelledby="evidence-title"><div class="section-head"><h2 id="evidence-title">검증·근거</h2><span class="eyebrow">현재 프로젝트 소스 기준</span></div><div class="split"><article class="panel"><h3>framework-r4 확인 범위</h3><ul class="compact"><li>기본 코스 @@DURATION@@초 · 도약 @@LAUNCHES@@회 · 탄성 도약 @@ELASTIC_LAUNCHES@@회.</li><li>기존 회귀 @@REGRESSION@@묶음과 v2.1 현행 하위 사례 @@REQUIREMENTS@@건 확인.</li><li>좌우 Z 연속 자세 @@NATIVE@@개 · 2.5ms 표본. 일부 관절·다리 메시 교차 잔존.</li><li>수면·산란 제외. 관계 장면은 검수 자료. 공중제비와 지상 Z는 별도 모션.</li></ul><p class="subtle" style="margin-top:9px">실기기 입력 지연과 물리 모니터의 표시 특성은 별도 검증 항목이다.</p></article>
+<article class="panel"><h3>실행·제작 근거</h3><ul class="evidence-links compact"><li><a href="@@SOURCE_EVIDENCE@@">현행 소스 회귀 결과</a> · <a href="../prototype/PATCH_NOTES.md">r4 변경 기록</a></li><li><a href="../asset/C/C01_toktogi/3D/framework-r4/spin_interkey_validation.json">Z 접지·교차 측정</a> · <a href="../asset/C/C01_toktogi/ASSET_INDEX.md">현행 에셋 목록</a></li><li><a href="markdown/architecture/toktogi_state_machine.md">상태 머신 원문</a> · <a href="@@SOURCE_FRAMEWORK@@">프레임워크 명세</a> · <a href="markdown/architecture/2Dshader.md">2D 셰이더 검증</a></li></ul><p class="subtle" style="margin-top:9px">배포 ZIP은 배포 시점의 산출물이다. 이 페이지의 추가 요구 검증은 현재 프로젝트 소스의 결과다.</p></article></div>
+</section>
+<footer class="foot">이 안내서는 파일 하나로 열립니다. 실행·소스·전체 프리뷰 링크는 프로젝트의 document 폴더에 파일을 둘 때 연결됩니다.</footer>
+</div></main></div>
+<script id="atlas-data" type="application/json">@@DATA@@</script>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const data = JSON.parse($('atlas-data').textContent);
+const nav = [...document.querySelectorAll('.sidebar nav a')];
+const views = new Map(nav.map(link => [link.hash.slice(1),link]));
+$('print').addEventListener('click', () => window.print());
+let collapsed = [];
+window.addEventListener('beforeprint', () => {
+  collapsed = [...document.querySelectorAll('details:not([open])')];
+  collapsed.forEach(d => d.open=true);
+  drawConnections();
+});
+window.addEventListener('afterprint', () => collapsed.forEach(d => d.open=false));
+
+const nodeButtons = [...document.querySelectorAll('[data-node]')];
+const edgeList = [
+  ['entry','clock','창 이벤트와 프레임 경과 시간'],
+  ['clock','rules','시각 순서가 정해진 입력을 120Hz에 전달'],
+  ['rules','motion','행동·방향·지지면으로 셀 선택'],
+  ['motion','render','clip · view · sample에 맞는 128px 표시'],
+  ['author','assets','리그의 5패스 셀과 마커를 번들로 패킹'],
+  ['assets','motion','클립·표본과 접지 메타데이터 제공'],
+  ['course','rules','정적 발판, 목표 배치와 Capsule 충돌'],
+  ['rules','replay','게임 입력을 실행한 셀·사건 시간 집계'],
+];
+const nodes = new Map(nodeButtons.map(button => [button.dataset.node,button]));
+let currentNode = null;
+function drawConnections() {
+  const canvas = $('edges');
+  const bounds = canvas.getBoundingClientRect();
+  if (!bounds.width || !bounds.height) return;
+  const ratio = window.devicePixelRatio || 1;
+  canvas.width = Math.round(bounds.width*ratio);
+  canvas.height = Math.round(bounds.height*ratio);
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+  ctx.lineJoin = 'round';
+  function rect(id) {
+    const r = nodes.get(id).getBoundingClientRect();
+    const x = r.left-bounds.left, y = r.top-bounds.top;
+    return {left:x,right:x+r.width,top:y,bottom:y+r.height,x:x+r.width/2,y:y+r.height/2};
+  }
+  for (const [from,to] of edgeList) {
+    const a=rect(from), b=rect(to);
+    const highlighted=from===currentNode || to===currentNode;
+    ctx.strokeStyle=ctx.fillStyle=highlighted ? '#25664e' : currentNode ? '#b9c9c4' : '#6d8b88';
+    ctx.lineWidth=highlighted ? 1.9 : 1.3;
+    let points;
+    if (Math.abs(a.y-b.y)<5) {
+      points=[[a.right,a.y],[b.left,b.y]];
+    } else {
+      const down=b.y>a.y, y0=down?a.bottom:a.top, y1=down?b.top:b.bottom;
+      const channel=(y0+y1)/2 + (from==='assets'?3:from==='rules'?-3:0);
+      points=[[a.x,y0],[a.x,channel],[b.x,channel],[b.x,y1]];
+    }
+    ctx.beginPath();ctx.moveTo(...points[0]);
+    points.slice(1).forEach(p => ctx.lineTo(...p));
+    ctx.stroke();
+    const [x,y]=points.at(-1),[px,py]=points.at(-2),angle=Math.atan2(y-py,x-px);
+    ctx.beginPath();ctx.moveTo(x,y);
+    for (const offset of [-.48,.48]) ctx.lineTo(x-6*Math.cos(angle+offset),y-6*Math.sin(angle+offset));
+    ctx.closePath();ctx.fill();
+  }
+}
+$('connections').replaceChildren(...edgeList.map(([a,b,description])=>{
+  const cell=document.createElement('div'), title=document.createElement('strong');
+  title.textContent=`${data.nodes[a].title} → ${data.nodes[b].title}`;
+  const text=document.createElement('span');text.textContent=description;
+  cell.append(title,text);return cell;
+}));
+function showNode(id) {
+  currentNode=id;
+  const details = data.nodes[id];
+  const related=new Set([id,...edgeList.filter(([a,b])=>a===id||b===id).flatMap(([a,b])=>[a,b])]);
+  nodeButtons.forEach(b => {
+    b.setAttribute('aria-pressed',String(b.dataset.node===id));
+    b.dataset.related=String(!id || related.has(b.dataset.node));
+  });
+  $('node-reset').disabled=!id;
+  $('node-fields').hidden=!id;
+  $('node-title').textContent = details?.title ?? '틱 안에서의 처리 순서';
+  $('node-role').textContent = details?.role ?? '접촉·위험 판정 → 입력 → 발사·작업 효과 → 장면 전환';
+  $('node-in').textContent = details?.reads ?? '';
+  $('node-out').textContent = details?.writes ?? '';
+  const refs=details?.refs ?? [data.nodes.clock.refs[1],data.nodes.rules.refs[0]];
+  $('node-sources').replaceChildren(...refs.map(ref => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = ref.path;
+    a.textContent = ref.path.split('/').at(-1);
+    const line = document.createElement('small');
+    line.textContent = ` · L${ref.line} · ${ref.symbol}`;
+    li.append(a,line);
+    return li;
+  }));
+  requestAnimationFrame(drawConnections);
+}
+nodeButtons.forEach(b => b.addEventListener('click', () => showNode(b.dataset.node)));
+$('node-reset').addEventListener('click', () => showNode(null));
+if ('ResizeObserver' in window) new ResizeObserver(drawConnections).observe($('diagram'));
+else window.addEventListener('resize',drawConnections);
+showNode(null);
+
+const stateData = data.states;
+const stateButtons = [...document.querySelectorAll('[data-state]')];
+function renderKeys(element, text) {
+  element.replaceChildren(...text.split(/\[([^\]]+)\]/).map((part,index)=>{
+    const item = document.createElement(index%2 ? 'kbd' : 'span');
+    item.textContent = part;
+    return item;
+  }));
+}
+function showState(id) {
+  const [title,detail,edges] = stateData[id];
+  stateButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.state === id)));
+  $('state-name').textContent = `${id} · ${title}`;
+  renderKeys($('state-detail'),detail);
+  $('state-transitions').replaceChildren(...edges.map(text => {
+    const li = document.createElement('li');
+    renderKeys(li,text);
+    return li;
+  }));
+}
+stateButtons.forEach(b => b.addEventListener('click', () => showState(b.dataset.state)));
+showState(data.initialState);
+
+const moduleIndex = new Map(data.modules.map(m => [m.file,m]));
+function moduleLink(file) {
+  const link = document.createElement('a');
+  link.href = '#files/' + file;
+  link.textContent = file;
+  return link;
+}
+function showModule(file) {
+  const m = moduleIndex.get(file) || moduleIndex.get('app.py');
+  $('module-file').value = m.file;
+  $('module-source').href = data.moduleBase + m.file;
+  $('module-source').textContent = m.file;
+  $('module-role').textContent = m.role;
+  const incoming = data.modules.flatMap(other =>
+    other.imports.filter(entry => entry.file === m.file)
+      .map(entry => ({...entry,file:other.file})));
+  function showImports(id, entries) {
+    const items = entries.map(entry => {
+      const li = document.createElement('li');
+      const detail = document.createElement('small');
+      detail.textContent = `L${entry.line} · ${entry.names}`;
+      li.append(moduleLink(entry.file),detail);
+      return li;
+    });
+    if (!items.length) {
+      const li = document.createElement('li');
+      li.textContent = '없음';
+      items.push(li);
+    }
+    $(id).replaceChildren(...items);
+  }
+  showImports('module-in',incoming);
+  showImports('module-out',m.imports);
+  function definitionGroup(title, entries) {
+    const details = document.createElement('details');
+    const summary = document.createElement('summary');
+    const list = document.createElement('ul');
+    summary.textContent = title;
+    list.className = 'member-list';
+    list.replaceChildren(...entries.map(entry => {
+      const li = document.createElement('li');
+      const code = document.createElement('code');
+      const line = document.createElement('small');
+      code.textContent = entry.name;
+      line.textContent = ` L${entry.line}`;
+      li.append(code,line);
+      return li;
+    }));
+    details.append(summary,list);
+    return details;
+  }
+  const definitions = m.classes.map(c => {
+    const parent = c.bases.length ? `(${c.bases.join(', ')})` : '';
+    return definitionGroup(`class ${c.name}${parent} · L${c.line}`,[...c.fields,...c.methods]);
+  });
+  if (m.functions.length) definitions.push(definitionGroup('모듈 함수',m.functions));
+  $('module-definitions').replaceChildren(...definitions);
+}
+$('module-file').addEventListener('change', event => {
+  location.hash = '#files/' + event.target.value;
+});
+showModule('app.py');
+
+function showModules(query='') {
+  const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const matches = data.modules.filter(m => terms.every(t => `${m.file} ${m.group} ${m.role} ${m.symbols}`.toLowerCase().includes(t)));
+  $('module-count').textContent = `${matches.length} / ${data.modules.length} 모듈`;
+  $('modules').replaceChildren(...matches.map(m => {
+    const card = document.createElement('article');
+    const name = moduleLink(m.file);
+    const role = document.createElement('p'); role.textContent = m.role;
+    const tag = document.createElement('small'); tag.textContent = `${m.group} · ${m.lines}줄`;
+    card.append(name,role,tag);
+    return card;
+  }));
+}
+$('module-search').addEventListener('input', e => showModules(e.target.value));
+showModules();
+
+const sheet = new Image();
+const ctx = $('sprite').getContext('2d');
+ctx.imageSmoothingEnabled = false;
+const videos = new Map(data.videos.map(v => [v.id,v]));
+const player = {track:null, ends:[], t:0, index:-1, raf:0, running:false, last:-Infinity, loaded:false};
+function paint(index) {
+  index=Math.max(0,Math.min(index,player.track.frames.length-1));
+  if (index === player.index) return;
+  player.index = index;
+  const tile = player.track.frames[index][0];
+  if (player.loaded) {
+    ctx.clearRect(0,0,128,128);
+    ctx.drawImage(sheet,(tile%data.columns)*128,Math.floor(tile/data.columns)*128,128,128,0,0,128,128);
+  }
+  $('seek').value = index+1;
+  $('clip-index').textContent = `${index+1} / ${player.track.frames.length} 프레임`;
+}
+function pause() {
+  player.running = false;
+  cancelAnimationFrame(player.raf);
+  $('play').textContent = player.t >= player.ends.at(-1) ? '다시 재생' : '재생';
+}
+function selectClip() {
+  pause();
+  $('play').textContent = '재생';
+  player.track = videos.get($('clip').value);
+  let total = 0;
+  player.ends = player.track.frames.map(row => total += row[1]);
+  player.t=0;
+  player.index=-1;
+  $('clip-title').textContent = player.track.title;
+  $('clip-detail').textContent = player.track.detail;
+  $('clip-keys').textContent = player.track.keys;
+  $('clip-time').textContent = ` · ${(total/1000).toFixed(3)}초`;
+  const names={hit:'타격',bite:'섭식',launch:'발사',land:'착지'};
+  $('clip-events').textContent = player.track.events.map(([e,t]) => `${names[e] || e} ${t.toFixed(3)}s`).join(' · ');
+  $('seek').max = player.track.frames.length;
+  paint(0);
+}
+function seek(index) {
+  pause(); paint(index);
+  player.t = player.index ? player.ends[player.index-1] : 0;
+  $('play').textContent = '재생';
+}
+function tick(now) {
+  if (!player.running) return;
+  player.t = Math.max(0,now-player.started);
+  const total = player.ends.at(-1);
+  if (player.t >= total) {
+    player.t = total;
+    paint(player.ends.length-1);
+    pause();
+    return;
+  }
+  const interval = 1000/Number($('fps').value);
+  if (now-player.last >= interval-.5) {
+    paint(player.ends.findIndex(end => end>player.t));
+    if (!Number.isFinite(player.last)) player.last=now;
+    else player.last+=Math.max(1,Math.floor((now-player.last+.5)/interval))*interval;
+  }
+  player.raf = requestAnimationFrame(tick);
+}
+$('clip').addEventListener('change', selectClip);
+$('play').addEventListener('click', () => {
+  if (player.running) { pause(); return; }
+  if (player.t >= player.ends.at(-1)) seek(0);
+  player.started=performance.now()-player.t;
+  player.last=-Infinity;
+  player.running=true;
+  $('play').textContent='일시정지';
+  player.raf=requestAnimationFrame(tick);
+});
+$('prev').addEventListener('click', () => seek(player.index-1));
+$('next').addEventListener('click', () => seek(player.index+1));
+$('seek').addEventListener('input', e => seek(Number(e.target.value)-1));
+document.addEventListener('visibilitychange', () => { if (document.hidden && player.running) pause(); });
+selectClip();
+$('play').disabled = true;
+sheet.onload = () => {
+  player.loaded = true;
+  $('player-poster').hidden = true;
+  $('sprite').hidden = false;
+  $('play').disabled = false;
+  const frame = player.index;
+  player.index=-1; paint(frame);
+};
+sheet.onerror=() => { $('clip-index').textContent='포함된 스프라이트를 읽지 못했습니다.'; };
+sheet.src=data.atlas;
+
+function showView(route,goTop=false) {
+  let [id,file] = route.split('/',2);
+  if (!views.has(id)) id='architecture';
+  for (const [key,link] of views) {
+    $(key).hidden=key!==id;
+    if (key===id) link.setAttribute('aria-current','page');
+    else link.removeAttribute('aria-current');
+  }
+  if (id!=='motion' && player.running) pause();
+  if (id==='architecture') requestAnimationFrame(drawConnections);
+  if (id==='files') showModule(file);
+  if (goTop) window.scrollTo(0,0);
+}
+nav.forEach(link => link.addEventListener('click',event => {
+  if (event.ctrlKey || event.shiftKey || event.metaKey || event.altKey) return;
+  event.preventDefault();
+  if (location.hash!==link.hash) history.pushState(null,'',link.hash);
+  showView(link.hash.slice(1),true);
+  const title=$(link.hash.slice(1)).querySelector('h2');
+  title.setAttribute('tabindex','-1');
+  title.focus({preventScroll:true});
+}));
+window.addEventListener('hashchange',()=>showView(location.hash.slice(1),true));
+showView(location.hash.slice(1));
+</script>
+</body>
+</html>

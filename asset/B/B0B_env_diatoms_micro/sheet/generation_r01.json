@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model_identifier": null,
+  "seed": null,
+  "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B0B A conceptual microscopy-only decorative diatom surface pattern: sparse warm golden-brown translucent glassy oval and elongated shell-like motifs in an irregular flat attached patch, very restrained internal striations. No specific species identification, no size scale, no giant organisms or swimming characters. Show top pattern, oblique surface, shallow side, detail. Clearly caption MICROSCOPY CONCEPT / SCALE UNASSIGNED.",
+  "input_spec": "../document/env_diatoms_micro_model.md",
+  "input_spec_sha256": "afd3a07b9d97308311ed60964f7fb1978d56ada7105c70002f49f22b78093414",
+  "style_reference": "../../_production/reference/C011_idle.png",
+  "style_reference_sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+  "style_input_delivery": "Reference displayed in conversation; new-image call omitted explicit image-path arguments.",
+  "output": "env_diatoms_micro_sheet_r01.png",
+  "output_sha256": "a680d9a85e120d04cfbb8aff3f53686e43e0f31797388e007fc009303dc40fc1",
+  "review": "conditional_reference_with_production_spec_corrections",
+  "correction": "그림은 종 동정 자료가 아니다. 장식 타원·길쭉한 껍질 모티프를 현미경 개념도로만 채택한다. 생성 이미지의 픽셀 크기를 mm로 변환하지 않는다.",
+  "selection_reason": "생물 명세의 큰 형태와 프로젝트 카툰 톤 참고. 실제 정투영·기관 수는 제작 계약과 Blender 출력이 우선한다.",
+  "license_note": "내장 생성 도구 산출물. 외부 사진·외부 모델을 복제하거나 새로 배포하지 않았다. 원자료의 법적 권리는 별도 검토하지 않았다."
+}

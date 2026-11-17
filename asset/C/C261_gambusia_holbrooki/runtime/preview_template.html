@@ -1,0 +1,16 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gambusia · 모션 검사</title>
+<style>body{margin:0;background:#172128;color:#e5ece7;font:15px system-ui}main{max-width:1180px;margin:auto;padding:24px}h1{font-size:25px}nav{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0}label{display:grid;gap:5px}select,button,input{font:inherit;color:inherit;background:#293d47;border:1px solid #59717b;border-radius:5px;padding:7px}button{cursor:pointer}canvas{background:#3d5057;image-rendering:pixelated;max-width:100%;height:auto}#viewport{overflow:auto}#status{white-space:pre-wrap;min-height:48px;color:#a8c8cc}a{color:#a4e5c5}.sheets{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sheets img{width:100%}details{margin-top:26px}input[type=range]{min-width:240px}</style>
+<main><h1>Gambusia holbrooki · 모션 검사</h1><p>암컷 6배 · 수컷 3.5배. 동일 픽셀 밀도. 아래 시퀀스는 실제 120Hz 물리 기록입니다.</p>
+<nav><label>성별<select id="sex"><option value="female">암컷</option><option value="male">수컷</option></select></label>
+<label>재생 대상<select id="sequence"><option value="clip">개별 모션</option><option value="surface">입 노출 → 뻐끔 → 잠수</option><option value="breach">돌파 → 낙하 → 재입수</option><option value="feeding">접촉 → 삼킴</option><option value="missed_water">수역 미도달</option></select></label>
+<label>행동<select id="action"></select></label><label>구간<select id="phase"><option>pre</option><option selected>mid</option><option>end</option></select></label>
+<label>시점<select id="view"><option>left</option><option>right</option><option>front</option><option>top</option></select></label><label>패스<select id="pass"></select></label>
+<label>배율<select id="scale"><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option></select></label>
+<label>표시 fps<select id="fps"><option>10</option><option>15</option><option selected>20</option><option>30</option><option>60</option></select></label></nav>
+<nav><button id="play">일시정지</button><button id="previous">이전 프레임</button><button id="next">다음 프레임</button><label>위치<input id="seek" type="range" min="0" max="1" step=".001" value="0"></label><label><input id="markers" type="checkbox">소켓 표시</label></nav>
+<div id="status" role="status" aria-live="polite"></div><div id="viewport"><canvas id="canvas" width="960" height="760" aria-label="물고기 모션 미리보기"></canvas></div>
+<p>시킹은 효과를 실행하지 않습니다. 개별 모션의 효과 표시는 후보이며, 공격 권한은 게임 물리가 판정합니다. <a href="ASSET_INDEX.md">산출물·검증 기록</a></p>
+<details><summary>시트와 최종 모델</summary><div class="sheets"><img src="sheet/gambusia_female_sheet_r01.png" alt="GPT Image 암컷 기준 시트"><img src="sheet/blender_female_sheet.png" alt="최종 암컷 Blender 6면"><img src="sheet/gambusia_male_sheet_r01.png" alt="GPT Image 수컷 기준 시트"><img src="sheet/blender_male_sheet.png" alt="최종 수컷 Blender 6면"></div></details>
+<details><summary>디테일 수정 전후</summary><img width="100%" src="comparison/model_detail_before_after.png" alt="모델 수정 전후 비교"></details>
+</main><script>const REVIEW=/*REVIEW_DATA*/;</script><script src="runtime/preview.js"></script></html>

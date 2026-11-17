@@ -1,0 +1,596 @@
+{
+  "schema": "toktogi.background/1",
+  "asset_id": "env_diatoms_micro",
+  "folder_id": "B0B",
+  "revision": "background-r01",
+  "passes": [
+    "sprite",
+    "base",
+    "normal",
+    "rm",
+    "emissive"
+  ],
+  "source_blend_sha256": "647f484d9cdb912c5c05519b018eb986c84caebe1cf312ceaf140b312de22b42",
+  "static": true,
+  "interaction": false,
+  "collision": null,
+  "events": [],
+  "scale": {
+    "selected_length_mm": null,
+    "presentation_factor": null,
+    "measure_kind": "microscopy_only",
+    "scale_policy": "microscopy_only",
+    "length_bu": 3,
+    "bu_per_pixel": 0.01390625,
+    "game_scale": 1
+  },
+  "filter": "nearest",
+  "alpha": "straight",
+  "mirror_allowed": false,
+  "views": {
+    "game": {
+      "file": "2D/static/static/game/0.png",
+      "cell": [
+        240,
+        96
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/game/sprite.png",
+        "base": "2D/passes/game/base.png",
+        "normal": "2D/passes/game/normal.png",
+        "rm": "2D/passes/game/rm.png",
+        "emissive": "2D/passes/game/emissive.png"
+      },
+      "pivot": [
+        124.05164457450707,
+        46.558029811439084
+      ],
+      "bbox": [
+        17,
+        15,
+        223,
+        81
+      ],
+      "base_bbox": [
+        17,
+        15,
+        223,
+        81
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          124.05164457450707,
+          46.558029811439084
+        ],
+        "substrate_uv": [
+          124.05164457450707,
+          46.558029811439084
+        ],
+        "microscope_focus": [
+          124.05164457450707,
+          46.558029811439084
+        ]
+      },
+      "rotation_quaternion": [
+        0.7932524681091309,
+        0.5400834083557129,
+        -0.15824313461780548,
+        -0.23242104053497314
+      ],
+      "camera_center_plane_bu": [
+        -0.056343182364238964,
+        -0.02005239793467528
+      ],
+      "ortho_scale": 3.3375,
+      "rect": [
+        0,
+        0,
+        240,
+        96
+      ],
+      "outline_px": 0
+    },
+    "front": {
+      "file": "2D/static/static/front/0.png",
+      "cell": [
+        192,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/front/sprite.png",
+        "base": "2D/passes/front/base.png",
+        "normal": "2D/passes/front/normal.png",
+        "rm": "2D/passes/front/rm.png",
+        "emissive": "2D/passes/front/emissive.png"
+      },
+      "pivot": [
+        92.3795334063508,
+        25.393448269746397
+      ],
+      "bbox": [
+        21,
+        22,
+        171,
+        26
+      ],
+      "base_bbox": [
+        21,
+        22,
+        171,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          92.3795334063508,
+          25.393448269746397
+        ],
+        "substrate_uv": [
+          92.3795334063508,
+          25.393448269746397
+        ],
+        "microscope_focus": [
+          92.3795334063508,
+          25.393448269746397
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776,
+        0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        0.05034711356793409,
+        0.019377640001160823
+      ],
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        48
+      ],
+      "outline_px": 0
+    },
+    "back": {
+      "file": "2D/static/static/back/0.png",
+      "cell": [
+        192,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/back/sprite.png",
+        "base": "2D/passes/back/base.png",
+        "normal": "2D/passes/back/normal.png",
+        "rm": "2D/passes/back/rm.png",
+        "emissive": "2D/passes/back/emissive.png"
+      },
+      "pivot": [
+        99.6204665936492,
+        25.393448269746397
+      ],
+      "bbox": [
+        21,
+        22,
+        171,
+        26
+      ],
+      "base_bbox": [
+        21,
+        22,
+        171,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          99.6204665936492,
+          25.393448269746397
+        ],
+        "substrate_uv": [
+          99.6204665936492,
+          25.393448269746397
+        ],
+        "microscope_focus": [
+          99.6204665936492,
+          25.393448269746397
+        ]
+      },
+      "rotation_quaternion": [
+        0.4999999701976776,
+        0.4999999701976776,
+        -0.4999999701976776,
+        -0.4999999701976776
+      ],
+      "camera_center_plane_bu": [
+        -0.05034711356793409,
+        0.019377640001160823
+      ],
+      "ortho_scale": 2.67,
+      "rect": [
+        0,
+        0,
+        192,
+        48
+      ],
+      "outline_px": 0
+    },
+    "left": {
+      "file": "2D/static/static/left/0.png",
+      "cell": [
+        256,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/left/sprite.png",
+        "base": "2D/passes/left/base.png",
+        "normal": "2D/passes/left/normal.png",
+        "rm": "2D/passes/left/rm.png",
+        "emissive": "2D/passes/left/emissive.png"
+      },
+      "pivot": [
+        128.1880045575155,
+        25.393448352802395
+      ],
+      "bbox": [
+        16,
+        22,
+        240,
+        26
+      ],
+      "base_bbox": [
+        16,
+        22,
+        240,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.1880045575155,
+          25.393448352802395
+        ],
+        "substrate_uv": [
+          128.1880045575155,
+          25.393448352802395
+        ],
+        "microscope_focus": [
+          128.1880045575155,
+          25.393448352802395
+        ]
+      },
+      "rotation_quaternion": [
+        0.7071067690849304,
+        0.7071067690849304,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        -0.002614438377950279,
+        0.01937764115615831
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        48
+      ],
+      "outline_px": 0
+    },
+    "right": {
+      "file": "2D/static/static/right/0.png",
+      "cell": [
+        256,
+        48
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/right/sprite.png",
+        "base": "2D/passes/right/base.png",
+        "normal": "2D/passes/right/normal.png",
+        "rm": "2D/passes/right/rm.png",
+        "emissive": "2D/passes/right/emissive.png"
+      },
+      "pivot": [
+        127.81199540476499,
+        25.39344659473077
+      ],
+      "bbox": [
+        16,
+        22,
+        240,
+        26
+      ],
+      "base_bbox": [
+        16,
+        22,
+        240,
+        26
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.81199540476499,
+          25.39344659473077
+        ],
+        "substrate_uv": [
+          127.81199540476499,
+          25.39344659473077
+        ],
+        "microscope_focus": [
+          127.81199540476499,
+          25.39344659473077
+        ]
+      },
+      "rotation_quaternion": [
+        -3.0908619663705394e-08,
+        3.0908619663705394e-08,
+        -0.7071067690849304,
+        -0.7071067690849304
+      ],
+      "camera_center_plane_bu": [
+        0.0026144389024869152,
+        0.019377616707974766
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        48
+      ],
+      "outline_px": 0
+    },
+    "top": {
+      "file": "2D/static/static/top/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/top/sprite.png",
+        "base": "2D/passes/top/base.png",
+        "normal": "2D/passes/top/normal.png",
+        "rm": "2D/passes/top/rm.png",
+        "emissive": "2D/passes/top/emissive.png"
+      },
+      "pivot": [
+        128.18800456872148,
+        99.62046702524249
+      ],
+      "bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "base_bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          128.18800456872148,
+          99.62046702524249
+        ],
+        "substrate_uv": [
+          128.18800456872148,
+          99.62046702524249
+        ],
+        "microscope_focus": [
+          128.18800456872148,
+          99.62046702524249
+        ]
+      },
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "camera_center_plane_bu": [
+        -0.002614438533782959,
+        0.05034711956977844
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    },
+    "underside": {
+      "file": "2D/static/static/underside/0.png",
+      "cell": [
+        256,
+        192
+      ],
+      "pass_files": {
+        "sprite": "2D/passes/underside/sprite.png",
+        "base": "2D/passes/underside/base.png",
+        "normal": "2D/passes/underside/normal.png",
+        "rm": "2D/passes/underside/rm.png",
+        "emissive": "2D/passes/underside/emissive.png"
+      },
+      "pivot": [
+        127.81199409564442,
+        99.62046894569318
+      ],
+      "bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "base_bbox": [
+        16,
+        21,
+        240,
+        171
+      ],
+      "sample": 0,
+      "sample_time_s": 0,
+      "phase": "mid",
+      "duration_s": null,
+      "static_hold": true,
+      "anchors": {
+        "origin": [
+          127.81199409564442,
+          99.62046894569318
+        ],
+        "substrate_uv": [
+          127.81199409564442,
+          99.62046894569318
+        ],
+        "microscope_focus": [
+          127.81199409564442,
+          99.62046894569318
+        ]
+      },
+      "rotation_quaternion": [
+        1.910685465164705e-15,
+        -4.371138828673793e-08,
+        -1.0,
+        4.371138828673793e-08
+      ],
+      "camera_center_plane_bu": [
+        0.0026144571074446787,
+        0.05034714627604564
+      ],
+      "ortho_scale": 3.5599999999999996,
+      "rect": [
+        0,
+        0,
+        256,
+        192
+      ],
+      "outline_px": 0
+    }
+  },
+  "files": {
+    "2D/passes/game/sprite.png": "37de3fe7271c1801b36a99c2d7da24a02bf2454a61f6f8c2fc63ab8a51dac764",
+    "2D/passes/game/base.png": "963752523e05d844422f493df93a5a980ef5c8cb7705096ecc2a2031c236fe30",
+    "2D/passes/game/normal.png": "a69389d5fd2045e498b26ad58fd806441ceb31b7e7e696d4cdb4221ab8ff3cac",
+    "2D/passes/game/rm.png": "64ede2dcb75a172022e096fd07cabb4b125427b20521f4daafb4b6870e1069e8",
+    "2D/passes/game/emissive.png": "315e742292998ce51f651bad155d7edbb7e5921d59cc9ea2db676647cf2e5b03",
+    "2D/static/static/game/0.png": "b1aa72fb468f92e6420ddeed04eca62e418f5ccf37bd788f03b088ecc4cd6031",
+    "2D/passes/front/sprite.png": "c39ba52f90ce6eecf137229402a5d4e48edcad0baa8ae94d7dde729b5a4ba41f",
+    "2D/passes/front/base.png": "2b862cf040400f849d4bd1e99a0434a8bdbc1af7d1c537374beee53ae59f3657",
+    "2D/passes/front/normal.png": "ef377f84a8954d37ec28396441003e08a95195d422effa27afc5aec287badfd0",
+    "2D/passes/front/rm.png": "316b539767af74d4b28f169dae2afbc7ace95411bca9a6825fca0aa78f95fab4",
+    "2D/passes/front/emissive.png": "28742e5877f27f73c8a6f0adeb500c867be70d006c1ed690628da7051653e5ff",
+    "2D/static/static/front/0.png": "8ac4a928f4f397cab84016a123609a5aef094b28464178f4e2f8eeb3f5325d7e",
+    "2D/passes/back/sprite.png": "b97feab707daffa42f17845c932c67ffcd23adba39359edf6b5cbbbde0488850",
+    "2D/passes/back/base.png": "d83fe7f20d217f0f69c2c05bc8ae41a53832fe7bc5a42552c0176ed8b66a7679",
+    "2D/passes/back/normal.png": "f2aa99acb1068a1aa91800b1918f2f151d862f2818a79fb7ed179d0f25920ce7",
+    "2D/passes/back/rm.png": "c04b9b74e24614d6ea0f35e5947b3f637f411f4a9c8767add1fd63da5ceeccab",
+    "2D/passes/back/emissive.png": "28742e5877f27f73c8a6f0adeb500c867be70d006c1ed690628da7051653e5ff",
+    "2D/static/static/back/0.png": "4504440d7718b85ba226e83f6d61cc8171a41640162a8f50193c58071db1e6cc",
+    "2D/passes/left/sprite.png": "6561bf3484641e3ca53f60c443aa9b65543b88386ab67137409f3061eb68d03d",
+    "2D/passes/left/base.png": "6c8e63686712c06bc532185bf986c0c3089ab036baccd4d50648e28ad2aafb32",
+    "2D/passes/left/normal.png": "0ab7bbac22a9b5f33096f57e02a8782d7a6f37d1ffbab165d361486bd3139e7a",
+    "2D/passes/left/rm.png": "8b891381478273a251547153be2110ca2ab4593f333ff0ffb8daf58f7352d459",
+    "2D/passes/left/emissive.png": "6de29755d415ec0472c7198d278393cb1869271689d88d269eb73e863d18f1a8",
+    "2D/static/static/left/0.png": "c110b6e4c18b67cd6f6bc57dd36ee60fc4abd2c6eaf25a5751ec4c82e436de9a",
+    "2D/passes/right/sprite.png": "80dc2e96516ee3be36f813a09aef81a7744d9970392a331cd245c986a2d15163",
+    "2D/passes/right/base.png": "5931d4df4e5919ed26ef249f41402466ce865fc8e65b7d46baf3a6c997dfa7bb",
+    "2D/passes/right/normal.png": "cc3d46e6fa7ae2f79ef42b6e027d6ecadaeb4c9a7f0a56c66f0bedad2ca9a8e8",
+    "2D/passes/right/rm.png": "5c55955610df77935c815f0a0a9478d14e2e8d4331ff6970437dd08f359700df",
+    "2D/passes/right/emissive.png": "6de29755d415ec0472c7198d278393cb1869271689d88d269eb73e863d18f1a8",
+    "2D/static/static/right/0.png": "35c3ccf002260435229b175450e11f45fd978b6b42c9a11bb12b4e32fe243c29",
+    "2D/passes/top/sprite.png": "0510f5bc5618812ff1e50d791e668526001545fe8f213bfe0da6d5a5d9cec4ad",
+    "2D/passes/top/base.png": "e322fb44034537e5f126ecb8a17b02c6c697db45869a669ce18feccf7a46e15e",
+    "2D/passes/top/normal.png": "050c913172fd9d3656676c0764f3e5f5758c784f1b4d51372d12c0303e620268",
+    "2D/passes/top/rm.png": "e90743d5bdc3c6e3c2aaac7c1c921d11ea9865975eec4b09fda109d5d8170bc5",
+    "2D/passes/top/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/static/static/top/0.png": "ea6e62a5503430f1b3c1fe23606895c0aa4edb38f0319e760866d87294599695",
+    "2D/passes/underside/sprite.png": "8972646b275026490c12df4e20b086a9b6c4bfa41b7d6b4a29a8207143d46f98",
+    "2D/passes/underside/base.png": "3d5f6fa1d917de8af6b03babdd61b4a3fbb51525cb4fab78eed14ce754f1e44b",
+    "2D/passes/underside/normal.png": "edcb34a20ee8b772d211692016621874ca7e4093164e664b25886fd706b4799c",
+    "2D/passes/underside/rm.png": "88a6f485e4572c444a237d822e7e69733263361abfb9897f6bec0c3db785141c",
+    "2D/passes/underside/emissive.png": "29b71a175dd27a8e187b2a2cd0b5be8554b67cb21f804d9f889a2b4e3f6e36be",
+    "2D/static/static/underside/0.png": "1477efbeee0f2e6c1d716a59c8ab54dde6a454b732133b9a0cfdbde4bc34e87b"
+  },
+  "channels": {
+    "sprite": "sRGB, four bands, role palette; outline #22313B radius 2 except attached coatings",
+    "base": "unlit sRGB + surface coverage Alpha",
+    "normal": "linear UNORM; R right, G up, B toward camera; A=255; mask Base A",
+    "rm": "linear R roughness G metallic=0 B=0 A=255; mask Base A",
+    "emissive": "linear black RGB A=255; mask Base A"
+  },
+  "lighting": {
+    "direction": [
+      -0.36,
+      0.57,
+      0.73
+    ],
+    "thresholds": [
+      0.14,
+      0.42,
+      0.72
+    ],
+    "linear_multipliers": [
+      [
+        0.36,
+        0.42,
+        0.51
+      ],
+      [
+        0.53,
+        0.6,
+        0.66
+      ],
+      [
+        0.73,
+        0.77,
+        0.8
+      ],
+      [
+        0.95,
+        0.95,
+        0.92
+      ]
+    ],
+    "shared_runtime_comparison": {
+      "power": 0.82,
+      "ambient": 0.34
+    }
+  },
+  "status": {
+    "production": "exported",
+    "standalone_loader": "verified_separately",
+    "main_game": "not_integrated",
+    "DEC-06": "deferred"
+  }
+}

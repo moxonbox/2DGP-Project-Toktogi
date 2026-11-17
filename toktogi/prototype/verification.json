@@ -1,0 +1,670 @@
+{
+  "play_display": {
+    "ui_buttons": 0,
+    "body_luma_by_platform": [
+      189.6,
+      190.7,
+      191.3,
+      192.0,
+      192.2
+    ]
+  },
+  "input_replay": {
+    "cleared": true,
+    "seconds": 13.75,
+    "launches": 4,
+    "elastic_launches": 1
+  },
+  "input_epochs": "Space UP, cancellation, focus loss, pause and scene switch",
+  "motion_rules": "elastic pre/post windows, one launch, reduced recovery, support-loss fall",
+  "work_and_progress": "beacon, bite, held input owner, self-groom, collection, hit, fail and respawn",
+  "viewer": {
+    "clips": 82,
+    "sequences": 163,
+    "clip_views": 212,
+    "base_sequence_frames": 804,
+    "runtime_profiles": 146,
+    "groom_hold_ms": 3960
+  },
+  "all_material_cells": {
+    "rendered": 1444,
+    "elapsed_seconds": 9.49,
+    "atlas_cache_cells": 36
+  },
+  "material_response_changed_pixels": {
+    "direction": 2434,
+    "roughness": 1916,
+    "metallic": 2273,
+    "emission": 87
+  },
+  "dummy_sdl_frame_ms": {
+    "p50": 1.092,
+    "p95": 1.417,
+    "p99": 7.903
+  },
+  "source_bundle_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec",
+  "requirement_trace": {
+    "SCOPE-01": {
+      "play_bindings": [
+        "down",
+        "e",
+        "f",
+        "g",
+        "left",
+        "q",
+        "right",
+        "shift",
+        "space",
+        "up",
+        "x",
+        "z"
+      ],
+      "unused_play_keys": [
+        "C",
+        "V"
+      ]
+    },
+    "INPUT-08": {
+      "game_keys": 13,
+      "control_overlap": 0
+    },
+    "TIME-05": {
+      "paused_wall_seconds": 3,
+      "late_input_launches": 1
+    },
+    "INPUT-07": {
+      "keys": [
+        "E",
+        "F",
+        "G"
+      ],
+      "contexts": [
+        "grounded recovery end",
+        "preparation",
+        "air"
+      ]
+    },
+    "JUMP-03": {
+      "changed_support_launches": 0,
+      "hazard_boundary_launches": 0,
+      "false_recovery": false
+    },
+    "INTERACT-01": {
+      "priority_when_both_reachable": [
+        "beacon",
+        "collect"
+      ]
+    },
+    "INTERACT-07": {
+      "hold_restarted": false,
+      "release_cancels_one_shot": false,
+      "consumed_targets_readmitted": false
+    },
+    "COMBAT-03": {
+      "same_tick_hit_precedes_attack": true,
+      "immunity_blocks_second_hit": true
+    },
+    "COMBAT-06": {
+      "effects_after_failed": 0,
+      "space_revives": false
+    },
+    "RUN-02": {
+      "recovery_landing": "Playing",
+      "outside_boundary": "Failed"
+    },
+    "RUN-03": {
+      "checkpoint_needs_beacon_and_landing": true,
+      "manual_e_activates_checkpoint": false
+    }
+  },
+  "review_regressions": {
+    "timestamped_inputs_5_120fps": [
+      [
+        [
+          5,
+          1,
+          1,
+          614.4,
+          173.0333333
+        ],
+        [
+          10,
+          1,
+          1,
+          614.4,
+          173.0333333
+        ],
+        [
+          30,
+          1,
+          1,
+          614.4,
+          173.0333333
+        ],
+        [
+          60,
+          1,
+          1,
+          614.4,
+          173.0333333
+        ],
+        [
+          120,
+          1,
+          1,
+          614.4,
+          173.0333333
+        ]
+      ],
+      [
+        [
+          5,
+          1,
+          0,
+          568.9973333,
+          305.9847778
+        ],
+        [
+          10,
+          1,
+          0,
+          568.9973333,
+          305.9847778
+        ],
+        [
+          30,
+          1,
+          0,
+          568.9973333,
+          305.9847778
+        ],
+        [
+          60,
+          1,
+          0,
+          568.9973333,
+          305.9847778
+        ],
+        [
+          120,
+          1,
+          0,
+          568.9973333,
+          305.9847778
+        ]
+      ]
+    ],
+    "catch_up_debt_preserved": true,
+    "preparation_boundary_cancel": true,
+    "native_sdl_timestamp_preserved": true,
+    "feed_count_5_120fps": [
+      [
+        5,
+        2,
+        2
+      ],
+      [
+        10,
+        2,
+        2
+      ],
+      [
+        30,
+        2,
+        2
+      ],
+      [
+        60,
+        2,
+        2
+      ],
+      [
+        120,
+        2,
+        2
+      ]
+    ],
+    "pause_commit_boundary_and_closed_input": true,
+    "air_action_separate_from_motion": true,
+    "moving_landing_visible": true,
+    "walk_stance_slip": [
+      {
+        "view": "left",
+        "max_stance_span_px": 2.661899999999889,
+        "stride_px": 7.656356078118033
+      },
+      {
+        "view": "right",
+        "max_stance_span_px": 2.8619999999997674,
+        "stride_px": 7.656356078118033
+      }
+    ],
+    "work_contact_admission_commit": [
+      [
+        "f",
+        "left",
+        159.8376
+      ],
+      [
+        "e",
+        "left",
+        342.6726
+      ],
+      [
+        "e",
+        "left",
+        548.4898
+      ],
+      [
+        "f",
+        "right",
+        100.1625
+      ],
+      [
+        "e",
+        "right",
+        340.2251
+      ],
+      [
+        "e",
+        "right",
+        546.0901
+      ]
+    ],
+    "attack_hit_miss_cancel": true,
+    "attack_active_end_excluded": true,
+    "phase_brake_and_groom_return": true,
+    "edge_idle_balanced_x": 170.133,
+    "ceiling_surface_overlap_px": 0,
+    "relit_contact_ink": [
+      [
+        11,
+        [
+          42,
+          51,
+          58
+        ]
+      ],
+      [
+        17,
+        [
+          43,
+          52,
+          60
+        ]
+      ]
+    ],
+    "warm_large_scene_render_ms": {
+      "median": 0.0004,
+      "max": 0.0049
+    },
+    "relative_light_cache_invalidation": true,
+    "asset_bundle_source_lock": true
+  },
+  "gameplay_r2": {
+    "irrelevant_events_preserve_cancel": {
+      "launches": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bites": [
+        0,
+        0
+      ]
+    },
+    "shared_work_clock": {
+      "first_attack_elapsed": 0.08333333333333334,
+      "activation": {
+        "elapsed": 0.19999999999999998,
+        "distance_px": 3.36272100686336
+      }
+    },
+    "automatic_balance_app": {
+      "end_x": 170.133333333335,
+      "moving_actions": [
+        "Walk"
+      ]
+    },
+    "all_gait_work_natural_exits": 36,
+    "recovery_jump_uses_visible_landing": 18,
+    "direct_groom_return_10_60fps": [
+      {
+        "hz": 10,
+        "max_alpha_delta_px": 1150,
+        "final_delta_px": 180
+      },
+      {
+        "hz": 15,
+        "max_alpha_delta_px": 1119,
+        "final_delta_px": 180
+      },
+      {
+        "hz": 30,
+        "max_alpha_delta_px": 807,
+        "final_delta_px": 275
+      },
+      {
+        "hz": 60,
+        "max_alpha_delta_px": 807,
+        "final_delta_px": 275
+      }
+    ],
+    "arrow_reverse_has_visible_turn": true,
+    "moving_root_active_sweep_miss": true,
+    "pause_freezes_visible_pose": true,
+    "manual_edge_stance": [
+      {
+        "view": "left",
+        "x": 36,
+        "support": [
+          "LF",
+          "LM",
+          "LH",
+          "RH"
+        ],
+        "lifted": [
+          "RF",
+          "RM"
+        ],
+        "min_lift_px": 1.2082337272853056
+      },
+      {
+        "view": "left",
+        "x": 200,
+        "support": [
+          "LF",
+          "RF",
+          "RM"
+        ],
+        "lifted": [
+          "LH",
+          "LM",
+          "RH"
+        ],
+        "min_lift_px": 0.8415640584704163
+      },
+      {
+        "view": "right",
+        "x": 36,
+        "support": [
+          "LF",
+          "LM"
+        ],
+        "lifted": [
+          "LH",
+          "RF",
+          "RH",
+          "RM"
+        ],
+        "min_lift_px": 0.8415640584704163
+      },
+      {
+        "view": "right",
+        "x": 200,
+        "support": [
+          "LH",
+          "RF",
+          "RM",
+          "RH"
+        ],
+        "lifted": [
+          "LF",
+          "LM"
+        ],
+        "min_lift_px": 1.4099415956959285
+      }
+    ],
+    "world_feedback_without_hud": true,
+    "supplemental_pose_cells": 930,
+    "reference_shader_equivalence": {
+      "cases": 24,
+      "max_channel_error": 1,
+      "changed_channels": 2
+    },
+    "moving_light_viewer_frame_ms": {
+      "median": 7.514199998695403,
+      "p95": 8.247699995990843,
+      "max": 10.562099982053041,
+      "samples": 120,
+      "scope": "SDL dummy update+draw, excludes OS presentation and event polling",
+      "p95_within_60hz_budget": true
+    }
+  },
+  "gameplay_r3": {
+    "groom_turn_attack_direction": true,
+    "opposite_landing_compression_ticks": 20,
+    "opposite_rejump_shared_heading": true,
+    "reverse_turn_returns_early": true,
+    "repeated_turn_reversals": true,
+    "edge_aim_and_attack_admission": [
+      [
+        "left",
+        36,
+        1073741906,
+        [
+          "LF",
+          "LM",
+          "LH",
+          "RH"
+        ]
+      ],
+      [
+        "left",
+        36,
+        1073741905,
+        [
+          "LF",
+          "LM",
+          "LH",
+          "RH"
+        ]
+      ],
+      [
+        "left",
+        200,
+        1073741906,
+        [
+          "LF",
+          "RF",
+          "RM"
+        ]
+      ],
+      [
+        "left",
+        200,
+        1073741905,
+        [
+          "LF",
+          "RF",
+          "RM"
+        ]
+      ],
+      [
+        "right",
+        36,
+        1073741906,
+        [
+          "LF",
+          "LM"
+        ]
+      ],
+      [
+        "right",
+        36,
+        1073741905,
+        [
+          "LF",
+          "LM"
+        ]
+      ],
+      [
+        "right",
+        200,
+        1073741906,
+        [
+          "LH",
+          "RF",
+          "RM",
+          "RH"
+        ]
+      ],
+      [
+        "right",
+        200,
+        1073741905,
+        [
+          "LH",
+          "RF",
+          "RM",
+          "RH"
+        ]
+      ]
+    ],
+    "goal_requires_stop": true,
+    "work_hint_matches_admission": true,
+    "progress_key_edge_and_focus": true,
+    "pause_resumes_effect_free_pose_return": true,
+    "support_labels": {
+      "cells": 780,
+      "max_normal_error_px": 0.26124944240135195
+    }
+  },
+  "gameplay_r4": {
+    "space_hold_preserves_walk_shift_brakes": [
+      172.0,
+      172.0,
+      172.0,
+      172.0
+    ],
+    "elastic_pre_post_same_direction_aim": [
+      [
+        "left",
+        1,
+        -139.0,
+        -562.0
+      ],
+      [
+        "left",
+        -1,
+        -197.0,
+        -520.0
+      ],
+      [
+        "right",
+        1,
+        139.0,
+        -562.0
+      ],
+      [
+        "right",
+        -1,
+        197.0,
+        -520.0
+      ]
+    ],
+    "q_attack_and_jump_use_destination": true,
+    "pending_jump_can_be_cancelled": true,
+    "feed_release_immediate_move": true,
+    "opposed_keys_keep_walk": true,
+    "first_ledge_headroom_and_jump_end": [
+      [
+        150,
+        104.979
+      ],
+      [
+        180,
+        104.979
+      ],
+      [
+        198,
+        104.979
+      ],
+      [
+        200,
+        104.979
+      ]
+    ],
+    "focus_closes_air_action": true,
+    "repeat_after_pause_does_not_attack": true,
+    "core_poses_every_display_phase": {
+      "10": {
+        "release": 1,
+        "apex": 1,
+        "rotation": 3
+      },
+      "15": {
+        "release": 1,
+        "apex": 1,
+        "rotation": 4
+      },
+      "30": {
+        "release": 3,
+        "apex": 3,
+        "rotation": 9
+      },
+      "60": {
+        "release": 6,
+        "apex": 6,
+        "rotation": 19
+      }
+    },
+    "flight_cells_have_no_ground_support": true
+  },
+  "framework_r1": {
+    "both_headings_full_spin": {
+      "left": {
+        "pose_count": 62,
+        "seconds": 1.5499999999999985
+      },
+      "right": {
+        "pose_count": 62,
+        "seconds": 1.5499999999999985
+      }
+    },
+    "idle_spin_current_pose_entry": true,
+    "walk_spin_walk_shared_boundary": true,
+    "ordered_spin_follow_ups": true,
+    "spin_guards_and_pause": true,
+    "course_lighting_changes_pixels": 2243,
+    "independent_course_and_renderer": true,
+    "feed_cancel_and_new_attack": {
+      "samples": 98,
+      "attack_delay_ticks": 0
+    },
+    "work_hint_and_admission": true,
+    "nearest_wall_and_configuration_validation": true,
+    "replanted_spin_10_60fps": {
+      "left": {
+        "stances": 12,
+        "max_z_px": 0.26124944240135195,
+        "max_slide_px": 7.191011351744133e-05,
+        "min_peak_lift_px": 2.5904180191643
+      },
+      "right": {
+        "stances": 12,
+        "max_z_px": 0.26124944240135195,
+        "max_slide_px": 0.00010169625780674305,
+        "min_peak_lift_px": 2.5904180191643
+      }
+    },
+    "q_idle_and_game_timing_previews": 16,
+    "connected_feed_and_readable_attack": {
+      "directions": 2,
+      "attack_effect_tick": 10,
+      "visible_at_all_10hz_phases": true
+    },
+    "four_live_input_replays": [
+      "replay_feed_attack",
+      "replay_walk_z",
+      "replay_q_reverse",
+      "replay_jump_land"
+    ],
+    "course_validation_and_cache_isolation": true,
+    "ledge_q_direction_share_support_gate": true,
+    "feed_to_move_restart_and_groom": true,
+    "course_spawn_and_checkpoint_clearance": true,
+    "q_both_support_sets_all_10hz_phases": true
+  }
+}

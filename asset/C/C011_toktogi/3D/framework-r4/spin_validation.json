@@ -1,0 +1,965 @@
+{
+  "unchanged_mesh_uv_weights_rest": true,
+  "cells": [
+    {
+      "profile": "ground_spin_left",
+      "sample": 0,
+      "frame": 3,
+      "geometry_hash": "bc637e654ff825b9622f9abd81e5328a940ddc793bad0bb1a80fcfe3e8c04c75",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 1,
+      "frame": 5,
+      "geometry_hash": "2f935bd6a9c61a674111ead42117a7ba8133257f6ffccaf880f3ef95bdf1f3c8",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 2,
+      "frame": 7,
+      "geometry_hash": "198929329a45fce00d9822559f768a02fa679c04fd00de4e90b33b0a6c6e7517",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 3,
+      "frame": 9,
+      "geometry_hash": "8cf3ca1e93a1ff6c580ef21d7241a64999fb4e89fd446b981e5e9f755a0c6d9d",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 4,
+      "frame": 11,
+      "geometry_hash": "fb123c57e43b343f23c1bab4d6d90ef0545d14fc2b8523f492b13ff75ab19968",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 5,
+      "frame": 13,
+      "geometry_hash": "810a61a56293d41d1225095a9db0fa04b7b1fe804d2109c92b187100a990d183",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 6,
+      "frame": 15,
+      "geometry_hash": "c72e7e5b63a793fa73323bf1d7c8ab12f73d55a0d3c26cfb5f8d80760192fdea",
+      "border_px": 20,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 7,
+      "frame": 17,
+      "geometry_hash": "831f93025e2e18f4c5737012dbce1038e334406c0ac13177195a87b59b78d84f",
+      "border_px": 23,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 8,
+      "frame": 19,
+      "geometry_hash": "a095b81ba2e768284206035fcada94d457f7d620f03abc2d78156677ec839a61",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 9,
+      "frame": 21,
+      "geometry_hash": "d2e28421cabded1737185c4fce16af8cfead3c926c2c9a8b85d12ce8c00450a4",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 10,
+      "frame": 23,
+      "geometry_hash": "505e8f1c9ebce1fbbd09473af8113d2e15d88235aff1b04f376ab9a6c207ae4a",
+      "border_px": 26,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 11,
+      "frame": 25,
+      "geometry_hash": "06e1a5a66816dd37ff9a6a62c30f130ae3e3a6b70ca8d60ea88fa9ac3597a8e4",
+      "border_px": 29,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 12,
+      "frame": 27,
+      "geometry_hash": "cc8a333cb10bbb2e7a34fb1223ce6d442e4942696bd0a78cbce938bc5a4c8688",
+      "border_px": 33,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 13,
+      "frame": 29,
+      "geometry_hash": "c8acf457a78ffe1f1645161bdf8eb3cb8f801edcc2c7be6ed6bca331d675bab5",
+      "border_px": 32,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 14,
+      "frame": 31,
+      "geometry_hash": "57e06c850e85971eea57c00b9a593f189d86357b7ed38957e533ed8a29d4b164",
+      "border_px": 31,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 15,
+      "frame": 33,
+      "geometry_hash": "d90e7f556d6a02dc5577a88c34f2233c65741c3a9ed01a9b5b76d49385371bf2",
+      "border_px": 31,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 16,
+      "frame": 35,
+      "geometry_hash": "7a838646b6a26b0f8295eb5c9be2a1bed7bd42db5216908ce90a0627ba7c208f",
+      "border_px": 31,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 17,
+      "frame": 37,
+      "geometry_hash": "e0836d188cc0bd0850c9ec2e37ad1eba96309326c450c129ed4c9c946453b900",
+      "border_px": 26,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 18,
+      "frame": 39,
+      "geometry_hash": "f9595c50be00421406e137faba30aaff81dd67a1cead0dfbef315da6af575e9a",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 19,
+      "frame": 41,
+      "geometry_hash": "9a68dae6e905ae420a67314bc5ec466ab9ac3b5b46495252d46621dfa361eba9",
+      "border_px": 21,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 20,
+      "frame": 43,
+      "geometry_hash": "b1c8aa3f463497e34c03804cf7093077072919e520a9f0a628df85710135826d",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 21,
+      "frame": 45,
+      "geometry_hash": "dccc9d9de3b7376d56c1b97a79bd072bf52bc2a0934aad4c713b41f6ca158a34",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 22,
+      "frame": 47,
+      "geometry_hash": "a822d85feecb18a433f1d24203c2a070cb4ee5fc0852e3fe5dea3ad4105590d6",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 23,
+      "frame": 49,
+      "geometry_hash": "893f0875db720641990322da4dd58cc6095ed61109b61d11766351a838b24a3b",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 24,
+      "frame": 51,
+      "geometry_hash": "e7dd0f95c07a8dd81c0cef331ce1d1c9a06b99ba520adb6765cc812a3e20786b",
+      "border_px": 11,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 25,
+      "frame": 53,
+      "geometry_hash": "6b337703984a05a904c19b5bf63a29a66fbfabf480bacb197e474dd285885bb1",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 26,
+      "frame": 55,
+      "geometry_hash": "1954842c46f645d3e385d7ff069f62c0a7625a4c3f18ebbad6ebae93a372fb25",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 27,
+      "frame": 57,
+      "geometry_hash": "e63c4abc20d2e2c6e9b7b67e610c8a35336c13852e6a2bc19f6dcf901e09323f",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 28,
+      "frame": 59,
+      "geometry_hash": "e841339547cfd82963424fe5023f677cf99c7bbc1ee91c44cd1054ee170f9845",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 29,
+      "frame": 61,
+      "geometry_hash": "cf741d2b2bc0712a50e75f09ed197a64abc6aba18df0dd0140da16d3286d35f6",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 30,
+      "frame": 63,
+      "geometry_hash": "f18946a9128811ebc575e7285ce04cb8bea1e29693339385426b66abf6985b13",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 31,
+      "frame": 65,
+      "geometry_hash": "14c7dbc187a80c85639d18f108bc6ef57ab377bd0646dc7651fc40d975114fc1",
+      "border_px": 19,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 32,
+      "frame": 67,
+      "geometry_hash": "62d3d0be45048e147171f0fb459a984ca93819e7bae56ce84b2f655ec61b0f57",
+      "border_px": 21,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 33,
+      "frame": 69,
+      "geometry_hash": "6fb5ae7f49fe58cd3f34fd0b93922d2685068cf5089bc0b9fe2f3aa735ef4d68",
+      "border_px": 20,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 34,
+      "frame": 71,
+      "geometry_hash": "660aa35357316df632aade3c2b9c30f56e3a8e2d0e606fba42c2142778a0e20b",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 35,
+      "frame": 73,
+      "geometry_hash": "b247fa19c1e413add61ad96c9211e05a06e45c3d1c4db53017e9c7f961eff287",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 36,
+      "frame": 75,
+      "geometry_hash": "972052ef477a3e4215047eb685c18d0684c32b9afefebbd46cae9493cb020447",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 37,
+      "frame": 77,
+      "geometry_hash": "3b09ec883ea2c1c67ccb2307850c54ff15491f963d3a5417ceab601592f35f6f",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 38,
+      "frame": 79,
+      "geometry_hash": "fe6304c0a15e6b7214d0a2f6dfc162bf4c0d2a29da1f7fd29fda6774ea4cabab",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 39,
+      "frame": 81,
+      "geometry_hash": "6df34163b75bb2aae84f044aff0edd0ac81c8698333ca40a5f6154b3e85cfb98",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 40,
+      "frame": 83,
+      "geometry_hash": "5f03cacfbe2c7b3654017659d235d64f2ae776f3e8be043dc31690433310af14",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 41,
+      "frame": 85,
+      "geometry_hash": "d2c4c926b886fd15a171950a95361d23d9edb6a8c347c25877933faad63b5d1d",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 42,
+      "frame": 87,
+      "geometry_hash": "824a88da8a3211eb188474355795813085140f9c9af6a862ff8bf5de35283dea",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 43,
+      "frame": 89,
+      "geometry_hash": "4d696687aa657826e4cc7b43bc9c0031ccb168a789116de6bf5abd301973db44",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 44,
+      "frame": 91,
+      "geometry_hash": "e90bfad1ca4cff4661ae8ff093e5948b8e28f43cdb284aebc8ecf77e6d822f1d",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 45,
+      "frame": 93,
+      "geometry_hash": "814cde425cc7636f8b719611d49a05a39b0fc8c92b5ed26b0a2a646cfda91c1c",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 46,
+      "frame": 95,
+      "geometry_hash": "d421a2fcf69224daf2f62708524e0e91165831e39c16b3d376328ba584e7af37",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 47,
+      "frame": 97,
+      "geometry_hash": "54cd6207619100c7651a4c3a6f0491461ba1e6934dcd02a0e1645f6e7f9ebd4b",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 48,
+      "frame": 99,
+      "geometry_hash": "16b864bbe5fb2bda87f452a472bd63220cb8f4391786b08bae4a03a256800294",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 49,
+      "frame": 101,
+      "geometry_hash": "c0a9af45f93b8a45585911cf1cf2b27d632de0896ec8fa270d16ef71ca089c3a",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 50,
+      "frame": 103,
+      "geometry_hash": "0a73141c07b3a50b90b94c5c7129881e5e8de79dddf77e96a737082040ab40ea",
+      "border_px": 11,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 51,
+      "frame": 105,
+      "geometry_hash": "d185c9d2a5629e2f8ddb35aa48e52b1c9c3b1641054ad887898072c25361756e",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 52,
+      "frame": 107,
+      "geometry_hash": "337c64ea5c3ad915c239c40639b8da7d59d92c60f28c62736328400b24e7ef4b",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 53,
+      "frame": 109,
+      "geometry_hash": "6b3094671588636109ef69b7b3d55902f14f9d564caa5a52a8ba5917bc98b001",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 54,
+      "frame": 111,
+      "geometry_hash": "10b5202fad84166067df039366899daaca1da62087b32d43f16869e0ea97b049",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 55,
+      "frame": 113,
+      "geometry_hash": "33d4b00731e1df03f0b8f611cc01e31ff4d25f7b7baf1915cfc55d1bd4210563",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 56,
+      "frame": 115,
+      "geometry_hash": "6794f116380581a53111131b8a120ceea571405fa491eee74702f6efc13a87c3",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 57,
+      "frame": 117,
+      "geometry_hash": "f49d6d793623c76b46a1cc864b4c3b99c65bd0e3c0a5f255f0faca73046d5aaa",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 58,
+      "frame": 119,
+      "geometry_hash": "f4636753510a57eea84207f6a9ab0903cd4c44f66735841c07a971fdeda490cb",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_left",
+      "sample": 59,
+      "frame": 121,
+      "geometry_hash": "5c42490a324eddb4bcbb02318baf04f5e14e8ea4a80ddbffb048fa00b49d7fc7",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 0,
+      "frame": 3,
+      "geometry_hash": "57bd514398ac7a68218c3ad85d0ef9da181ee1bd11d87dbc73e30923d5739305",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 1,
+      "frame": 5,
+      "geometry_hash": "49e2e48ce1f4d648c3c770c010c08361b68930bc8c15077d3cd202b2cdbd979b",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 2,
+      "frame": 7,
+      "geometry_hash": "0be9cecc8ac205fae70d0bc2ead42844ab770c7949bc0685c7280b2e5503a9e4",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 3,
+      "frame": 9,
+      "geometry_hash": "4b8b1c3d482dfa297fa5d195d7ca59d70694eae8bea1b3859a7a5bf27327bc53",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 4,
+      "frame": 11,
+      "geometry_hash": "17e0cc7f35c24d9f53c9f68cb1e376b074fbb12e71f8dfeb457083a444767dd9",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 5,
+      "frame": 13,
+      "geometry_hash": "2db2f76090fc907b18b9fafa32d08564ba62daf22d00d7f918a67d5f894ead61",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 6,
+      "frame": 15,
+      "geometry_hash": "8e1be222f01cb14e02b30ecef3ca10fa31ad255a091c4b495744e79100946835",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 7,
+      "frame": 17,
+      "geometry_hash": "d2022b2f559b1315f96dc3272a2010e74c3f52ae846b230d97a34a7a856660af",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 8,
+      "frame": 19,
+      "geometry_hash": "ed7da948d394dedce4aae000c1ff25a171ad084cbb79e6d8ccbedca3d22fc875",
+      "border_px": 11,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 9,
+      "frame": 21,
+      "geometry_hash": "d929209632972730ebfc51657b42d4c6f1bb55519918442817d70ead67eb3d5d",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 10,
+      "frame": 23,
+      "geometry_hash": "6c216e6cf5a6af7e6a49b663a8a3e27582bb3e695482e0b23a5575e411da93b7",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 11,
+      "frame": 25,
+      "geometry_hash": "ee7a62991e9921b55d3185f3ccf5d7aed0b8ef6cb42808a1851984e11e35f8f0",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 12,
+      "frame": 27,
+      "geometry_hash": "2ed29a9e126fe02962a0304566f91255f6772329ef9550d8cd86e166d8f68eeb",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 13,
+      "frame": 29,
+      "geometry_hash": "647c458f69bfca5482fc829c55aeddfa25568d5d5741c153211ddcc14a1448d8",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 14,
+      "frame": 31,
+      "geometry_hash": "6fe90334b1bfd7c5e3a07ff13daa437a57251543755e699f2b587eb71fd0053e",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 15,
+      "frame": 33,
+      "geometry_hash": "28714ce85b67b4215525b031a7dd6f46aae28957fe9ad8580533523b984aee73",
+      "border_px": 19,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 16,
+      "frame": 35,
+      "geometry_hash": "2e29054ffaf184ecf37567ecd88768f9cc4b37246a37742f6fa89d1b1ee798f4",
+      "border_px": 21,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 17,
+      "frame": 37,
+      "geometry_hash": "963a97170e848d489a320a4ad884d5b5c3097ccf5507e0c0adfc621e2ef637b8",
+      "border_px": 19,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 18,
+      "frame": 39,
+      "geometry_hash": "450053b1550fdea9563f2f0ebff23ae429f82ab847623cb7a77e32cc046b0202",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 19,
+      "frame": 41,
+      "geometry_hash": "4fafe636bbec76dba02fcbf82983adccd961ee250a8465fc1ded5d6e630ded71",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 20,
+      "frame": 43,
+      "geometry_hash": "9698874fb0dd5ad06b8f8163a5f36eb622888a639fb447ca8852bd9dd8794371",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 21,
+      "frame": 45,
+      "geometry_hash": "69b25e7c58c80cdeb5798e74f881ecf6b3a4572c771909d3c962dc1c35918cf0",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 22,
+      "frame": 47,
+      "geometry_hash": "67f84b4412ab3761ec89e6dd8ca39256490c631c99b6450511f02726e4118603",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 23,
+      "frame": 49,
+      "geometry_hash": "8c07fc422b0724a908ce2295e41a23095241305a13ae27001241721f0dbc3434",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 24,
+      "frame": 51,
+      "geometry_hash": "06e8b380c6529add503c8368193c78702e913ce6a0c62061bca343c7ca5f81eb",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 25,
+      "frame": 53,
+      "geometry_hash": "9e5b863af12e22270f80e836af3c853bf3a333897719f7ee88aae91f4000258a",
+      "border_px": 13,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 26,
+      "frame": 55,
+      "geometry_hash": "27e44b02e64a2ad61b203d81b8bb3da39b40d7445cabefd10c8aee1d7395018f",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 27,
+      "frame": 57,
+      "geometry_hash": "9c50bc2d3b19f72b3f1d7653399a7be629315ea506200749993c0d3197adbf80",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 28,
+      "frame": 59,
+      "geometry_hash": "e8f067e56cd05255bac6042d60d181e895d240bdab17013179678a156001617c",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 29,
+      "frame": 61,
+      "geometry_hash": "25b50b0cd6db55292ff75e7ffd8e58483d0c39d15de630a23247fa076ce33486",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 30,
+      "frame": 63,
+      "geometry_hash": "fba6de35814eaa25f3447f15cc236e50e2e80258d6248460f450e9b7e7fead09",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 31,
+      "frame": 65,
+      "geometry_hash": "42e6d4c62784956c0ee95f1c517afc6ec71ba10b140645115acff213804f22be",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 32,
+      "frame": 67,
+      "geometry_hash": "4c3539d683af8902c74da5234e20199dd2599623024949cfe4bc511ef00fe323",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 33,
+      "frame": 69,
+      "geometry_hash": "2bc3ab90375322ec13685220ab55895a688f921f961fad3204b990d57b6e3af1",
+      "border_px": 11,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 34,
+      "frame": 71,
+      "geometry_hash": "f88657fae659968c181f7c4a8caf1c15170ed01bccd8b78de5c37e3b5527762c",
+      "border_px": 11,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 35,
+      "frame": 73,
+      "geometry_hash": "da80520112d2e50404665daa6f6022b91251ad18164cc2bbd896a6bb6abca71d",
+      "border_px": 12,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 36,
+      "frame": 75,
+      "geometry_hash": "f0b0456ca93efba427050c6c6ff115053b05f61f1b35091310e5cc3f5e6a1d52",
+      "border_px": 14,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 37,
+      "frame": 77,
+      "geometry_hash": "53677224ca8feee545e0dc8557c9b4edaa2f2da4ed68bedad424359fbb2ef6dd",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 38,
+      "frame": 79,
+      "geometry_hash": "2706952e0ef3d5c4f3f34e63c7b675ba44d1ec224cd7976a56c82dc83e6b9017",
+      "border_px": 15,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 39,
+      "frame": 81,
+      "geometry_hash": "a45c870748ed0c52c5875f9f74815d1d6d7a15e7e9b9761f648c83d013ca96fe",
+      "border_px": 16,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 40,
+      "frame": 83,
+      "geometry_hash": "a1f60c9843773c87a6609e4d8699cecf9795a5b23379776d991e989b6be7881f",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 41,
+      "frame": 85,
+      "geometry_hash": "aede4df9d3baa539bc30d1ad7cc7084904df7921cf59e89625fbb8ee24524c17",
+      "border_px": 20,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 42,
+      "frame": 87,
+      "geometry_hash": "b3c05682c09fb032ca33a0706cf5174b31d7848981f59fd55553e6c2656a8056",
+      "border_px": 24,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 43,
+      "frame": 89,
+      "geometry_hash": "160888cabe20c7fa169e1d838b5e357bc6f62d8e996e0fb5e23880798f771954",
+      "border_px": 27,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 44,
+      "frame": 91,
+      "geometry_hash": "35ea5538ae5d7595fcb2b41bd79e0ccd0582c7f2377910a8b506a5529dec23f7",
+      "border_px": 31,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 45,
+      "frame": 93,
+      "geometry_hash": "1687d3e7636dfc07a18581a181c0009aaa2eb230c8bfd910ca42556831be8b45",
+      "border_px": 32,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 46,
+      "frame": 95,
+      "geometry_hash": "1c6355198272752505525ba658bea13d73facc52c19aab841de77a69ee48c505",
+      "border_px": 32,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 47,
+      "frame": 97,
+      "geometry_hash": "cdcc4cf718cad588a6d0acdabad48dbd9365f48d2d4a80cd00208519c6b9e832",
+      "border_px": 32,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 48,
+      "frame": 99,
+      "geometry_hash": "215166da8b8c72eb52b75d05e442ee2b905a1a17d2ea149e71036338c259c7d3",
+      "border_px": 29,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 49,
+      "frame": 101,
+      "geometry_hash": "2ffd9ccc007418f2707953d55478ed76690574fb3bf54a385ee7dae46eb704e3",
+      "border_px": 26,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 50,
+      "frame": 103,
+      "geometry_hash": "22d77c8527d7089843da6d77d0fdd93ea41b5a452f54c1331222d474e17ec650",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 51,
+      "frame": 105,
+      "geometry_hash": "2af7d5949f9ed51ae780f4d5f578545bfee0997de561392a8e463b3193365189",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 52,
+      "frame": 107,
+      "geometry_hash": "84282c6859208be06901d3622891a874da71005ac3b1c196ed2b5bbc4b2ba9e1",
+      "border_px": 25,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 53,
+      "frame": 109,
+      "geometry_hash": "8d30e04fb90c21431fe9665bfd69c4e6f05db5ad9ca3de2f2da0fd700d01e5c2",
+      "border_px": 24,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 54,
+      "frame": 111,
+      "geometry_hash": "3b459832231e0911010f2a607a11c64b3fefcf0baeb42671f555ed25d0d69251",
+      "border_px": 20,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 55,
+      "frame": 113,
+      "geometry_hash": "1b10b39050da137d274a6b9c04520707898f3ea3f7acc8b1f8c10c14a2331625",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 56,
+      "frame": 115,
+      "geometry_hash": "729b9b863b3ac64a4ff504d67e2a3d7a34529bb3dbdc676ce62bdc4179309ae7",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 57,
+      "frame": 117,
+      "geometry_hash": "6aa4faf8d992a19ba61f27f398c5391fd051e753d91639ff9badceb992e76dce",
+      "border_px": 18,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 58,
+      "frame": 119,
+      "geometry_hash": "3e25cf567ee724526f05dcd97f4401d76c2b1011ac685cae1d2ba42949ac1e44",
+      "border_px": 17,
+      "native_action_matches": true
+    },
+    {
+      "profile": "ground_spin_right",
+      "sample": 59,
+      "frame": 121,
+      "geometry_hash": "72580e9d1ac4f0523f8fdaddb48c2c447c4a7065ddd35598bba0abf64daf06f3",
+      "border_px": 17,
+      "native_action_matches": true
+    }
+  ]
+}

@@ -1,0 +1,1070 @@
+{
+  "ASSET_INDEX.md": {
+    "sha256": "ef7637da18ec720ea42d583bda691030bd5ad0e8177cf33f1cbbad9ad3e0e3cc",
+    "location": "archive:ASSET_INDEX.md"
+  },
+  "framework-r1/build_spin.py": {
+    "sha256": "293111ade73f520d9e1b474ac7fc5ad6f5cde54a5fe8614b369a6b23b5e04122",
+    "location": "archive:framework-r1/build_spin.py"
+  },
+  "framework-r1/check_saved.py": {
+    "sha256": "465434fc843ea519c60f2297b89939bbf4b40dcd555c40babdce32c10c514ae1",
+    "location": "archive:framework-r1/check_saved.py"
+  },
+  "framework-r1/README.md": {
+    "sha256": "7004ecee3604ed67c44fd1a205d5d33d612fe2c2c676b179e5fbc7f3de46ae2e",
+    "location": "archive:framework-r1/README.md"
+  },
+  "framework-r1/runtime_poses.json": {
+    "sha256": "1bbb8a232edc38c58678f55803a52047822c497d82baf1d1cd936db21f7ea1af",
+    "location": "archive:framework-r1/runtime_poses.json"
+  },
+  "framework-r1/saved_action_validation.json": {
+    "sha256": "4805b998839f5e0dc6952c4e19ccdd960f3ba45fdea137499e8b4a56578148c6",
+    "location": "archive:framework-r1/saved_action_validation.json"
+  },
+  "framework-r1/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "framework-r1/spin_validation.json": {
+    "sha256": "4a397f1d1194fd5b62ffbfa686b863c826a8bcd9b021d5271fe9fb51c1b3db5f",
+    "location": "archive:framework-r1/spin_validation.json"
+  },
+  "framework-r1/toktogi_framework_r1.blend": {
+    "sha256": "396f9f310795c519b4790761bf4c6fe6b1e2b7c9153f9d99c069fbf37f0c6473",
+    "location": "archive:framework-r1/toktogi_framework_r1.blend"
+  },
+  "framework-r1/toktogi_runtime_poses.source.json": {
+    "sha256": "75cb62d977adcf0f0593277677c3e00efc8bd0868996e9c2e3edf88c60fea079",
+    "location": "archive:framework-r1/toktogi_runtime_poses.source.json"
+  },
+  "framework-r1/toktogi_runtime_poses.zip": {
+    "sha256": "c7323b9e22ca58e9caf86bf59cb153b7721a681c4a21b30df15deb177c17155d",
+    "location": "archive:framework-r1/toktogi_runtime_poses.zip"
+  },
+  "framework-r2/build_spin_r2.py": {
+    "sha256": "e8e7f6c512f1773a4b546163ff178386754374cdee48310578c0237ab5cc004e",
+    "location": "archive:framework-r2/build_spin_r2.py"
+  },
+  "framework-r2/check_saved.py": {
+    "sha256": "7a19fa789501cd84fd373c3fe90d559d6a7572eba25e4c8fbba1f737a873ad2b",
+    "location": "archive:framework-r2/check_saved.py"
+  },
+  "framework-r2/README.md": {
+    "sha256": "8872d6ec4d3f99dcf83261b3cf073a53f8604c7d9d54e19bec81adedcbf413f7",
+    "location": "archive:framework-r2/README.md"
+  },
+  "framework-r2/runtime_poses.json": {
+    "sha256": "6d287a8285d8bb7c3974e75002eabbed2559fb8d7cdcd72f05c8e359ef2332cd",
+    "location": "archive:framework-r2/runtime_poses.json"
+  },
+  "framework-r2/saved_action_validation.json": {
+    "sha256": "2ee6f319b038a7c4ff2bc82ceadced8335b3b6d3867daf14d525c7995830df86",
+    "location": "archive:framework-r2/saved_action_validation.json"
+  },
+  "framework-r2/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "framework-r2/spin_validation.json": {
+    "sha256": "bae31fc851c494778a02887feca6e78697a7b530848c4576ccc2c4e7c7e04325",
+    "location": "archive:framework-r2/spin_validation.json"
+  },
+  "framework-r2/toktogi_framework_r2.blend": {
+    "sha256": "94811bf8132948d386e880b5b923a9dd7285ab8bc23e25d596815cbb3ee92d12",
+    "location": "archive:framework-r2/toktogi_framework_r2.blend"
+  },
+  "framework-r2/toktogi_runtime_poses.source.json": {
+    "sha256": "b76eca71f98289d95f2a1371ffb34b6562fad7ccbe8baeff365b16cb4575b86d",
+    "location": "archive:framework-r2/toktogi_runtime_poses.source.json"
+  },
+  "framework-r2/toktogi_runtime_poses.zip": {
+    "sha256": "3f56d73c992822230f340cb9c9e1ecb73905891b71cf894755dc4efa4eb6a6be",
+    "location": "archive:framework-r2/toktogi_runtime_poses.zip"
+  },
+  "framework-r3/build_spin_r3.py": {
+    "sha256": "d14ef62ab309e7be2978ba934bdd9a20775aca692fc7fe14adae8b1a1cc1dfc1",
+    "location": "archive:framework-r3/build_spin_r3.py"
+  },
+  "framework-r3/check_saved.py": {
+    "sha256": "78466652ff86e33d54c65e9279a2e9e0e68eed3a7b9f4dbd52cf78b53d0cbe41",
+    "location": "archive:framework-r3/check_saved.py"
+  },
+  "framework-r3/README.md": {
+    "sha256": "d86aeb549033c032bf8761b845414ec473d83f34fc634cccef766552938b4c0b",
+    "location": "archive:framework-r3/README.md"
+  },
+  "framework-r3/runtime_poses.json": {
+    "sha256": "0e74361f6ebc624ffd50bf7d1267c1fc25e59ce2ca7a656e6ab6d99f1fa2b172",
+    "location": "archive:framework-r3/runtime_poses.json"
+  },
+  "framework-r3/saved_action_validation.json": {
+    "sha256": "294ce061d91cae7382a663d67b47ac9f5df6a0853a6b893e3732d00e0efd4ef3",
+    "location": "archive:framework-r3/saved_action_validation.json"
+  },
+  "framework-r3/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "framework-r3/spin_interkey_validation.json": {
+    "sha256": "6fc34b41ad7ac933acdf70185471ea775cd03e7a437257dcdc4f2f8823a58703",
+    "location": "archive:framework-r3/spin_interkey_validation.json"
+  },
+  "framework-r3/spin_validation.json": {
+    "sha256": "720da33bd529da8a0b6cce22b525b2f0550dada0e1cf78e3c5007921749a2e59",
+    "location": "archive:framework-r3/spin_validation.json"
+  },
+  "framework-r3/toktogi_framework_r3.blend": {
+    "sha256": "4863937c1977c436ec38d1c39aca01dfc25d90269c2fd1d6c5f9c25067069d36",
+    "location": "archive:framework-r3/toktogi_framework_r3.blend"
+  },
+  "framework-r3/toktogi_runtime_poses.source.json": {
+    "sha256": "92a34480b4dac1c9efbcfdfabba938353a40a4fdbec9b79479156a1b11d0f496",
+    "location": "archive:framework-r3/toktogi_runtime_poses.source.json"
+  },
+  "framework-r3/toktogi_runtime_poses.zip": {
+    "sha256": "3ba1409c3bb970b8acbd6e371682cbac37d452a3189622c979991916d48a77ac",
+    "location": "archive:framework-r3/toktogi_runtime_poses.zip"
+  },
+  "framework-r4/build_spin_r4.py": {
+    "sha256": "4fceaaf0248678d7e04642a904d34723a54852255c3239ec67c0cba05f1cfa2c",
+    "location": "current:3D/framework-r4/build_spin_r4.py"
+  },
+  "framework-r4/check_saved.py": {
+    "sha256": "1367b91c57cdd9c07b8fb0b734afaf993e96c52584950e5550a7612f29754b5c",
+    "location": "current:3D/framework-r4/check_saved.py"
+  },
+  "framework-r4/README.md": {
+    "sha256": "ae33209ffb16cac1a1ac88b5690f7d1905b512e06a881a4c2893cd754afc5463",
+    "location": "current:3D/framework-r4/README.md"
+  },
+  "framework-r4/runtime_poses.json": {
+    "sha256": "92dac1a456551f312890d4ff1234b881b9307d6f70fd34bde04a9fa46c415210",
+    "location": "current:3D/framework-r4/runtime_poses.json"
+  },
+  "framework-r4/saved_action_validation.json": {
+    "sha256": "808ee3d140e13c8116f4b8a39e0b785f710db026a76fd3da965285729048d011",
+    "location": "current:3D/framework-r4/saved_action_validation.json"
+  },
+  "framework-r4/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "framework-r4/spin_interkey_validation.json": {
+    "sha256": "a7786dfdb2d61c04613a7e6227867f5a13bc73c8037a593089e79fd4f874a9fb",
+    "location": "current:3D/framework-r4/spin_interkey_validation.json"
+  },
+  "framework-r4/spin_validation.json": {
+    "sha256": "f0b61082dcaa7bf49d497de8bc76627d15f76fe06e863d19d52b4a3f07ae429c",
+    "location": "current:3D/framework-r4/spin_validation.json"
+  },
+  "framework-r4/toktogi_framework_r4.blend": {
+    "sha256": "f6dbeb7f0583cebc0dfc3b9fd015d01d9a61e4e48632eb0d5f2d812bf88f259d",
+    "location": "current:3D/framework-r4/toktogi_framework_r4.blend"
+  },
+  "framework-r4/toktogi_runtime_poses.source.json": {
+    "sha256": "110ecf917d64946593a60578ef2344428b1dc287b46ec4475a25932fc5622082",
+    "location": "current:3D/framework-r4/toktogi_runtime_poses.source.json"
+  },
+  "framework-r4/toktogi_runtime_poses.zip": {
+    "sha256": "206780f89b7a7697b898820f09c0f89a1b68076015972e67d5d1f7e2faa4eeed",
+    "location": "current:3D/framework-r4/toktogi_runtime_poses.zip"
+  },
+  "gameplay-r2/build_gameplay_r2_poses.py": {
+    "sha256": "16400e8813d20389ec7a73ead660956344d245476541214871ff06bfe9a33a5a",
+    "location": "archive:gameplay-r2/build_gameplay_r2_poses.py"
+  },
+  "gameplay-r2/finalize_gameplay_r2_native.py": {
+    "sha256": "616352a0719d99a13a7d09de0ee8ac5b990bb78735d94b5daa6f418ef7c3da90",
+    "location": "archive:gameplay-r2/finalize_gameplay_r2_native.py"
+  },
+  "gameplay-r2/pose_validation.json": {
+    "sha256": "a798020f560a08c45789ff846fb7ea0824c6660bae5ddce939319c62ae6b0487",
+    "location": "archive:gameplay-r2/pose_validation.json"
+  },
+  "gameplay-r2/README.md": {
+    "sha256": "0da1495d69dd2a9143aec7c3745911ad902dae8e3327f24efbf4ae22db129e2e",
+    "location": "archive:gameplay-r2/README.md"
+  },
+  "gameplay-r2/runtime_poses.json": {
+    "sha256": "2ac46cf883248c2dd2dfa0e46f0c7953549405181c3e70acd0e8467902cac6cf",
+    "location": "archive:gameplay-r2/runtime_poses.json"
+  },
+  "gameplay-r2/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "gameplay-r2/toktogi_runtime_poses.source.json": {
+    "sha256": "5626b0fef070c41902098e8686cfb27568aacfef3f0f8f655db36c4fa3ec2dfd",
+    "location": "archive:gameplay-r2/toktogi_runtime_poses.source.json"
+  },
+  "gameplay-r2/toktogi_runtime_poses.zip": {
+    "sha256": "0d874173019a5411416834a82368c60df313e134f2cae70f691188ee08fe510a",
+    "location": "archive:gameplay-r2/toktogi_runtime_poses.zip"
+  },
+  "gameplay-r2/toktogi_runtime_r2.blend": {
+    "sha256": "176dfb4b94bbbb0c9c2036f4d5d1096acb3dfd6bc13b173e2a078ab932384de4",
+    "location": "archive:gameplay-r2/toktogi_runtime_r2.blend"
+  },
+  "gameplay-r2/transition_preview_128.png": {
+    "sha256": "9a25e0371651cbf9214db35d9cf94100bc9341915a2a5c141eb1770e7ba82817",
+    "location": "archive:gameplay-r2/transition_preview_128.png"
+  },
+  "gameplay-r3/build_poses.py": {
+    "sha256": "5b9722f370640b074a86f7013d1a6c498ca6ea11f7b115cb2333e519b0af167c",
+    "location": "archive:gameplay-r3/build_poses.py"
+  },
+  "gameplay-r3/finalize_native.py": {
+    "sha256": "7f46be0e0d89e6766c3cc5e363cb8fbc8b5da5a82e3be5d1eaaa00ecf241bb4a",
+    "location": "archive:gameplay-r3/finalize_native.py"
+  },
+  "gameplay-r3/geometry_validation.json": {
+    "sha256": "b5574c81f8c2b7841da2c0d423c3426c6702e4632286e545b68f84c143cdf1f3",
+    "location": "archive:gameplay-r3/geometry_validation.json"
+  },
+  "gameplay-r3/pose_refine.py": {
+    "sha256": "7fe109d006cf93c527faef178d19dfcedeb6f40b636bae6485e97e39d72900c8",
+    "location": "archive:gameplay-r3/pose_refine.py"
+  },
+  "gameplay-r3/pose_validation.json": {
+    "sha256": "aeb16fc8d8e26f1609108ccdf0f77f8815433ab83c2016d6b7f0eb3d308e1940",
+    "location": "archive:gameplay-r3/pose_validation.json"
+  },
+  "gameplay-r3/README.md": {
+    "sha256": "5f4591e24e37c1d939c8fda3b5e842537a94ad48322dc7b04d3058da57db3b28",
+    "location": "archive:gameplay-r3/README.md"
+  },
+  "gameplay-r3/repair_organs.py": {
+    "sha256": "a634f47f0991be7b37092bb0bc3ba11ae3ff4e632b02d9430c82b8766604fad4",
+    "location": "archive:gameplay-r3/repair_organs.py"
+  },
+  "gameplay-r3/runtime_poses.json": {
+    "sha256": "95aca1be270fd7c0ef4f946f6fd80f4b17763eff3246ed70221835dc2b35f680",
+    "location": "archive:gameplay-r3/runtime_poses.json"
+  },
+  "gameplay-r3/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "gameplay-r3/toktogi_runtime_poses.source.json": {
+    "sha256": "f43de8915b965d0fdeede2d9c407f201a24f47fc9c50bb5e51c4d382a1009036",
+    "location": "archive:gameplay-r3/toktogi_runtime_poses.source.json"
+  },
+  "gameplay-r3/toktogi_runtime_poses.zip": {
+    "sha256": "60fdac5bceddd7b25023dcd6da6aa0ee15d2d63a2dd41c64b920ba2fbadd518f",
+    "location": "archive:gameplay-r3/toktogi_runtime_poses.zip"
+  },
+  "gameplay-r3/toktogi_runtime_r3.blend": {
+    "sha256": "e683547afe24dba4f97226256aa66b45ea485ef39025cdcde87d7f2fb43f8e98",
+    "location": "archive:gameplay-r3/toktogi_runtime_r3.blend"
+  },
+  "gameplay-r4/build_flight.py": {
+    "sha256": "22fc904ad9c765c7830529651f453a9f737e78e7250c8c4eea55ae635ce276e1",
+    "location": "archive:gameplay-r4/build_flight.py"
+  },
+  "gameplay-r4/check_saved.py": {
+    "sha256": "d05a523146c9546caf767e42ddb8e13bf150b961b4c4bd1e990c7f09334f011b",
+    "location": "archive:gameplay-r4/check_saved.py"
+  },
+  "gameplay-r4/flight_validation.json": {
+    "sha256": "4e6949224b4b0cf53c88204fd3ee8cae1a3349e3aee31dfdcf82e6e444b111a4",
+    "location": "archive:gameplay-r4/flight_validation.json"
+  },
+  "gameplay-r4/README.md": {
+    "sha256": "1b8be396e5f8c30a0461afd5cb5e0a2229c23090155ec83e063872c9628eedca",
+    "location": "archive:gameplay-r4/README.md"
+  },
+  "gameplay-r4/runtime_poses.json": {
+    "sha256": "a6ec2cc5706efd9738e5d0e7982df17a2c5ce1bbb3acc025a18cb2260b08a26c",
+    "location": "archive:gameplay-r4/runtime_poses.json"
+  },
+  "gameplay-r4/saved_action_validation.json": {
+    "sha256": "b82ab164098e7fe5e6045b50f79878bb2732a87fc72163c8decac5ca5fb3855b",
+    "location": "archive:gameplay-r4/saved_action_validation.json"
+  },
+  "gameplay-r4/SET_RUNTIME_POSE.py": {
+    "sha256": "7a81c5ab3ea1a8f46949ff3d7ab6524e2ec0378911bc4e1c4c71c2cd3f6ddace",
+    "location": "current:3D/framework-r4/SET_RUNTIME_POSE.py"
+  },
+  "gameplay-r4/toktogi_runtime_poses.source.json": {
+    "sha256": "b865458ceafb55bb8cffe8ab09a93ff03f3417f7badfa27415a074e5d44ba8c3",
+    "location": "archive:gameplay-r4/toktogi_runtime_poses.source.json"
+  },
+  "gameplay-r4/toktogi_runtime_poses.zip": {
+    "sha256": "f5d3b10e52a5d8ec10969d23d3ef1ea331297055f4c2186849c585bd925ae37a",
+    "location": "archive:gameplay-r4/toktogi_runtime_poses.zip"
+  },
+  "gameplay-r4/toktogi_runtime_r4.blend": {
+    "sha256": "c06d97227fe9cea864e07d75d0ef3487f21d882083a5ec691ffcd56a3d86befc",
+    "location": "archive:gameplay-r4/toktogi_runtime_r4.blend"
+  },
+  "idle_outline0.png": {
+    "sha256": "a2ec2a4c0cce0ee5d423b68c4ee0fabd9befee93bf2b65d3899183f35c1ed958",
+    "location": "archive:idle_outline0.png"
+  },
+  "integrated-r5/air_turn_ccw_full.png": {
+    "sha256": "cfbca247d90fbf733796477d2ff98e5948cc1f40dbef97feb8d6d3c09eea37f4",
+    "location": "current:2D/integrated-r5/air_turn_ccw_full.png"
+  },
+  "integrated-r5/air_turn_ccw_mid_land.png": {
+    "sha256": "0bba96d7a9142aa09c07909f8ce077b853d8ba0856960a56a116b0830475cfef",
+    "location": "current:2D/integrated-r5/air_turn_ccw_mid_land.png"
+  },
+  "integrated-r5/air_turn_cw_full.png": {
+    "sha256": "c0a393ef0feba20564cc21fe313b220bb74c858307d7cde318555011eef080b8",
+    "location": "current:2D/integrated-r5/air_turn_cw_full.png"
+  },
+  "integrated-r5/air_turn_cw_mid_land.png": {
+    "sha256": "41bd853b1e7cfac4401643f0275f6d6388bd5247dbba8f8a6bbec52c3a04db8a",
+    "location": "current:2D/integrated-r5/air_turn_cw_mid_land.png"
+  },
+  "integrated-r5/asset_validation.json": {
+    "sha256": "f15049c7901f5a9f4ba76b4c221d1c639cdc50136d7e2e0391bf631c6141d758",
+    "location": "current:2D/integrated-r5/asset_validation.json"
+  },
+  "integrated-r5/geometry_validation.json": {
+    "sha256": "aa80fa906fe80c202502daf035a3ed7c7b22294eb120f4ab7a01af8fc680b3d5",
+    "location": "current:2D/integrated-r5/geometry_validation.json"
+  },
+  "integrated-r5/left_base.png": {
+    "sha256": "47c894fe8ff855ad0f4a61f248cdd665b868929e0a71163938024f7d13348b1e",
+    "location": "current:2D/integrated-r5/left_base.png"
+  },
+  "integrated-r5/left_emissive.png": {
+    "sha256": "0d26f31d06e5d3d7d411462c1e398e928bdb9358228728a50c296d6c33135ec6",
+    "location": "current:2D/integrated-r5/left_emissive.png"
+  },
+  "integrated-r5/left_normal.png": {
+    "sha256": "a12001bad61cbe82cd4fba11422704053d89dca88afdb82c588449dee018de2d",
+    "location": "current:2D/integrated-r5/left_normal.png"
+  },
+  "integrated-r5/left_rm.png": {
+    "sha256": "277ee56c165bc5781633874fb8ca524fd7159780b35ef4350c44aa3c23f3f4fc",
+    "location": "current:2D/integrated-r5/left_rm.png"
+  },
+  "integrated-r5/left_sprite.png": {
+    "sha256": "9934e69f20b3cb5faf5628335032a70b51cbd5a35d58cfdfbb6032b1c28c4eaa",
+    "location": "current:2D/integrated-r5/left_sprite.png"
+  },
+  "integrated-r5/playable_manifest.json": {
+    "sha256": "15b14a8a48b467b3360b5cd3dfd350e4b8b08efa3f8d9545fa927b51df858fef",
+    "location": "current:2D/integrated-r5/playable_manifest.json"
+  },
+  "integrated-r5/playable_preview.png": {
+    "sha256": "ba0726821bfa9fc0a9e240427dfa9f8164adfa4f26661b4dc91319b65525f532",
+    "location": "current:2D/integrated-r5/playable_preview.png"
+  },
+  "integrated-r5/pose_validation.json": {
+    "sha256": "67d32eb1ecb77a677a31feb9b1b55775258eac757c737395147137899c561d56",
+    "location": "current:2D/integrated-r5/pose_validation.json"
+  },
+  "integrated-r5/press_128px_comparison.png": {
+    "sha256": "e0dc4d04b4a8d6262b18773edfd4dac94779ea3ccfcaf1ca2b95f1d2c44540a0",
+    "location": "current:2D/integrated-r5/press_128px_comparison.png"
+  },
+  "integrated-r5/previews/aim_down.png": {
+    "sha256": "b5c3ce0b59494ec22eb78c265fdd0c91371e160befc0204edd273edef9df04c0",
+    "location": "current:2D/integrated-r5/previews/aim_down.png"
+  },
+  "integrated-r5/previews/aim_return_down.png": {
+    "sha256": "f61fc5f9a9118765208acc562d99b92a46e21dc16e05c07f9f451d9da4b15b49",
+    "location": "current:2D/integrated-r5/previews/aim_return_down.png"
+  },
+  "integrated-r5/previews/aim_return_up.png": {
+    "sha256": "39776ebc61f943c7178b38a16029d52827631c06dedd36cfa7450c2f03d2c680",
+    "location": "current:2D/integrated-r5/previews/aim_return_up.png"
+  },
+  "integrated-r5/previews/aim_up.png": {
+    "sha256": "99db43935c978257bc51bbbefb2111785e3fc0176153aa9087fe3d214461b0bd",
+    "location": "current:2D/integrated-r5/previews/aim_up.png"
+  },
+  "integrated-r5/previews/air_apex.png": {
+    "sha256": "135e408adc7a99fcf916f26106d2eba5bc1fd62b5883e42e3545e22d2b572307",
+    "location": "current:2D/integrated-r5/previews/air_apex.png"
+  },
+  "integrated-r5/previews/air_fall.png": {
+    "sha256": "7eb45747d6e76e8933a214b289c42f3457da3535a1a5ea8cb54e390e31974803",
+    "location": "current:2D/integrated-r5/previews/air_fall.png"
+  },
+  "integrated-r5/previews/air_rise.png": {
+    "sha256": "e641cd379f4c9a790228a911a8274792f67894fc4844360da67941129a9c64c4",
+    "location": "current:2D/integrated-r5/previews/air_rise.png"
+  },
+  "integrated-r5/previews/air_turn_ccw.png": {
+    "sha256": "c8255b3c9cdf79442f0fc462a998536a513d1870b92990831e2488027d477c31",
+    "location": "current:2D/integrated-r5/previews/air_turn_ccw.png"
+  },
+  "integrated-r5/previews/air_turn_cw.png": {
+    "sha256": "375c773a42b2510c2150296f1d0fc6f7d809593c9fa0fc0b06ac3b58518de9fa",
+    "location": "current:2D/integrated-r5/previews/air_turn_cw.png"
+  },
+  "integrated-r5/previews/attack_demo.png": {
+    "sha256": "51917b9dd6327193948bc4c3bc07e222eb768904ecf382d8fd7f0e0255e23e12",
+    "location": "current:2D/integrated-r5/previews/attack_demo.png"
+  },
+  "integrated-r5/previews/brake.png": {
+    "sha256": "8f60987d71c728127205f6953f524578d1a46833a04ba6974859403c0e34d210",
+    "location": "current:2D/integrated-r5/previews/brake.png"
+  },
+  "integrated-r5/previews/brake_01.png": {
+    "sha256": "81c995d2b2175951f1d1319c8fe98e10eee6314a08ef7570aaa1d2cd12a8f3f6",
+    "location": "current:2D/integrated-r5/previews/brake_01.png"
+  },
+  "integrated-r5/previews/brake_02.png": {
+    "sha256": "3740e53298311a0eb8a6c48d5b7f90bf836d74fe4c990cb54885634cc3f76fd4",
+    "location": "current:2D/integrated-r5/previews/brake_02.png"
+  },
+  "integrated-r5/previews/brake_03.png": {
+    "sha256": "871d52d6f3ce98005b029236d54b38bda76b4f55e323778a0836828c8c33a4a9",
+    "location": "current:2D/integrated-r5/previews/brake_03.png"
+  },
+  "integrated-r5/previews/brake_04.png": {
+    "sha256": "1959d280b9a52e54ff47a8540a2a3a0c90bdfe053b96f84d598bb78a4952b5ab",
+    "location": "current:2D/integrated-r5/previews/brake_04.png"
+  },
+  "integrated-r5/previews/brake_05.png": {
+    "sha256": "b01f9c8021144a9865a1e87f68697717e34826daeb2c0aef342a215168140b1e",
+    "location": "current:2D/integrated-r5/previews/brake_05.png"
+  },
+  "integrated-r5/previews/brake_06.png": {
+    "sha256": "143a808e3bfadd800cdbdfd586546c4b56be9d66e667219c15f7da81239d606a",
+    "location": "current:2D/integrated-r5/previews/brake_06.png"
+  },
+  "integrated-r5/previews/brake_07.png": {
+    "sha256": "1b17e29872b4b841b68fe5bc6dacf50782ac085b8e142ee368f74092ba0d2a8a",
+    "location": "current:2D/integrated-r5/previews/brake_07.png"
+  },
+  "integrated-r5/previews/brake_08.png": {
+    "sha256": "225a5a40efe6da283ed972d6379cc8350791487f91a3821135c9bbc461ac5990",
+    "location": "current:2D/integrated-r5/previews/brake_08.png"
+  },
+  "integrated-r5/previews/brake_09.png": {
+    "sha256": "38c1ee9aa5a74e5198dc1db337e0c2425b67ae50246859efac99c0aa0cc588a1",
+    "location": "current:2D/integrated-r5/previews/brake_09.png"
+  },
+  "integrated-r5/previews/brake_10.png": {
+    "sha256": "3aa45e3faf1554e7099c44253d7958346426e93f8fded75e729f62eb6035e233",
+    "location": "current:2D/integrated-r5/previews/brake_10.png"
+  },
+  "integrated-r5/previews/brake_11.png": {
+    "sha256": "9d5fef86efaa7e0fa27bcd8974bcec62613f3c91305aa7b7c7bfec8f84e451c6",
+    "location": "current:2D/integrated-r5/previews/brake_11.png"
+  },
+  "integrated-r5/previews/elastic_release.png": {
+    "sha256": "1fdc67325d00f40f4d74cba2d07eea6f8fc8cd44fe84c8b575fd3af5edd69643",
+    "location": "current:2D/integrated-r5/previews/elastic_release.png"
+  },
+  "integrated-r5/previews/failed.png": {
+    "sha256": "d1efa29cdec1944933cc6365588e575f907e658cf4c808aac5667380c2915e6a",
+    "location": "current:2D/integrated-r5/previews/failed.png"
+  },
+  "integrated-r5/previews/fall_unlaunched.png": {
+    "sha256": "c2da4ea4c533abf52c7a4f20ba68be63e100d75fdaf7175dd1b33ff93dc36565",
+    "location": "current:2D/integrated-r5/previews/fall_unlaunched.png"
+  },
+  "integrated-r5/previews/fall_unlaunched_charged.png": {
+    "sha256": "2712f0adfd1aae9ffed4db6a5b92a8ce47ff5970aea6ede593cc52a8bc3a3df4",
+    "location": "current:2D/integrated-r5/previews/fall_unlaunched_charged.png"
+  },
+  "integrated-r5/previews/feed_cycle.png": {
+    "sha256": "b8d5f1811f725f42c7a0caf97e0c923475f16d3e51b1096df61df1e52c273c9f",
+    "location": "current:2D/integrated-r5/previews/feed_cycle.png"
+  },
+  "integrated-r5/previews/feed_end.png": {
+    "sha256": "2d7b8f1a6b12dddb9ac8dd088091a8b6d1c6285925c467e31171edb3961688e4",
+    "location": "current:2D/integrated-r5/previews/feed_end.png"
+  },
+  "integrated-r5/previews/feed_pre.png": {
+    "sha256": "18ea28be99e40995ef528669ae702cc247a75223d67d0fdd88b9f10f4a37db37",
+    "location": "current:2D/integrated-r5/previews/feed_pre.png"
+  },
+  "integrated-r5/previews/goal.png": {
+    "sha256": "20b6c1fb4683b301aace07c6523919b5aae04417013109600ea3185d705403e3",
+    "location": "current:2D/integrated-r5/previews/goal.png"
+  },
+  "integrated-r5/previews/hit_air.png": {
+    "sha256": "41b64ccb8e32ed17f14738b52af62fe12fd73aef395d0eb30981344be22110e5",
+    "location": "current:2D/integrated-r5/previews/hit_air.png"
+  },
+  "integrated-r5/previews/hit_ground.png": {
+    "sha256": "5e42f2600b1b8ea723b41df74bc6c56f92e000ee9a10b117b7596d3e89ea89c6",
+    "location": "current:2D/integrated-r5/previews/hit_ground.png"
+  },
+  "integrated-r5/previews/idle.png": {
+    "sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+    "location": "current:2D/integrated-r5/previews/idle.png"
+  },
+  "integrated-r5/previews/interact_activate.png": {
+    "sha256": "69df98953ea7bb4ffef2969977184e9ed74368d79d428e2c638d1279b28c1d63",
+    "location": "current:2D/integrated-r5/previews/interact_activate.png"
+  },
+  "integrated-r5/previews/interact_activate_right.png": {
+    "sha256": "05665e556c725d37d5fbbbfa20a78e3ecd19b0ef1ab275b5153b3d6ffa98ec72",
+    "location": "current:2D/integrated-r5/previews/interact_activate_right.png"
+  },
+  "integrated-r5/previews/interact_collect.png": {
+    "sha256": "00a0ea7748a36b2627b29759a04328ef2b67a80fe5dd1af516ba66d60fda2cc1",
+    "location": "current:2D/integrated-r5/previews/interact_collect.png"
+  },
+  "integrated-r5/previews/interact_collect_right.png": {
+    "sha256": "9d8ccfa3c7992dbe4ecf9b084a0850011c0c4b639b2a113df80ffa26af29e165",
+    "location": "current:2D/integrated-r5/previews/interact_collect_right.png"
+  },
+  "integrated-r5/previews/jump_blocked.png": {
+    "sha256": "1dac50bfb5f3962f5cbe0dbc67bcc34c000dbb6d7e232f317232d36d228dbe7f",
+    "location": "current:2D/integrated-r5/previews/jump_blocked.png"
+  },
+  "integrated-r5/previews/jump_pre.png": {
+    "sha256": "c8458c7f0b7e4dd6a26f9b71a3a9684a609c80f614a36ac5c599e65a741f685a",
+    "location": "current:2D/integrated-r5/previews/jump_pre.png"
+  },
+  "integrated-r5/previews/jump_release.png": {
+    "sha256": "c420f0b5566c59e1eb8fca369b7452812aa45ec5bb5d62fed7f8155fa461255f",
+    "location": "current:2D/integrated-r5/previews/jump_release.png"
+  },
+  "integrated-r5/previews/land_hard.png": {
+    "sha256": "f387f0deddc7ff2519fe7c6d8c0c912ad3ccbe116317338a4624df777300feb7",
+    "location": "current:2D/integrated-r5/previews/land_hard.png"
+  },
+  "integrated-r5/previews/land_soft.png": {
+    "sha256": "92c8ed2e11441f4a222d39eea8a7d3818d197ae614e05a5c1194893155e7b9ac",
+    "location": "current:2D/integrated-r5/previews/land_soft.png"
+  },
+  "integrated-r5/previews/obs_antenna_clean.png": {
+    "sha256": "ebdaae50909e8b08e896218d363e75a05df3256948da0b2c745b9b47dffe2a67",
+    "location": "current:2D/integrated-r5/previews/obs_antenna_clean.png"
+  },
+  "integrated-r5/previews/obs_antenna_to_furca.png": {
+    "sha256": "1f17dd35c83ede9d5e38edc22a5225b752ecf46ecbc2b21d0c44bb6118b57a34",
+    "location": "current:2D/integrated-r5/previews/obs_antenna_to_furca.png"
+  },
+  "integrated-r5/previews/obs_approach.png": {
+    "sha256": "be36dc3b8f4bafdf1f13ffcb573179cab6c85104a3d9eb2f0e9e252290b80824",
+    "location": "current:2D/integrated-r5/previews/obs_approach.png"
+  },
+  "integrated-r5/previews/obs_bark.png": {
+    "sha256": "807dfae4bd24c3c6981d2c3215dfc321641168103abe35acfb6cc13b32024b52",
+    "location": "current:2D/integrated-r5/previews/obs_bark.png"
+  },
+  "integrated-r5/previews/obs_carry.png": {
+    "sha256": "7bd758e38677835277d5ae876a40bb7bd1b77b0ca54619dcb6350e9c07ed339b",
+    "location": "current:2D/integrated-r5/previews/obs_carry.png"
+  },
+  "integrated-r5/previews/obs_clasp.png": {
+    "sha256": "576b8850bed08e084ebdbbae7fc8c894fd6ecbe0041fbc25e962708999fa2e90",
+    "location": "current:2D/integrated-r5/previews/obs_clasp.png"
+  },
+  "integrated-r5/previews/obs_dance.png": {
+    "sha256": "361e7e2dc7b5c79bc54c358e7cd30a2b89994d709aa3a71be41adcce51fb388b",
+    "location": "current:2D/integrated-r5/previews/obs_dance.png"
+  },
+  "integrated-r5/previews/obs_female_contact.png": {
+    "sha256": "4e54fb6e4eea3585cdfeffc0caddb9fbf01c5a1126142841b86c59251ca1114f",
+    "location": "current:2D/integrated-r5/previews/obs_female_contact.png"
+  },
+  "integrated-r5/previews/obs_furca_clean.png": {
+    "sha256": "1e2f50091678b766447d682c8ef2bdca224e943f13656b1ed6699f8f877ec84f",
+    "location": "current:2D/integrated-r5/previews/obs_furca_clean.png"
+  },
+  "integrated-r5/previews/obs_graze.png": {
+    "sha256": "089ccaa369ee92a69587dbdefb63791985cd72d42480a5c3917ef53318771e6d",
+    "location": "current:2D/integrated-r5/previews/obs_graze.png"
+  },
+  "integrated-r5/previews/obs_jump.png": {
+    "sha256": "4f9281aa9a62966e7309d4676aa9fdde9f89b16f3590734c44793b0a503c8699",
+    "location": "current:2D/integrated-r5/previews/obs_jump.png"
+  },
+  "integrated-r5/previews/obs_juvenile_clasp.png": {
+    "sha256": "4246b74f4b88a70534cc1b874b828b7aeaec21951a5ef76956959b064a2a09c0",
+    "location": "current:2D/integrated-r5/previews/obs_juvenile_clasp.png"
+  },
+  "integrated-r5/previews/obs_male_contact.png": {
+    "sha256": "455c665b26366bded75f84fc54f995b94f8ca137870d8ef8dc5e5247f28eead6",
+    "location": "current:2D/integrated-r5/previews/obs_male_contact.png"
+  },
+  "integrated-r5/previews/obs_pair_jump.png": {
+    "sha256": "15262a621f9d477262e034a52b736f51d4252f4861ccef8afc22578beb02cd1a",
+    "location": "current:2D/integrated-r5/previews/obs_pair_jump.png"
+  },
+  "integrated-r5/previews/obs_rebuff.png": {
+    "sha256": "4e6a7aafdf446549aa1ca0e18d27da6b8dfdacb18d78c84813b275d42e8256e1",
+    "location": "current:2D/integrated-r5/previews/obs_rebuff.png"
+  },
+  "integrated-r5/previews/obs_rest.png": {
+    "sha256": "d895f6d397920b9dbb2c285a854bafa01bc6e7d16ddadd7a58b557290e8beb4a",
+    "location": "current:2D/integrated-r5/previews/obs_rest.png"
+  },
+  "integrated-r5/previews/obs_saliva_clean.png": {
+    "sha256": "781f4c35c98ad31fdc9bfef8e9b20786d3e63f4f99331097de19f88d44327b7f",
+    "location": "current:2D/integrated-r5/previews/obs_saliva_clean.png"
+  },
+  "integrated-r5/previews/obs_walk.png": {
+    "sha256": "49bd882f41f5f54275fb9197b05a1159e93ed0d662d0281975e995447d83f92f",
+    "location": "current:2D/integrated-r5/previews/obs_walk.png"
+  },
+  "integrated-r5/previews/obs_wrong_grasp.png": {
+    "sha256": "047bda7ef9e16949b1f6f46c3b89abe135da3512f5c7dc55bdafb1162d48205f",
+    "location": "current:2D/integrated-r5/previews/obs_wrong_grasp.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre.png": {
+    "sha256": "3139722980bbbc3a27961783dec2eddf3de4acee5eb8552e3d0ab6a351a6e845",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_01.png": {
+    "sha256": "ef2a8b3e91191c7cae1ab6d6095f925ecd0ca3294ab409c5b9321666b0a18424",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_01.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_02.png": {
+    "sha256": "29eb97a32e7309af7169bc4e8e26a044a39d11872420a2a160d2dedfde1fc8af",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_02.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_03.png": {
+    "sha256": "169c70a888dc11fc4d8e3ab9d3608092799d6b462016cd4890931cd8ad94f07e",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_03.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_04.png": {
+    "sha256": "1443c63073d423ad3a5fb2020296e6b10e4830e7097d85393b0d3b12aaf9f955",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_04.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_05.png": {
+    "sha256": "7f6f26e7bfb54458933e9b9b29becbca1647aeaefed9b676b864249a2603cd4e",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_05.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_06.png": {
+    "sha256": "b9c5e530162e28a12a92d95626c3ff1f07accb5ba675f7db52fc1cf552ec9e65",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_06.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_07.png": {
+    "sha256": "03eda7392dc2d03453da83600c6082d4ecc0a602e799fcb720e5be3c8c275648",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_07.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_08.png": {
+    "sha256": "4fc4153e75f9445c5706009b2a3b64a05456c0422d7b7631e3a89a030c6d4621",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_08.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_09.png": {
+    "sha256": "0a71d30c360ded98841214643c52e2dcc6f24a9f37693246c0e2f10af07f3063",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_09.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_10.png": {
+    "sha256": "47b42ec153e9af67de14f2195f126f1700df7cb0f6981265a95d5e9d930763ea",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_10.png"
+  },
+  "integrated-r5/previews/recovery_jump_pre_11.png": {
+    "sha256": "9b66adc39f7908707f364b3621f7f980845ab274c155c5bd6ca30aac844904e6",
+    "location": "current:2D/integrated-r5/previews/recovery_jump_pre_11.png"
+  },
+  "integrated-r5/previews/recovery_start.png": {
+    "sha256": "6bb3903e92515561828a0844255d43a8d5a555503594dfadb53727e94d613c5b",
+    "location": "current:2D/integrated-r5/previews/recovery_start.png"
+  },
+  "integrated-r5/previews/recovery_walk.png": {
+    "sha256": "0dab17266f297006dda898e4d28c4a5c1d202dd9138081d950594150ede7a51c",
+    "location": "current:2D/integrated-r5/previews/recovery_walk.png"
+  },
+  "integrated-r5/previews/respawn.png": {
+    "sha256": "793712c3565575e804581e88baf5c22920c6c0ccd339f26de076dc6232e58335",
+    "location": "current:2D/integrated-r5/previews/respawn.png"
+  },
+  "integrated-r5/previews/turn_full_ccw.png": {
+    "sha256": "67949d9c8c7a1857b5674bf806add9802dc18cb1a491431d22d47f397ab46216",
+    "location": "current:2D/integrated-r5/previews/turn_full_ccw.png"
+  },
+  "integrated-r5/previews/turn_full_cw.png": {
+    "sha256": "749a85e3e4323b1120dad0e9fdbf3411444c9d7d5e3a4212ac466ccd38eb0223",
+    "location": "current:2D/integrated-r5/previews/turn_full_cw.png"
+  },
+  "integrated-r5/previews/turn_left_right.png": {
+    "sha256": "1d0305599744a21e11fc68c3e6680454116996338fcdab9b0c0f4d0da2fc6036",
+    "location": "current:2D/integrated-r5/previews/turn_left_right.png"
+  },
+  "integrated-r5/previews/turn_right_left.png": {
+    "sha256": "33e58aaa1857c73f2025fce54f73c0a3ce5681131df18b4226c69855caf7d771",
+    "location": "current:2D/integrated-r5/previews/turn_right_left.png"
+  },
+  "integrated-r5/previews/walk.png": {
+    "sha256": "20c52515780c5dd1e8d42d353505aac0864956d588ce95369ea88ede11324857",
+    "location": "current:2D/integrated-r5/previews/walk.png"
+  },
+  "integrated-r5/previews/walk_start.png": {
+    "sha256": "b4e1dd42ce83f16b906cbe06f20321e4f886910e12a41e73a030651978ba3bbe",
+    "location": "current:2D/integrated-r5/previews/walk_start.png"
+  },
+  "integrated-r5/README.txt": {
+    "sha256": "72b5a85470bf79ab2406632879393c8fe298b00e94be2c3fc8d3777668c86b17",
+    "location": "current:2D/integrated-r5/README.txt"
+  },
+  "integrated-r5/right_base.png": {
+    "sha256": "2380d38f95b51fb681b31ffaa6b757063d77c53356b57203bb2740e00f7c7bce",
+    "location": "current:2D/integrated-r5/right_base.png"
+  },
+  "integrated-r5/right_emissive.png": {
+    "sha256": "18c213ae21939e2cc5d739db58dfa3949b4a49ca3231e9283f13b85a78c7cded",
+    "location": "current:2D/integrated-r5/right_emissive.png"
+  },
+  "integrated-r5/right_normal.png": {
+    "sha256": "f5d55b75e0c3538cbe9fff9bbfec77e08807602f9858b2bc4f74f8206048ac5e",
+    "location": "current:2D/integrated-r5/right_normal.png"
+  },
+  "integrated-r5/right_rm.png": {
+    "sha256": "d6ac3287694efe9a47b17d0fd0a3daa67015ce544aa23508a1c4b0f720f8b627",
+    "location": "current:2D/integrated-r5/right_rm.png"
+  },
+  "integrated-r5/right_sprite.png": {
+    "sha256": "6b2059a0820a352755e2dc7f7f48c761b099eba0aeaa6a45bdf1f5132811a898",
+    "location": "current:2D/integrated-r5/right_sprite.png"
+  },
+  "integrated-r5/runtime_128px.png": {
+    "sha256": "4af1bcdd9aadea50d8edd1a7ac55c3a1e1ad14a98aedf388d811490567375b50",
+    "location": "current:2D/integrated-r5/runtime_128px.png"
+  },
+  "integrated-r5/runtime_validation.json": {
+    "sha256": "dd420a35b79e06cb1c504a5583944910c92e79436b8c80dc8be6f7ffa071d397",
+    "location": "current:2D/integrated-r5/runtime_validation.json"
+  },
+  "integrated-r5/toktogi_integrated.blend": {
+    "sha256": "6edd5a7e2181717924cd129444627ff8009db1223c1f39ac81a23590b25831c8",
+    "location": "current:3D/integrated-r5/toktogi_integrated.blend"
+  },
+  "integrated-r5/transition_aim_return.png": {
+    "sha256": "12d2aa42b49d5bb4bfe2331e415a103b6390458810d362ccad5c947966742e61",
+    "location": "current:2D/integrated-r5/transition_aim_return.png"
+  },
+  "integrated-r5/transition_antenna_furca.png": {
+    "sha256": "06ca2cf7605aaf7cf330113ba4f6b142b15ce61fdab2fee748b798bfd7f7d075",
+    "location": "current:2D/integrated-r5/transition_antenna_furca.png"
+  },
+  "integrated-r5/transition_carry_dance.png": {
+    "sha256": "583891e721b2a2a3b58172270b7f9aacf0e0d8dabd9fe94b53040d10bf8adc3a",
+    "location": "current:2D/integrated-r5/transition_carry_dance.png"
+  },
+  "integrated-r5/transition_elastic_soft.png": {
+    "sha256": "aeaa2010562838c45a54bd201152993395438d1dfd37a40f88ee39ba11ff2c0b",
+    "location": "current:2D/integrated-r5/transition_elastic_soft.png"
+  },
+  "integrated-r5/transition_feed.png": {
+    "sha256": "f0f8494262e09fce45b38557197955def4a925c58d9d44b51dc1aa38f2032a60",
+    "location": "current:2D/integrated-r5/transition_feed.png"
+  },
+  "integrated-r5/transition_flight.png": {
+    "sha256": "72d06eaf019b84afe640381aa0a3551331084fa019d7048d3c025c6a4f628bc8",
+    "location": "current:2D/integrated-r5/transition_flight.png"
+  },
+  "integrated-r5/transition_groom.png": {
+    "sha256": "3b11b16bb611ba8f076251babf6373b06b0dfc1773a376d2bf010a702e12bc9a",
+    "location": "current:2D/integrated-r5/transition_groom.png"
+  },
+  "integrated-r5/transition_support_loss.png": {
+    "sha256": "15b98e364e5da08cb029791cf88445e03567c69c4e13e141bfd1e9dede31fad5",
+    "location": "current:2D/integrated-r5/transition_support_loss.png"
+  },
+  "integrated-r5/transition_turn.png": {
+    "sha256": "a64bd98316c2454c3c80d88f28f562c48423fb647358a2ef6a5459c032bebf41",
+    "location": "current:2D/integrated-r5/transition_turn.png"
+  },
+  "integrated-r5/transition_turn_reverse.png": {
+    "sha256": "c343929b1392d11af03401f6520f51e9a5ee80f9172cd6e67e29c6bf46e30253",
+    "location": "current:2D/integrated-r5/transition_turn_reverse.png"
+  },
+  "integrated-r5/turn_full_ccw.png": {
+    "sha256": "5c92a7d224f077c21a92d969775531fe17f4c332596d0e3eee5c586b1e95dca0",
+    "location": "current:2D/integrated-r5/turn_full_ccw.png"
+  },
+  "integrated-r5/turn_full_cw.png": {
+    "sha256": "3862859d8f992fbd42da14b1c93214d93a5ec41d556ae5be5d64aabb9d90276b",
+    "location": "current:2D/integrated-r5/turn_full_cw.png"
+  },
+  "integrated-r5/yaw_045_base.png": {
+    "sha256": "b0557bdcefaab8cb8da6d69c38d6ef59030483fa6c1c55977629325c46e6ca44",
+    "location": "current:2D/integrated-r5/yaw_045_base.png"
+  },
+  "integrated-r5/yaw_045_emissive.png": {
+    "sha256": "be44837bf6e6419b89968074b3e4a82125b8fbeaecd105e6f6bc46ff581067ac",
+    "location": "current:2D/integrated-r5/yaw_045_emissive.png"
+  },
+  "integrated-r5/yaw_045_normal.png": {
+    "sha256": "6d06243b1fcaecaef4714ff402cfcf4ab06e91c9af8d3c06cf1850912680131a",
+    "location": "current:2D/integrated-r5/yaw_045_normal.png"
+  },
+  "integrated-r5/yaw_045_rm.png": {
+    "sha256": "023ee54a8d6ee7a32fa4ddbbc7b0483e4ce6a8436dd3f7dbf695ae935cc396ad",
+    "location": "current:2D/integrated-r5/yaw_045_rm.png"
+  },
+  "integrated-r5/yaw_045_sprite.png": {
+    "sha256": "61352f8ee24979cab16b8c9deae2ae9b20357040604b3bcf6635d84a66eedc38",
+    "location": "current:2D/integrated-r5/yaw_045_sprite.png"
+  },
+  "integrated-r5/yaw_090_base.png": {
+    "sha256": "01e12853662fbb0c4a6a2a9fc5ec2ef0ce8b2e6b3532dd7c1a62b82f4e3cc0f2",
+    "location": "current:2D/integrated-r5/yaw_090_base.png"
+  },
+  "integrated-r5/yaw_090_emissive.png": {
+    "sha256": "28f751aa045856c9e7f03b9fadbe44da5e76f96fbcba3a76ff1919b151ed1866",
+    "location": "current:2D/integrated-r5/yaw_090_emissive.png"
+  },
+  "integrated-r5/yaw_090_normal.png": {
+    "sha256": "41585cddbe0ec4836bdaef0e6f601003ba78ca8e084d012ede168dc3038d5dc8",
+    "location": "current:2D/integrated-r5/yaw_090_normal.png"
+  },
+  "integrated-r5/yaw_090_rm.png": {
+    "sha256": "f62c504b9132be642bb145fdedc118359a07cbc7087dbc684c4bbaaeaf1480ee",
+    "location": "current:2D/integrated-r5/yaw_090_rm.png"
+  },
+  "integrated-r5/yaw_090_sprite.png": {
+    "sha256": "d39425b12e6f248982523b38e7c9288bf110dcd79c1f8e0cfd2d097ca24e6e75",
+    "location": "current:2D/integrated-r5/yaw_090_sprite.png"
+  },
+  "integrated-r5/yaw_135_base.png": {
+    "sha256": "97c7a560f7a370f3dd62dad4bea56862c58b1bcb1d87e6a2a28bde6e9d9fd2d4",
+    "location": "current:2D/integrated-r5/yaw_135_base.png"
+  },
+  "integrated-r5/yaw_135_emissive.png": {
+    "sha256": "fe05ea6ed311717f229882fa52721e3096cb391193dd99aef83f4fc30388c08e",
+    "location": "current:2D/integrated-r5/yaw_135_emissive.png"
+  },
+  "integrated-r5/yaw_135_normal.png": {
+    "sha256": "c62a42d77e0dc3afe750511006d08fc787eaf44148aee3771152dc8efcc524f4",
+    "location": "current:2D/integrated-r5/yaw_135_normal.png"
+  },
+  "integrated-r5/yaw_135_rm.png": {
+    "sha256": "e37acbe98a3d713ac97a036e320b04ea74c135b667972704e032a68afbae202e",
+    "location": "current:2D/integrated-r5/yaw_135_rm.png"
+  },
+  "integrated-r5/yaw_135_sprite.png": {
+    "sha256": "30ba8889191beaec6a50c0bf1c44eb03ef6a3210b84cebcd4d0b86d0f73d6e34",
+    "location": "current:2D/integrated-r5/yaw_135_sprite.png"
+  },
+  "integrated-r5/yaw_180_base.png": {
+    "sha256": "15ef1c1b57656ff054ae39046265ec79e40c630b2a8fc52758b2f4c963599ae0",
+    "location": "current:2D/integrated-r5/yaw_180_base.png"
+  },
+  "integrated-r5/yaw_180_emissive.png": {
+    "sha256": "0014ffd5e2d6fa55e72a6debfde84c93d4d2b214a734bd2f21909f557ff9b270",
+    "location": "current:2D/integrated-r5/yaw_180_emissive.png"
+  },
+  "integrated-r5/yaw_180_normal.png": {
+    "sha256": "855e81119ff3dab8e701f0dc9f0937a676caa85f1159605acafa1b668d29bfa5",
+    "location": "current:2D/integrated-r5/yaw_180_normal.png"
+  },
+  "integrated-r5/yaw_180_rm.png": {
+    "sha256": "2406dec6159093a16a3e4a47f78e9a2d72fe44d16caed0a352d58cfa84c1cedc",
+    "location": "current:2D/integrated-r5/yaw_180_rm.png"
+  },
+  "integrated-r5/yaw_180_sprite.png": {
+    "sha256": "ed2c0f2166aa8cbedba073216025f15ce381f28ff39b164bfed47cb3f920eb11",
+    "location": "current:2D/integrated-r5/yaw_180_sprite.png"
+  },
+  "integrated-r5/yaw_225_base.png": {
+    "sha256": "050ad57570fafc0e4e992eba70f06c190945668c70cc0b019867ef8270d15b96",
+    "location": "current:2D/integrated-r5/yaw_225_base.png"
+  },
+  "integrated-r5/yaw_225_emissive.png": {
+    "sha256": "6eb0d53184b8443316f00c74799eeef88115801bbb77bc3093484b02496a1d93",
+    "location": "current:2D/integrated-r5/yaw_225_emissive.png"
+  },
+  "integrated-r5/yaw_225_normal.png": {
+    "sha256": "419b60225b711b3fb8b6acd508078c4d27471b069bc63d933fca043eb1af6050",
+    "location": "current:2D/integrated-r5/yaw_225_normal.png"
+  },
+  "integrated-r5/yaw_225_rm.png": {
+    "sha256": "88721b86f1f78911025d881a507e0c2c7905edb44cd029177aabaedfcfcf55f7",
+    "location": "current:2D/integrated-r5/yaw_225_rm.png"
+  },
+  "integrated-r5/yaw_225_sprite.png": {
+    "sha256": "e94f67be8819d217e082110cb9a70d7bf7a712a440b1b2891660de4765416a17",
+    "location": "current:2D/integrated-r5/yaw_225_sprite.png"
+  },
+  "integrated-r5/yaw_270_base.png": {
+    "sha256": "76f22d4e38815a27571d87a872d6d3a1e31b6c92d3f3075e74b36854c7555086",
+    "location": "current:2D/integrated-r5/yaw_270_base.png"
+  },
+  "integrated-r5/yaw_270_emissive.png": {
+    "sha256": "c519e4057261f8bea087820e6457386a5eb9c4e2ff95c3bb00ac4cd745211318",
+    "location": "current:2D/integrated-r5/yaw_270_emissive.png"
+  },
+  "integrated-r5/yaw_270_normal.png": {
+    "sha256": "6bc82c0aa864395b5c0049e6b512a5daa96787bef5fd6f7b5ae2f10d01d87590",
+    "location": "current:2D/integrated-r5/yaw_270_normal.png"
+  },
+  "integrated-r5/yaw_270_rm.png": {
+    "sha256": "d152c028290f38b3fdb8baf5be8ac71d7f98d921cccb453059a73144e17142d4",
+    "location": "current:2D/integrated-r5/yaw_270_rm.png"
+  },
+  "integrated-r5/yaw_270_sprite.png": {
+    "sha256": "a7fda5699df89f53a10a78676b5192b480684fc670dbccceb948af6261ac187f",
+    "location": "current:2D/integrated-r5/yaw_270_sprite.png"
+  },
+  "integrated-r5/yaw_315_base.png": {
+    "sha256": "484fdc5c263d4f37130f56e642f73f22d46b9489468f451afa527c505e55cb16",
+    "location": "current:2D/integrated-r5/yaw_315_base.png"
+  },
+  "integrated-r5/yaw_315_emissive.png": {
+    "sha256": "46de6adf7200f93edb1a69523bb76da694f8f43d593b3daf1420a6c3cf73be0b",
+    "location": "current:2D/integrated-r5/yaw_315_emissive.png"
+  },
+  "integrated-r5/yaw_315_normal.png": {
+    "sha256": "91f0e1fc72e1bba4b456d1dd30778c9b939272d9586ebf4fc39fbd59c9b80e8a",
+    "location": "current:2D/integrated-r5/yaw_315_normal.png"
+  },
+  "integrated-r5/yaw_315_rm.png": {
+    "sha256": "b5461619b31a8e0d2413729bab8ab2ec0be8bcbb950dff3dfa80ab876e80dee9",
+    "location": "current:2D/integrated-r5/yaw_315_rm.png"
+  },
+  "integrated-r5/yaw_315_sprite.png": {
+    "sha256": "6d90e0caaff9e02348cd7df02806afa7fb2a9648d0482451ef550798c5dfd567",
+    "location": "current:2D/integrated-r5/yaw_315_sprite.png"
+  },
+  "toktogi_polished_model_preview.png": {
+    "sha256": "e830f0f77d121f6d0c8e0a8909fdd9d5b28bf4d957024a608170e293c18a7f94",
+    "location": "archive:toktogi_polished_model_preview.png"
+  },
+  "toktogi_review_fixes_comparison.png": {
+    "sha256": "28920e134205051c2bf87434dd27c1095c2c0017ecfda61251ce7cb823ed5551",
+    "location": "archive:toktogi_review_fixes_comparison.png"
+  },
+  "toktogi_rigged_basecolor.png": {
+    "sha256": "65c61fd1e41c90522bd2967a34563f0d275b6ec1b34281bbff8b72057b590fe5",
+    "location": "current:3D/textures/toktogi_rigged_basecolor.png"
+  },
+  "toktogi_sprite.blend": {
+    "sha256": "12d2fcf718a371e3c6c87c2b8904d30b32e734c7d6c77c478dd9e876dba58114",
+    "location": "archive:toktogi_sprite.blend"
+  },
+  "toktogi_sprite128.json": {
+    "sha256": "77884105e4825c7dbf9fb1e312717789821528aaca7967ec6de542d54edd39b3",
+    "location": "archive:toktogi_sprite128.json"
+  },
+  "toktogi_sprite128.png": {
+    "sha256": "30d55cb9db8416e3aea736e16ef1d33e63b54dd08f4e83a5fb096a983453944d",
+    "location": "archive:toktogi_sprite128.png"
+  },
+  "toktogi_sprite128_frames/idle_00.png": {
+    "sha256": "2849299fb8f20f3bfcdc48648ba50fd455e645a4d70fb24e57957d4fdb1d3620",
+    "location": "archive:toktogi_sprite128_frames/idle_00.png"
+  },
+  "toktogi_sprite128_frames/idle_01.png": {
+    "sha256": "7d1b6c1e31e1064cde772caabc7335bbec06c680a0303a236969b90acdb61a07",
+    "location": "archive:toktogi_sprite128_frames/idle_01.png"
+  },
+  "toktogi_sprite128_frames/idle_02.png": {
+    "sha256": "7592a2473440e892566e5b91d8ea09aa165ab15a0916fd8b2c1e16011a79ce38",
+    "location": "archive:toktogi_sprite128_frames/idle_02.png"
+  },
+  "toktogi_sprite128_frames/idle_03.png": {
+    "sha256": "7c36a846fa0b759bf5e5068724257d8738c1963b69b3a11cdc66a053ff7c8204",
+    "location": "archive:toktogi_sprite128_frames/idle_03.png"
+  },
+  "toktogi_sprite128_frames/idle_04.png": {
+    "sha256": "c138bcba4baba8b63603c4f37dce3ced90f57f4ffcc7e4254fe9a9b6b7f046b5",
+    "location": "archive:toktogi_sprite128_frames/idle_04.png"
+  },
+  "toktogi_sprite128_frames/idle_05.png": {
+    "sha256": "160b8e724b1b6c3703a3861c04a94029d1414a7fc86150e569f84f13c168530a",
+    "location": "archive:toktogi_sprite128_frames/idle_05.png"
+  },
+  "toktogi_sprite128_frames/idle_06.png": {
+    "sha256": "f65815f1afb0d3d0fc0e0f95a972ef5b645be2acb3512eb3b1c2beac564bc3b0",
+    "location": "archive:toktogi_sprite128_frames/idle_06.png"
+  },
+  "toktogi_sprite128_frames/idle_07.png": {
+    "sha256": "5010ff80ac5bcf9799cd9900ca7670d6084c5c957365f75a23737e04999968ef",
+    "location": "archive:toktogi_sprite128_frames/idle_07.png"
+  },
+  "toktogi_sprite128_frames/jump_00.png": {
+    "sha256": "2849299fb8f20f3bfcdc48648ba50fd455e645a4d70fb24e57957d4fdb1d3620",
+    "location": "archive:toktogi_sprite128_frames/idle_00.png"
+  },
+  "toktogi_sprite128_frames/jump_01.png": {
+    "sha256": "bc961331c53d156cc5ba1bcc2249e11d9b95c7d876ae8dd2f81819e79a69bc2f",
+    "location": "archive:toktogi_sprite128_frames/jump_01.png"
+  },
+  "toktogi_sprite128_frames/jump_02.png": {
+    "sha256": "0e7dfe784f920962b1fd90b2516e24775f9f3d5c849834e422b7a3d6eb0b1b2a",
+    "location": "archive:toktogi_sprite128_frames/jump_02.png"
+  },
+  "toktogi_sprite128_frames/jump_03.png": {
+    "sha256": "8ac1bbc05d066e8a93e1f3cfe1122e5cdfdb2100c12fd2232c8e593afc9a280d",
+    "location": "archive:toktogi_sprite128_frames/jump_03.png"
+  },
+  "toktogi_sprite128_frames/jump_04.png": {
+    "sha256": "7245d197e7f0c5daee9c5275ac775cd776a1b00edf57fcb9519912789c9918a0",
+    "location": "archive:toktogi_sprite128_frames/jump_04.png"
+  },
+  "toktogi_sprite128_frames/jump_05.png": {
+    "sha256": "b5424dd5287c08b5b673d3f8d9b6f4f8fe34ba0e95ee576fed313e959c0cd98e",
+    "location": "archive:toktogi_sprite128_frames/jump_05.png"
+  },
+  "toktogi_sprite128_frames/jump_06.png": {
+    "sha256": "1fb23b701a0899e05531876fd3935e2d8782191934420bf9c7620696b5ad646f",
+    "location": "archive:toktogi_sprite128_frames/jump_06.png"
+  },
+  "toktogi_sprite128_frames/jump_07.png": {
+    "sha256": "2849299fb8f20f3bfcdc48648ba50fd455e645a4d70fb24e57957d4fdb1d3620",
+    "location": "archive:toktogi_sprite128_frames/idle_00.png"
+  },
+  "toktogi_sprite128_frames/walk_00.png": {
+    "sha256": "c2338269331173082062face2513f91269ad37a04b666acbd2ed476c86fea733",
+    "location": "archive:toktogi_sprite128_frames/walk_00.png"
+  },
+  "toktogi_sprite128_frames/walk_01.png": {
+    "sha256": "27cd8d92474ee07822e6b1e9d2bbda8f7ba0d6ed28ff572fe208d1b05edcbb98",
+    "location": "archive:toktogi_sprite128_frames/walk_01.png"
+  },
+  "toktogi_sprite128_frames/walk_02.png": {
+    "sha256": "d31deaa12bfeb5ecb5244d467c9fd5beecd89e1f8fde162b094643a6b637457f",
+    "location": "archive:toktogi_sprite128_frames/walk_02.png"
+  },
+  "toktogi_sprite128_frames/walk_03.png": {
+    "sha256": "0abd112aa0fb8d14c7ca96d1ab4ba43638a27f845445912cd0ab73144336211a",
+    "location": "archive:toktogi_sprite128_frames/walk_03.png"
+  },
+  "toktogi_sprite128_frames/walk_04.png": {
+    "sha256": "1767919897ed350b0986bd7d5443b92b1a7f0ed0f701d893ecf1bcded79509f6",
+    "location": "archive:toktogi_sprite128_frames/walk_04.png"
+  },
+  "toktogi_sprite128_frames/walk_05.png": {
+    "sha256": "c196f85eeb0850f79e2ba8084cdf031fb07e1ecf8df32804bf04ee151984b80c",
+    "location": "archive:toktogi_sprite128_frames/walk_05.png"
+  },
+  "toktogi_sprite128_frames/walk_06.png": {
+    "sha256": "ca3a7908e1476f6f1133dc21b2b081d4cae73167e85b6f80d2832df6b7168495",
+    "location": "archive:toktogi_sprite128_frames/walk_06.png"
+  },
+  "toktogi_sprite128_frames/walk_07.png": {
+    "sha256": "fea19e1cb600889b80c1a25d1fec0b3801ef24d78c60d5e24f5e98a9b3df39bb",
+    "location": "archive:toktogi_sprite128_frames/walk_07.png"
+  },
+  "toktogi_sprite128_improvements.json": {
+    "sha256": "68790256a417a7fab1ad0ab5636b61f6e541ab2d7d4048d36d7361fcc9d1e67b",
+    "location": "archive:toktogi_sprite128_improvements.json"
+  },
+  "toktogi_sprite128_package.zip": {
+    "sha256": "8366b325c8d50b7dce94983e6fdd016a0214ab84a083806f6b95797b7d78d55a",
+    "location": "archive:toktogi_sprite128_package.zip"
+  },
+  "toktogi_sprite128_palette.png": {
+    "sha256": "8d50c5eebb7b99221f814d4519dee37091071d46b5ed19e21cc5d7cf7b4245f9",
+    "location": "archive:toktogi_sprite128_palette.png"
+  },
+  "toktogi_sprite128_preview.png": {
+    "sha256": "5585dcc02067e99d439aade6804514050ff09467ddbe0de03d910d717a9b11f0",
+    "location": "archive:toktogi_sprite128_preview.png"
+  },
+  "toktogi_sprite128_preview_still.png": {
+    "sha256": "3d223eb48643bcd12a56301c773bcd837000bcbd42d184bc56aef301c3a170af",
+    "location": "archive:toktogi_sprite128_preview_still.png"
+  },
+  "toktogi_sprite128_README.txt": {
+    "sha256": "1887d3b7621d6722e3cdb9d19336868ef6c39c5a22eead1f8364cc4c3c0ec929",
+    "location": "archive:toktogi_sprite128_README.txt"
+  },
+  "toktogi_sprite128_validation.json": {
+    "sha256": "3116173f040f11f7cadaebfbadb7696560face9368868d569e5f7801dd320439",
+    "location": "archive:toktogi_sprite128_validation.json"
+  },
+  "ToktogiMotionPreview.html": {
+    "sha256": "996d66d7b09010882c81c7564bc8f5962c1268a087553216a118bc4ae1add036",
+    "location": "current:ToktogiMotionPreview.html"
+  }
+}

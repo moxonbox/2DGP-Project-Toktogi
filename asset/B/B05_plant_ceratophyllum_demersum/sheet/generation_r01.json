@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model_identifier": null,
+  "seed": null,
+  "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B05 Ceratophyllum demersum short submerged stem fragment: ROOTLESS, four nodes, each with a whorl of 6 narrow green leaves that fork twice. A bushy underwater bottlebrush silhouette made of forked leaves. No broad leaves, no flowers, no roots. Whole size is a design variable, do not print biological dimensions.",
+  "input_spec": "../document/plant_ceratophyllum_demersum_model.md",
+  "input_spec_sha256": "ab6d0708405b659af71d9b6bfd1c4dcbbcea812a52a664de2a54333f0118f844",
+  "style_reference": "../../_production/reference/C011_idle.png",
+  "style_reference_sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+  "style_input_delivery": "Reference displayed in conversation; new-image call omitted explicit image-path arguments.",
+  "output": "plant_ceratophyllum_demersum_sheet_r01.png",
+  "output_sha256": "ef6d21d5c38b17857a382b55a0210725e7f3a959467e26a3f1c30c4e803cd01d",
+  "review": "conditional_reference_with_production_spec_corrections",
+  "correction": "생성 시트의 겹친 잎 수를 세어 생물 형질로 확정하지 않는다. 4마디·6돌려남·2회 분지를 제작 계약으로 고정한다.",
+  "selection_reason": "생물 명세의 큰 형태와 프로젝트 카툰 톤 참고. 실제 정투영·기관 수는 제작 계약과 Blender 출력이 우선한다.",
+  "license_note": "내장 생성 도구 산출물. 외부 사진·외부 모델을 복제하거나 새로 배포하지 않았다. 원자료의 법적 권리는 별도 검토하지 않았다."
+}

@@ -1,0 +1,171 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "frond",
+      "vertices": 266,
+      "triangles": 528
+    },
+    {
+      "name": "root_01",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_02",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_03",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_04",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_05",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_06",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "root_07",
+      "vertices": 32,
+      "triangles": 60
+    },
+    {
+      "name": "vein_01",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_02",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_03",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_04",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_05",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_06",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "name": "vein_07",
+      "vertices": 18,
+      "triangles": 32
+    }
+  ],
+  "triangles": 1172,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        432,
+        2384
+      ],
+      "margin": 14,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 81356,
+      "seconds": 1.098293199960608
+    },
+    "front": {
+      "cell": [
+        384,
+        2496
+      ],
+      "margin": 17,
+      "normal_error": 0.006331360245143802,
+      "surface_pixels": 52354,
+      "seconds": 0.7683979999856092
+    },
+    "back": {
+      "cell": [
+        384,
+        2496
+      ],
+      "margin": 17,
+      "normal_error": 0.006278843038372117,
+      "surface_pixels": 52354,
+      "seconds": 0.7680444999714382
+    },
+    "left": {
+      "cell": [
+        448,
+        2496
+      ],
+      "margin": 14,
+      "normal_error": 0.006464570847540818,
+      "surface_pixels": 57767,
+      "seconds": 0.9538634000346065
+    },
+    "right": {
+      "cell": [
+        448,
+        2496
+      ],
+      "margin": 14,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 57767,
+      "seconds": 0.9076053000171669
+    },
+    "top": {
+      "cell": [
+        448,
+        384
+      ],
+      "margin": 14,
+      "normal_error": 0.005660000888458305,
+      "surface_pixels": 112228,
+      "seconds": 0.44416110002202913
+    },
+    "underside": {
+      "cell": [
+        448,
+        384
+      ],
+      "margin": 14,
+      "normal_error": 0.005660000888458305,
+      "surface_pixels": 112228,
+      "seconds": 0.4401700999587774
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_spirodela_polyrhiza_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_spirodela_polyrhiza_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_spirodela_polyrhiza_sheet_r01.png",
+      "sha256": "7f392e296454ea684901b87d1c9487709f8d390d6a6885055754c2deb6ec4344",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 110545920,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

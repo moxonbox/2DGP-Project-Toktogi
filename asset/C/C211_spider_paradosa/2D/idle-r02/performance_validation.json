@@ -1,0 +1,57 @@
+{
+  "device": {
+    "system": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD RYZEN AI MAX+ 395 w/ Radeon 8060S",
+    "python": "3.13.15",
+    "pygame": "2.6.1"
+  },
+  "scope": "left view, one C211 actor, 640px, 120 frames at 60fps timeline; timings are measured, not paced",
+  "load_verify_ms": 213.82060000905767,
+  "warm_24_frames_ms": 6404.36210000189,
+  "fixed_light_cached": {
+    "p95_ms": 4.174800007604063,
+    "max_ms": 4.628099966794252,
+    "mean_ms": 3.5366499975983365,
+    "frames": 120
+  },
+  "moving_light_cpu": {
+    "p95_ms": 287.7570000127889,
+    "max_ms": 318.94230004400015,
+    "mean_ms": 183.01467083219904,
+    "frames": 120
+  },
+  "target_display_ms": 16.7,
+  "display_backend": "SDL dummy software display",
+  "includes": [
+    "CPU decode when sample changes",
+    "CPU shading for moving light",
+    "RGBA transfer to SDL surface",
+    "software blit/flip"
+  ],
+  "not_measured": [
+    "GPU upload",
+    "real window compositor",
+    "game physics/AI"
+  ],
+  "memory": {
+    "raw_unique_cells_bytes": 471859200,
+    "atlas_rgba_bytes": 477775872,
+    "cached_fixed_rgba_bytes": 39321600,
+    "peak_working_set_bytes": 154714112,
+    "browser_overhead": "embedded base64/decoded atlases/canvas copies additional, not measured"
+  },
+  "cache_key_contract": [
+    "asset_id",
+    "revision",
+    "clip",
+    "view",
+    "sample",
+    "light parameters",
+    "material parameters",
+    "flat_normal",
+    "emission"
+  ],
+  "fixed_light_cpu_budget_pass": true,
+  "moving_light_cpu_budget_pass": false,
+  "game_ready": false
+}

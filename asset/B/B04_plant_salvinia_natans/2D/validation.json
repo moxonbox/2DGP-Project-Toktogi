@@ -1,0 +1,366 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "floating_leaf_L",
+      "vertices": 266,
+      "triangles": 528
+    },
+    {
+      "name": "floating_leaf_R",
+      "vertices": 266,
+      "triangles": 528
+    },
+    {
+      "name": "hair_-1_0_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_0_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_0_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_1_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_1_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_1_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_2_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_2_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_2_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_3_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_3_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_3_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_4_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_4_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_-1_4_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_0_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_0_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_0_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_1_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_1_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_1_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_2_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_2_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_2_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_3_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_3_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_3_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_4_0",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_4_1",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "hair_1_4_2",
+      "vertices": 10,
+      "triangles": 16
+    },
+    {
+      "name": "joining_stem",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_0_-1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_0_1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_1_-1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_1_1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_2_-1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_2_1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_3_-1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_3_1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_4_-1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_branch_4_1",
+      "vertices": 24,
+      "triangles": 44
+    },
+    {
+      "name": "submerged_leaf_fork_0_-1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_0_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_1_-1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_1_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_2_-1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_2_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_3_-1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_3_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_4_-1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_fork_4_1",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "submerged_leaf_mid",
+      "vertices": 16,
+      "triangles": 28
+    }
+  ],
+  "triangles": 2328,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        1232,
+        688
+      ],
+      "margin": 15,
+      "normal_error": 0.006526487833136807,
+      "surface_pixels": 211447,
+      "seconds": 1.2135072000091895
+    },
+    "front": {
+      "cell": [
+        448,
+        576
+      ],
+      "margin": 14,
+      "normal_error": 0.006216941482118599,
+      "surface_pixels": 38776,
+      "seconds": 0.45750100002624094
+    },
+    "back": {
+      "cell": [
+        448,
+        576
+      ],
+      "margin": 14,
+      "normal_error": 0.00633136024514358,
+      "surface_pixels": 38776,
+      "seconds": 0.5231483000097796
+    },
+    "left": {
+      "cell": [
+        1408,
+        576
+      ],
+      "margin": 15,
+      "normal_error": 0.006464570847540818,
+      "surface_pixels": 129295,
+      "seconds": 0.913953399984166
+    },
+    "right": {
+      "cell": [
+        1408,
+        576
+      ],
+      "margin": 15,
+      "normal_error": 0.006278843038372006,
+      "surface_pixels": 129295,
+      "seconds": 0.8462577000027522
+    },
+    "top": {
+      "cell": [
+        1408,
+        448
+      ],
+      "margin": 14,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 448624,
+      "seconds": 1.3402913000318222
+    },
+    "underside": {
+      "cell": [
+        1408,
+        448
+      ],
+      "margin": 14,
+      "normal_error": 0.006453608379858755,
+      "surface_pixels": 448624,
+      "seconds": 1.2689174999832176
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_salvinia_natans_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_salvinia_natans_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_salvinia_natans_sheet_r01.png",
+      "sha256": "2b4c2e12f31b6eadd874399864ad1b284498be08c177d6701ec2511c9ef98f4a",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 84945920,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

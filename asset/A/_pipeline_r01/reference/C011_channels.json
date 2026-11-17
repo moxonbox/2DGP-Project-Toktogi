@@ -1,0 +1,47 @@
+{
+  "base": {
+    "format": "RGBA8 PNG",
+    "transfer": "sRGB RGB, linear coverage A",
+    "alpha": "straight",
+    "body": "UV baked albedo input; no scene lighting",
+    "eye": "dark base; use emissive pass"
+  },
+  "normal": {
+    "format": "RGBA8 PNG",
+    "transfer": "linear UNORM",
+    "alpha": "255; use Base A for coverage"
+  },
+  "rm": {
+    "format": "RGBA8 PNG",
+    "transfer": "linear UNORM",
+    "channels": "R roughness, G metallic, B zero, A 255",
+    "source_values": [
+      [
+        0.7699999809265137,
+        0.0
+      ],
+      [
+        0.47999998927116394,
+        0.0
+      ],
+      [
+        0.5,
+        0.0
+      ]
+    ],
+    "coverage": "Base A"
+  },
+  "emissive": {
+    "format": "RGBA8 PNG",
+    "transfer": "linear UNORM",
+    "scale": 1.0,
+    "coverage": "Base A"
+  },
+  "sprite": {
+    "format": "RGBA8 PNG",
+    "transfer": "sRGB",
+    "alpha": "straight",
+    "role": "display preview; palette and external outline after lighting",
+    "postprocess": "fill enclosed 1-2 px holes in display outline only"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "B03",
+  "name": "plant_wolffia_arrhiza",
+  "folder": "B03_plant_wolffia_arrhiza",
+  "selected_length_mm": 1,
+  "presentation_factor": 1,
+  "measure_kind": "frond_length",
+  "game_scale": 1,
+  "scale_policy": "display_relative",
+  "details": {
+    "root_count": 0
+  },
+  "sheet_review": "reviewed_with_geometry_corrections",
+  "revision": "background-r01",
+  "schema": 1,
+  "length_bu": 0.965396,
+  "bounds_bu": [
+    [
+      -0.4826977550983429,
+      -0.3378885090351105,
+      -0.10812435299158096
+    ],
+    [
+      0.48269790410995483,
+      0.33788859844207764,
+      0.20080237090587616
+    ]
+  ],
+  "anchors_bu": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "frond_center": [
+      0,
+      0,
+      0
+    ]
+  },
+  "triangles": 528,
+  "mesh_count": 1,
+  "bone_count": 0,
+  "root_count": 0,
+  "axis": "+X leaf/stem extent, +Z up",
+  "texture": "textures/plant_wolffia_arrhiza_basecolor_r01.png",
+  "texture_size": [
+    512,
+    512
+  ],
+  "sheet": "../sheet/plant_wolffia_arrhiza_sheet_r01.png",
+  "blender": "5.3.0",
+  "sheet_sha256": "74245adc14b1d003eafa787690492535641948c6513480f36ca9257316adfad9",
+  "static": true,
+  "collision": null,
+  "interactive": false,
+  "animation_status": "not_applicable_static_B",
+  "reference_size_mm": 1.0,
+  "bu_per_reference_body": 0.965396,
+  "bu_per_pixel": 0.01390625,
+  "palette_roles": {
+    "leaf": "82a548",
+    "vein": "b6c96c",
+    "stem": "61783d",
+    "root": "b4a079",
+    "underside": "825476",
+    "hair": "c8d58d",
+    "flower": "e5b5c7",
+    "pollen": "f3ddbc",
+    "silt": "837464",
+    "stratum": "625548",
+    "gravel": "9b9b8b",
+    "detritus": "54493d",
+    "film": "8c9052",
+    "diatom": "bd994f",
+    "striation": "8b773e"
+  },
+  "uv_policy": "16 padded tiles; intentional reuse per material; no asymmetric measured texture",
+  "source_document_status": "Original biological unknowns remain null; production dimensions are design choices."
+}

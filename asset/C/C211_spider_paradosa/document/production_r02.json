@@ -1,0 +1,1956 @@
+{
+  "revision": "idle-r02",
+  "date": "2026-11-17T19:40:28.270395+09:00",
+  "scope": "selected P. agrestis female scale, style and idle correction; standalone preview only",
+  "contract": {
+    "asset_id": "C211_spider_paradosa",
+    "object_id": "spider_pardosa",
+    "revision": "idle-r02",
+    "pipeline": {
+      "version": "2.2",
+      "path": "../../../document/markdown/AssetPipeLine.md",
+      "sha256": "a603f2bc4594637413d3db9b79590136e0001bd8de63001a2da7ebebaf0484ef"
+    },
+    "size": {
+      "version": "1.1",
+      "path": "../../../document/markdown/AssetSize.md",
+      "sha256": "b3277c28c89025b787f215a913fbb078d2d87a34d1f6628b561bac49c8a8c466"
+    },
+    "selection": {
+      "taxon": "Pardosa agrestis",
+      "sex": "female",
+      "stage": "adult",
+      "body_length_mm": 5.0,
+      "size_reference": "AssetSize S2, approximately 5 mm",
+      "reference_toktogi_mm": 1.0,
+      "biological_ratio": 5.0,
+      "authoring_reference_body_bu": 0.965396,
+      "staging_factor": 1.0,
+      "target_body_bu": 4.82698,
+      "approved_by": "user in this chat"
+    },
+    "style_reference": {
+      "asset_id": "C011_toktogi",
+      "revision": "integrated-r5",
+      "unit_pixels": 71.91011235955057,
+      "outline_rgb": [
+        34,
+        49,
+        59
+      ],
+      "outline_px": 2,
+      "ambient": 0.34,
+      "power": 0.82,
+      "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec"
+    },
+    "collision_profile": null,
+    "identifier_mapping": {
+      "folder_id": "C211_spider_paradosa",
+      "asset_id": "C211_spider_paradosa",
+      "object_id": "spider_pardosa",
+      "variation": "adult_female_stylized",
+      "clip": "idle_scan",
+      "phase": "mid",
+      "sample_start": 0,
+      "revision": "idle-r02",
+      "number_assignment": "C2xx preserved; new hexadecimal numbering deferred by AssetLabelRule"
+    },
+    "license_scope": {
+      "new_mesh_texture_animation": "generated for this project",
+      "sheet": "GPT Image output generated for this project",
+      "external_biology": "linked text sources, no external photo redistributed",
+      "C011_reference": "existing project asset used for internal comparison; upstream licensing inherited"
+    }
+  },
+  "input_specs": {
+    "document/spider_pardosa.md": "74f1bfb0316616b6c2c07881a4c096a3193029f22929cd256e3ca8980ea1fa83",
+    "document/spider_pardosa_model.md": "dabef92dd4619f0f1269f9d600f407402bbe381356d1be7ba5f9d5a0c81d2719",
+    "document/spider_pardosa_movement.md": "181327352ab53503aed3b58c291907b714ee7ba2dbdcc172924bea43cd1cfe5d"
+  },
+  "prior_revision": "document/production_r01.json",
+  "sheet": {
+    "path": "sheet/spider_pardosa_sheet_r02.png",
+    "sha256": "b70497f71948de12bde16a55f331c10bcc1c4c84393e1b48e4dc0cba5ac310ab",
+    "tool": "built-in GPT Image imagegen",
+    "model_version": null,
+    "seed": null,
+    "generation_date": "2026-11-17",
+    "prompt": "sheet/spider_pardosa_sheet_r02_prompt.txt",
+    "prompt_sha256": "b6f9fbc36a8ef4eb79a90b9e46e1eaaca2882f22b30b46f6aa25153057c1e46b",
+    "references": [
+      {
+        "path": "sheet/spider_pardosa_sheet_r01.png",
+        "sha256": "065f5cafb65fd326984dd059cf88cb2422179bc44c1eb6b56f43137a8ac150c4"
+      },
+      {
+        "path": "../C011_toktogi/2D/integrated-r5/previews/idle.png",
+        "sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c"
+      },
+      {
+        "path": "sheet/references/c011_blender_six_views.png",
+        "sha256": "4506b3487f4e9a651ec6cbae5331ef44b824096dc1ff903313f0ab4e219cd602"
+      }
+    ],
+    "panel_order": [
+      "front",
+      "left",
+      "right",
+      "rear",
+      "top",
+      "bottom"
+    ],
+    "review": "eight walking legs and 4-2-2 eyes checked; overlapping joints follow model spec; muted broad markings and thicker legs selected",
+    "art_direction": "genus-level anatomy with selected species size; color, proportions and exact joints are stylized, not taxonomic measurements"
+  },
+  "authoring": {
+    "blender": "5.3.0",
+    "method": "isolated background CLI",
+    "mcp_this_revision": "connection failed at 127.0.0.1:9876",
+    "mcp_prior_revision": "background MCP 120-second timeout",
+    "computer_use": false,
+    "model": "3D/spider_pardosa_idle_r02.blend",
+    "model_sha256": "7d95639f87ee29230490b7612b5ad440754b713e3cabfaa8f3697c5becb68443",
+    "embedded_tools": [
+      "build_spider.py",
+      "export_idle.py",
+      "verify_saved.py",
+      "png_codec.py",
+      "select_idle.py"
+    ]
+  },
+  "sources": {
+    "pipeline": {
+      "version": "2.2",
+      "path": "../../../document/markdown/AssetPipeLine.md",
+      "sha256": "a603f2bc4594637413d3db9b79590136e0001bd8de63001a2da7ebebaf0484ef"
+    },
+    "size": {
+      "version": "1.1",
+      "path": "../../../document/markdown/AssetSize.md",
+      "sha256": "b3277c28c89025b787f215a913fbb078d2d87a34d1f6628b561bac49c8a8c466"
+    },
+    "renderer": {
+      "path": "../../../toktogi/prototype/lighting.py",
+      "sha256": "483bd40c7bcfffbd79003d6e59dc2c7dce73e92e47a4d89fca2647961ad0a021"
+    },
+    "reference_blend": {
+      "path": "../C011_toktogi/3D/toktogi_unified.blend",
+      "sha256": "fc6c9e29bc8c19ed73a5d33d1abea5b9fb1a2775e166341b1f76336d308d8399"
+    }
+  },
+  "tools": {
+    "3D/tools/benchmark_idle.py": "1861fa0eb8cc3a46f8c34c13c08d5b0f742356f8b38cdc188b548306743a29e9",
+    "3D/tools/build_spider.py": "5eb57d09d05e90541c847c3a554a756aecda2833d37d9fa73aad88f943afd100",
+    "3D/tools/compare_assets.py": "19a3c6c6dbd9b4e38d8c9defe795131cbd50e54b589d36c6d634224fc1bd014d",
+    "3D/tools/export_idle.py": "6cf3160e1028ae6a4ef4e67970e3d0eff0c59e0adc5588faff8ffd1f857d3c8e",
+    "3D/tools/idle_bundle.py": "0261b46dd5b42b86fa16bfbf95547a3beb0a2829b4bc8690f2302b07e5eb06c0",
+    "3D/tools/package_idle.py": "dbdec3a377c28c474638ffdc7cdcec2243e69d43713555b18f208aec1e467584",
+    "3D/tools/png_codec.py": "f487b88a586078e48a0e61577def6505171243496ff27ba59f82142076fdec7c",
+    "3D/tools/preview_template.html": "d3ea0f23a59e416e3abb0a0c5c7682ec4a34ab4c1cc8576d3d615a2eae84ea0e",
+    "3D/tools/select_idle.py": "18e1ffc05097096d19926b663f503016e99e9a0dc749ae975b9c5e3e6f9cd0e3",
+    "3D/tools/shared_lighting.py": "fca18e207a327e2060c5daa15ba124f78edf6268e215adc98ed4e7b5c276352e",
+    "3D/tools/verify_bundle.py": "55233ebf9b194e97d344ea98cf5915804ce6a17a70a6c33e176177d13418a2ae",
+    "3D/tools/verify_preview.mjs": "391efef0621ff94b1a8fde5fb09c49af75b08170ceeeb4c07738702d733f140d",
+    "3D/tools/verify_saved.py": "44264451e75bc78adb671b68ab554072bc2838f7ec5037750121ea497341fc7b",
+    "3D/tools/verify_style.py": "b79b02f451b34655085bece7c0b821e93b8fdd4a2f3937f3e20d946977dcac2d"
+  },
+  "decisions": {
+    "body_measurement": "prosoma front to abdomen rear local Y; appendages and eyes excluded",
+    "measurement_kind": "relative staging; not 1BU=1m scientific scale",
+    "reference_individual": "S. aquaticus adult female maximum approximately 1mm, not mean",
+    "camera_offset": "left -12px/right +12px along camera X balances silhouette margins at unchanged pixel density",
+    "export_fix": "ray length from evaluated maximum camera depth + 1BU; former 20BU cut far-side legs after scaling",
+    "contact": "lowest evaluated tarsus vertex; 384 projected foot markers checked against Base coverage",
+    "shading": "isolated proportional studio for Blend preview; shared C011 CPU shader and common light for comparison",
+    "artistic_exclusions": [
+      "fine setae",
+      "egg sac",
+      "young",
+      "species-identification microdetails"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "AssetPipeLine §2/§3",
+      "state": "verified",
+      "expected": "explicit identifiers, sources and revision",
+      "evidence": [
+        "document/source_contract.json",
+        "2D/idle-r02/manifest.json"
+      ]
+    },
+    {
+      "id": "AssetSize v1.1 / AssetPipeLine §7",
+      "state": "verified",
+      "expected": "5mm / 1mm maximum, 5x body at same density, all view bounds",
+      "evidence": [
+        "3D/style_validation.json",
+        "2D/idle-r02/size_validation.json"
+      ]
+    },
+    {
+      "id": "AssetPipeLine §4/§5/§8",
+      "state": "implemented_and_inspected",
+      "expected": "rounded forms, broad restrained markings, matched outline and common-light comparison",
+      "evidence": [
+        "sheet/spider_pardosa_sheet_r02.png",
+        "comparison/scale_color_left.png",
+        "comparison/scale_gray_left.png",
+        "comparison/shared_light_left.png",
+        "comparison/comparison_validation.json"
+      ]
+    },
+    {
+      "id": "AssetPipeLine §6/§9",
+      "state": "verified_with_limits",
+      "expected": "saved model, loop, seeking, support contacts, sampled cross-leg intersections",
+      "evidence": [
+        "3D/saved_validation.json",
+        "3D/style_validation.json"
+      ],
+      "limits": "cross-leg surfaces every 4 native frames, intentional attachments excluded; UV checker visual review pending"
+    },
+    {
+      "id": "AssetPipeLine §10/§11 bundle",
+      "state": "verified_standalone",
+      "expected": "real 640px/6-pass load and malformed input rejection",
+      "evidence": [
+        "2D/idle-r02/bundle_validation.json",
+        "2D/idle-r02/package_validation.json"
+      ]
+    },
+    {
+      "id": "AssetPipeLine §10 performance",
+      "state": "measured_not_game_ready",
+      "expected": "separate load/warm and 120-frame p95/max, target16.7ms",
+      "evidence": [
+        "2D/idle-r02/performance_validation.json"
+      ],
+      "moving_light_cpu_budget_pass": false
+    },
+    {
+      "id": "AssetPipeLine §3/§11 restore",
+      "state": "verified",
+      "expected": "7z old bytes, archive/current map and full reconstruction hashes",
+      "evidence": [
+        "3D/versions/restore_map_r01.json"
+      ]
+    },
+    {
+      "id": "AssetPipeLine §10/§11 game gate",
+      "state": "pending",
+      "expected": "game loader/state/collision/transition/GPU/Pico2D/Bloom integration",
+      "reason": "requested scope is asset correction through idle; existing game accepts C011 128px format only"
+    }
+  ],
+  "evidence": {
+    "3D/saved_validation.json": {
+      "sha256": "48bba784c8b2151339e1ddf8ddc2f12907f5cc2f60dd2d8c173f2c1dd55b4374",
+      "result": {
+        "status": "PASS",
+        "blender_version": "5.3.0",
+        "saved_file": "spider_pardosa_idle_r02.blend",
+        "source_blend_sha256": "7d95639f87ee29230490b7612b5ad440754b713e3cabfaa8f3697c5becb68443",
+        "measured": {
+          "triangles": 9192,
+          "vertices": 4750,
+          "bones": 77
+        },
+        "eye_layout": [
+          4,
+          2,
+          2
+        ],
+        "legs": 8,
+        "ik_chains": 8,
+        "loop_max_vertex_error_bu": 1.0509058367245299e-17,
+        "seek_max_vertex_error_bu": 0.0,
+        "between_key_samples": 193,
+        "max_foot_target_drift_bu": 4.06452219221734e-06,
+        "max_sole_vertex_drift_bu": 0.0006758624416399956,
+        "minimum_mesh_height_bu": -7.737427949905396e-06,
+        "cross_leg_surface_intersections": [],
+        "uv_zero_area_faces": 0,
+        "unweighted_vertices": 0,
+        "missing_external_files": [],
+        "limitations": [
+          "Cross-leg test at 4 native-frame spacing; contact every 0.5 frame.",
+          "UV islands are per-part padded charts. Texture density intentionally varies by anatomical part.",
+          "This verifies idle only; game physics, AI and other motion transitions remain outside this revision."
+        ]
+      }
+    },
+    "3D/style_validation.json": {
+      "sha256": "dcc15c7fe4809e7b3edaab6b1f0e8084afc0a007eec9fed431e27a24b720dc76",
+      "result": {
+        "status": "PASS",
+        "reference": "AssetSize v1.1, C011 idle/left body proxy .965396 BU",
+        "body_measurement": "prosoma front to abdomen rear along local Y, excludes appendages and eyes",
+        "body_length_bu": 4.826979875564575,
+        "ratio_to_toktogi": 4.999999871104267,
+        "body_length_mm": 5.0,
+        "stage": "adult female",
+        "taxon": "Pardosa agrestis",
+        "art_scale": 1.0,
+        "full_bounds_bu": [
+          7.660784006118774,
+          6.253235816955566,
+          2.1217585698186667
+        ],
+        "pixel_density": 71.91011235955057,
+        "body_centroid_range_bu": [
+          0.06439556454138531,
+          0.0011681398821901945,
+          0.04736461206365017
+        ],
+        "body_centroid_range_px": [
+          4.630692281627708,
+          0.08400107017996904,
+          3.4059945753636076
+        ],
+        "loop_velocity_discontinuity_bu_s": 0.02156421911568978,
+        "loop_velocity_tolerance_bu_s": 0.025,
+        "sample_visits_at_four_start_phases": {
+          "10": [
+            20,
+            20,
+            20,
+            20
+          ],
+          "15": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "20": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "30": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "60": [
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "reference_idle_s": 1.6,
+        "spider_idle_s": 2,
+        "rhythm_reason": "slower grounded scanning with stable eight-foot support; species speed is a design choice"
+      }
+    },
+    "2D/idle-r02/export_validation.json": {
+      "sha256": "e84cf858ac130e66e1b4ddf70657f381177b7536fbc98524fc71802a67d2ca7f",
+      "result": {
+        "minimum_margin_px": 16,
+        "normal_error_max": 0.006650333382466123,
+        "visible_eye_pixel_counts": {
+          "left/0": 1533,
+          "left/1": 1535,
+          "left/2": 1539,
+          "left/3": 1542,
+          "left/4": 1538,
+          "left/5": 1537,
+          "left/6": 1543,
+          "left/7": 1535,
+          "left/8": 1537,
+          "left/9": 1546,
+          "left/10": 1539,
+          "left/11": 1538,
+          "left/12": 1532,
+          "left/13": 1531,
+          "left/14": 1529,
+          "left/15": 1536,
+          "left/16": 1519,
+          "left/17": 1522,
+          "left/18": 1531,
+          "left/19": 1520,
+          "left/20": 1529,
+          "left/21": 1530,
+          "left/22": 1526,
+          "left/23": 1532,
+          "right/0": 1533,
+          "right/1": 1532,
+          "right/2": 1526,
+          "right/3": 1530,
+          "right/4": 1531,
+          "right/5": 1520,
+          "right/6": 1531,
+          "right/7": 1522,
+          "right/8": 1519,
+          "right/9": 1535,
+          "right/10": 1529,
+          "right/11": 1531,
+          "right/12": 1532,
+          "right/13": 1538,
+          "right/14": 1539,
+          "right/15": 1546,
+          "right/16": 1538,
+          "right/17": 1535,
+          "right/18": 1543,
+          "right/19": 1537,
+          "right/20": 1537,
+          "right/21": 1542,
+          "right/22": 1539,
+          "right/23": 1535
+        },
+        "frame_count": 48,
+        "coverage_equal": true,
+        "unique_sprite_frames": {
+          "left": 24,
+          "right": 24
+        },
+        "scope": "2D export and numeric material checks",
+        "status": "PASS",
+        "foot_marker_surface_check": "all 384 foot projections within 3px of Base coverage",
+        "ray_depth": "evaluated mesh maximum camera depth + 1 BU"
+      }
+    },
+    "2D/idle-r02/size_validation.json": {
+      "sha256": "5079378cd0c1d7bce25ba26f8f9a8f13ba369aae5c30ae978976bc22ca997772",
+      "result": {
+        "cell_size": [
+          640,
+          640
+        ],
+        "required_margin_px": 8,
+        "bbox_convention": "left, top, right-exclusive, bottom-exclusive",
+        "views": {
+          "left": {
+            "samples": [
+              {
+                "index": 0,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 1,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 2,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 3,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 4,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 5,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 6,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 7,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 8,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 9,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 10,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 11,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 12,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 13,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 14,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 15,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 16,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 17,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 18,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 19,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 20,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 21,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 22,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 23,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              }
+            ],
+            "minimum_margin_px": 16,
+            "sprite_wh_range": [
+              [
+                608,
+                608
+              ],
+              [
+                297,
+                298
+              ]
+            ],
+            "base_wh_range": [
+              [
+                604,
+                604
+              ],
+              [
+                293,
+                294
+              ]
+            ],
+            "pivot": [
+              331.9999313354492,
+              439.9999237060547
+            ]
+          },
+          "right": {
+            "samples": [
+              {
+                "index": 0,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 1,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 2,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 3,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 4,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 5,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 6,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 7,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 8,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 9,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 10,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 11,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 12,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 13,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 14,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 15,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 16,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 17,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 18,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 19,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 20,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 21,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 22,
+                "sprite_bbox": [
+                  16,
+                  253,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  255,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              },
+              {
+                "index": 23,
+                "sprite_bbox": [
+                  16,
+                  254,
+                  624,
+                  551
+                ],
+                "base_bbox": [
+                  18,
+                  256,
+                  622,
+                  549
+                ],
+                "margin_px": 16
+              }
+            ],
+            "minimum_margin_px": 16,
+            "sprite_wh_range": [
+              [
+                608,
+                608
+              ],
+              [
+                297,
+                298
+              ]
+            ],
+            "base_wh_range": [
+              [
+                604,
+                604
+              ],
+              [
+                293,
+                294
+              ]
+            ],
+            "pivot": [
+              307.99999237060547,
+              440.0000762939453
+            ]
+          }
+        },
+        "status": "PASS"
+      }
+    },
+    "2D/idle-r02/package_validation.json": {
+      "sha256": "100e905aa5d12b2b8959432d55c5c75bd2f22492cc73f787850a548e78937dcf",
+      "result": {
+        "status": "PASS",
+        "files": {
+          "left_sprite.png": "570a2ae7d0e43d91d7d6e9f8baf4b328ce4aecfb9d56b871e35e42f5c0cbf2f4",
+          "left_base.png": "91a2878764676250c128319b133345794ccdfca8dff74925a1c90e016130ad01",
+          "left_normal.png": "06e13caf59cc238e40b6f7c1304e0b6a31488300bf263b6f8d6208c04d8ad790",
+          "left_ao.png": "8b01321e1978546bd2f1e20d024328bc65a12522520df691851207462caeece5",
+          "left_rm.png": "a2a44813c0ba56a4c33defb751111fa207c98ecfe2e308dc88f3289d9ddf5137",
+          "left_emissive.png": "ee6d5ad1bf8e2fd2ad8c89ce67eb2c0e94691374b14b63ebfd8d0515f13282b6",
+          "idle_scan_left.png": "5a0f64149777f25970c015b5b85941e64e8b13f01b2a1b47f84982ce8dbc4f12",
+          "idle_scan/left/0.png": "aca3183f36ee0ad016ff063e1f68e05ba95eb0d167c485ae116868fe32693633",
+          "idle_scan/left/1.png": "1d43a87d7897e907986aa41728a0e766f73dbc41ad15c79d6bafba5249b526f1",
+          "idle_scan/left/2.png": "6486687caf3cc310ba0c90d20a5be019fb3da0761a0d60c93cca504d6fe89e95",
+          "idle_scan/left/3.png": "f7b85659f4463c169ab9af25498f42b860fa3fc0052b792915a74c426282c69e",
+          "idle_scan/left/4.png": "534ca08148b396474af377e0468a55ecf07c5d6c739513f83034f99796aa5021",
+          "idle_scan/left/5.png": "3ff91712dc741be02dd0535abd62679a41ef279089ab8f44980c3c30158cc0b8",
+          "idle_scan/left/6.png": "f213f240aebe13a0c5a1b9b27502be2052cd31e3c0641ec6c7fc7c125932334f",
+          "idle_scan/left/7.png": "cef2cad564aab443a1079a353ad1d14c382cb1721fcbd75caffa690055b09420",
+          "idle_scan/left/8.png": "b41384becc0b9156ef0e9295816efbb123ccd7effccae78e0f239672c5a8f761",
+          "idle_scan/left/9.png": "d60ee13cebd5b2a5e6aee68917241de7c5500c1de949f803ab4fa993444565de",
+          "idle_scan/left/10.png": "56b1e4f2ddb76c354d801c68f2573427922904242bf52c8d942198c9dc11da58",
+          "idle_scan/left/11.png": "a0b67f10600429a9fa910f17164a6894b31382d71fd8cd95b8654871ae92e1ba",
+          "idle_scan/left/12.png": "abeba1fb7445809e88772012b537ac74de34db8352f98e196e4fd3dfbbbe269a",
+          "idle_scan/left/13.png": "f86d30b5fe020148c12d98f5782249371f3a1664e82caf131c807573282193f0",
+          "idle_scan/left/14.png": "83d5cf1ee75155d96efb44146368a72f5cd85c3f1fa0ff091231f1d88c433718",
+          "idle_scan/left/15.png": "e757cec857f26672f2697ffb0cf7cdfbf302aee0d85d435a5e4437c95773b41b",
+          "idle_scan/left/16.png": "76ae6251a2e2ae99fde57e244f2faabc4e98a913529dd38b1e1d57505823a22f",
+          "idle_scan/left/17.png": "545a3b54a7360d55b90c7f567a3d5d5056d4f8358e2f83ba6b69da44722361d2",
+          "idle_scan/left/18.png": "d1f1936045c373450adce27522344ab2cbfa99f6c45bd437b261233896e5f6ab",
+          "idle_scan/left/19.png": "98cf8f666d19270f6ca251a75d624f781a065b4d39ebedcb842c572d0bae3c96",
+          "idle_scan/left/20.png": "bddc3d0b831699a475d427a374d906f2e3787ef6cd84e0b1c585ba4232d8c302",
+          "idle_scan/left/21.png": "212bca18cdbac6d14363efc39f4b5af767f197e430b28b983dd5d33f23df8926",
+          "idle_scan/left/22.png": "eb01f14e92eeb0b872b6169a3942385c725d34aa0e12e1c5dfa878bab758e659",
+          "idle_scan/left/23.png": "828ce3a586c41d5837c09602418284457fd974b01811ab07c9f640b812964563",
+          "right_sprite.png": "e15fa82328b911b3ad1bb897096a28fcb3d4ce5aa068c27b6f5f5968ccddce1d",
+          "right_base.png": "ac81f8991d80dfd4911ff4a870c0889e2f451ddf574359bb33879031e592d3cf",
+          "right_normal.png": "137c70a6777d15947959b912591be1bfc55d1ed563be11bb048e2c176bc0c0a9",
+          "right_ao.png": "af1ea62d9a592355586857eae6d6b2b824cd9d83d5172954758bc1296331c367",
+          "right_rm.png": "1e1095e4bc8ba209116f1258fa88dbde95f456746eb1ef0b6882d00de255ab17",
+          "right_emissive.png": "4a9c3e4fec244279718f6c9078fd51932be2f8194f1b54486b7f9400ade5a692",
+          "idle_scan_right.png": "bb91c8a08ccb19293f84e701dc4bba0e4a10f1826f51929351742be76c4cc666",
+          "idle_scan/right/0.png": "f95d9fb5a6ed388633036260c8a4cc262d04789cdc65fc791d95b66025e6cdae",
+          "idle_scan/right/1.png": "e1af83e25ad04859807787a375e7cb306f6b031fbf6d0745c71943382eb8b5f4",
+          "idle_scan/right/2.png": "b52a1e65e5cf7ae760be186d669af6c95a555206a195a26fd4e542659d4d22f5",
+          "idle_scan/right/3.png": "a6eae16a511cb6aff19b095c1b680fb9b2b2f29d79d62fe5b243090ab68738ac",
+          "idle_scan/right/4.png": "4f411d49b92397fc9977c28879fc64dabfbdc1449ba12246d566e70e103c4034",
+          "idle_scan/right/5.png": "9b031c962c1c7393ada503b57e8b92c219ecc75af260fbe4fce2a3acbfc8d868",
+          "idle_scan/right/6.png": "fdf391592d7b882559c67b112de01e5f65ab7d9fe79d0afad90dfafaeee9600e",
+          "idle_scan/right/7.png": "12b26fa0d738d5ddf814e627703b148d15e2276f1a3fd2a5333acd81078b5ca5",
+          "idle_scan/right/8.png": "82a71d864f35a29870f793b868680216d3120b69be42301506d17c6106811fab",
+          "idle_scan/right/9.png": "2e393f87038053d8e42cc6104b56e87de828a51f7ce045895b29a5ad85b81f17",
+          "idle_scan/right/10.png": "e61f46365552a7e43ef661f8ddd7e5aedf9037363566ceba744ba810044b1f32",
+          "idle_scan/right/11.png": "b2bcea17209d5c2db669253437bf45de3025e05287c27f4377fbd3022fb4abff",
+          "idle_scan/right/12.png": "bc6c8f3444e0be4e6ee8f7b6ffbd60f9fe46024cd89e6dc852dc00e369d0ebb9",
+          "idle_scan/right/13.png": "bbb5b8ed3646204da0ec2ba4b72563f48b75c3241a24720070ac38977385f0c9",
+          "idle_scan/right/14.png": "3c4c34c9be0d8b9bdca95fed959fe5ab77ae534c0c5abc41dd59d663733939be",
+          "idle_scan/right/15.png": "299ec1ae42136797da4d4a011f3e29e6ca4272caefc03618f8ffae17092a20f5",
+          "idle_scan/right/16.png": "9b3711e2125f0d602b4a8a5ae96c1ef1d781f1f8c4cef75eb359e2c2ddcb853d",
+          "idle_scan/right/17.png": "b24a70fa99dcbbd0df23bdc1623e23e7d7d86fad3f35a2c18cbfe9a655e347b6",
+          "idle_scan/right/18.png": "9b562db7400ed7685e8f7ecc69c14492cded7f6eb8f6154df92dbc1380150b84",
+          "idle_scan/right/19.png": "ff05edccdccf17ee3e9bf2ed33104508f4b3bc86767453c120008c06d6d60f56",
+          "idle_scan/right/20.png": "58fe456421e2b7089d13e7e746bde73ce863a636ccb9a492c88069d5577dd2f6",
+          "idle_scan/right/21.png": "06721660c899c9fb8f6a33f4390e9db1aa5b80154843661a7bb20590821656e7",
+          "idle_scan/right/22.png": "24c1717698fd7bbdcd1e874a571f084a16b53c0c836ff3848b97088d8c765fc5",
+          "idle_scan/right/23.png": "3d0acfef54cc1b6c1b674726fb85876ad4099d6a9ae9037a61802c5ee4fce84d"
+        },
+        "archive_sha256": "0bb96b4d42669fbebedc56e28b8ea7dbf512036ea0eae562fa569ea5f9afa8b2",
+        "source_blend_sha256": "7d95639f87ee29230490b7612b5ad440754b713e3cabfaa8f3697c5becb68443",
+        "frames": 48,
+        "atlas_files": 12,
+        "apng_files": 2,
+        "coverage_alignment": "PASS",
+        "apng_loop_ms": 2000,
+        "preview_javascript": "PASS syntax, loop boundaries, seeking, pause, light and flat-Normal controls with synthetic pixels",
+        "browser_visual_check": "NOT_RUN"
+      }
+    },
+    "2D/idle-r02/bundle_validation.json": {
+      "sha256": "48b40009ee04a0be556443f538abd0e8ecc53aed22955e2df17d9313a23d3741",
+      "result": {
+        "status": "PASS",
+        "decoded_cells": 48,
+        "negative_cases": [
+          "schema",
+          "duplicate sample",
+          "zero duration",
+          "missing view",
+          "missing pass",
+          "out-of-bounds rect",
+          "nonfinite marker",
+          "missing marker",
+          "invalid transition",
+          "corrupt ZIP checksum"
+        ],
+        "timeline_boundaries": "0, 2 seconds and negative seek",
+        "errors": "bundle filename and cell/field context"
+      }
+    },
+    "2D/idle-r02/performance_validation.json": {
+      "sha256": "f50d018e9c233090b6b10a947f59d8ed899dbcc01db6e3f3e8bcba332a3ea5e0",
+      "result": {
+        "device": {
+          "system": "Windows-11-10.0.26200-SP0",
+          "processor": "AMD RYZEN AI MAX+ 395 w/ Radeon 8060S",
+          "python": "3.13.15",
+          "pygame": "2.6.1"
+        },
+        "scope": "left view, one C211 actor, 640px, 120 frames at 60fps timeline; timings are measured, not paced",
+        "load_verify_ms": 213.82060000905767,
+        "warm_24_frames_ms": 6404.36210000189,
+        "fixed_light_cached": {
+          "p95_ms": 4.174800007604063,
+          "max_ms": 4.628099966794252,
+          "mean_ms": 3.5366499975983365,
+          "frames": 120
+        },
+        "moving_light_cpu": {
+          "p95_ms": 287.7570000127889,
+          "max_ms": 318.94230004400015,
+          "mean_ms": 183.01467083219904,
+          "frames": 120
+        },
+        "target_display_ms": 16.7,
+        "display_backend": "SDL dummy software display",
+        "includes": [
+          "CPU decode when sample changes",
+          "CPU shading for moving light",
+          "RGBA transfer to SDL surface",
+          "software blit/flip"
+        ],
+        "not_measured": [
+          "GPU upload",
+          "real window compositor",
+          "game physics/AI"
+        ],
+        "memory": {
+          "raw_unique_cells_bytes": 471859200,
+          "atlas_rgba_bytes": 477775872,
+          "cached_fixed_rgba_bytes": 39321600,
+          "peak_working_set_bytes": 154714112,
+          "browser_overhead": "embedded base64/decoded atlases/canvas copies additional, not measured"
+        },
+        "cache_key_contract": [
+          "asset_id",
+          "revision",
+          "clip",
+          "view",
+          "sample",
+          "light parameters",
+          "material parameters",
+          "flat_normal",
+          "emission"
+        ],
+        "fixed_light_cpu_budget_pass": true,
+        "moving_light_cpu_budget_pass": false,
+        "game_ready": false
+      }
+    },
+    "comparison/comparison_validation.json": {
+      "sha256": "5cae089776ec9e951ed3c9107f7b9c45451331e4e2dbceabc985e26d273f2427",
+      "result": {
+        "left": {
+          "flat_normal_mean_rgb_difference": [
+            0.7546565755208333,
+            0.6711490885416667,
+            0.5979215494791666
+          ]
+        },
+        "right": {
+          "flat_normal_mean_rgb_difference": [
+            0.6622102864583334,
+            0.5874739583333334,
+            0.5246207682291667
+          ]
+        },
+        "renderer": "C011 lighting.py BRDF reused with dynamic size coordinate fields",
+        "reference_renderer_sha256": "483bd40c7bcfffbd79003d6e59dc2c7dce73e92e47a4d89fca2647961ad0a021",
+        "C011_128px_parity": "byte-identical",
+        "C211_640px_load_and_shade": "PASS",
+        "light": {
+          "power": 0.82,
+          "ambient": 0.34,
+          "z_pixels": 116
+        },
+        "clock": "common seconds, own clip durations",
+        "collision": "visual comparison only, game collision profile unchanged",
+        "game_loader": "existing materials.Assets has fixed SIZE=128 and revision integrated-r5; C211 uses this standalone manifest-driven comparison loader"
+      }
+    },
+    "3D/versions/restore_map_r01.json": {
+      "sha256": "084518207d4e595aaa0631c31ddba55647c9569b5aa0e51a3dc5bca3a32afd5b",
+      "result": {
+        "revision": "idle-r01",
+        "date": "2026-11-17",
+        "archive": "spider_pardosa_previous_r01.7z",
+        "archive_sha256": "6be01e3123efdb092455c068ae13361c70f520be96ad8fb1e7941b06f027cee2",
+        "restore_root": "asset root; reconstruct into a separate directory",
+        "entries": [
+          {
+            "path": "ASSET_INDEX.md",
+            "source": "archive:objects/e5753423c1a5dbf9a4f9c383b2ad4283343728aa32b5804db418bb5ce3ae57d3.md",
+            "sha256": "e5753423c1a5dbf9a4f9c383b2ad4283343728aa32b5804db418bb5ce3ae57d3"
+          },
+          {
+            "path": "delivery_files.json",
+            "source": "archive:objects/759f5791ad346e817e04d386f9b45c9113410361071cdd9c744f261c17702b00.json",
+            "sha256": "759f5791ad346e817e04d386f9b45c9113410361071cdd9c744f261c17702b00"
+          },
+          {
+            "path": "PardosaIdlePreview.html",
+            "source": "archive:objects/ece2bf961571f97d5e6d97257a545cb0919a0fe5341231f77521881c366b2105.html",
+            "sha256": "ece2bf961571f97d5e6d97257a545cb0919a0fe5341231f77521881c366b2105"
+          },
+          {
+            "path": "3D/model_manifest.json",
+            "source": "archive:objects/2e7421bae4f6dc1044c95387dbb9df72cb2c8c2ca01a5c9d37c03d25b053c63b.json",
+            "sha256": "2e7421bae4f6dc1044c95387dbb9df72cb2c8c2ca01a5c9d37c03d25b053c63b"
+          },
+          {
+            "path": "3D/model_preview.png",
+            "source": "archive:objects/8aa284857d112fec0d54b58cb0de0b16248e9c3b31926ba110a17a694180b6d0.png",
+            "sha256": "8aa284857d112fec0d54b58cb0de0b16248e9c3b31926ba110a17a694180b6d0"
+          },
+          {
+            "path": "3D/saved_validation.json",
+            "source": "archive:objects/d82ee5ed26e418eae742f4d1a9037069bb0b2b90c907ef85e0766fa47a76b99d.json",
+            "sha256": "d82ee5ed26e418eae742f4d1a9037069bb0b2b90c907ef85e0766fa47a76b99d"
+          },
+          {
+            "path": "3D/spider_pardosa_idle_r01.blend",
+            "source": "current:3D/spider_pardosa_idle_r01.blend",
+            "sha256": "9bdfafafb657cb1c58499b23ecdc7e17f0036b3f0cd2489adf1240e23d9db0fa"
+          },
+          {
+            "path": "document/production_r01.json",
+            "source": "current:document/production_r01.json",
+            "sha256": "a1f23a2668e84ee8914e44450f26fb4d0975320ab6071e5a0bfaf68e84ecb2fb"
+          },
+          {
+            "path": "document/spider_pardosa.md",
+            "source": "current:document/spider_pardosa.md",
+            "sha256": "74f1bfb0316616b6c2c07881a4c096a3193029f22929cd256e3ca8980ea1fa83"
+          },
+          {
+            "path": "document/spider_pardosa_model.md",
+            "source": "current:document/spider_pardosa_model.md",
+            "sha256": "dabef92dd4619f0f1269f9d600f407402bbe381356d1be7ba5f9d5a0c81d2719"
+          },
+          {
+            "path": "document/spider_pardosa_movement.md",
+            "source": "current:document/spider_pardosa_movement.md",
+            "sha256": "181327352ab53503aed3b58c291907b714ee7ba2dbdcc172924bea43cd1cfe5d"
+          },
+          {
+            "path": "sheet/bottom.png",
+            "source": "current:sheet/bottom.png",
+            "sha256": "1b2afffea7c17db68d00486265267b9d75c88ccd6940b59d691bd96116266b0d"
+          },
+          {
+            "path": "sheet/front.png",
+            "source": "current:sheet/front.png",
+            "sha256": "5352fe4136187cc9683d20d85ee78d5f157e6e026709e0a517eca82fbdd56b9e"
+          },
+          {
+            "path": "sheet/left.png",
+            "source": "current:sheet/left.png",
+            "sha256": "88a518af1d10386903863a63f2ba817327ad0a8be34e4dd7f6bd20182b204cc2"
+          },
+          {
+            "path": "sheet/rear.png",
+            "source": "current:sheet/rear.png",
+            "sha256": "672d3eaaaaaae8383407062871463d7c822612ad23a33be6b3bddd07e2a63ea1"
+          },
+          {
+            "path": "sheet/right.png",
+            "source": "current:sheet/right.png",
+            "sha256": "9f8d8297493fcab649dd6f9577c5c4e238cff49b06aee4f2e74bcf7953e3afa5"
+          },
+          {
+            "path": "sheet/sheet.png",
+            "source": "current:sheet/sheet.png",
+            "sha256": "2d407ed8d83588c511697ff707cedb047749fbd06d00e1f8720c5fa04fe3eb7d"
+          },
+          {
+            "path": "sheet/spider_pardosa_sheet_r01.png",
+            "source": "current:sheet/spider_pardosa_sheet_r01.png",
+            "sha256": "065f5cafb65fd326984dd059cf88cb2422179bc44c1eb6b56f43137a8ac150c4"
+          },
+          {
+            "path": "sheet/spider_pardosa_sheet_r01_prompt.txt",
+            "source": "current:sheet/spider_pardosa_sheet_r01_prompt.txt",
+            "sha256": "9a594ce532b32e106cb668cd38cb6b8e7aa98893629f7654dec7eda3bc658ebe"
+          },
+          {
+            "path": "sheet/top.png",
+            "source": "current:sheet/top.png",
+            "sha256": "c186b26bae0d57a03c522d174f548c88db333f03ace50daaf64f88a032ec1250"
+          },
+          {
+            "path": "3D/textures/spider_pardosa_basecolor_r01.png",
+            "source": "current:3D/textures/spider_pardosa_basecolor_r01.png",
+            "sha256": "072c2d5aebf9d1cf344fb9017f82f4cd3a175576977f299755cb120038126b29"
+          },
+          {
+            "path": "3D/tools/build_spider.py",
+            "source": "archive:objects/0215062b0e0acaa94662f2960ffdeb7e981238d5441069fe2b5c6f934f3adc52.py",
+            "sha256": "0215062b0e0acaa94662f2960ffdeb7e981238d5441069fe2b5c6f934f3adc52"
+          },
+          {
+            "path": "3D/tools/export_idle.py",
+            "source": "archive:objects/06bba2e17fe5644e6371b60a5482087cbb005120410fbe90b7e50f5208bf2a18.py",
+            "sha256": "06bba2e17fe5644e6371b60a5482087cbb005120410fbe90b7e50f5208bf2a18"
+          },
+          {
+            "path": "3D/tools/package_idle.py",
+            "source": "archive:objects/cdf657b3071fac7af9a653abdd12e7e3810ef4864104bde597a67f0d52a82863.py",
+            "sha256": "cdf657b3071fac7af9a653abdd12e7e3810ef4864104bde597a67f0d52a82863"
+          },
+          {
+            "path": "3D/tools/png_codec.py",
+            "source": "current:3D/tools/png_codec.py",
+            "sha256": "f487b88a586078e48a0e61577def6505171243496ff27ba59f82142076fdec7c"
+          },
+          {
+            "path": "3D/tools/preview_template.html",
+            "source": "archive:objects/4095322f81394ce809f5dc941a5d025f081c8d6d94770e55d419cfe7acacddbc.html",
+            "sha256": "4095322f81394ce809f5dc941a5d025f081c8d6d94770e55d419cfe7acacddbc"
+          },
+          {
+            "path": "3D/tools/select_idle.py",
+            "source": "archive:objects/dd607550888811c845ea8e64d122589597f59d2f92f55c6c183f17a1c57a3cfa.py",
+            "sha256": "dd607550888811c845ea8e64d122589597f59d2f92f55c6c183f17a1c57a3cfa"
+          },
+          {
+            "path": "3D/tools/verify_preview.mjs",
+            "source": "archive:objects/d64f38445483c5455ecb081791ad2a58a9157045adc2512dcb8559cd73b3f6a6.mjs",
+            "sha256": "d64f38445483c5455ecb081791ad2a58a9157045adc2512dcb8559cd73b3f6a6"
+          },
+          {
+            "path": "3D/tools/verify_saved.py",
+            "source": "archive:objects/d115026c4ac9652c9fef5dc220f5860c49f40bb69867e14137898cc1c79f13f2.py",
+            "sha256": "d115026c4ac9652c9fef5dc220f5860c49f40bb69867e14137898cc1c79f13f2"
+          },
+          {
+            "path": "2D/idle-r01/export_validation.json",
+            "source": "current:2D/idle-r01/export_validation.json",
+            "sha256": "beaa4f93a51767b3e966e3bcd2ffb9eab8b55c5cb1edd39beda95d3e983173e6"
+          },
+          {
+            "path": "2D/idle-r01/idle_scan_left.png",
+            "source": "current:2D/idle-r01/idle_scan_left.png",
+            "sha256": "a25031dbe4853fe801fbbb71e3f3de32057a137b67811e0c12091f8a8e962e62"
+          },
+          {
+            "path": "2D/idle-r01/idle_scan_right.png",
+            "source": "current:2D/idle-r01/idle_scan_right.png",
+            "sha256": "62a1cd80bf07cf26b9ba746e5bd6eb19dc511eb72162a1ae7024dada7d09d688"
+          },
+          {
+            "path": "2D/idle-r01/left_ao.png",
+            "source": "current:2D/idle-r01/left_ao.png",
+            "sha256": "9a10b5099a4ce323507d70537d8adb43b1007179322376f2825c4986bb54f538"
+          },
+          {
+            "path": "2D/idle-r01/left_base.png",
+            "source": "current:2D/idle-r01/left_base.png",
+            "sha256": "1cdd1271aa21476e4af334f7c2e3eff640f8ab387a4c90cbe5b58ffa96453c4e"
+          },
+          {
+            "path": "2D/idle-r01/left_emissive.png",
+            "source": "current:2D/idle-r01/left_emissive.png",
+            "sha256": "6cae3260a8c914bf2213a676fd3e12ce504b7f414b7ea8b4133fcbf50b900cbc"
+          },
+          {
+            "path": "2D/idle-r01/left_normal.png",
+            "source": "current:2D/idle-r01/left_normal.png",
+            "sha256": "62ab84725e1f59d40bca866659d7a92a091dc8c8e727fc6277e1915cc6d467e4"
+          },
+          {
+            "path": "2D/idle-r01/left_rm.png",
+            "source": "current:2D/idle-r01/left_rm.png",
+            "sha256": "f76fd919eab26df1506a8312ccac72915f9322b05a5b028088f8d7cfb7214080"
+          },
+          {
+            "path": "2D/idle-r01/left_sprite.png",
+            "source": "current:2D/idle-r01/left_sprite.png",
+            "sha256": "b61e5a778690c03ccb40e4bd17023b32b0f56699c105cf8ab5d15f23bb340547"
+          },
+          {
+            "path": "2D/idle-r01/manifest.json",
+            "source": "current:2D/idle-r01/manifest.json",
+            "sha256": "a76b36a22deaaa4c671fb4cd0bc7d5a8deb85a21798be3a09452504ff647975d"
+          },
+          {
+            "path": "2D/idle-r01/package_validation.json",
+            "source": "current:2D/idle-r01/package_validation.json",
+            "sha256": "d07a7c6d4beecdef26dd66e554bf5f42c2d6cc3747984b747151bd5240f2e84a"
+          },
+          {
+            "path": "2D/idle-r01/right_ao.png",
+            "source": "current:2D/idle-r01/right_ao.png",
+            "sha256": "47bfe8a3908e97dca51b8492b19e431c95691abadbe13bb133ae0f3b46bf4853"
+          },
+          {
+            "path": "2D/idle-r01/right_base.png",
+            "source": "current:2D/idle-r01/right_base.png",
+            "sha256": "ebac7ae4a76f48d503efca2713d07eaf46a1bfc2ef2c3eb924bc2bc1937eda94"
+          },
+          {
+            "path": "2D/idle-r01/right_emissive.png",
+            "source": "current:2D/idle-r01/right_emissive.png",
+            "sha256": "cb4ae204e3eb3a9fb9a5be3637bfa1dc133df97e42fae4bcf2900926b71aa122"
+          },
+          {
+            "path": "2D/idle-r01/right_normal.png",
+            "source": "current:2D/idle-r01/right_normal.png",
+            "sha256": "4be424c49f35c5c11177d44d6b412ccc3a42c4ad4cdbfa63fc9f74d056b82829"
+          },
+          {
+            "path": "2D/idle-r01/right_rm.png",
+            "source": "current:2D/idle-r01/right_rm.png",
+            "sha256": "a32fd66cfac7a1a9282f118b16696d8d90ad564d62be457a7df8ddb3cacc9b52"
+          },
+          {
+            "path": "2D/idle-r01/right_sprite.png",
+            "source": "current:2D/idle-r01/right_sprite.png",
+            "sha256": "91c810ad21248fab011e5dfa2d5d07dcc0c542fe697c44cb4bfd3e6a198ca595"
+          },
+          {
+            "path": "2D/idle-r01/spider_pardosa_idle_r01.zip",
+            "source": "current:2D/idle-r01/spider_pardosa_idle_r01.zip",
+            "sha256": "4087ab5a811a6d706482e4afe90411b2bd0050d7727287f0257a3e103a88968d"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/0.png",
+            "source": "archive:objects/db55ee9aa3df2450adcb76b814b56d74b4091bb84ceefdada8fd0bd0594199b4.png",
+            "sha256": "db55ee9aa3df2450adcb76b814b56d74b4091bb84ceefdada8fd0bd0594199b4"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/1.png",
+            "source": "archive:objects/64371482693d5709363637196490099283086bbc3e8398ff4ecb2b03533f51f3.png",
+            "sha256": "64371482693d5709363637196490099283086bbc3e8398ff4ecb2b03533f51f3"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/10.png",
+            "source": "archive:objects/0fe2a4849d33a5b0338f99a14c396ed1369b0d6929367ba7d2ff0561749e980a.png",
+            "sha256": "0fe2a4849d33a5b0338f99a14c396ed1369b0d6929367ba7d2ff0561749e980a"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/11.png",
+            "source": "archive:objects/9a23695a047d55c8144da1dfa80efb32213347ed5a66372c072d2149c1e7b322.png",
+            "sha256": "9a23695a047d55c8144da1dfa80efb32213347ed5a66372c072d2149c1e7b322"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/12.png",
+            "source": "archive:objects/2b4300a947b80968a22926bd39d7209b4fe1d2019723ce444f03062b770c9582.png",
+            "sha256": "2b4300a947b80968a22926bd39d7209b4fe1d2019723ce444f03062b770c9582"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/13.png",
+            "source": "archive:objects/5366bc6154c6820fa425337ed6a1df8ce959af1149346d7b3a8d475636728bf7.png",
+            "sha256": "5366bc6154c6820fa425337ed6a1df8ce959af1149346d7b3a8d475636728bf7"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/14.png",
+            "source": "archive:objects/d61089f57ef4492e572ecc81aae8b58beee629492a3979d834d8f6467fffbabe.png",
+            "sha256": "d61089f57ef4492e572ecc81aae8b58beee629492a3979d834d8f6467fffbabe"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/15.png",
+            "source": "archive:objects/33bb2a4d752ca9665f24c26e18a6e82471db621574044d8bc741534f4361fd91.png",
+            "sha256": "33bb2a4d752ca9665f24c26e18a6e82471db621574044d8bc741534f4361fd91"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/16.png",
+            "source": "archive:objects/ad8048c353b0ffb1eaeb2309771cdb33d6df78c0ae40b85adb4634d08322a52c.png",
+            "sha256": "ad8048c353b0ffb1eaeb2309771cdb33d6df78c0ae40b85adb4634d08322a52c"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/17.png",
+            "source": "archive:objects/b822816a84267bf1ee7ad50d5f41a1f128e879ec26415a60a9b34ab1c7dbaf24.png",
+            "sha256": "b822816a84267bf1ee7ad50d5f41a1f128e879ec26415a60a9b34ab1c7dbaf24"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/18.png",
+            "source": "archive:objects/b279f0b5f6502ed3478c1e605c97b57d73eb74b44e6869dd8cdb98f228aba6cd.png",
+            "sha256": "b279f0b5f6502ed3478c1e605c97b57d73eb74b44e6869dd8cdb98f228aba6cd"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/19.png",
+            "source": "archive:objects/ea096463fd23876e2726e2c4e694403a11df5cf51ecba71eed2dea699335267b.png",
+            "sha256": "ea096463fd23876e2726e2c4e694403a11df5cf51ecba71eed2dea699335267b"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/2.png",
+            "source": "archive:objects/6db46ee15e2935d7fd81a868601a5e0ac81044e544ded99700b7c4ade3ce08db.png",
+            "sha256": "6db46ee15e2935d7fd81a868601a5e0ac81044e544ded99700b7c4ade3ce08db"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/20.png",
+            "source": "archive:objects/3757d64aec1b1ff991575a47fe09fe96dcab8b947942f61a304bcaa8f003ab59.png",
+            "sha256": "3757d64aec1b1ff991575a47fe09fe96dcab8b947942f61a304bcaa8f003ab59"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/21.png",
+            "source": "archive:objects/665bbed2a2a354915fb8395d6ea1e6e91384e713b8e99ef851d5b8c7f0ea96f5.png",
+            "sha256": "665bbed2a2a354915fb8395d6ea1e6e91384e713b8e99ef851d5b8c7f0ea96f5"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/22.png",
+            "source": "archive:objects/487ea8b742e28deb1a13be8353f983e2743b31555d46dcebeeedb6581311080d.png",
+            "sha256": "487ea8b742e28deb1a13be8353f983e2743b31555d46dcebeeedb6581311080d"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/23.png",
+            "source": "archive:objects/18bf6135e18b6333583a02b8d7b30cb17439607c73f5d9de6bdb8a453f62be47.png",
+            "sha256": "18bf6135e18b6333583a02b8d7b30cb17439607c73f5d9de6bdb8a453f62be47"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/3.png",
+            "source": "archive:objects/72bb0b8120c6891d8e0b08abe8c9eb86483da3b0350b0dbbeb38f1af227954e9.png",
+            "sha256": "72bb0b8120c6891d8e0b08abe8c9eb86483da3b0350b0dbbeb38f1af227954e9"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/4.png",
+            "source": "archive:objects/771a81ba150eff848c3adb732a0b4e5119a60ff3598bde81e39758e3587f6eb1.png",
+            "sha256": "771a81ba150eff848c3adb732a0b4e5119a60ff3598bde81e39758e3587f6eb1"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/5.png",
+            "source": "archive:objects/c47f5097dc4e692009b27f5c6cea03775905029739bc4a2a348d299d1a121f22.png",
+            "sha256": "c47f5097dc4e692009b27f5c6cea03775905029739bc4a2a348d299d1a121f22"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/6.png",
+            "source": "archive:objects/854be7c7c1f88de813d320db6458fc220b1cbca12e2b1dd38414fbe51a2611b1.png",
+            "sha256": "854be7c7c1f88de813d320db6458fc220b1cbca12e2b1dd38414fbe51a2611b1"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/7.png",
+            "source": "archive:objects/b8903fa4084cd18fce3b36cb44a12564d02ef8d3b745de35697fe8047862289e.png",
+            "sha256": "b8903fa4084cd18fce3b36cb44a12564d02ef8d3b745de35697fe8047862289e"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/8.png",
+            "source": "archive:objects/b93bc161f72442e029e0c65fd41ecee68456bd28dd25424a62dd67135443c7af.png",
+            "sha256": "b93bc161f72442e029e0c65fd41ecee68456bd28dd25424a62dd67135443c7af"
+          },
+          {
+            "path": "2D/idle/idle_scan/left/9.png",
+            "source": "archive:objects/e4c4589aecfde4cdc330639aa6ce8f00507c008b2915a3da280de42f8ba40cfe.png",
+            "sha256": "e4c4589aecfde4cdc330639aa6ce8f00507c008b2915a3da280de42f8ba40cfe"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/0.png",
+            "source": "archive:objects/197c8b45efeb91910e7f10688fe9764b7dae5116f4388cd9e484a3c3a5bc13c1.png",
+            "sha256": "197c8b45efeb91910e7f10688fe9764b7dae5116f4388cd9e484a3c3a5bc13c1"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/1.png",
+            "source": "archive:objects/b2051c0e097ee77dff73f91930f2656d5f401c4351408c83fbe13960667311c2.png",
+            "sha256": "b2051c0e097ee77dff73f91930f2656d5f401c4351408c83fbe13960667311c2"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/10.png",
+            "source": "archive:objects/eea46de741ae380ae9e7fbf3bf05338d2d4da443e2f9b80805c437bd89630950.png",
+            "sha256": "eea46de741ae380ae9e7fbf3bf05338d2d4da443e2f9b80805c437bd89630950"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/11.png",
+            "source": "archive:objects/5bcb0a6475624661343e474e7a02ccc9f154817006ce229da9f1bcc40a154842.png",
+            "sha256": "5bcb0a6475624661343e474e7a02ccc9f154817006ce229da9f1bcc40a154842"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/12.png",
+            "source": "archive:objects/749d9222725f9ed9594f3f7b98731f2b02eaf9e03a67b999bba71c34b36bcd2e.png",
+            "sha256": "749d9222725f9ed9594f3f7b98731f2b02eaf9e03a67b999bba71c34b36bcd2e"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/13.png",
+            "source": "archive:objects/321311b638d83a18a3cd1efa0ef713098a6d2bf6ab8a31bd3f2dd58764bff577.png",
+            "sha256": "321311b638d83a18a3cd1efa0ef713098a6d2bf6ab8a31bd3f2dd58764bff577"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/14.png",
+            "source": "archive:objects/9236d20292dd41676de9de05894e1416836d60c1fbadab333160ea64512fe645.png",
+            "sha256": "9236d20292dd41676de9de05894e1416836d60c1fbadab333160ea64512fe645"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/15.png",
+            "source": "archive:objects/5b1d9080d1f480fe93471c273c9c3bff5894aa183aa1113f8fdf00dfead638e3.png",
+            "sha256": "5b1d9080d1f480fe93471c273c9c3bff5894aa183aa1113f8fdf00dfead638e3"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/16.png",
+            "source": "archive:objects/f28b48c59ff14a606db4d93021716aafcd8fd72ef89c53c461402d3261cc39a5.png",
+            "sha256": "f28b48c59ff14a606db4d93021716aafcd8fd72ef89c53c461402d3261cc39a5"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/17.png",
+            "source": "archive:objects/1868bedb93a58fa8a829ac019c70032a0db8841e168f1bb26567505131bd8711.png",
+            "sha256": "1868bedb93a58fa8a829ac019c70032a0db8841e168f1bb26567505131bd8711"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/18.png",
+            "source": "archive:objects/3d0788aedb4ff32e58385bd52caaa855520ee3e92cf36403056a00ffe0f1123c.png",
+            "sha256": "3d0788aedb4ff32e58385bd52caaa855520ee3e92cf36403056a00ffe0f1123c"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/19.png",
+            "source": "archive:objects/05e906b5964e73eda540f649895ae59efde58afe7b1e9556315b431950a97138.png",
+            "sha256": "05e906b5964e73eda540f649895ae59efde58afe7b1e9556315b431950a97138"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/2.png",
+            "source": "archive:objects/2a357f93e58d97cf219b3f931cc59fa32ca805c60236c4f0dc2bc4ce0e137ff0.png",
+            "sha256": "2a357f93e58d97cf219b3f931cc59fa32ca805c60236c4f0dc2bc4ce0e137ff0"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/20.png",
+            "source": "archive:objects/8c0341a2c90323bf8d54557da7fe49f16b85432b1d62e29ac93ef4a551aeb933.png",
+            "sha256": "8c0341a2c90323bf8d54557da7fe49f16b85432b1d62e29ac93ef4a551aeb933"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/21.png",
+            "source": "archive:objects/a986dc67825fa4871dbc9295278038876ea0edd6bfc078c587a20179a48b4e67.png",
+            "sha256": "a986dc67825fa4871dbc9295278038876ea0edd6bfc078c587a20179a48b4e67"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/22.png",
+            "source": "archive:objects/5b01a0c714d2a8d8bcfe9ed29f6c3f5293eb6f0683481f67d69668b0063477ff.png",
+            "sha256": "5b01a0c714d2a8d8bcfe9ed29f6c3f5293eb6f0683481f67d69668b0063477ff"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/23.png",
+            "source": "archive:objects/bbcd6e5b63b1a8481c77d7486a8ca315f5cf4f2bd9aea1cdff6222e8bd63f3a7.png",
+            "sha256": "bbcd6e5b63b1a8481c77d7486a8ca315f5cf4f2bd9aea1cdff6222e8bd63f3a7"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/3.png",
+            "source": "archive:objects/b9aeadfe6577f2d73050f61a190b37561c885498ce97dbb49f3d6cf73ef93127.png",
+            "sha256": "b9aeadfe6577f2d73050f61a190b37561c885498ce97dbb49f3d6cf73ef93127"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/4.png",
+            "source": "archive:objects/be3dff7e5cf33a59ee5d707ecc1b8bd7dc85cabffb51c2e8d7a7b87deb7e68dd.png",
+            "sha256": "be3dff7e5cf33a59ee5d707ecc1b8bd7dc85cabffb51c2e8d7a7b87deb7e68dd"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/5.png",
+            "source": "archive:objects/ec2496c5b711a0954b38ba1bd93d5dc779522f89e04c9b9eff3d1f74e3899cbb.png",
+            "sha256": "ec2496c5b711a0954b38ba1bd93d5dc779522f89e04c9b9eff3d1f74e3899cbb"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/6.png",
+            "source": "archive:objects/855d9f7bedccd614764597b3837b740cca7ddf6ed18b9774dc2010f6b448c672.png",
+            "sha256": "855d9f7bedccd614764597b3837b740cca7ddf6ed18b9774dc2010f6b448c672"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/7.png",
+            "source": "archive:objects/cc5c9fd3ea6c243146b8605910ea9750a43b68f403a4747f3c289c8b1098e942.png",
+            "sha256": "cc5c9fd3ea6c243146b8605910ea9750a43b68f403a4747f3c289c8b1098e942"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/8.png",
+            "source": "archive:objects/6ac06ae206cc0e4fc1e13f357ae727efd611d8503216f45a4b25c4c59edbcf9d.png",
+            "sha256": "6ac06ae206cc0e4fc1e13f357ae727efd611d8503216f45a4b25c4c59edbcf9d"
+          },
+          {
+            "path": "2D/idle/idle_scan/right/9.png",
+            "source": "archive:objects/1bfaf8b9d18bb9d15d9f901886937f1234e502ca8319a044b5153f75b9d5a418.png",
+            "sha256": "1bfaf8b9d18bb9d15d9f901886937f1234e502ca8319a044b5153f75b9d5a418"
+          }
+        ],
+        "validation": {
+          "status": "PASS",
+          "files": 95,
+          "archive_entries": 61,
+          "method": "7z test, extract separately, reconstruct full tree, SHA256 all files"
+        }
+      }
+    }
+  },
+  "readiness": {
+    "model_idle": "verified",
+    "standalone_640px_bundle": "verified",
+    "game_runtime": "pending",
+    "full_pipeline_pass": false
+  },
+  "unverified": [
+    "real browser visual/UI operation",
+    "GPU upload and real compositor",
+    "game transitions/AI/collision",
+    "Pico2D",
+    "Bloom",
+    "UV checker visual stretch review"
+  ]
+}

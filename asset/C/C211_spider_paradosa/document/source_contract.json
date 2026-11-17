@@ -1,0 +1,60 @@
+{
+  "asset_id": "C211_spider_paradosa",
+  "object_id": "spider_pardosa",
+  "revision": "idle-r02",
+  "pipeline": {
+    "version": "2.2",
+    "path": "../../../document/markdown/AssetPipeLine.md",
+    "sha256": "a603f2bc4594637413d3db9b79590136e0001bd8de63001a2da7ebebaf0484ef"
+  },
+  "size": {
+    "version": "1.1",
+    "path": "../../../document/markdown/AssetSize.md",
+    "sha256": "b3277c28c89025b787f215a913fbb078d2d87a34d1f6628b561bac49c8a8c466"
+  },
+  "selection": {
+    "taxon": "Pardosa agrestis",
+    "sex": "female",
+    "stage": "adult",
+    "body_length_mm": 5.0,
+    "size_reference": "AssetSize S2, approximately 5 mm",
+    "reference_toktogi_mm": 1.0,
+    "biological_ratio": 5.0,
+    "authoring_reference_body_bu": 0.965396,
+    "staging_factor": 1.0,
+    "target_body_bu": 4.82698,
+    "approved_by": "user in this chat"
+  },
+  "style_reference": {
+    "asset_id": "C011_toktogi",
+    "revision": "integrated-r5",
+    "unit_pixels": 71.91011235955057,
+    "outline_rgb": [
+      34,
+      49,
+      59
+    ],
+    "outline_px": 2,
+    "ambient": 0.34,
+    "power": 0.82,
+    "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec"
+  },
+  "collision_profile": null,
+  "identifier_mapping": {
+    "folder_id": "C211_spider_paradosa",
+    "asset_id": "C211_spider_paradosa",
+    "object_id": "spider_pardosa",
+    "variation": "adult_female_stylized",
+    "clip": "idle_scan",
+    "phase": "mid",
+    "sample_start": 0,
+    "revision": "idle-r02",
+    "number_assignment": "C2xx preserved; new hexadecimal numbering deferred by AssetLabelRule"
+  },
+  "license_scope": {
+    "new_mesh_texture_animation": "generated for this project",
+    "sheet": "GPT Image output generated for this project",
+    "external_biology": "linked text sources, no external photo redistributed",
+    "C011_reference": "existing project asset used for internal comparison; upstream licensing inherited"
+  }
+}

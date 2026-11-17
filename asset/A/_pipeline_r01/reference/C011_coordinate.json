@@ -1,0 +1,26 @@
+{
+  "status": "deferred_DEC_06",
+  "production_export_allowed": false,
+  "experiment_profile": "orthographic_128_eight_headings_r5",
+  "pivot_pixels_top_left": [
+    64,
+    88
+  ],
+  "image_axis": "x right, y down",
+  "world_up": "+Z",
+  "world_units_per_pixel": 0.013906249776482582,
+  "camera_location": [
+    -2.44451642036438,
+    -3.813446044921875,
+    2.143212080001831
+  ],
+  "camera_rotation_euler": [
+    1.195510983467102,
+    4.938385700370418e-09,
+    -0.5700404644012451
+  ],
+  "ortho_scale": 1.7799999713897705,
+  "normal_space": "camera axes: R right, G up (opposite image row), B toward camera",
+  "normal_decode": "normalize(RGB/255*2-1), only when Base alpha > 0",
+  "mirror_allowed": false
+}

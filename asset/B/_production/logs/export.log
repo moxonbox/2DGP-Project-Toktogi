@@ -1,0 +1,70 @@
+00:01.313  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B01_plant_lemna_perpusilla\3D\plant_lemna_perpusilla_r01.blend"
+B01 game 192 128
+B01 front 144 112
+B01 back 144 112
+B01 left 208 112
+B01 right 208 112
+B01 top 208 144
+B01 underside 208 144
+00:02.625  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B02_plant_spirodela_polyrhiza\3D\plant_spirodela_polyrhiza_r01.blend"
+B02 game 432 2384
+B02 front 384 2496
+B02 back 384 2496
+B02 left 448 2496
+B02 right 448 2496
+B02 top 448 384
+B02 underside 448 384
+00:08.156  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B03_plant_wolffia_arrhiza\3D\plant_wolffia_arrhiza_r01.blend"
+B03 game 96 64
+B03 front 80 64
+B03 back 80 64
+B03 left 112 64
+B03 right 112 64
+B03 top 112 80
+B03 underside 112 80
+00:08.922  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B04_plant_salvinia_natans\3D\plant_salvinia_natans_r01.blend"
+B04 game 1232 688
+B04 front 448 576
+B04 back 448 576
+B04 left 1408 576
+B04 right 1408 576
+B04 top 1408 448
+B04 underside 1408 448
+00:15.672  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B05_plant_ceratophyllum_demersum\3D\plant_ceratophyllum_demersum_r01.blend"
+B05 game 272 416
+B05 front 272 400
+B05 back 272 400
+B05 left 272 400
+B05 right 272 400
+B05 top 272 272
+B05 underside 272 272
+00:21.109  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B06_plant_typha_orientalis\3D\plant_typha_orientalis_r01.blend"
+B06 game 272 512
+B06 front 240 528
+B06 back 240 528
+B06 left 224 528
+B06 right 224 528
+B06 top 224 240
+B06 underside 224 240
+00:22.875  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B07_plant_phragmites_australis\3D\plant_phragmites_australis_r01.blend"
+B07 game 304 624
+B07 front 160 656
+B07 back 160 656
+B07 left 320 656
+B07 right 320 656
+B07 top 320 160
+B07 underside 320 160
+00:33.250  blend            | Read blend: "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\B08_plant_persicaria_thunbergii\3D\plant_persicaria_thunbergii_r01.blend"
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\_production\tools\export_backgrounds.py", line 186, in <module>
+    result=[export(c) for c in configs if not selected or c['id'] in selected]
+            ~~~~~~^^^
+  File "C:\Users\user\Documents\ChatGPT\2DGP\background_B_r01_20261117\asset\B\_production\tools\export_backgrounds.py", line 83, in export
+    assert uvs.min()>=0 and uvs.max()<=1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: '.\background_B_r01_20261117\asset\B\_production\tools\export_backgrounds.py', exiting.
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

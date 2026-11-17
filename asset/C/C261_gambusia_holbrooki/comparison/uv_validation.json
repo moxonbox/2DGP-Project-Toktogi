@@ -1,0 +1,53 @@
+{
+  "female": {
+    "triangles": 4160,
+    "zero_UV_area": 776,
+    "negative_UV_winding": 1632,
+    "zero_UV_by_part": {
+      "body_head_continuous": 36,
+      "caudal_fin": 92,
+      "dorsal_fin": 60,
+      "anal_fin": 44,
+      "pectoral_L": 44,
+      "pelvic_L": 44,
+      "operculum_crease_L": 156,
+      "pectoral_R": 44,
+      "pelvic_R": 44,
+      "operculum_crease_R": 156,
+      "jaw_upper": 28,
+      "jaw_lower": 28
+    },
+    "intentional_reuse": [
+      "fin front/back charts; thin edge walls share rim UVs",
+      "bilateral eye charts",
+      "gill creases use one flat-color palette texel",
+      "hidden body/jaw end caps collapse to seam"
+    ],
+    "note": "Signed winding includes intentional reverse fin faces; checker images are the visual density evidence. No detailed painting supported on thin fin edges or flat-color crease strips."
+  },
+  "male": {
+    "triangles": 4164,
+    "zero_UV_area": 732,
+    "negative_UV_winding": 1728,
+    "zero_UV_by_part": {
+      "body_head_continuous": 36,
+      "caudal_fin": 92,
+      "dorsal_fin": 60,
+      "pectoral_L": 44,
+      "pelvic_L": 44,
+      "operculum_crease_L": 156,
+      "pectoral_R": 44,
+      "pelvic_R": 44,
+      "operculum_crease_R": 156,
+      "jaw_upper": 28,
+      "jaw_lower": 28
+    },
+    "intentional_reuse": [
+      "fin front/back charts; thin edge walls share rim UVs",
+      "bilateral eye charts",
+      "gill creases use one flat-color palette texel",
+      "hidden body/jaw end caps collapse to seam"
+    ],
+    "note": "Signed winding includes intentional reverse fin faces; checker images are the visual density evidence. No detailed painting supported on thin fin edges or flat-color crease strips."
+  }
+}

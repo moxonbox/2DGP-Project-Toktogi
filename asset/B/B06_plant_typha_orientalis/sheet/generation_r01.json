@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model_identifier": null,
+  "seed": null,
+  "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B06 Typha orientalis: a single upright reed-like stem ending in a solid elongated cylindrical brown cattail inflorescence, surrounded by six long tapering strap-shaped green leaves from the base. Broad gracefully arcing strap leaves. Show the entire mature plant including base, no pot. Selected whole height 1.2 m, thus enormous relative to a 1 mm springtail; never imply same-size plant and springtail.",
+  "input_spec": "../document/plant_typha_orientalis_model.md",
+  "input_spec_sha256": "cf551438e591d9938aa65cc4273846fb83110e64ac8bc565c03e0498bdd56b0c",
+  "style_reference": "../../_production/reference/C011_idle.png",
+  "style_reference_sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+  "style_input_delivery": "Reference displayed in conversation; new-image call omitted explicit image-path arguments.",
+  "output": "plant_typha_orientalis_sheet_r01.png",
+  "output_sha256": "3a52df41c6a47a794b90fc4c9420e12c9b292bb07358893a86e5fc2178552cd7",
+  "review": "conditional_reference_with_production_spec_corrections",
+  "correction": "생성 시트의 일부 underside 라벨은 기부 정면 그림에 붙어 있다. Blender underside는 실제 아래에서 본 뷰로 대체한다. 꽃이삭·잎 수는 계약값을 따른다.",
+  "selection_reason": "생물 명세의 큰 형태와 프로젝트 카툰 톤 참고. 실제 정투영·기관 수는 제작 계약과 Blender 출력이 우선한다.",
+  "license_note": "내장 생성 도구 산출물. 외부 사진·외부 모델을 복제하거나 새로 배포하지 않았다. 원자료의 법적 권리는 별도 검토하지 않았다."
+}

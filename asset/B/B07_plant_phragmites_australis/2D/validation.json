@@ -1,0 +1,771 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "jointed_cane",
+      "vertices": 16,
+      "triangles": 28
+    },
+    {
+      "name": "lance_leaf_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_2",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_3",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_4",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_5",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_6",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "lance_leaf_7",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "node_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_6",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "node_7",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_branch_0_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_0_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_0_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_0_3",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_0_4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_0_5",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_3",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_1_5",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_3",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_2_5",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_3",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_3_5",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_3",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_branch_4_5",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "panicle_spikelet_0_0_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_0_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_1_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_1_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_2_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_2_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_3_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_3_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_4_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_4_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_5_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_5_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_0_5_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_0_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_0_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_1_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_1_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_2_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_2_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_3_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_3_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_4_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_4_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_5_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_5_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_1_5_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_0_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_0_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_1_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_1_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_2_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_2_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_3_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_3_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_4_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_4_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_5_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_5_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_2_5_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_0_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_0_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_1_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_1_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_2_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_2_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_3_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_3_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_4_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_4_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_5_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_5_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_3_5_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_0_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_0_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_0_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_1_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_1_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_1_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_2_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_2_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_2_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_3_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_3_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_3_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_4_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_4_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_4_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_5_0.5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_5_0.8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "panicle_spikelet_4_5_1",
+      "vertices": 62,
+      "triangles": 120
+    }
+  ],
+  "triangles": 12968,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        304,
+        624
+      ],
+      "margin": 15,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 22539,
+      "seconds": 1.4599998000194319
+    },
+    "front": {
+      "cell": [
+        160,
+        656
+      ],
+      "margin": 12,
+      "normal_error": 0.00646457084754104,
+      "surface_pixels": 18418,
+      "seconds": 1.1951374000054784
+    },
+    "back": {
+      "cell": [
+        160,
+        656
+      ],
+      "margin": 12,
+      "normal_error": 0.00646457084754104,
+      "surface_pixels": 18418,
+      "seconds": 1.252331800002139
+    },
+    "left": {
+      "cell": [
+        320,
+        656
+      ],
+      "margin": 14,
+      "normal_error": 0.006270230608479643,
+      "surface_pixels": 17592,
+      "seconds": 1.5844805999659002
+    },
+    "right": {
+      "cell": [
+        320,
+        656
+      ],
+      "margin": 14,
+      "normal_error": 0.006086819413139377,
+      "surface_pixels": 17592,
+      "seconds": 1.5336014000349678
+    },
+    "top": {
+      "cell": [
+        320,
+        160
+      ],
+      "margin": 12,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 14417,
+      "seconds": 1.4190629000077024
+    },
+    "underside": {
+      "cell": [
+        320,
+        160
+      ],
+      "margin": 12,
+      "normal_error": 0.0062090972580421955,
+      "surface_pixels": 14417,
+      "seconds": 1.54356350004673
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_phragmites_australis_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_phragmites_australis_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_phragmites_australis_sheet_r01.png",
+      "sha256": "fe5506b2819b91484dec9bda2f0cacbbe74fb9ce1ae9a4e83ed72bb267b99902",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 18437120,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

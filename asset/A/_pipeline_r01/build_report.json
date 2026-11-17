@@ -1,0 +1,280 @@
+{
+  "plant_lemna_minor": {
+    "blender": "5.3.0",
+    "geometry": {
+      "frond": {
+        "vertices": 98,
+        "triangles": 192
+      },
+      "root_single": {
+        "vertices": 24,
+        "triangles": 44
+      },
+      "root_cap": {
+        "vertices": 98,
+        "triangles": 192
+      }
+    },
+    "triangle_count": 428,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -1.6894429922103882,
+        -1.1102054119110107,
+        -1.300014853477478
+      ],
+      [
+        1.6894429922103882,
+        1.1102054119110107,
+        0.13515543937683105
+      ]
+    ],
+    "extent_bu": [
+      3.3788859844207764,
+      2.2204108238220215,
+      1.435170292854309
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "a8abc03c32b1033ee1159e0a2979931564cf6ed30e35cf43736aa1a97ef5a9f5",
+    "static_root": true
+  },
+  "env_still_water": {
+    "blender": "5.3.0",
+    "geometry": {
+      "surface_skin": {
+        "vertices": 8,
+        "triangles": 12
+      }
+    },
+    "triangle_count": 12,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -3.571965217590332,
+        -2.2204108238220215,
+        -0.0115847522392869
+      ],
+      [
+        3.571965217590332,
+        2.2204108238220215,
+        0.0115847522392869
+      ]
+    ],
+    "extent_bu": [
+      7.143930435180664,
+      4.440821647644043,
+      0.0231695044785738
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "c89e4cf2c491c0920e295fb44c23647f96b925609a78dc1bc39678994b1d5d8f",
+    "static_root": true
+  },
+  "env_shore_slope": {
+    "blender": "5.3.0",
+    "geometry": {
+      "slope_base": {
+        "vertices": 127,
+        "triangles": 250
+      },
+      "gravel_0": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "gravel_1": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "gravel_2": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "gravel_3": {
+        "vertices": 96,
+        "triangles": 188
+      },
+      "shallow_puddle": {
+        "vertices": 98,
+        "triangles": 192
+      }
+    },
+    "triangle_count": 1194,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.8961880207061768,
+        -1.4480940103530884,
+        -0.07999999821186066
+      ],
+      [
+        2.8961880207061768,
+        1.4480940103530884,
+        0.968088686466217
+      ]
+    ],
+    "extent_bu": [
+      5.7923760414123535,
+      2.8961880207061768,
+      1.0480886697769165
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "dd90a7946a60a2f48f1d5381246337546972399cb740b7c47eeb814a06d63159",
+    "static_root": true
+  },
+  "env_wet_wood": {
+    "blender": "5.3.0",
+    "geometry": {
+      "branch_main": {
+        "vertices": 70,
+        "triangles": 136
+      },
+      "branch_spur": {
+        "vertices": 30,
+        "triangles": 56
+      },
+      "broken_end": {
+        "vertices": 28,
+        "triangles": 52
+      },
+      "knot": {
+        "vertices": 98,
+        "triangles": 192
+      }
+    },
+    "triangle_count": 436,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.4328842163085938,
+        -0.4999396800994873,
+        -0.24746106564998627
+      ],
+      [
+        2.433845043182373,
+        0.5049999952316284,
+        1.1787240505218506
+      ]
+    ],
+    "extent_bu": [
+      4.866729259490967,
+      1.0049396753311157,
+      1.426185131072998
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "7ee2c97c29e95a9712131880eceae9f307d7276bcad41151d98af62bb416eebd",
+    "static_root": true
+  },
+  "env_wet_stone": {
+    "blender": "5.3.0",
+    "geometry": {
+      "rock_core": {
+        "vertices": 96,
+        "triangles": 188
+      }
+    },
+    "triangle_count": 188,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -1.4825515747070312,
+        -1.0681225061416626,
+        -0.19307920336723328
+      ],
+      [
+        1.4825515747070312,
+        1.0683199167251587,
+        1.013665795326233
+      ]
+    ],
+    "extent_bu": [
+      2.9651031494140625,
+      2.1364424228668213,
+      1.2067450284957886
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "4518195d992ba828db9c619b0fbcc8375b5284489cfc5bc53127648213a5ef75",
+    "static_root": true
+  },
+  "env_wet_leaf_litter": {
+    "blender": "5.3.0",
+    "geometry": {
+      "leaf_plane_thickened": {
+        "vertices": 98,
+        "triangles": 192
+      }
+    },
+    "triangle_count": 192,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -2.1401684284210205,
+        -1.1903332471847534,
+        0.02500000037252903
+      ],
+      [
+        2.2139546871185303,
+        1.128421425819397,
+        0.29628831148147583
+      ]
+    ],
+    "extent_bu": [
+      4.354123115539551,
+      2.3187546730041504,
+      0.27128830552101135
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "bad9daff346383134d94945793ec465304eaef8fc5588bfe96cc95e07b9b0269",
+    "static_root": true
+  },
+  "env_algae_patch": {
+    "blender": "5.3.0",
+    "geometry": {
+      "patch_decal": {
+        "vertices": 98,
+        "triangles": 192
+      }
+    },
+    "triangle_count": 192,
+    "bone_count": 0,
+    "bounds_bu": [
+      [
+        -0.8408756256103516,
+        -0.5944579839706421,
+        -0.0115847522392869
+      ],
+      [
+        0.8831562995910645,
+        0.535609245300293,
+        0.0115847522392869
+      ]
+    ],
+    "extent_bu": [
+      1.724031925201416,
+      1.130067229270935,
+      0.0231695044785738
+    ],
+    "all_images_packed": true,
+    "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+    "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+    "rendered_views": 7,
+    "blend_sha256": "7ccfa1a3cb8488b606809b72cbeba0f741067d2662811e18cf9c5903e85d06c7",
+    "static_root": true
+  }
+}

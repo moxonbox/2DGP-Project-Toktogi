@@ -1,0 +1,837 @@
+{
+  "cell_size": [
+    640,
+    640
+  ],
+  "required_margin_px": 8,
+  "bbox_convention": "left, top, right-exclusive, bottom-exclusive",
+  "views": {
+    "left": {
+      "samples": [
+        {
+          "index": 0,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 1,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 2,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 3,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 4,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 5,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 6,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 7,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 8,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 9,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 10,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 11,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 12,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 13,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 14,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 15,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 16,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 17,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 18,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 19,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 20,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 21,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 22,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 23,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        }
+      ],
+      "minimum_margin_px": 16,
+      "sprite_wh_range": [
+        [
+          608,
+          608
+        ],
+        [
+          297,
+          298
+        ]
+      ],
+      "base_wh_range": [
+        [
+          604,
+          604
+        ],
+        [
+          293,
+          294
+        ]
+      ],
+      "pivot": [
+        331.9999313354492,
+        439.9999237060547
+      ]
+    },
+    "right": {
+      "samples": [
+        {
+          "index": 0,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 1,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 2,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 3,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 4,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 5,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 6,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 7,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 8,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 9,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 10,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 11,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 12,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 13,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 14,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 15,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 16,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 17,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 18,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 19,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 20,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 21,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 22,
+          "sprite_bbox": [
+            16,
+            253,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            255,
+            622,
+            549
+          ],
+          "margin_px": 16
+        },
+        {
+          "index": 23,
+          "sprite_bbox": [
+            16,
+            254,
+            624,
+            551
+          ],
+          "base_bbox": [
+            18,
+            256,
+            622,
+            549
+          ],
+          "margin_px": 16
+        }
+      ],
+      "minimum_margin_px": 16,
+      "sprite_wh_range": [
+        [
+          608,
+          608
+        ],
+        [
+          297,
+          298
+        ]
+      ],
+      "base_wh_range": [
+        [
+          604,
+          604
+        ],
+        [
+          293,
+          294
+        ]
+      ],
+      "pivot": [
+        307.99999237060547,
+        440.0000762939453
+      ]
+    }
+  },
+  "status": "PASS"
+}

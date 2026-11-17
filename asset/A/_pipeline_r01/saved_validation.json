@@ -1,0 +1,233 @@
+[
+  {
+    "asset_id": "plant_lemna_minor",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "634eff563cc669e9ca7bfbd8a787d6a7912454bf5cea7dab18a2f775f664576d",
+      "634eff563cc669e9ca7bfbd8a787d6a7912454bf5cea7dab18a2f775f664576d",
+      "634eff563cc669e9ca7bfbd8a787d6a7912454bf5cea7dab18a2f775f664576d",
+      "634eff563cc669e9ca7bfbd8a787d6a7912454bf5cea7dab18a2f775f664576d",
+      "634eff563cc669e9ca7bfbd8a787d6a7912454bf5cea7dab18a2f775f664576d"
+    ],
+    "triangles": 428,
+    "packed_images": [
+      {
+        "image": "M_plant_lemna_minor.png",
+        "bytes": 17558,
+        "external_matches": true
+      },
+      {
+        "image": "plant_lemna_minor_sheet_r01.png",
+        "bytes": 1322973,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "a8abc03c32b1033ee1159e0a2979931564cf6ed30e35cf43736aa1a97ef5a9f5"
+  },
+  {
+    "asset_id": "env_still_water",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "9b71271674e6fe7fbbbb36a51d58e19e00d3610dabdbef42e77c226ca16ca1b1",
+      "9b71271674e6fe7fbbbb36a51d58e19e00d3610dabdbef42e77c226ca16ca1b1",
+      "9b71271674e6fe7fbbbb36a51d58e19e00d3610dabdbef42e77c226ca16ca1b1",
+      "9b71271674e6fe7fbbbb36a51d58e19e00d3610dabdbef42e77c226ca16ca1b1",
+      "9b71271674e6fe7fbbbb36a51d58e19e00d3610dabdbef42e77c226ca16ca1b1"
+    ],
+    "triangles": 12,
+    "packed_images": [
+      {
+        "image": "env_still_water_sheet_r01.png",
+        "bytes": 1244864,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_still_water.png",
+        "bytes": 10262,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "c89e4cf2c491c0920e295fb44c23647f96b925609a78dc1bc39678994b1d5d8f"
+  },
+  {
+    "asset_id": "env_shore_slope",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "c8cd2bff087eb07e11e0a15f2d19057d3bf9b98cca821feb624a5e7b82abbd0f",
+      "c8cd2bff087eb07e11e0a15f2d19057d3bf9b98cca821feb624a5e7b82abbd0f",
+      "c8cd2bff087eb07e11e0a15f2d19057d3bf9b98cca821feb624a5e7b82abbd0f",
+      "c8cd2bff087eb07e11e0a15f2d19057d3bf9b98cca821feb624a5e7b82abbd0f",
+      "c8cd2bff087eb07e11e0a15f2d19057d3bf9b98cca821feb624a5e7b82abbd0f"
+    ],
+    "triangles": 1194,
+    "packed_images": [
+      {
+        "image": "env_shore_slope_sheet_r01.png",
+        "bytes": 1346542,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_shore_slope.png",
+        "bytes": 16683,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "dd90a7946a60a2f48f1d5381246337546972399cb740b7c47eeb814a06d63159"
+  },
+  {
+    "asset_id": "env_wet_wood",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "884648a02780915725461599b3ac324213932b3d1964ef24ea9b411de340bb39",
+      "884648a02780915725461599b3ac324213932b3d1964ef24ea9b411de340bb39",
+      "884648a02780915725461599b3ac324213932b3d1964ef24ea9b411de340bb39",
+      "884648a02780915725461599b3ac324213932b3d1964ef24ea9b411de340bb39",
+      "884648a02780915725461599b3ac324213932b3d1964ef24ea9b411de340bb39"
+    ],
+    "triangles": 436,
+    "packed_images": [
+      {
+        "image": "env_wet_wood_sheet_r01.png",
+        "bytes": 1318881,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_wood.png",
+        "bytes": 21554,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "7ee2c97c29e95a9712131880eceae9f307d7276bcad41151d98af62bb416eebd"
+  },
+  {
+    "asset_id": "env_wet_stone",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "668896320d16728b829e14d6e2c66c2bcc52e89ae76a3a5ffacdfcb224430b94",
+      "668896320d16728b829e14d6e2c66c2bcc52e89ae76a3a5ffacdfcb224430b94",
+      "668896320d16728b829e14d6e2c66c2bcc52e89ae76a3a5ffacdfcb224430b94",
+      "668896320d16728b829e14d6e2c66c2bcc52e89ae76a3a5ffacdfcb224430b94",
+      "668896320d16728b829e14d6e2c66c2bcc52e89ae76a3a5ffacdfcb224430b94"
+    ],
+    "triangles": 188,
+    "packed_images": [
+      {
+        "image": "env_wet_stone_sheet_r01.png",
+        "bytes": 1343103,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_stone.png",
+        "bytes": 16787,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "4518195d992ba828db9c619b0fbcc8375b5284489cfc5bc53127648213a5ef75"
+  },
+  {
+    "asset_id": "env_wet_leaf_litter",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "dcc7a6c314bd30f6c3563a0def7e9b561164e527d53987ed165136c32ebe2388",
+      "dcc7a6c314bd30f6c3563a0def7e9b561164e527d53987ed165136c32ebe2388",
+      "dcc7a6c314bd30f6c3563a0def7e9b561164e527d53987ed165136c32ebe2388",
+      "dcc7a6c314bd30f6c3563a0def7e9b561164e527d53987ed165136c32ebe2388",
+      "dcc7a6c314bd30f6c3563a0def7e9b561164e527d53987ed165136c32ebe2388"
+    ],
+    "triangles": 192,
+    "packed_images": [
+      {
+        "image": "env_wet_leaf_litter_sheet_r01.png",
+        "bytes": 1363760,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_wet_leaf_litter.png",
+        "bytes": 26220,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "bad9daff346383134d94945793ec465304eaef8fc5588bfe96cc95e07b9b0269"
+  },
+  {
+    "asset_id": "env_algae_patch",
+    "saved_reopen": "PASS",
+    "seek_frames": [
+      1,
+      30,
+      12,
+      60,
+      1
+    ],
+    "seek_mesh_hashes": [
+      "9a53a1e465605eaa1509318664a6ded221c5ff0976ec2075465ce47e8c99d4bc",
+      "9a53a1e465605eaa1509318664a6ded221c5ff0976ec2075465ce47e8c99d4bc",
+      "9a53a1e465605eaa1509318664a6ded221c5ff0976ec2075465ce47e8c99d4bc",
+      "9a53a1e465605eaa1509318664a6ded221c5ff0976ec2075465ce47e8c99d4bc",
+      "9a53a1e465605eaa1509318664a6ded221c5ff0976ec2075465ce47e8c99d4bc"
+    ],
+    "triangles": 192,
+    "packed_images": [
+      {
+        "image": "env_algae_patch_sheet_r01.png",
+        "bytes": 1276713,
+        "external_matches": true
+      },
+      {
+        "image": "M_env_algae_patch.png",
+        "bytes": 15210,
+        "external_matches": true
+      }
+    ],
+    "bones": 0,
+    "source_blend_sha256": "7ccfa1a3cb8488b606809b72cbeba0f741067d2662811e18cf9c5903e85d06c7"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model_identifier": null,
+  "seed": null,
+  "prompt": "Use case: stylized-concept. Produce ONE production reference sheet for the Toktogi 2D game. Match the already displayed C011 springtail reference in rounded low-poly cartoon forms, clean dark blue-gray edge definition, restrained surface texture, readable four-tone shading, matte natural green/brown palette (the plant must retain its natural color, not springtail white). Off-white background, uniform neutral light, orthographic multi-view panels: top, front, left, right, back, underside/detail, consistently same object, no perspective distortion, no scenery, no shadow crossing panels, no text on object. Labels outside object in English with asset ID. Broad simple forms suitable for editable low-poly Blender geometry. Do not add a springtail character. This is a reference sheet, not a runtime sprite. Subject: B01 Lemna perpusilla, a small asymmetrical oval green duckweed frond, single frond only, exactly ONE thin hanging root with a small winged sheath at its base. Selected design frond 2.5 by 1.6 mm, root length unknown and merely illustrative. No lily pad notch; subtle three veins; root count one in every view.",
+  "input_spec": "../document/plant_lemna_perpusilla_model.md",
+  "input_spec_sha256": "1d68753e2194188326b470da167f3ca8d40c757b5d7b26cb763fc9b3c889f5fb",
+  "style_reference": "../../_production/reference/C011_idle.png",
+  "style_reference_sha256": "a731a13c8a936b4265968bfff7f96dd84fdf3106c43df6d60c0ac4dc65da6b1c",
+  "style_input_delivery": "Reference displayed in conversation; new-image call omitted explicit image-path arguments.",
+  "output": "plant_lemna_perpusilla_sheet_r01.png",
+  "output_sha256": "3bb4823ea1a105d653c4a226811f5eea767563210452c60e65c99f5b689b4173",
+  "review": "conditional_reference_with_production_spec_corrections",
+  "correction": "생성 시트의 정면/측면 폭은 정밀 투영이 아니다. 치수와 단일 뿌리 계약을 우선하고 Blender 정투영 시트로 최종 방향을 교체한다.",
+  "selection_reason": "생물 명세의 큰 형태와 프로젝트 카툰 톤 참고. 실제 정투영·기관 수는 제작 계약과 Blender 출력이 우선한다.",
+  "license_note": "내장 생성 도구 산출물. 외부 사진·외부 모델을 복제하거나 새로 배포하지 않았다. 원자료의 법적 권리는 별도 검토하지 않았다."
+}

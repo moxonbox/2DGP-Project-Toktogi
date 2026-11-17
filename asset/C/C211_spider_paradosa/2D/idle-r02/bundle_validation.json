@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "decoded_cells": 48,
+  "negative_cases": [
+    "schema",
+    "duplicate sample",
+    "zero duration",
+    "missing view",
+    "missing pass",
+    "out-of-bounds rect",
+    "nonfinite marker",
+    "missing marker",
+    "invalid transition",
+    "corrupt ZIP checksum"
+  ],
+  "timeline_boundaries": "0, 2 seconds and negative seek",
+  "errors": "bundle filename and cell/field context"
+}

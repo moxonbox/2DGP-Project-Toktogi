@@ -1,0 +1,344 @@
+{
+  "left": {
+    "sampled_poses_2p5ms": 977,
+    "blend_sha256": "f6dbeb7f0583cebc0dfc3b9fd015d01d9a61e4e48632eb0d5f2d812bf88f259d",
+    "peak_support_height_px": 0.29252272443861466,
+    "max_support_slide_px": 0.09670571134049225,
+    "before": {
+      "key": {
+        "samples": 62,
+        "visible_leg_pairs": 53,
+        "visible_leg_poses": 6,
+        "largest_visible_leg_crossing": {
+          "pair": [
+            "Leg_R1_Ankle",
+            "Leg_R2_Ankle"
+          ],
+          "region": "different_legs",
+          "tri": [
+            1881,
+            1991
+          ],
+          "line_px": 1.3089314146084423,
+          "xy": [
+            87.31901550292969,
+            87.58862686157227
+          ],
+          "visible": true,
+          "frame": 73.0
+        },
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Leg_R2_Upper",
+            "Leg_R2_Upper"
+          ],
+          "region": "same_leg",
+          "tri": [
+            1942,
+            1952
+          ],
+          "line_px": 2.299034230613187,
+          "xy": [
+            89.55247497558594,
+            81.18424987792969
+          ],
+          "visible": true,
+          "frame": 83.0
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 444,
+          "leg_and_other": 360,
+          "other": 26,
+          "different_legs": 53
+        }
+      },
+      "interkey": {
+        "samples": 915,
+        "visible_leg_pairs": 978,
+        "visible_leg_poses": 95,
+        "largest_visible_leg_crossing": {
+          "pair": [
+            "Leg_R1_Ankle",
+            "Leg_R2_Ankle"
+          ],
+          "region": "different_legs",
+          "tri": [
+            1881,
+            1991
+          ],
+          "line_px": 2.00039272094672,
+          "xy": [
+            87.17132568359375,
+            88.61428451538086
+          ],
+          "visible": true,
+          "frame": 71.375
+        },
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Body",
+            "Leg_R3_Upper"
+          ],
+          "region": "leg_and_other",
+          "tri": [
+            430,
+            2062
+          ],
+          "line_px": 2.8096764726801102,
+          "xy": [
+            36.859649658203125,
+            71.05112075805664
+          ],
+          "visible": true,
+          "frame": 35.875
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 6563,
+          "leg_and_other": 5583,
+          "other": 244,
+          "different_legs": 978
+        }
+      }
+    },
+    "after": {
+      "key": {
+        "samples": 62,
+        "visible_leg_pairs": 0,
+        "visible_leg_poses": 0,
+        "largest_visible_leg_crossing": null,
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Leg_R2_Lower",
+            "Leg_R2_Upper"
+          ],
+          "region": "same_leg",
+          "tri": [
+            1943,
+            1953
+          ],
+          "line_px": 2.0447060292175276,
+          "xy": [
+            86.45042419433594,
+            80.93466567993164
+          ],
+          "visible": true,
+          "frame": 81.0
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 455,
+          "leg_and_other": 351,
+          "other": 20
+        }
+      },
+      "interkey": {
+        "samples": 915,
+        "visible_leg_pairs": 101,
+        "visible_leg_poses": 19,
+        "largest_visible_leg_crossing": {
+          "pair": [
+            "Leg_L1_Upper",
+            "Leg_L2_Claw"
+          ],
+          "region": "different_legs",
+          "tri": [
+            1492,
+            1672
+          ],
+          "line_px": 1.0160793912450286,
+          "xy": [
+            73.14244842529297,
+            93.62035369873047
+          ],
+          "visible": true,
+          "frame": 110.25
+        },
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Body",
+            "Leg_R3_Upper"
+          ],
+          "region": "leg_and_other",
+          "tri": [
+            430,
+            2062
+          ],
+          "line_px": 2.8096764726801102,
+          "xy": [
+            36.859649658203125,
+            71.05112075805664
+          ],
+          "visible": true,
+          "frame": 35.875
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 7000,
+          "leg_and_other": 5465,
+          "other": 231,
+          "different_legs": 101
+        }
+      }
+    }
+  },
+  "right": {
+    "sampled_poses_2p5ms": 977,
+    "blend_sha256": "f6dbeb7f0583cebc0dfc3b9fd015d01d9a61e4e48632eb0d5f2d812bf88f259d",
+    "peak_support_height_px": 0.2925237959828076,
+    "max_support_slide_px": 0.09670797209740635,
+    "before": {
+      "key": {
+        "samples": 62,
+        "visible_leg_pairs": 56,
+        "visible_leg_poses": 4,
+        "largest_visible_leg_crossing": {
+          "pair": [
+            "Leg_R1_Ankle",
+            "Leg_R2_Ankle"
+          ],
+          "region": "different_legs",
+          "tri": [
+            1881,
+            1991
+          ],
+          "line_px": 1.3089137341292585,
+          "xy": [
+            80.856201171875,
+            91.00481414794922
+          ],
+          "visible": true,
+          "frame": 33.0
+        },
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Body",
+            "Leg_R1_Upper"
+          ],
+          "region": "leg_and_other",
+          "tri": [
+            372,
+            1831
+          ],
+          "line_px": 2.594619696241331,
+          "xy": [
+            74.36749267578125,
+            82.16360092163086
+          ],
+          "visible": true,
+          "frame": 35.0
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 436,
+          "leg_and_other": 326,
+          "different_legs": 56,
+          "other": 25
+        }
+      },
+      "interkey": {
+        "samples": 915,
+        "visible_leg_pairs": 712,
+        "visible_leg_poses": 56,
+        "largest_visible_leg_crossing": {
+          "pair": [
+            "Leg_R1_Ankle",
+            "Leg_R2_Ankle"
+          ],
+          "region": "different_legs",
+          "tri": [
+            1881,
+            1991
+          ],
+          "line_px": 2.0003741028663673,
+          "xy": [
+            80.4632797241211,
+            91.98450088500977
+          ],
+          "visible": true,
+          "frame": 31.375
+        },
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Body",
+            "Leg_R1_Upper"
+          ],
+          "region": "leg_and_other",
+          "tri": [
+            372,
+            1831
+          ],
+          "line_px": 3.3048180243377154,
+          "xy": [
+            74.35498809814453,
+            82.03438949584961
+          ],
+          "visible": true,
+          "frame": 34.625
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 6490,
+          "leg_and_other": 5338,
+          "different_legs": 712,
+          "other": 197
+        }
+      }
+    },
+    "after": {
+      "key": {
+        "samples": 62,
+        "visible_leg_pairs": 0,
+        "visible_leg_poses": 0,
+        "largest_visible_leg_crossing": null,
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Leg_R2_Lower",
+            "Leg_R2_Upper"
+          ],
+          "region": "same_leg",
+          "tri": [
+            1943,
+            1953
+          ],
+          "line_px": 2.0447104493373236,
+          "xy": [
+            51.69499206542969,
+            85.10270690917969
+          ],
+          "visible": true,
+          "frame": 21.0
+        },
+        "visible_pairs_by_region": {
+          "leg_and_other": 356,
+          "same_leg": 469,
+          "other": 28
+        }
+      },
+      "interkey": {
+        "samples": 915,
+        "visible_leg_pairs": 0,
+        "visible_leg_poses": 0,
+        "largest_visible_leg_crossing": null,
+        "largest_visible_mesh_crossing": {
+          "pair": [
+            "Body",
+            "Leg_R3_Lower"
+          ],
+          "region": "leg_and_other",
+          "tri": [
+            212,
+            2063
+          ],
+          "line_px": 2.673687870695691,
+          "xy": [
+            92.92205810546875,
+            81.50313949584961
+          ],
+          "visible": true,
+          "frame": 56.875
+        },
+        "visible_pairs_by_region": {
+          "same_leg": 7122,
+          "leg_and_other": 5766,
+          "other": 269
+        }
+      }
+    }
+  }
+}

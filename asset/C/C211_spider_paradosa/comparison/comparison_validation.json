@@ -1,0 +1,28 @@
+{
+  "left": {
+    "flat_normal_mean_rgb_difference": [
+      0.7546565755208333,
+      0.6711490885416667,
+      0.5979215494791666
+    ]
+  },
+  "right": {
+    "flat_normal_mean_rgb_difference": [
+      0.6622102864583334,
+      0.5874739583333334,
+      0.5246207682291667
+    ]
+  },
+  "renderer": "C011 lighting.py BRDF reused with dynamic size coordinate fields",
+  "reference_renderer_sha256": "483bd40c7bcfffbd79003d6e59dc2c7dce73e92e47a4d89fca2647961ad0a021",
+  "C011_128px_parity": "byte-identical",
+  "C211_640px_load_and_shade": "PASS",
+  "light": {
+    "power": 0.82,
+    "ambient": 0.34,
+    "z_pixels": 116
+  },
+  "clock": "common seconds, own clip durations",
+  "collision": "visual comparison only, game collision profile unchanged",
+  "game_loader": "existing materials.Assets has fixed SIZE=128 and revision integrated-r5; C211 uses this standalone manifest-driven comparison loader"
+}

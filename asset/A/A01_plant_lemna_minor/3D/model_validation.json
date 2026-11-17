@@ -1,0 +1,42 @@
+{
+  "blender": "5.3.0",
+  "geometry": {
+    "frond": {
+      "vertices": 98,
+      "triangles": 192
+    },
+    "root_single": {
+      "vertices": 24,
+      "triangles": 44
+    },
+    "root_cap": {
+      "vertices": 98,
+      "triangles": 192
+    }
+  },
+  "triangle_count": 428,
+  "bone_count": 0,
+  "bounds_bu": [
+    [
+      -1.6894429922103882,
+      -1.1102054119110107,
+      -1.300014853477478
+    ],
+    [
+      1.6894429922103882,
+      1.1102054119110107,
+      0.13515543937683105
+    ]
+  ],
+  "extent_bu": [
+    3.3788859844207764,
+    2.2204108238220215,
+    1.435170292854309
+  ],
+  "all_images_packed": true,
+  "uv_policy": "planar per face for hard surfaces; XY projection for fronds/decal; intentional repeating underside",
+  "hidden_face_policy": "closed editable volumes retained; no unproven occluded-face deletion",
+  "rendered_views": 7,
+  "blend_sha256": "a8abc03c32b1033ee1159e0a2979931564cf6ed30e35cf43736aa1a97ef5a9f5",
+  "static_root": true
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-17",
+  "computer_use": false,
+  "imagegen": "built-in image_gen; seven subject calls; C011 idle style reference",
+  "blender_mcp_reference_read": "PASS",
+  "blender_mcp_build": "120s timeout",
+  "blender_build": "5.3.0 CLI --background --factory-startup --disable-autoexec --threads 2",
+  "source_game_modified": false,
+  "deployment_root": "asset/A"
+}

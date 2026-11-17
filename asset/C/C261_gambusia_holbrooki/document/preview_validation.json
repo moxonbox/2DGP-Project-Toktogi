@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "JavaScript syntax, mocked canvas/DOM selection, referenced files, seek boundaries and data-pass alpha-mask requests",
+  "image_requests": 27,
+  "actual_browser": "NOT_RUN"
+}

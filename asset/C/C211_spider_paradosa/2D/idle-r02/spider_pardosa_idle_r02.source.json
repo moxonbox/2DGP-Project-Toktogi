@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "asset_id": "C211_spider_paradosa",
+  "revision": "idle-r02",
+  "base_signature": "918bcc48c8c2eb0d14b0cc240bd99e762e19111accaea4b63f20c158728ff9ec",
+  "source_blend_sha256": "7d95639f87ee29230490b7612b5ad440754b713e3cabfaa8f3697c5becb68443",
+  "manifest_signature": "5e063a00b4e72831378a86c4f10396bd1bd079b69bb4526510cf275f9ec51649",
+  "bundle_sha256": "0bb96b4d42669fbebedc56e28b8ea7dbf512036ea0eae562fa569ea5f9afa8b2"
+}

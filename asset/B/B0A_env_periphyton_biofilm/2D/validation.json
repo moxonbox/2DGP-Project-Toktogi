@@ -1,0 +1,181 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "attached_film",
+      "vertices": 98,
+      "triangles": 192
+    },
+    {
+      "name": "film_colony_0",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_10",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_11",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_12",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_13",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_14",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_15",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_6",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_7",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_8",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "film_colony_9",
+      "vertices": 62,
+      "triangles": 120
+    }
+  ],
+  "triangles": 2112,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        240,
+        96
+      ],
+      "margin": 15,
+      "normal_error": 0.006392486168711242,
+      "surface_pixels": 9274,
+      "seconds": 0.26952020003227517
+    },
+    "front": {
+      "cell": [
+        192,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.005291650887873978,
+      "surface_pixels": 188,
+      "seconds": 0.20866779994685203
+    },
+    "back": {
+      "cell": [
+        192,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.005475207131862891,
+      "surface_pixels": 188,
+      "seconds": 0.25338619999820367
+    },
+    "left": {
+      "cell": [
+        256,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.0048020036369751384,
+      "surface_pixels": 318,
+      "seconds": 0.1925682000000961
+    },
+    "right": {
+      "cell": [
+        256,
+        32
+      ],
+      "margin": 15,
+      "normal_error": 0.005108061122221841,
+      "surface_pixels": 318,
+      "seconds": 0.25516320002498105
+    },
+    "top": {
+      "cell": [
+        256,
+        192
+      ],
+      "margin": 16,
+      "normal_error": 0.00658840867787136,
+      "surface_pixels": 24845,
+      "seconds": 0.3447992000146769
+    },
+    "underside": {
+      "cell": [
+        256,
+        192
+      ],
+      "margin": 16,
+      "normal_error": 0.00658840867787136,
+      "surface_pixels": 24845,
+      "seconds": 0.3682181999902241
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\env_periphyton_biofilm_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "env_periphyton_biofilm_sheet_r01.png": {
+      "relative": "//..\\sheet\\env_periphyton_biofilm_sheet_r01.png",
+      "sha256": "83e79a456acf7040f5b42d1deac99384ecbea593ddb5439088b1349e71c572fb",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 3000320,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

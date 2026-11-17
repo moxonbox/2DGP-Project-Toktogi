@@ -1,0 +1,136 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "cylindrical_inflorescence",
+      "vertices": 64,
+      "triangles": 124
+    },
+    {
+      "name": "strap_leaf_1",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "strap_leaf_2",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "strap_leaf_3",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "strap_leaf_4",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "strap_leaf_5",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "strap_leaf_6",
+      "vertices": 52,
+      "triangles": 100
+    },
+    {
+      "name": "vertical_stem",
+      "vertices": 20,
+      "triangles": 36
+    }
+  ],
+  "triangles": 760,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        272,
+        512
+      ],
+      "margin": 16,
+      "normal_error": 0.006514726879262689,
+      "surface_pixels": 19397,
+      "seconds": 0.26963479997357354
+    },
+    "front": {
+      "cell": [
+        240,
+        528
+      ],
+      "margin": 12,
+      "normal_error": 0.00633136024514358,
+      "surface_pixels": 21384,
+      "seconds": 0.25641649996396154
+    },
+    "back": {
+      "cell": [
+        240,
+        528
+      ],
+      "margin": 12,
+      "normal_error": 0.00633136024514358,
+      "surface_pixels": 21384,
+      "seconds": 0.24063389998627827
+    },
+    "left": {
+      "cell": [
+        224,
+        528
+      ],
+      "margin": 12,
+      "normal_error": 0.00633136024514358,
+      "surface_pixels": 20964,
+      "seconds": 0.19864409998990595
+    },
+    "right": {
+      "cell": [
+        224,
+        528
+      ],
+      "margin": 12,
+      "normal_error": 0.00633136024514358,
+      "surface_pixels": 20964,
+      "seconds": 0.23963500000536442
+    },
+    "top": {
+      "cell": [
+        224,
+        240
+      ],
+      "margin": 13,
+      "normal_error": 0.005969373805238987,
+      "surface_pixels": 10608,
+      "seconds": 0.17536760005168617
+    },
+    "underside": {
+      "cell": [
+        224,
+        240
+      ],
+      "margin": 13,
+      "normal_error": 0.006093149935492259,
+      "surface_pixels": 10608,
+      "seconds": 0.21864250005455688
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\plant_typha_orientalis_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "plant_typha_orientalis_sheet_r01.png": {
+      "relative": "//..\\sheet\\plant_typha_orientalis_sheet_r01.png",
+      "sha256": "3a52df41c6a47a794b90fc4c9420e12c9b292bb07358893a86e5fc2178552cd7",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 14735360,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

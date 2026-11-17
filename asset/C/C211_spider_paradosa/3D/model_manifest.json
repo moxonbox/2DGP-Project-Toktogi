@@ -1,0 +1,1352 @@
+{
+  "asset_id": "C211_spider_paradosa",
+  "object_id": "spider_pardosa",
+  "revision": "idle-r02",
+  "taxon": "Pardosa agrestis",
+  "stage": "adult",
+  "sex": "female",
+  "biological_body_length_mm": 5.0,
+  "relative_size_to_toktogi": 5.0,
+  "design_body_length_bu": 4.82698,
+  "status": "asset_experiment",
+  "production_export_allowed": false,
+  "size_profile": {
+    "taxon": "Pardosa agrestis",
+    "sex": "female",
+    "stage": "adult",
+    "body_length_mm": 5.0,
+    "size_reference": "AssetSize S2, approximately 5 mm",
+    "reference_toktogi_mm": 1.0,
+    "biological_ratio": 5.0,
+    "authoring_reference_body_bu": 0.965396,
+    "staging_factor": 1.0,
+    "target_body_bu": 4.82698,
+    "approved_by": "user in this chat"
+  },
+  "style_reference": "C011 integrated-r5, AssetPipeLine v2.2",
+  "ground_alignment_offset_bu": 0.02356567420065403,
+  "preview_surface": {
+    "body_shader": "NPR_Toon",
+    "size": 0.55,
+    "smooth": 0.035,
+    "eye_roughness": 0.48,
+    "color_management": "AgX / None",
+    "lighting": "isolated proportional studio; shared game lighting verified in comparison"
+  },
+  "motion_design": {
+    "easing": "periodic cubic Hermite via Bezier handles",
+    "cycle_s": 2,
+    "reference_idle_s": 1.6,
+    "body_lateral_amplitude_bu": 0.008581297777777778,
+    "body_height_range_bu": 0.042906488888888886,
+    "body_yaw_rad": 0.02,
+    "palp_yaw_rad": 0.08,
+    "palp_double_frequency": true
+  },
+  "coordinate_contract": "DEC-06-deferred",
+  "front_axis": "-Y",
+  "up_axis": "+Z",
+  "left_axis": "+X",
+  "physics_owner": "simulation",
+  "effect_owner": "simulation",
+  "effects": [],
+  "parts": [
+    {
+      "name": "cephalothorax",
+      "bone": "cephalothorax",
+      "first_vertex": 0,
+      "vertex_count": 362,
+      "tile": [
+        4,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "abdomen",
+      "bone": "abdomen",
+      "first_vertex": 362,
+      "vertex_count": 362,
+      "tile": [
+        88,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "pedicel",
+      "bone": "abdomen",
+      "first_vertex": 724,
+      "vertex_count": 86,
+      "tile": [
+        172,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_coxa",
+      "bone": "leg_L1_coxa",
+      "first_vertex": 810,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_trochanter",
+      "bone": "leg_L1_trochanter",
+      "first_vertex": 852,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_femur",
+      "bone": "leg_L1_femur",
+      "first_vertex": 894,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_patella",
+      "bone": "leg_L1_patella",
+      "first_vertex": 936,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_tibia",
+      "bone": "leg_L1_tibia",
+      "first_vertex": 978,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_metatarsus",
+      "bone": "leg_L1_metatarsus",
+      "first_vertex": 1020,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L1_tarsus",
+      "bone": "leg_L1_tarsus",
+      "first_vertex": 1062,
+      "vertex_count": 42,
+      "tile": [
+        760,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_coxa",
+      "bone": "leg_L2_coxa",
+      "first_vertex": 1104,
+      "vertex_count": 42,
+      "tile": [
+        844,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_trochanter",
+      "bone": "leg_L2_trochanter",
+      "first_vertex": 1146,
+      "vertex_count": 42,
+      "tile": [
+        928,
+        4,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_femur",
+      "bone": "leg_L2_femur",
+      "first_vertex": 1188,
+      "vertex_count": 42,
+      "tile": [
+        4,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_patella",
+      "bone": "leg_L2_patella",
+      "first_vertex": 1230,
+      "vertex_count": 42,
+      "tile": [
+        88,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_tibia",
+      "bone": "leg_L2_tibia",
+      "first_vertex": 1272,
+      "vertex_count": 42,
+      "tile": [
+        172,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_metatarsus",
+      "bone": "leg_L2_metatarsus",
+      "first_vertex": 1314,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L2_tarsus",
+      "bone": "leg_L2_tarsus",
+      "first_vertex": 1356,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_coxa",
+      "bone": "leg_L3_coxa",
+      "first_vertex": 1398,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_trochanter",
+      "bone": "leg_L3_trochanter",
+      "first_vertex": 1440,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_femur",
+      "bone": "leg_L3_femur",
+      "first_vertex": 1482,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_patella",
+      "bone": "leg_L3_patella",
+      "first_vertex": 1524,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_tibia",
+      "bone": "leg_L3_tibia",
+      "first_vertex": 1566,
+      "vertex_count": 42,
+      "tile": [
+        760,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_metatarsus",
+      "bone": "leg_L3_metatarsus",
+      "first_vertex": 1608,
+      "vertex_count": 42,
+      "tile": [
+        844,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L3_tarsus",
+      "bone": "leg_L3_tarsus",
+      "first_vertex": 1650,
+      "vertex_count": 42,
+      "tile": [
+        928,
+        88,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_coxa",
+      "bone": "leg_L4_coxa",
+      "first_vertex": 1692,
+      "vertex_count": 42,
+      "tile": [
+        4,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_trochanter",
+      "bone": "leg_L4_trochanter",
+      "first_vertex": 1734,
+      "vertex_count": 42,
+      "tile": [
+        88,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_femur",
+      "bone": "leg_L4_femur",
+      "first_vertex": 1776,
+      "vertex_count": 42,
+      "tile": [
+        172,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_patella",
+      "bone": "leg_L4_patella",
+      "first_vertex": 1818,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_tibia",
+      "bone": "leg_L4_tibia",
+      "first_vertex": 1860,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_metatarsus",
+      "bone": "leg_L4_metatarsus",
+      "first_vertex": 1902,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_L4_tarsus",
+      "bone": "leg_L4_tarsus",
+      "first_vertex": 1944,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_coxa",
+      "bone": "leg_R1_coxa",
+      "first_vertex": 1986,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_trochanter",
+      "bone": "leg_R1_trochanter",
+      "first_vertex": 2028,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_femur",
+      "bone": "leg_R1_femur",
+      "first_vertex": 2070,
+      "vertex_count": 42,
+      "tile": [
+        760,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_patella",
+      "bone": "leg_R1_patella",
+      "first_vertex": 2112,
+      "vertex_count": 42,
+      "tile": [
+        844,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_tibia",
+      "bone": "leg_R1_tibia",
+      "first_vertex": 2154,
+      "vertex_count": 42,
+      "tile": [
+        928,
+        172,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_metatarsus",
+      "bone": "leg_R1_metatarsus",
+      "first_vertex": 2196,
+      "vertex_count": 42,
+      "tile": [
+        4,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R1_tarsus",
+      "bone": "leg_R1_tarsus",
+      "first_vertex": 2238,
+      "vertex_count": 42,
+      "tile": [
+        88,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_coxa",
+      "bone": "leg_R2_coxa",
+      "first_vertex": 2280,
+      "vertex_count": 42,
+      "tile": [
+        172,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_trochanter",
+      "bone": "leg_R2_trochanter",
+      "first_vertex": 2322,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_femur",
+      "bone": "leg_R2_femur",
+      "first_vertex": 2364,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_patella",
+      "bone": "leg_R2_patella",
+      "first_vertex": 2406,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_tibia",
+      "bone": "leg_R2_tibia",
+      "first_vertex": 2448,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_metatarsus",
+      "bone": "leg_R2_metatarsus",
+      "first_vertex": 2490,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R2_tarsus",
+      "bone": "leg_R2_tarsus",
+      "first_vertex": 2532,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_coxa",
+      "bone": "leg_R3_coxa",
+      "first_vertex": 2574,
+      "vertex_count": 42,
+      "tile": [
+        760,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_trochanter",
+      "bone": "leg_R3_trochanter",
+      "first_vertex": 2616,
+      "vertex_count": 42,
+      "tile": [
+        844,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_femur",
+      "bone": "leg_R3_femur",
+      "first_vertex": 2658,
+      "vertex_count": 42,
+      "tile": [
+        928,
+        256,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_patella",
+      "bone": "leg_R3_patella",
+      "first_vertex": 2700,
+      "vertex_count": 42,
+      "tile": [
+        4,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_tibia",
+      "bone": "leg_R3_tibia",
+      "first_vertex": 2742,
+      "vertex_count": 42,
+      "tile": [
+        88,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_metatarsus",
+      "bone": "leg_R3_metatarsus",
+      "first_vertex": 2784,
+      "vertex_count": 42,
+      "tile": [
+        172,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R3_tarsus",
+      "bone": "leg_R3_tarsus",
+      "first_vertex": 2826,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_coxa",
+      "bone": "leg_R4_coxa",
+      "first_vertex": 2868,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_trochanter",
+      "bone": "leg_R4_trochanter",
+      "first_vertex": 2910,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_femur",
+      "bone": "leg_R4_femur",
+      "first_vertex": 2952,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_patella",
+      "bone": "leg_R4_patella",
+      "first_vertex": 2994,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_tibia",
+      "bone": "leg_R4_tibia",
+      "first_vertex": 3036,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_metatarsus",
+      "bone": "leg_R4_metatarsus",
+      "first_vertex": 3078,
+      "vertex_count": 42,
+      "tile": [
+        760,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "leg_R4_tarsus",
+      "bone": "leg_R4_tarsus",
+      "first_vertex": 3120,
+      "vertex_count": 42,
+      "tile": [
+        844,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "pedipalp_L",
+      "bone": "pedipalp_L",
+      "first_vertex": 3162,
+      "vertex_count": 42,
+      "tile": [
+        928,
+        340,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "pedipalp_tip_L",
+      "bone": "pedipalp_tip_L",
+      "first_vertex": 3204,
+      "vertex_count": 42,
+      "tile": [
+        4,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "chelicera_L",
+      "bone": "chelicera_L",
+      "first_vertex": 3246,
+      "vertex_count": 42,
+      "tile": [
+        88,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "fang_L",
+      "bone": "fang_L",
+      "first_vertex": 3288,
+      "vertex_count": 42,
+      "tile": [
+        172,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "spinneret_L",
+      "bone": "spinneret_L",
+      "first_vertex": 3330,
+      "vertex_count": 42,
+      "tile": [
+        256,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "pedipalp_R",
+      "bone": "pedipalp_R",
+      "first_vertex": 3372,
+      "vertex_count": 42,
+      "tile": [
+        340,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "pedipalp_tip_R",
+      "bone": "pedipalp_tip_R",
+      "first_vertex": 3414,
+      "vertex_count": 42,
+      "tile": [
+        424,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "chelicera_R",
+      "bone": "chelicera_R",
+      "first_vertex": 3456,
+      "vertex_count": 42,
+      "tile": [
+        508,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "fang_R",
+      "bone": "fang_R",
+      "first_vertex": 3498,
+      "vertex_count": 42,
+      "tile": [
+        592,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "spinneret_R",
+      "bone": "spinneret_R",
+      "first_vertex": 3540,
+      "vertex_count": 42,
+      "tile": [
+        676,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_anterior_1",
+      "bone": "cephalothorax",
+      "first_vertex": 3582,
+      "vertex_count": 146,
+      "tile": [
+        760,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_anterior_2",
+      "bone": "cephalothorax",
+      "first_vertex": 3728,
+      "vertex_count": 146,
+      "tile": [
+        844,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_anterior_3",
+      "bone": "cephalothorax",
+      "first_vertex": 3874,
+      "vertex_count": 146,
+      "tile": [
+        928,
+        424,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_anterior_4",
+      "bone": "cephalothorax",
+      "first_vertex": 4020,
+      "vertex_count": 146,
+      "tile": [
+        4,
+        508,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_PME_L",
+      "bone": "cephalothorax",
+      "first_vertex": 4166,
+      "vertex_count": 146,
+      "tile": [
+        88,
+        508,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_PLE_L",
+      "bone": "cephalothorax",
+      "first_vertex": 4312,
+      "vertex_count": 146,
+      "tile": [
+        172,
+        508,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_PME_R",
+      "bone": "cephalothorax",
+      "first_vertex": 4458,
+      "vertex_count": 146,
+      "tile": [
+        256,
+        508,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "eye_PLE_R",
+      "bone": "cephalothorax",
+      "first_vertex": 4604,
+      "vertex_count": 146,
+      "tile": [
+        340,
+        508,
+        80,
+        80
+      ]
+    }
+  ],
+  "leg_paths": {
+    "L1": [
+      [
+        0.7294103503227234,
+        -1.6304465532302856,
+        1.0276433229446411
+      ],
+      [
+        0.8946002721786499,
+        -1.7385709285736084,
+        1.1087366342544556
+      ],
+      [
+        1.0007938146591187,
+        -1.808079481124878,
+        1.1608680486679077
+      ],
+      [
+        1.9093387126922607,
+        -2.4027633666992188,
+        1.6068809032440186
+      ],
+      [
+        2.018106698989868,
+        -2.5310537815093994,
+        1.4021741151809692
+      ],
+      [
+        2.4364449977874756,
+        -3.0244784355163574,
+        0.614840030670166
+      ],
+      [
+        2.637247323989868,
+        -3.261322259902954,
+        0.23691967129707336
+      ],
+      [
+        2.7460153102874756,
+        -3.3896126747131348,
+        0.0322127640247345
+      ]
+    ],
+    "L2": [
+      [
+        0.7294103503227234,
+        -1.1370218992233276,
+        1.0276433229446411
+      ],
+      [
+        0.9666832089424133,
+        -1.1670564413070679,
+        1.1087366342544556
+      ],
+      [
+        1.1192158460617065,
+        -1.1863644123077393,
+        1.1608680486679077
+      ],
+      [
+        2.4242167472839355,
+        -1.3515543937683105,
+        1.6068809032440186
+      ],
+      [
+        2.5720295906066895,
+        -1.4324331283569336,
+        1.4021741151809692
+      ],
+      [
+        3.140540361404419,
+        -1.7435052394866943,
+        0.614840030670166
+      ],
+      [
+        3.4134256839752197,
+        -1.8928197622299194,
+        0.23691967129707336
+      ],
+      [
+        3.5612385272979736,
+        -1.9736984968185425,
+        0.0322127640247345
+      ]
+    ],
+    "L3": [
+      [
+        0.7294103503227234,
+        -0.6221441030502319,
+        1.0276433229446411
+      ],
+      [
+        0.9756935834884644,
+        -0.5110162496566772,
+        1.1087366342544556
+      ],
+      [
+        1.1340184211730957,
+        -0.43957698345184326,
+        1.1608680486679077
+      ],
+      [
+        2.4885764122009277,
+        0.17162595689296722,
+        1.6068809032440186
+      ],
+      [
+        2.658700704574585,
+        0.23856008052825928,
+        1.4021741151809692
+      ],
+      [
+        3.3130245208740234,
+        0.4959990084171295,
+        0.614840030670166
+      ],
+      [
+        3.6271002292633057,
+        0.619569718837738,
+        0.23691967129707336
+      ],
+      [
+        3.797224283218384,
+        0.6865038275718689,
+        0.0322127640247345
+      ]
+    ],
+    "L4": [
+      [
+        0.7294103503227234,
+        -0.17162595689296722,
+        1.0276433229446411
+      ],
+      [
+        0.9276382923126221,
+        0.050629667937755585,
+        1.1087366342544556
+      ],
+      [
+        1.0550706386566162,
+        0.19350828230381012,
+        1.1608680486679077
+      ],
+      [
+        2.145324468612671,
+        1.4159141778945923,
+        1.6068809032440186
+      ],
+      [
+        2.2791926860809326,
+        1.58603835105896,
+        1.4021741151809692
+      ],
+      [
+        2.7940704822540283,
+        2.2403621673583984,
+        0.614840030670166
+      ],
+      [
+        3.0412120819091797,
+        2.5544378757476807,
+        0.23691967129707336
+      ],
+      [
+        3.1750802993774414,
+        2.724561929702759,
+        0.0322127640247345
+      ]
+    ],
+    "R1": [
+      [
+        -0.7294103503227234,
+        -1.6304465532302856,
+        1.0276433229446411
+      ],
+      [
+        -0.8946002721786499,
+        -1.7385709285736084,
+        1.1087366342544556
+      ],
+      [
+        -1.0007938146591187,
+        -1.808079481124878,
+        1.1608680486679077
+      ],
+      [
+        -1.9093387126922607,
+        -2.4027633666992188,
+        1.6068809032440186
+      ],
+      [
+        -2.018106698989868,
+        -2.5310537815093994,
+        1.4021741151809692
+      ],
+      [
+        -2.4364449977874756,
+        -3.0244784355163574,
+        0.614840030670166
+      ],
+      [
+        -2.637247323989868,
+        -3.261322259902954,
+        0.23691967129707336
+      ],
+      [
+        -2.7460153102874756,
+        -3.3896126747131348,
+        0.0322127640247345
+      ]
+    ],
+    "R2": [
+      [
+        -0.7294103503227234,
+        -1.1370218992233276,
+        1.0276433229446411
+      ],
+      [
+        -0.9666832089424133,
+        -1.1670564413070679,
+        1.1087366342544556
+      ],
+      [
+        -1.1192158460617065,
+        -1.1863644123077393,
+        1.1608680486679077
+      ],
+      [
+        -2.4242167472839355,
+        -1.3515543937683105,
+        1.6068809032440186
+      ],
+      [
+        -2.5720295906066895,
+        -1.4324331283569336,
+        1.4021741151809692
+      ],
+      [
+        -3.140540361404419,
+        -1.7435052394866943,
+        0.614840030670166
+      ],
+      [
+        -3.4134256839752197,
+        -1.8928197622299194,
+        0.23691967129707336
+      ],
+      [
+        -3.5612385272979736,
+        -1.9736984968185425,
+        0.0322127640247345
+      ]
+    ],
+    "R3": [
+      [
+        -0.7294103503227234,
+        -0.6221441030502319,
+        1.0276433229446411
+      ],
+      [
+        -0.9756935834884644,
+        -0.5110162496566772,
+        1.1087366342544556
+      ],
+      [
+        -1.1340184211730957,
+        -0.43957698345184326,
+        1.1608680486679077
+      ],
+      [
+        -2.4885764122009277,
+        0.17162595689296722,
+        1.6068809032440186
+      ],
+      [
+        -2.658700704574585,
+        0.23856008052825928,
+        1.4021741151809692
+      ],
+      [
+        -3.3130245208740234,
+        0.4959990084171295,
+        0.614840030670166
+      ],
+      [
+        -3.6271002292633057,
+        0.619569718837738,
+        0.23691967129707336
+      ],
+      [
+        -3.797224283218384,
+        0.6865038275718689,
+        0.0322127640247345
+      ]
+    ],
+    "R4": [
+      [
+        -0.7294103503227234,
+        -0.17162595689296722,
+        1.0276433229446411
+      ],
+      [
+        -0.9276382923126221,
+        0.050629667937755585,
+        1.1087366342544556
+      ],
+      [
+        -1.0550706386566162,
+        0.19350828230381012,
+        1.1608680486679077
+      ],
+      [
+        -2.145324468612671,
+        1.4159141778945923,
+        1.6068809032440186
+      ],
+      [
+        -2.2791926860809326,
+        1.58603835105896,
+        1.4021741151809692
+      ],
+      [
+        -2.7940704822540283,
+        2.2403621673583984,
+        0.614840030670166
+      ],
+      [
+        -3.0412120819091797,
+        2.5544378757476807,
+        0.23691967129707336
+      ],
+      [
+        -3.1750802993774414,
+        2.724561929702759,
+        0.0322127640247345
+      ]
+    ]
+  },
+  "eye_layout": [
+    4,
+    2,
+    2
+  ],
+  "budgets": {
+    "triangles": 16000,
+    "bones": 96,
+    "texture": [
+      1024,
+      1024
+    ]
+  },
+  "clip": {
+    "state": "idle_scan",
+    "id": "idle_scan",
+    "phase": "mid",
+    "loop": true,
+    "duration_s": 2,
+    "action": "C211_idle_scan_mid_r02",
+    "native_fps": 48,
+    "frame_start": 1,
+    "loop_endpoint": 97,
+    "playback_frames": 96,
+    "sample_count": 24,
+    "sample_fps": 12,
+    "pre_end": "neutral boundary pose shared at frame 1"
+  },
+  "sheet_sha256": "b70497f71948de12bde16a55f331c10bcc1c4c84393e1b48e4dc0cba5ac310ab",
+  "blender_version": "5.3.0",
+  "measured": {
+    "triangles": 9192,
+    "vertices": 4750,
+    "bones": 77
+  }
+}

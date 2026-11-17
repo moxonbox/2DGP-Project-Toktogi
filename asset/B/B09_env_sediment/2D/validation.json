@@ -1,0 +1,151 @@
+{
+  "reopened_blend": true,
+  "parts": [
+    {
+      "name": "detritus_0",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "detritus_1",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "detritus_2",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "name": "gravel_1",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_2",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_3",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_4",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_5",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "gravel_6",
+      "vertices": 62,
+      "triangles": 120
+    },
+    {
+      "name": "sediment_floor",
+      "vertices": 98,
+      "triangles": 192
+    },
+    {
+      "name": "sediment_stratum",
+      "vertices": 98,
+      "triangles": 192
+    }
+  ],
+  "triangles": 1164,
+  "bones": 0,
+  "views": {
+    "game": {
+      "cell": [
+        448,
+        192
+      ],
+      "margin": 15,
+      "normal_error": 0.006331360245143802,
+      "surface_pixels": 48731,
+      "seconds": 0.28628659999230877
+    },
+    "front": {
+      "cell": [
+        336,
+        96
+      ],
+      "margin": 15,
+      "normal_error": 0.006514726879262689,
+      "surface_pixels": 12657,
+      "seconds": 0.14724100002786145
+    },
+    "back": {
+      "cell": [
+        336,
+        96
+      ],
+      "margin": 15,
+      "normal_error": 0.006575841667598947,
+      "surface_pixels": 12657,
+      "seconds": 0.25684370001545176
+    },
+    "left": {
+      "cell": [
+        480,
+        96
+      ],
+      "margin": 13,
+      "normal_error": 0.006464570847540818,
+      "surface_pixels": 18535,
+      "seconds": 0.21893550001550466
+    },
+    "right": {
+      "cell": [
+        480,
+        96
+      ],
+      "margin": 13,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 18535,
+      "seconds": 0.22509809996699914
+    },
+    "top": {
+      "cell": [
+        480,
+        336
+      ],
+      "margin": 13,
+      "normal_error": 0.006402657720362304,
+      "surface_pixels": 99313,
+      "seconds": 0.4124082999769598
+    },
+    "underside": {
+      "cell": [
+        480,
+        336
+      ],
+      "margin": 13,
+      "normal_error": 0.006392486168711242,
+      "surface_pixels": 99313,
+      "seconds": 0.42222300003049895
+    }
+  },
+  "uv_finite_in_bounds": true,
+  "degenerate_triangles": 0,
+  "external_files": {
+    "Background_BaseColor_r01": {
+      "relative": "//textures\\env_sediment_basecolor_r01.png",
+      "sha256": "7b302910cfa5df7b2a824febf3b17b5b16db21b6d288a55a6bdae35e0859edec",
+      "packed_matches": true
+    },
+    "env_sediment_sheet_r01.png": {
+      "relative": "//..\\sheet\\env_sediment_sheet_r01.png",
+      "sha256": "0af619adcfb6b518ee8965ac3d6130882b4444e535bb51e51f421f6e1855cbd3",
+      "packed_matches": true
+    }
+  },
+  "mcp": "connection_timeout_cli_fallback",
+  "decoded_rgba_bytes": 11304960,
+  "status": "PASS_NUMERIC_PRODUCTION"
+}

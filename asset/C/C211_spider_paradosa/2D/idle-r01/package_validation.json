@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "files": {
+    "left_sprite.png": "b61e5a778690c03ccb40e4bd17023b32b0f56699c105cf8ab5d15f23bb340547",
+    "left_base.png": "1cdd1271aa21476e4af334f7c2e3eff640f8ab387a4c90cbe5b58ffa96453c4e",
+    "left_normal.png": "62ab84725e1f59d40bca866659d7a92a091dc8c8e727fc6277e1915cc6d467e4",
+    "left_ao.png": "9a10b5099a4ce323507d70537d8adb43b1007179322376f2825c4986bb54f538",
+    "left_rm.png": "f76fd919eab26df1506a8312ccac72915f9322b05a5b028088f8d7cfb7214080",
+    "left_emissive.png": "6cae3260a8c914bf2213a676fd3e12ce504b7f414b7ea8b4133fcbf50b900cbc",
+    "right_sprite.png": "91c810ad21248fab011e5dfa2d5d07dcc0c542fe697c44cb4bfd3e6a198ca595",
+    "right_base.png": "ebac7ae4a76f48d503efca2713d07eaf46a1bfc2ef2c3eb924bc2bc1937eda94",
+    "right_normal.png": "4be424c49f35c5c11177d44d6b412ccc3a42c4ad4cdbfa63fc9f74d056b82829",
+    "right_ao.png": "47bfe8a3908e97dca51b8492b19e431c95691abadbe13bb133ae0f3b46bf4853",
+    "right_rm.png": "a32fd66cfac7a1a9282f118b16696d8d90ad564d62be457a7df8ddb3cacc9b52",
+    "right_emissive.png": "cb4ae204e3eb3a9fb9a5be3637bfa1dc133df97e42fae4bcf2900926b71aa122"
+  },
+  "archive_sha256": "4087ab5a811a6d706482e4afe90411b2bd0050d7727287f0257a3e103a88968d",
+  "source_blend_sha256": "9bdfafafb657cb1c58499b23ecdc7e17f0036b3f0cd2489adf1240e23d9db0fa",
+  "frames": 48,
+  "atlas_files": 12,
+  "apng_files": 2,
+  "coverage_alignment": "PASS",
+  "apng_loop_ms": 2000,
+  "preview_javascript": "PASS syntax, loop boundaries, seeking, pause, light and flat-Normal controls with synthetic pixels",
+  "browser_visual_check": "NOT_RUN"
+}

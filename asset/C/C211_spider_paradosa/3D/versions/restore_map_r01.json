@@ -1,0 +1,490 @@
+{
+  "revision": "idle-r01",
+  "date": "2026-11-17",
+  "archive": "spider_pardosa_previous_r01.7z",
+  "archive_sha256": "6be01e3123efdb092455c068ae13361c70f520be96ad8fb1e7941b06f027cee2",
+  "restore_root": "asset root; reconstruct into a separate directory",
+  "entries": [
+    {
+      "path": "ASSET_INDEX.md",
+      "source": "archive:objects/e5753423c1a5dbf9a4f9c383b2ad4283343728aa32b5804db418bb5ce3ae57d3.md",
+      "sha256": "e5753423c1a5dbf9a4f9c383b2ad4283343728aa32b5804db418bb5ce3ae57d3"
+    },
+    {
+      "path": "delivery_files.json",
+      "source": "archive:objects/759f5791ad346e817e04d386f9b45c9113410361071cdd9c744f261c17702b00.json",
+      "sha256": "759f5791ad346e817e04d386f9b45c9113410361071cdd9c744f261c17702b00"
+    },
+    {
+      "path": "PardosaIdlePreview.html",
+      "source": "archive:objects/ece2bf961571f97d5e6d97257a545cb0919a0fe5341231f77521881c366b2105.html",
+      "sha256": "ece2bf961571f97d5e6d97257a545cb0919a0fe5341231f77521881c366b2105"
+    },
+    {
+      "path": "3D/model_manifest.json",
+      "source": "archive:objects/2e7421bae4f6dc1044c95387dbb9df72cb2c8c2ca01a5c9d37c03d25b053c63b.json",
+      "sha256": "2e7421bae4f6dc1044c95387dbb9df72cb2c8c2ca01a5c9d37c03d25b053c63b"
+    },
+    {
+      "path": "3D/model_preview.png",
+      "source": "archive:objects/8aa284857d112fec0d54b58cb0de0b16248e9c3b31926ba110a17a694180b6d0.png",
+      "sha256": "8aa284857d112fec0d54b58cb0de0b16248e9c3b31926ba110a17a694180b6d0"
+    },
+    {
+      "path": "3D/saved_validation.json",
+      "source": "archive:objects/d82ee5ed26e418eae742f4d1a9037069bb0b2b90c907ef85e0766fa47a76b99d.json",
+      "sha256": "d82ee5ed26e418eae742f4d1a9037069bb0b2b90c907ef85e0766fa47a76b99d"
+    },
+    {
+      "path": "3D/spider_pardosa_idle_r01.blend",
+      "source": "current:3D/spider_pardosa_idle_r01.blend",
+      "sha256": "9bdfafafb657cb1c58499b23ecdc7e17f0036b3f0cd2489adf1240e23d9db0fa"
+    },
+    {
+      "path": "document/production_r01.json",
+      "source": "current:document/production_r01.json",
+      "sha256": "a1f23a2668e84ee8914e44450f26fb4d0975320ab6071e5a0bfaf68e84ecb2fb"
+    },
+    {
+      "path": "document/spider_pardosa.md",
+      "source": "current:document/spider_pardosa.md",
+      "sha256": "74f1bfb0316616b6c2c07881a4c096a3193029f22929cd256e3ca8980ea1fa83"
+    },
+    {
+      "path": "document/spider_pardosa_model.md",
+      "source": "current:document/spider_pardosa_model.md",
+      "sha256": "dabef92dd4619f0f1269f9d600f407402bbe381356d1be7ba5f9d5a0c81d2719"
+    },
+    {
+      "path": "document/spider_pardosa_movement.md",
+      "source": "current:document/spider_pardosa_movement.md",
+      "sha256": "181327352ab53503aed3b58c291907b714ee7ba2dbdcc172924bea43cd1cfe5d"
+    },
+    {
+      "path": "sheet/bottom.png",
+      "source": "current:sheet/bottom.png",
+      "sha256": "1b2afffea7c17db68d00486265267b9d75c88ccd6940b59d691bd96116266b0d"
+    },
+    {
+      "path": "sheet/front.png",
+      "source": "current:sheet/front.png",
+      "sha256": "5352fe4136187cc9683d20d85ee78d5f157e6e026709e0a517eca82fbdd56b9e"
+    },
+    {
+      "path": "sheet/left.png",
+      "source": "current:sheet/left.png",
+      "sha256": "88a518af1d10386903863a63f2ba817327ad0a8be34e4dd7f6bd20182b204cc2"
+    },
+    {
+      "path": "sheet/rear.png",
+      "source": "current:sheet/rear.png",
+      "sha256": "672d3eaaaaaae8383407062871463d7c822612ad23a33be6b3bddd07e2a63ea1"
+    },
+    {
+      "path": "sheet/right.png",
+      "source": "current:sheet/right.png",
+      "sha256": "9f8d8297493fcab649dd6f9577c5c4e238cff49b06aee4f2e74bcf7953e3afa5"
+    },
+    {
+      "path": "sheet/sheet.png",
+      "source": "current:sheet/sheet.png",
+      "sha256": "2d407ed8d83588c511697ff707cedb047749fbd06d00e1f8720c5fa04fe3eb7d"
+    },
+    {
+      "path": "sheet/spider_pardosa_sheet_r01.png",
+      "source": "current:sheet/spider_pardosa_sheet_r01.png",
+      "sha256": "065f5cafb65fd326984dd059cf88cb2422179bc44c1eb6b56f43137a8ac150c4"
+    },
+    {
+      "path": "sheet/spider_pardosa_sheet_r01_prompt.txt",
+      "source": "current:sheet/spider_pardosa_sheet_r01_prompt.txt",
+      "sha256": "9a594ce532b32e106cb668cd38cb6b8e7aa98893629f7654dec7eda3bc658ebe"
+    },
+    {
+      "path": "sheet/top.png",
+      "source": "current:sheet/top.png",
+      "sha256": "c186b26bae0d57a03c522d174f548c88db333f03ace50daaf64f88a032ec1250"
+    },
+    {
+      "path": "3D/textures/spider_pardosa_basecolor_r01.png",
+      "source": "current:3D/textures/spider_pardosa_basecolor_r01.png",
+      "sha256": "072c2d5aebf9d1cf344fb9017f82f4cd3a175576977f299755cb120038126b29"
+    },
+    {
+      "path": "3D/tools/build_spider.py",
+      "source": "archive:objects/0215062b0e0acaa94662f2960ffdeb7e981238d5441069fe2b5c6f934f3adc52.py",
+      "sha256": "0215062b0e0acaa94662f2960ffdeb7e981238d5441069fe2b5c6f934f3adc52"
+    },
+    {
+      "path": "3D/tools/export_idle.py",
+      "source": "archive:objects/06bba2e17fe5644e6371b60a5482087cbb005120410fbe90b7e50f5208bf2a18.py",
+      "sha256": "06bba2e17fe5644e6371b60a5482087cbb005120410fbe90b7e50f5208bf2a18"
+    },
+    {
+      "path": "3D/tools/package_idle.py",
+      "source": "archive:objects/cdf657b3071fac7af9a653abdd12e7e3810ef4864104bde597a67f0d52a82863.py",
+      "sha256": "cdf657b3071fac7af9a653abdd12e7e3810ef4864104bde597a67f0d52a82863"
+    },
+    {
+      "path": "3D/tools/png_codec.py",
+      "source": "current:3D/tools/png_codec.py",
+      "sha256": "f487b88a586078e48a0e61577def6505171243496ff27ba59f82142076fdec7c"
+    },
+    {
+      "path": "3D/tools/preview_template.html",
+      "source": "archive:objects/4095322f81394ce809f5dc941a5d025f081c8d6d94770e55d419cfe7acacddbc.html",
+      "sha256": "4095322f81394ce809f5dc941a5d025f081c8d6d94770e55d419cfe7acacddbc"
+    },
+    {
+      "path": "3D/tools/select_idle.py",
+      "source": "archive:objects/dd607550888811c845ea8e64d122589597f59d2f92f55c6c183f17a1c57a3cfa.py",
+      "sha256": "dd607550888811c845ea8e64d122589597f59d2f92f55c6c183f17a1c57a3cfa"
+    },
+    {
+      "path": "3D/tools/verify_preview.mjs",
+      "source": "archive:objects/d64f38445483c5455ecb081791ad2a58a9157045adc2512dcb8559cd73b3f6a6.mjs",
+      "sha256": "d64f38445483c5455ecb081791ad2a58a9157045adc2512dcb8559cd73b3f6a6"
+    },
+    {
+      "path": "3D/tools/verify_saved.py",
+      "source": "archive:objects/d115026c4ac9652c9fef5dc220f5860c49f40bb69867e14137898cc1c79f13f2.py",
+      "sha256": "d115026c4ac9652c9fef5dc220f5860c49f40bb69867e14137898cc1c79f13f2"
+    },
+    {
+      "path": "2D/idle-r01/export_validation.json",
+      "source": "current:2D/idle-r01/export_validation.json",
+      "sha256": "beaa4f93a51767b3e966e3bcd2ffb9eab8b55c5cb1edd39beda95d3e983173e6"
+    },
+    {
+      "path": "2D/idle-r01/idle_scan_left.png",
+      "source": "current:2D/idle-r01/idle_scan_left.png",
+      "sha256": "a25031dbe4853fe801fbbb71e3f3de32057a137b67811e0c12091f8a8e962e62"
+    },
+    {
+      "path": "2D/idle-r01/idle_scan_right.png",
+      "source": "current:2D/idle-r01/idle_scan_right.png",
+      "sha256": "62a1cd80bf07cf26b9ba746e5bd6eb19dc511eb72162a1ae7024dada7d09d688"
+    },
+    {
+      "path": "2D/idle-r01/left_ao.png",
+      "source": "current:2D/idle-r01/left_ao.png",
+      "sha256": "9a10b5099a4ce323507d70537d8adb43b1007179322376f2825c4986bb54f538"
+    },
+    {
+      "path": "2D/idle-r01/left_base.png",
+      "source": "current:2D/idle-r01/left_base.png",
+      "sha256": "1cdd1271aa21476e4af334f7c2e3eff640f8ab387a4c90cbe5b58ffa96453c4e"
+    },
+    {
+      "path": "2D/idle-r01/left_emissive.png",
+      "source": "current:2D/idle-r01/left_emissive.png",
+      "sha256": "6cae3260a8c914bf2213a676fd3e12ce504b7f414b7ea8b4133fcbf50b900cbc"
+    },
+    {
+      "path": "2D/idle-r01/left_normal.png",
+      "source": "current:2D/idle-r01/left_normal.png",
+      "sha256": "62ab84725e1f59d40bca866659d7a92a091dc8c8e727fc6277e1915cc6d467e4"
+    },
+    {
+      "path": "2D/idle-r01/left_rm.png",
+      "source": "current:2D/idle-r01/left_rm.png",
+      "sha256": "f76fd919eab26df1506a8312ccac72915f9322b05a5b028088f8d7cfb7214080"
+    },
+    {
+      "path": "2D/idle-r01/left_sprite.png",
+      "source": "current:2D/idle-r01/left_sprite.png",
+      "sha256": "b61e5a778690c03ccb40e4bd17023b32b0f56699c105cf8ab5d15f23bb340547"
+    },
+    {
+      "path": "2D/idle-r01/manifest.json",
+      "source": "current:2D/idle-r01/manifest.json",
+      "sha256": "a76b36a22deaaa4c671fb4cd0bc7d5a8deb85a21798be3a09452504ff647975d"
+    },
+    {
+      "path": "2D/idle-r01/package_validation.json",
+      "source": "current:2D/idle-r01/package_validation.json",
+      "sha256": "d07a7c6d4beecdef26dd66e554bf5f42c2d6cc3747984b747151bd5240f2e84a"
+    },
+    {
+      "path": "2D/idle-r01/right_ao.png",
+      "source": "current:2D/idle-r01/right_ao.png",
+      "sha256": "47bfe8a3908e97dca51b8492b19e431c95691abadbe13bb133ae0f3b46bf4853"
+    },
+    {
+      "path": "2D/idle-r01/right_base.png",
+      "source": "current:2D/idle-r01/right_base.png",
+      "sha256": "ebac7ae4a76f48d503efca2713d07eaf46a1bfc2ef2c3eb924bc2bc1937eda94"
+    },
+    {
+      "path": "2D/idle-r01/right_emissive.png",
+      "source": "current:2D/idle-r01/right_emissive.png",
+      "sha256": "cb4ae204e3eb3a9fb9a5be3637bfa1dc133df97e42fae4bcf2900926b71aa122"
+    },
+    {
+      "path": "2D/idle-r01/right_normal.png",
+      "source": "current:2D/idle-r01/right_normal.png",
+      "sha256": "4be424c49f35c5c11177d44d6b412ccc3a42c4ad4cdbfa63fc9f74d056b82829"
+    },
+    {
+      "path": "2D/idle-r01/right_rm.png",
+      "source": "current:2D/idle-r01/right_rm.png",
+      "sha256": "a32fd66cfac7a1a9282f118b16696d8d90ad564d62be457a7df8ddb3cacc9b52"
+    },
+    {
+      "path": "2D/idle-r01/right_sprite.png",
+      "source": "current:2D/idle-r01/right_sprite.png",
+      "sha256": "91c810ad21248fab011e5dfa2d5d07dcc0c542fe697c44cb4bfd3e6a198ca595"
+    },
+    {
+      "path": "2D/idle-r01/spider_pardosa_idle_r01.zip",
+      "source": "current:2D/idle-r01/spider_pardosa_idle_r01.zip",
+      "sha256": "4087ab5a811a6d706482e4afe90411b2bd0050d7727287f0257a3e103a88968d"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/0.png",
+      "source": "archive:objects/db55ee9aa3df2450adcb76b814b56d74b4091bb84ceefdada8fd0bd0594199b4.png",
+      "sha256": "db55ee9aa3df2450adcb76b814b56d74b4091bb84ceefdada8fd0bd0594199b4"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/1.png",
+      "source": "archive:objects/64371482693d5709363637196490099283086bbc3e8398ff4ecb2b03533f51f3.png",
+      "sha256": "64371482693d5709363637196490099283086bbc3e8398ff4ecb2b03533f51f3"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/10.png",
+      "source": "archive:objects/0fe2a4849d33a5b0338f99a14c396ed1369b0d6929367ba7d2ff0561749e980a.png",
+      "sha256": "0fe2a4849d33a5b0338f99a14c396ed1369b0d6929367ba7d2ff0561749e980a"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/11.png",
+      "source": "archive:objects/9a23695a047d55c8144da1dfa80efb32213347ed5a66372c072d2149c1e7b322.png",
+      "sha256": "9a23695a047d55c8144da1dfa80efb32213347ed5a66372c072d2149c1e7b322"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/12.png",
+      "source": "archive:objects/2b4300a947b80968a22926bd39d7209b4fe1d2019723ce444f03062b770c9582.png",
+      "sha256": "2b4300a947b80968a22926bd39d7209b4fe1d2019723ce444f03062b770c9582"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/13.png",
+      "source": "archive:objects/5366bc6154c6820fa425337ed6a1df8ce959af1149346d7b3a8d475636728bf7.png",
+      "sha256": "5366bc6154c6820fa425337ed6a1df8ce959af1149346d7b3a8d475636728bf7"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/14.png",
+      "source": "archive:objects/d61089f57ef4492e572ecc81aae8b58beee629492a3979d834d8f6467fffbabe.png",
+      "sha256": "d61089f57ef4492e572ecc81aae8b58beee629492a3979d834d8f6467fffbabe"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/15.png",
+      "source": "archive:objects/33bb2a4d752ca9665f24c26e18a6e82471db621574044d8bc741534f4361fd91.png",
+      "sha256": "33bb2a4d752ca9665f24c26e18a6e82471db621574044d8bc741534f4361fd91"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/16.png",
+      "source": "archive:objects/ad8048c353b0ffb1eaeb2309771cdb33d6df78c0ae40b85adb4634d08322a52c.png",
+      "sha256": "ad8048c353b0ffb1eaeb2309771cdb33d6df78c0ae40b85adb4634d08322a52c"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/17.png",
+      "source": "archive:objects/b822816a84267bf1ee7ad50d5f41a1f128e879ec26415a60a9b34ab1c7dbaf24.png",
+      "sha256": "b822816a84267bf1ee7ad50d5f41a1f128e879ec26415a60a9b34ab1c7dbaf24"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/18.png",
+      "source": "archive:objects/b279f0b5f6502ed3478c1e605c97b57d73eb74b44e6869dd8cdb98f228aba6cd.png",
+      "sha256": "b279f0b5f6502ed3478c1e605c97b57d73eb74b44e6869dd8cdb98f228aba6cd"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/19.png",
+      "source": "archive:objects/ea096463fd23876e2726e2c4e694403a11df5cf51ecba71eed2dea699335267b.png",
+      "sha256": "ea096463fd23876e2726e2c4e694403a11df5cf51ecba71eed2dea699335267b"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/2.png",
+      "source": "archive:objects/6db46ee15e2935d7fd81a868601a5e0ac81044e544ded99700b7c4ade3ce08db.png",
+      "sha256": "6db46ee15e2935d7fd81a868601a5e0ac81044e544ded99700b7c4ade3ce08db"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/20.png",
+      "source": "archive:objects/3757d64aec1b1ff991575a47fe09fe96dcab8b947942f61a304bcaa8f003ab59.png",
+      "sha256": "3757d64aec1b1ff991575a47fe09fe96dcab8b947942f61a304bcaa8f003ab59"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/21.png",
+      "source": "archive:objects/665bbed2a2a354915fb8395d6ea1e6e91384e713b8e99ef851d5b8c7f0ea96f5.png",
+      "sha256": "665bbed2a2a354915fb8395d6ea1e6e91384e713b8e99ef851d5b8c7f0ea96f5"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/22.png",
+      "source": "archive:objects/487ea8b742e28deb1a13be8353f983e2743b31555d46dcebeeedb6581311080d.png",
+      "sha256": "487ea8b742e28deb1a13be8353f983e2743b31555d46dcebeeedb6581311080d"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/23.png",
+      "source": "archive:objects/18bf6135e18b6333583a02b8d7b30cb17439607c73f5d9de6bdb8a453f62be47.png",
+      "sha256": "18bf6135e18b6333583a02b8d7b30cb17439607c73f5d9de6bdb8a453f62be47"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/3.png",
+      "source": "archive:objects/72bb0b8120c6891d8e0b08abe8c9eb86483da3b0350b0dbbeb38f1af227954e9.png",
+      "sha256": "72bb0b8120c6891d8e0b08abe8c9eb86483da3b0350b0dbbeb38f1af227954e9"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/4.png",
+      "source": "archive:objects/771a81ba150eff848c3adb732a0b4e5119a60ff3598bde81e39758e3587f6eb1.png",
+      "sha256": "771a81ba150eff848c3adb732a0b4e5119a60ff3598bde81e39758e3587f6eb1"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/5.png",
+      "source": "archive:objects/c47f5097dc4e692009b27f5c6cea03775905029739bc4a2a348d299d1a121f22.png",
+      "sha256": "c47f5097dc4e692009b27f5c6cea03775905029739bc4a2a348d299d1a121f22"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/6.png",
+      "source": "archive:objects/854be7c7c1f88de813d320db6458fc220b1cbca12e2b1dd38414fbe51a2611b1.png",
+      "sha256": "854be7c7c1f88de813d320db6458fc220b1cbca12e2b1dd38414fbe51a2611b1"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/7.png",
+      "source": "archive:objects/b8903fa4084cd18fce3b36cb44a12564d02ef8d3b745de35697fe8047862289e.png",
+      "sha256": "b8903fa4084cd18fce3b36cb44a12564d02ef8d3b745de35697fe8047862289e"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/8.png",
+      "source": "archive:objects/b93bc161f72442e029e0c65fd41ecee68456bd28dd25424a62dd67135443c7af.png",
+      "sha256": "b93bc161f72442e029e0c65fd41ecee68456bd28dd25424a62dd67135443c7af"
+    },
+    {
+      "path": "2D/idle/idle_scan/left/9.png",
+      "source": "archive:objects/e4c4589aecfde4cdc330639aa6ce8f00507c008b2915a3da280de42f8ba40cfe.png",
+      "sha256": "e4c4589aecfde4cdc330639aa6ce8f00507c008b2915a3da280de42f8ba40cfe"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/0.png",
+      "source": "archive:objects/197c8b45efeb91910e7f10688fe9764b7dae5116f4388cd9e484a3c3a5bc13c1.png",
+      "sha256": "197c8b45efeb91910e7f10688fe9764b7dae5116f4388cd9e484a3c3a5bc13c1"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/1.png",
+      "source": "archive:objects/b2051c0e097ee77dff73f91930f2656d5f401c4351408c83fbe13960667311c2.png",
+      "sha256": "b2051c0e097ee77dff73f91930f2656d5f401c4351408c83fbe13960667311c2"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/10.png",
+      "source": "archive:objects/eea46de741ae380ae9e7fbf3bf05338d2d4da443e2f9b80805c437bd89630950.png",
+      "sha256": "eea46de741ae380ae9e7fbf3bf05338d2d4da443e2f9b80805c437bd89630950"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/11.png",
+      "source": "archive:objects/5bcb0a6475624661343e474e7a02ccc9f154817006ce229da9f1bcc40a154842.png",
+      "sha256": "5bcb0a6475624661343e474e7a02ccc9f154817006ce229da9f1bcc40a154842"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/12.png",
+      "source": "archive:objects/749d9222725f9ed9594f3f7b98731f2b02eaf9e03a67b999bba71c34b36bcd2e.png",
+      "sha256": "749d9222725f9ed9594f3f7b98731f2b02eaf9e03a67b999bba71c34b36bcd2e"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/13.png",
+      "source": "archive:objects/321311b638d83a18a3cd1efa0ef713098a6d2bf6ab8a31bd3f2dd58764bff577.png",
+      "sha256": "321311b638d83a18a3cd1efa0ef713098a6d2bf6ab8a31bd3f2dd58764bff577"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/14.png",
+      "source": "archive:objects/9236d20292dd41676de9de05894e1416836d60c1fbadab333160ea64512fe645.png",
+      "sha256": "9236d20292dd41676de9de05894e1416836d60c1fbadab333160ea64512fe645"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/15.png",
+      "source": "archive:objects/5b1d9080d1f480fe93471c273c9c3bff5894aa183aa1113f8fdf00dfead638e3.png",
+      "sha256": "5b1d9080d1f480fe93471c273c9c3bff5894aa183aa1113f8fdf00dfead638e3"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/16.png",
+      "source": "archive:objects/f28b48c59ff14a606db4d93021716aafcd8fd72ef89c53c461402d3261cc39a5.png",
+      "sha256": "f28b48c59ff14a606db4d93021716aafcd8fd72ef89c53c461402d3261cc39a5"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/17.png",
+      "source": "archive:objects/1868bedb93a58fa8a829ac019c70032a0db8841e168f1bb26567505131bd8711.png",
+      "sha256": "1868bedb93a58fa8a829ac019c70032a0db8841e168f1bb26567505131bd8711"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/18.png",
+      "source": "archive:objects/3d0788aedb4ff32e58385bd52caaa855520ee3e92cf36403056a00ffe0f1123c.png",
+      "sha256": "3d0788aedb4ff32e58385bd52caaa855520ee3e92cf36403056a00ffe0f1123c"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/19.png",
+      "source": "archive:objects/05e906b5964e73eda540f649895ae59efde58afe7b1e9556315b431950a97138.png",
+      "sha256": "05e906b5964e73eda540f649895ae59efde58afe7b1e9556315b431950a97138"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/2.png",
+      "source": "archive:objects/2a357f93e58d97cf219b3f931cc59fa32ca805c60236c4f0dc2bc4ce0e137ff0.png",
+      "sha256": "2a357f93e58d97cf219b3f931cc59fa32ca805c60236c4f0dc2bc4ce0e137ff0"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/20.png",
+      "source": "archive:objects/8c0341a2c90323bf8d54557da7fe49f16b85432b1d62e29ac93ef4a551aeb933.png",
+      "sha256": "8c0341a2c90323bf8d54557da7fe49f16b85432b1d62e29ac93ef4a551aeb933"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/21.png",
+      "source": "archive:objects/a986dc67825fa4871dbc9295278038876ea0edd6bfc078c587a20179a48b4e67.png",
+      "sha256": "a986dc67825fa4871dbc9295278038876ea0edd6bfc078c587a20179a48b4e67"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/22.png",
+      "source": "archive:objects/5b01a0c714d2a8d8bcfe9ed29f6c3f5293eb6f0683481f67d69668b0063477ff.png",
+      "sha256": "5b01a0c714d2a8d8bcfe9ed29f6c3f5293eb6f0683481f67d69668b0063477ff"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/23.png",
+      "source": "archive:objects/bbcd6e5b63b1a8481c77d7486a8ca315f5cf4f2bd9aea1cdff6222e8bd63f3a7.png",
+      "sha256": "bbcd6e5b63b1a8481c77d7486a8ca315f5cf4f2bd9aea1cdff6222e8bd63f3a7"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/3.png",
+      "source": "archive:objects/b9aeadfe6577f2d73050f61a190b37561c885498ce97dbb49f3d6cf73ef93127.png",
+      "sha256": "b9aeadfe6577f2d73050f61a190b37561c885498ce97dbb49f3d6cf73ef93127"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/4.png",
+      "source": "archive:objects/be3dff7e5cf33a59ee5d707ecc1b8bd7dc85cabffb51c2e8d7a7b87deb7e68dd.png",
+      "sha256": "be3dff7e5cf33a59ee5d707ecc1b8bd7dc85cabffb51c2e8d7a7b87deb7e68dd"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/5.png",
+      "source": "archive:objects/ec2496c5b711a0954b38ba1bd93d5dc779522f89e04c9b9eff3d1f74e3899cbb.png",
+      "sha256": "ec2496c5b711a0954b38ba1bd93d5dc779522f89e04c9b9eff3d1f74e3899cbb"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/6.png",
+      "source": "archive:objects/855d9f7bedccd614764597b3837b740cca7ddf6ed18b9774dc2010f6b448c672.png",
+      "sha256": "855d9f7bedccd614764597b3837b740cca7ddf6ed18b9774dc2010f6b448c672"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/7.png",
+      "source": "archive:objects/cc5c9fd3ea6c243146b8605910ea9750a43b68f403a4747f3c289c8b1098e942.png",
+      "sha256": "cc5c9fd3ea6c243146b8605910ea9750a43b68f403a4747f3c289c8b1098e942"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/8.png",
+      "source": "archive:objects/6ac06ae206cc0e4fc1e13f357ae727efd611d8503216f45a4b25c4c59edbcf9d.png",
+      "sha256": "6ac06ae206cc0e4fc1e13f357ae727efd611d8503216f45a4b25c4c59edbcf9d"
+    },
+    {
+      "path": "2D/idle/idle_scan/right/9.png",
+      "source": "archive:objects/1bfaf8b9d18bb9d15d9f901886937f1234e502ca8319a044b5153f75b9d5a418.png",
+      "sha256": "1bfaf8b9d18bb9d15d9f901886937f1234e502ca8319a044b5153f75b9d5a418"
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "files": 95,
+    "archive_entries": 61,
+    "method": "7z test, extract separately, reconstruct full tree, SHA256 all files"
+  }
+}

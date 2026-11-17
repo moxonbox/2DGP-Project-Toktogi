@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "reference": "AssetSize v1.1, C011 idle/left body proxy .965396 BU",
+  "body_measurement": "prosoma front to abdomen rear along local Y, excludes appendages and eyes",
+  "body_length_bu": 4.826979875564575,
+  "ratio_to_toktogi": 4.999999871104267,
+  "body_length_mm": 5.0,
+  "stage": "adult female",
+  "taxon": "Pardosa agrestis",
+  "art_scale": 1.0,
+  "full_bounds_bu": [
+    7.660784006118774,
+    6.253235816955566,
+    2.1217585698186667
+  ],
+  "pixel_density": 71.91011235955057,
+  "body_centroid_range_bu": [
+    0.06439556454138531,
+    0.0011681398821901945,
+    0.04736461206365017
+  ],
+  "body_centroid_range_px": [
+    4.630692281627708,
+    0.08400107017996904,
+    3.4059945753636076
+  ],
+  "loop_velocity_discontinuity_bu_s": 0.02156421911568978,
+  "loop_velocity_tolerance_bu_s": 0.025,
+  "sample_visits_at_four_start_phases": {
+    "10": [
+      20,
+      20,
+      20,
+      20
+    ],
+    "15": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "20": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "30": [
+      24,
+      24,
+      24,
+      24
+    ],
+    "60": [
+      24,
+      24,
+      24,
+      24
+    ]
+  },
+  "reference_idle_s": 1.6,
+  "spider_idle_s": 2,
+  "rhythm_reason": "slower grounded scanning with stable eight-foot support; species speed is a design choice"
+}

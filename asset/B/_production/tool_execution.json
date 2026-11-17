@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-17",
+  "image_generation": "11 built-in calls; no seed/model identifier returned",
+  "blender_mcp": [
+    {
+      "tool": "get_blendfile_summary_path_info",
+      "result": "Cannot connect to Blender at 127.0.0.1:9876"
+    },
+    {
+      "tool": "get_blendfile_summary_path_info",
+      "result": "Blender connection timed out at 127.0.0.1:9876"
+    },
+    {
+      "tool": "execute_blender_code",
+      "result": "Blender connection timed out at 127.0.0.1:9876"
+    },
+    {
+      "tool": "get_blendfile_summary_path_info_for_cli",
+      "result": "Blender CLI timed out after 120s"
+    }
+  ],
+  "fallback": "Direct installed Blender CLI 5.3.0 --background; clean factory scenes only",
+  "computer_use": false,
+  "source_reuse": {
+    "png_codec.py": "C261 3D/tools/png_codec.py; originally C011 codec",
+    "raster": "C261 export_fish.py rectangular adaptation",
+    "shared_lighting.py": "C211 r02 shared_lighting.py unchanged"
+  },
+  "warnings": "Sandbox denied Blender thumbnail/extensions cache writes; .blend, PNG and packed image checks passed."
+}

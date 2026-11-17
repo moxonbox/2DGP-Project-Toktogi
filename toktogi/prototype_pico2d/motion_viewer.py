@@ -198,7 +198,7 @@ class Viewer:
         self.rect((20, 77, 334, 560))
         self.rect((34, 89, 306, 38), (39, 64, 53) if v.searching else (28, 51, 41), 7)
         self.buttons.append((Rect(34, 89, 306, 38), self.focus_search))
-        search=(v.search+v.composition)+'▏' if v.searching else v.search or '검색  ·  Ctrl+F'
+        search=(v.search+v.composition)+'|' if v.searching else v.search or '검색  ·  Ctrl+F'
         self.text(self.fit_text(search,15,280,tail=True),44,99,15,TINT)
         self.text(f'{len(v.filtered)} / {len(v.names)}   ·   클립 {len(self.assets.clips)}   ·   전환 {len(self.assets.sequences)}', 35, 137, 14, MUTED)
         offset = max(0, min(v.selected - 6, len(v.filtered) - 15))

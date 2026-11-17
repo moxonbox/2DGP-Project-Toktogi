@@ -83,5 +83,7 @@ toktogi/prototype_pico2d/.venv/Scripts/python.exe document/tools/architecture/bu
 2026-11-17 23:45 종료 요청에 따라 추가분은 집중 검사만 수행했다. 전체 회귀는 추가 구현 전 결과다.
 `controls_results.json`·`pond_results.json`: WASD/E, 두 공격의 도약 회피·반격·단일 피격·Pause/R 통과.
 연잎은 asset에 최종 연꽃 제작물이 없어 테스트용 절개 잎 도형이며 양산 에셋으로 집계하지 않는다.
-C261은 asset의 male/right 원본 Sprite 6액션 72셀과 실제 mouth_tip을 재사용한다. NumPy를 추가하지 않았다.
+C261은 asset의 `gambusia-r03` male/right 원본 Sprite 6액션 72셀과 실제 mouth_tip을 재사용한다. NumPy를 추가하지 않았다.
 F2 이동 광원/Bloom의 dummy p95는 22.01/24.70ms로 16.7ms 목표 미달이며 실기 인수는 미검증이다.
+
+실행부와 배포 패커는 현재 C261 r03 명세와 해당 Sprite 72셀을 함께 사용한다. 실행 오류는 콘솔에 남고 키 입력을 기다린다.

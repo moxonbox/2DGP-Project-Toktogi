@@ -25,12 +25,12 @@ class FishAssets:
         self.memory_bytes = 0
         self.closed = False
         try:
-            manifest_path = self.root / '2D/gambusia-r01/manifest.json'
+            manifest_path = self.root / '2D/gambusia-r03/manifest.json'
             self.manifest = manifest = _json(manifest_path.read_bytes())
             signature = hashlib.sha256(json.dumps({k:v for k,v in manifest.items() if k != 'signature'},
                                                   sort_keys=True,separators=(',',':')).encode()).hexdigest()
             if (manifest['schema'] != 1 or manifest['asset_id'] != 'C261_gambusia_holbrooki'
-                    or manifest['revision'] != 'gambusia-r01' or manifest['signature'] != signature
+                    or manifest['revision'] != 'gambusia-r03' or manifest['signature'] != signature
                     or tuple(manifest['passes']) != PASSES or manifest['variants']['male']['cell'] != SIZE):
                 raise ValueError('Unsupported fish manifest or signature mismatch.')
             base_path = confined(self.asset_root, 'C/C011_toktogi/2D/integrated-r5/playable_manifest.json')

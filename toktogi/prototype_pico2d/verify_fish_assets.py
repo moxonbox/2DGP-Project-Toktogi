@@ -11,6 +11,7 @@ from fish_assets import ACTIONS, FishAssets, MAX_MEMORY
 def verify(asset_root=None):
     assets = FishAssets(asset_root)
     try:
+        assert assets.metadata['revision'] == 'gambusia-r03'
         assert assets.memory_bytes == 72*384*384*4 < MAX_MEMORY
         with patch.object(Path,'open',side_effect=AssertionError('Frame selection performed disk I/O')):
             for action in ACTIONS:

@@ -18,7 +18,7 @@ def build(project,output):
     architecture=project/'document/ToktogiPico2DArchitecture.html'
     if architecture.is_file():files.append(architecture)
     fish=project/'asset/C/C261_gambusia_holbrooki'
-    manifest=fish/'2D/gambusia-r01/manifest.json'
+    manifest=fish/'2D/gambusia-r03/manifest.json'
     data=json.loads(manifest.read_bytes())
     files.extend((manifest,project/'asset/C/C011_toktogi/2D/integrated-r5/playable_manifest.json'))
     for action in ('surface_peek','surface_snap','breach_launch','airborne_arc','surface_fall','water_reentry'):

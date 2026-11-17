@@ -9,7 +9,7 @@ from materials import Assets
 from motion_viewer import Viewer,MODES
 from physics import STEP
 from play_view import PlayView,SCREEN
-from replays import game_replays
+from replays import game_replays,world_replays
 from timeline import FixedStepTimeline
 
 ROOT=Path(__file__).resolve().parent
@@ -31,7 +31,7 @@ class App:
             world=World.seamless() if profile=='seamless' else World(course)
             self.game=Game(self.assets,world=world)
             course=world.course
-            self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets)))
+            self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets))+(list(world_replays(self.assets)) if profile=='seamless' else []))
             self.screen=Image.new('RGBA',SCREEN)
             self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
             self.play_view.step(self.game,0)
@@ -92,6 +92,9 @@ class App:
     def _event(self,e):
         self.dispatch_time=getattr(e,'input_time',self.timeline.wall_time)
         contextual=e.type in ('key_down','key_up','text_input','text_editing','mouse_down','mouse_up','wheel')
+        if contextual and e.timestamp is not None and e.timestamp<=self.context_cutoff:
+            if e.type=='key_up':self.control_keys.discard(e.key)
+            return
         if contextual and (e.epoch is not None and e.epoch!=self.epoch or getattr(e,'collected_epoch',self.epoch)<self.epoch and self.dispatch_time<=self.context_cutoff):return
         if e.type=='quit':self.running=False
         elif e.type=='render_reset':raise RuntimeError('SDL renderer reset; restart the application.')
@@ -170,6 +173,7 @@ class App:
 
     def close(self):
         if hasattr(self,'viewer'):self.viewer.text_surface.cache_clear()
+        if hasattr(self,'play_view') and self.play_view.environment:self.play_view.environment.close()
         try:
             if self.assets:self.assets.close();self.assets=None
         finally:

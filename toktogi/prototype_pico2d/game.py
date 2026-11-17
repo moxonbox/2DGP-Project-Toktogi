@@ -472,6 +472,7 @@ class Game:
             if stage.startswith('interact_activate') and self.work_contact(stage,target.touch,age):
                 self.world.states[target.key]=True
                 self.tell('중간 등불을 켰습니다.')
+                if self.world.landed(self.support):self.checkpoint=True
             if stage.startswith('interact_collect') and self.work_contact(stage,target.touch,age):
                 self.world.states[target.key]=True
                 self.tell('잎 위의 씨앗을 수집했습니다.')

@@ -22,8 +22,11 @@ class Pond:
     attack_seconds=.64
     recovery_seconds=.60
 
-    def __init__(self,world):
+    def __init__(self,world,active_span=None,water_y=380.):
         self.world=world
+        if not isfinite(water_y):raise ValueError('Pond waterline must be finite.')
+        self.water_y=float(water_y)
+        self.active_span=active_span
         self.reset()
 
     def reset(self):
@@ -63,6 +66,10 @@ class Pond:
         if not isfinite(dt) or dt<0:
             raise ValueError('Pond dt must be finite and nonnegative.')
         self.time+=dt
+        if self.active_span and not self.active_span[0]<=game.x<=self.active_span[1]:
+            self.phase,self.age='idle',0.
+            self.next_attack=self.time+3.5
+            return
         self.age+=dt
         if self.phase=='idle':
             if self.time+1e-9<self.next_attack:

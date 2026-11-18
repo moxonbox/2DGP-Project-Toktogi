@@ -5,7 +5,7 @@ from pathlib import Path
 def main():
     parser=argparse.ArgumentParser(description='Toktogi Pico2D candidate')
     parser.add_argument('--verify',action='store_true',help='CPU-only acceptance checks')
-    parser.add_argument('--profile',choices=('legacy','seamless','pond_test','habitat'),default='habitat')
+    parser.add_argument('--profile',choices=('legacy','seamless','pond_test','habitat','storyboard'),default='storyboard')
     args=parser.parse_args()
     if args.verify:
         from verify_all import verify

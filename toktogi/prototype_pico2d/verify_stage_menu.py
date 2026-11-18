@@ -43,7 +43,7 @@ def verify(assets_path=ROOT/'toktogi_assets.zip', asset_root=None, capture=None)
         assert frozen == (g.x,g.y,g.time,g.pond.time,app.play_view.camera.x,dict(g.world.states))
         assert not g.held and not app.physical_keys and g.launch_count == 0
         app.draw()
-        assert len(app.buttons) == 5
+        assert len(app.buttons) == len(menu.entries)+2
         if capture:
             app.screen.save(capture)
         checks.append('animated drawer freezes simulation and consumes held keys')

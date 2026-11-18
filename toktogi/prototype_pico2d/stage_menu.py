@@ -1,16 +1,20 @@
 """Animated F1 stage drawer using the current world's levels and prepared stage art."""
-from PIL import Image, ImageDraw, ImageOps
+from PIL import Image, ImageDraw, ImageOps, ImageEnhance
 from geometry import Rect, bounds
 from stage_world import ZONES
+from world import Level
 
 HEIGHT = 320
 DURATION = .18
 NAMES = {key: title for key, title, _ in ZONES}
+NAMES['storyboard_test'] = '스토리보드 #1 · 임시'
 
 
 class StageMenu:
-    def __init__(self, world):
+    def __init__(self, world, *, story=False):
         self.world = world
+        self.entries = world.levels + ((Level('storyboard_test','임시 테스트',world.levels[0].bounds),) if story else ())
+        self.current = world.level_id
         self.opened = False
         self.progress = 0.
         self.selected = 0
@@ -21,14 +25,15 @@ class StageMenu:
     def visible(self):
         return self.opened or self.progress > 0.
 
-    def open(self, background, art=None):
+    def open(self, background, art=None, *, current=None):
         self.opened = True
-        self.selected = next(i for i, level in enumerate(self.world.levels)
-                             if level.level_id == self.world.level_id)
+        self.current = current or self.world.level_id
+        self.selected = next(i for i, level in enumerate(self.entries)
+                             if level.level_id == self.current)
         self._release_images()
         self.background = background.copy()
-        width = (background.width-48-12*(len(self.world.levels)-1))//len(self.world.levels)
-        for level in self.world.levels:
+        width = (background.width-48-12*(len(self.entries)-1))//len(self.entries)
+        for level in self.entries:
             if art is None:
                 self.previews.append(None)
                 continue
@@ -36,6 +41,10 @@ class StageMenu:
             self.previews.append(ImageOps.fit(source, (width-24,112),
                                              method=Image.Resampling.NEAREST, centering=(.5,.75)))
             source.close()
+            if level.level_id == 'storyboard_test':
+                old = self.previews[-1]
+                self.previews[-1] = ImageEnhance.Brightness(old).enhance(.25)
+                old.close()
 
     def step(self, dt):
         change = dt / DURATION
@@ -58,7 +67,7 @@ class StageMenu:
         self.previews.clear()
 
     def move(self, direction):
-        self.selected = max(0,min(len(self.world.levels)-1,self.selected+direction))
+        self.selected = max(0,min(len(self.entries)-1,self.selected+direction))
 
     def draw(self, screen, viewer, start, dismiss):
         screen.paste(self.background)
@@ -84,9 +93,9 @@ class StageMenu:
         text('스테이지 선택',24,13,22)
         text('선택한 구간에서 새 도전을 시작합니다. 이전 구간의 등불은 완료 처리됩니다.',24,45,14,(159,172,185))
         button('닫기  M / Esc',Rect(screen.width-158,16,134,36),dismiss)
-        count = len(self.world.levels)
+        count = len(self.entries)
         width = (screen.width-48-12*(count-1))//count
-        for index, level in enumerate(self.world.levels):
+        for index, level in enumerate(self.entries):
             rect = Rect(24+index*(width+12),78,width,180)
             hover = rect.collidepoint((viewer.pointer[0],viewer.pointer[1]-top))
             active = self.selected == index
@@ -99,7 +108,7 @@ class StageMenu:
             else:
                 text(level.level_id,rect.x+16,rect.y+48,20,(159,172,185))
             text(NAMES.get(level.level_id,level.level_id),rect.x+14,rect.y+128,18)
-            current = ' · 현재 구간' if level.level_id == self.world.level_id else ''
+            current = ' · 현재 구간' if level.level_id == self.current else ''
             text(level.stage_id+current,rect.x+14,rect.y+153,13,(159,172,185))
             if self.opened and self.progress == 1.:
                 viewer.buttons.append((Rect(rect.x,top+rect.y,rect.w,rect.h),

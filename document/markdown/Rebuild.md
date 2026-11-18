@@ -189,3 +189,5 @@ toktogi/prototype_pico2d/.venv/Scripts/python.exe toktogi/prototype_pico2d/build
 - Computer-Use 미사용 요청을 따랐다. 실제 키/IME/DPI·장치 성능, 연꽃 양산은 미검증이다. F2 이동 광원/Bloom dummy p95 22.01/24.70ms로 목표 미달이다.
 
 - 2026-11-18 F1 M 스테이지 메뉴를 추가했다. 하단 180ms 슬라이드·현재 구간/아트 미리보기·키/마우스 선택을 지원한다. 메뉴 중 시뮬레이션 정지, 새 구간 시작·선행 등불·R 복귀 규칙은 [StageLevel](StageLevel.md), 입력은 [Control](Control.md)의 C-10을 따른다.
+
+- 2026-11-18 [스토리보드 #1 임시 테스트](StoryBoardTest.md)를 기본 실행에 추가했다. 암전·환경음·반딧불이 접촉/반동·눈뜨기·근접 및 E/F 버섯 발광을 제공하며 M으로 기존 스테이지에 복귀한다.

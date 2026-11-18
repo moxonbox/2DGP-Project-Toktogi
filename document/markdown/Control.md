@@ -1,6 +1,6 @@
 # Toktogi 조작·입력 명세
 
-2026-11-18 · v2.0 · Pico2D 후보: WASD 직접 회전·상황별 E·Ctrl 제동·Shift 달리기·F 공격. 원본 prototype의 이전 키는 비교용으로 보존한다. 실기 미검증.
+2026-11-18 · v2.1 · Pico2D 후보: WASD 직접 회전·상황별 E·Ctrl 제동·Shift 달리기·F 공격. 원본 prototype의 이전 키는 비교용으로 보존한다. 실기 미검증.
 키·장면별 소비·포커스는 이 문서, 행동 적격성·수치는 [시스템](game-design/011_toktogi_system_design_spec.md), 상태 전이는 [상태 머신](game-design/toktogi_state_machine.md#atlas-states), 이식 순서는 [Rebuild](Rebuild.md)를 따른다.
 
 <a id="atlas-controls"></a>
@@ -88,6 +88,8 @@
 - 키 도움말·F2 버튼·HTML의 게임 시간표와 구조도는 이 문서·MotionSet을 참조한다. 새 Normal/Bloom 버튼에 미정 단축키를 임의 배정하지 않는다.
 
 메뉴 진입·취소·선택은 입력 세대를 갱신하고 유지 키·Space 짝·예약을 정리한다. 메뉴를 닫으면 기존 Playing/Paused/Failed/Cleared 상태를 유지한다. 포커스 상실 시 Playing은 Paused가 되며 자동 재개하지 않는다. F2/Tab 전환은 메뉴를 즉시 닫고 F2의 M 보기 순환을 사용한다.
+
+임시 스토리보드 프로필은 도입 연출 동안 이동·도약·작업을 소비한다. M/P/Esc/F1/F2/Tab/R은 사용할 수 있다. 연출 뒤 가까운 버섯에 E를 누르면 발광을 강화하고, F는 버섯 강화와 기존 공격을 함께 실행한다. R은 도입부터 다시 시작한다.
 
 ## 5. 입력 인수 검사
 

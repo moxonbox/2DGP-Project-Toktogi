@@ -28,35 +28,37 @@ class App:
     contextual_e=True
     directional_yaw=True
     def __init__(self,assets_path=ROOT/'toktogi_assets.zip',course=COURSE,*,pose_path=None,native=False,profile='legacy',asset_root=None):
-        self.backend=None;self.assets=None
+        self.backend=None;self.assets=None;self.story_audio=None
         try:
             self.assets=Assets(assets_path,pose_path)
             from world import World
-            if profile=='habitat':
+            if profile in ('habitat','storyboard'):
                 from stage_world import habitat_world
                 world=habitat_world()
             elif profile=='pond_test':
                 from pond import test_world
                 world=test_world()
             else:world=World.seamless() if profile=='seamless' else World(course)
-            self.game=Game(self.assets,world=world,walk_speed=72. if profile=='habitat' else 24.,directional_yaw=self.directional_yaw)
-            if profile in ('pond_test','habitat'):
+            self.game=Game(self.assets,world=world,walk_speed=72. if profile in ('habitat','storyboard') else 24.,directional_yaw=self.directional_yaw)
+            if profile in ('pond_test','habitat','storyboard'):
                 from pond import Pond
-                self.game.pond=Pond(world,active_span=(1030,2110) if profile=='habitat' else None,
-                                    water_y=400. if profile=='habitat' else 380.)
+                self.game.pond=Pond(world,active_span=(1030,2110) if profile in ('habitat','storyboard') else None,
+                                    water_y=400. if profile in ('habitat','storyboard') else 380.)
             course=world.course
             self.viewer=Viewer(self.assets,dict(self.game.motion.game_previews()),list(game_replays(self.assets))+(list(world_replays(self.assets)) if profile=='seamless' else []))
             self.screen=Image.new('RGBA',SCREEN)
-            if profile=='habitat':
-                from stage_view import StageView
-                self.play_view=StageView(self.assets,world,self.game.pond,asset_root=asset_root)
+            if profile in ('habitat','storyboard'):
+                from story_stage import StoryView
+                self.play_view=StoryView(self.assets,world,self.game.pond,asset_root=asset_root)
             elif profile=='pond_test':
                 from pond_view import PondView
                 self.play_view=PondView(self.assets,world,self.game.pond,asset_root=asset_root)
             else:self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
+            self.story=getattr(self.play_view,'story',None)
+            if self.story:self.story.reset(self.game,active=profile=='storyboard')
             self.play_view.step(self.game,0)
             self.scene='game';self.buttons=self.viewer.buttons
-            self.stage_menu=StageMenu(world);self.stage_start=None
+            self.stage_menu=StageMenu(world,story=self.story is not None);self.stage_start=None
             self.timeline=FixedStepTimeline(STEP)
             self.running=True;self.focused=True
             self.physical_keys={};self.control_keys=set();self.viewer_keys=set()
@@ -68,6 +70,11 @@ class App:
                 from pico_backend import Backend
                 self.backend=Backend(*SCREEN)
                 self.viewer.native_text=self.backend.draw_text
+                if self.story is not None:
+                    from story_audio import StoryAudio
+                    self.story_audio=StoryAudio(self.backend)
+                    self.story_audio.sync(self.story.active)
+                    self.story.audio_status=self.story_audio.error
         except BaseException:
             self.close()
             raise
@@ -89,18 +96,26 @@ class App:
             self.close_context()
         else:
             self.play_view.draw(self.screen,self.game)
-            self.stage_menu.open(self.screen,getattr(getattr(self.play_view,'art',None),'image',None))
+            self.stage_menu.open(self.screen,getattr(getattr(self.play_view,'art',None),'image',None),
+                                 current='storyboard_test' if self.story and self.story.active else None)
             self.close_context()
 
     def start_stage(self):
-        self.stage_start=self.game.world.levels[self.stage_menu.selected].level_id
-        self.close_context()
-        self.game.reset(level_id=self.stage_start)
-        self.play_view.step(self.game,0)
+        selected=self.stage_menu.entries[self.stage_menu.selected].level_id
+        if self.story:self.story.active=selected=='storyboard_test'
+        self.stage_start=self.game.world.spawn_level if selected=='storyboard_test' else selected
+        self.restart_game()
         self.play_view.draw(self.screen,self.game)
         self.stage_menu.background.close()
         self.stage_menu.background=self.screen.copy()
         self.stage_menu.opened=False
+
+    def restart_game(self,checkpoint=False):
+        self.close_context()
+        story=bool(self.story and self.story.active)
+        self.game.reset(checkpoint and not story,level_id=self.stage_start)
+        if self.story:self.story.reset(self.game,active=story)
+        self.play_view.step(self.game,0)
 
     def event(self,event,*,at=None):
         event.collected_epoch=self.epoch
@@ -112,12 +127,21 @@ class App:
         self.timeline.advance(dt,self._event,self.step_scene,lambda e:route_event(e,self.game_keys))
         self.viewer.light_time+=dt
         self.stage_menu.step(dt)
+        if self.story_audio:
+            self.story_audio.sync(self.story.active and self.scene=='game' and self.focused
+                                  and self.game.run=='Playing' and not self.stage_menu.visible)
+            self.story.audio_status=self.story_audio.error
 
     def step_scene(self,dt,on_input):
         if self.scene=='game' and self.stage_menu.visible:
             on_input()
         elif self.scene=='game':
-            self.game.step(dt,on_input if self.game.run=='Playing' else None)
+            if self.story and self.story.intro:
+                on_input()
+            else:
+                self.game.step(dt,on_input if self.game.run=='Playing' else None)
+            if self.story and self.story.active and self.game.run=='Playing':
+                self.story.step(dt)
             self.play_view.step(self.game,dt)
         else:self.viewer.step(dt)
 
@@ -194,11 +218,17 @@ class App:
                 if self.scene=='viewer':self.switch('game')
                 else:self.game.pause();self.close_context()
             elif self.scene=='game':
-                if down and key=='r':self.close_context();self.game.reset(self.game.checkpoint,level_id=self.stage_start)
+                if down and key=='r':self.restart_game(self.game.checkpoint)
                 elif down and key=='p':self.game.pause();self.close_context()
+                elif self.story and self.story.intro:return
                 elif self.game.run=='Playing' and (key in self.game_keys or not down and physical in self.physical_keys):
                     if down:
                         if e.repeat or physical in self.physical_keys:return
+                        if self.story and self.story.active and key in ('e','f'):
+                            boosted=self.story.interact(self.game)
+                            if boosted and key=='e':
+                                self.physical_keys[physical]='story_glow'
+                                return
                         binding=self.command(key)
                         already=binding in self.physical_keys.values()
                         self.physical_keys[physical]=binding
@@ -236,6 +266,7 @@ class App:
         finally:self.close()
 
     def close(self):
+        if self.story_audio:self.story_audio.close();self.story_audio=None
         if hasattr(self,'stage_menu'):self.stage_menu.hide()
         if hasattr(self,'viewer'):self.viewer.text_surface.cache_clear()
         if hasattr(self,'play_view') and self.play_view.environment:self.play_view.environment.close()

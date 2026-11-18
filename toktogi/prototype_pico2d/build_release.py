@@ -6,7 +6,7 @@ from zipfile import ZipFile,ZIP_DEFLATED
 def build(project,output):
     project=Path(project).resolve();output=Path(output).resolve()
     candidate=project/'toktogi/prototype_pico2d'
-    files=[]
+    files=[project/'document/StoryBoard.txt',project/'document/markdown/StoryBoardTest.md']
     extensions={'.py','.md','.txt','.cmd','.json','.zip','.html','.png'}
     for folder in (candidate,project/'toktogi/prototype',project/'document/markdown'):
         files.extend(p for p in folder.rglob('*') if p.is_file() and p.suffix in extensions

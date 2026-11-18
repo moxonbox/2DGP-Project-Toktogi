@@ -111,13 +111,14 @@ class App:
     def _event(self,e):
         self.dispatch_time=getattr(e,'input_time',self.timeline.wall_time)
         if e.type=='key_up' and e.key in CONTROL_KEYS:
-            self.control_keys.discard(e.key)
+            self.control_keys.discard(e.key);self.viewer_keys.discard(e.key)
             return
         contextual=e.type in ('key_down','key_up','text_input','text_editing','mouse_down','mouse_up','wheel')
         if contextual and e.timestamp is not None and e.timestamp<=self.context_cutoff:
             if e.type=='key_up':self.control_keys.discard(e.key)
             return
         if contextual and (e.epoch is not None and e.epoch!=self.epoch or getattr(e,'collected_epoch',self.epoch)<self.epoch and self.dispatch_time<=self.context_cutoff):return
+        if e.type=='key_up':self.viewer_keys.discard(e.key)
         if e.type=='quit':self.running=False
         elif e.type=='render_reset':raise RuntimeError('SDL renderer reset; restart the application.')
         elif e.type=='window_changed':
@@ -140,6 +141,7 @@ class App:
         elif e.type=='text_editing' and self.scene=='viewer' and self.viewer.searching:self.viewer.composition=e.text
         elif e.type in ('key_down','key_up'):
             key,down=e.key,e.type=='key_down'
+            physical=e.scancode if e.scancode else key
             if key in CONTROL_KEYS:
                 if not down:self.control_keys.discard(key);return
                 if key in self.control_keys or e.repeat:return
@@ -157,16 +159,17 @@ class App:
             elif self.scene=='game':
                 if down and key=='r':self.close_context();self.game.reset(self.game.checkpoint)
                 elif down and key=='p':self.game.pause();self.close_context()
-                elif key in self.game_keys and self.game.run=='Playing':
-                    physical=e.scancode if e.scancode is not None else key
-                    binding=self.command(key) if down else self.physical_keys.get(physical)
+                elif self.game.run=='Playing' and (key in self.game_keys or not down and physical in self.physical_keys):
                     if down:
                         if e.repeat or physical in self.physical_keys:return
+                        binding=self.command(key)
                         already=binding in self.physical_keys.values()
                         self.physical_keys[physical]=binding
                         if not already:self.game.edge(binding,True)
+                        elif binding=='x':
+                            self.game.start_work('x')
                     elif physical in self.physical_keys:
-                        del self.physical_keys[physical]
+                        binding=self.physical_keys.pop(physical)
                         if binding not in self.physical_keys.values():self.game.edge(binding,False)
             elif self.scene=='viewer':
                 repeatable=key in ('up','down','left','right','backspace')
@@ -184,12 +187,13 @@ class App:
 
     def run(self):
         if self.backend is None:raise RuntimeError('Native run requires App(native=True).')
-        self.input_clock=EventClock(origin=int(self.backend.sdl.SDL_GetTicks()),position_transform=self.backend.logical_point)
         previous=perf_counter()
+        self.input_clock=EventClock(origin=int(self.backend.sdl.SDL_GetTicks()),position_transform=self.backend.logical_point)
         try:
             while self.running:
-                begin=perf_counter();dt=begin-previous;previous=begin
+                begin=perf_counter()
                 for event in self.input_clock.events():self.event(event,at=event.timestamp)
+                collected=perf_counter();dt=collected-previous;previous=collected
                 self.update(dt);self.draw()
                 sleep(max(0,1/60-(perf_counter()-begin)))
         finally:self.close()

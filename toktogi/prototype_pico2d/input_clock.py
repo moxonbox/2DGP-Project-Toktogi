@@ -20,6 +20,7 @@ class Event:
     y: int=0
     start: int=0
     length: int=0
+    symbol: str|None=None
 
 class EventClock:
     def __init__(self,origin=None,position_transform=None):
@@ -62,9 +63,11 @@ class EventClock:
             kind=int(raw.type); e=None
             if kind in (s.SDL_KEYDOWN,s.SDL_KEYUP):
                 sym=raw.key.keysym
-                name=s.SDL_GetKeyName(sym.sym).decode('utf-8').lower()
+                symbol=s.SDL_GetKeyName(sym.sym).decode('utf-8').lower()
+                physical=s.SDL_GetScancodeName(sym.scancode)
+                name=physical.decode('utf-8').lower() if physical else symbol
                 name={'left shift':'lshift','right shift':'rshift','left ctrl':'lctrl','right ctrl':'rctrl','return':'return'}.get(name,name)
-                e=Event('key_down' if kind==s.SDL_KEYDOWN else 'key_up',name,int(sym.mod),bool(raw.key.repeat),scancode=int(sym.scancode))
+                e=Event('key_down' if kind==s.SDL_KEYDOWN else 'key_up',name,int(sym.mod),bool(raw.key.repeat),scancode=int(sym.scancode),symbol=symbol)
             elif kind==s.SDL_QUIT: e=Event('quit')
             elif kind==s.SDL_WINDOWEVENT:
                 event=int(raw.window.event)

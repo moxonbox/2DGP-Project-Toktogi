@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "checks": {
+    "Ctrl_F_search_reopened_five_times": true,
+    "physical_release_survives_changed_symbol": true,
+    "unknown_scancode_keys_remain_independent": true,
+    "fresh_F_X_E_alias_attacks_and_release_count": true,
+    "3ms_tap_retained_once_across_frame_rates": true,
+    "released_modifier_chord_retained_for_one_tick": true,
+    "opposites_neutral_and_rollover_release_immediate": true,
+    "six_key_chord_jump_and_dual_Ctrl_release": true,
+    "pause_focus_context_clear_without_ghost_jump": true,
+    "aim_neutral_rotation_wait_under_100ms": true,
+    "event_during_poll_processed_in_current_frame": true,
+    "rejection_reason_visible_before_four_seconds": true,
+    "native_scancode_identity_and_original_symbol_preserved": true
+  },
+  "short_tap_displacement_px": {
+    "10": 0.052777777777777146,
+    "15": 0.052777777777777146,
+    "30": 0.052777777777777146,
+    "60": 0.052777777777777146,
+    "120": 0.052777777777777146,
+    "240": 0.052777777777777146
+  },
+  "latency_matrix": {
+    "10": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 99.0,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 7.292,
+        "max_simulation_move_ms": 15.625,
+        "max_frame_observation_ms": 103.125
+      }
+    },
+    "15": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 65.667,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 6.25,
+        "max_simulation_move_ms": 14.583,
+        "max_frame_observation_ms": 72.917
+      }
+    },
+    "30": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 32.333,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 7.292,
+        "max_simulation_move_ms": 15.625,
+        "max_frame_observation_ms": 40.625
+      }
+    },
+    "60": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 15.667,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 7.812,
+        "max_simulation_move_ms": 16.146,
+        "max_frame_observation_ms": 24.479
+      }
+    },
+    "120": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 15.667,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 8.073,
+        "max_simulation_move_ms": 16.406,
+        "max_frame_observation_ms": 16.406
+      }
+    },
+    "240": {
+      "event_to_tick_accept_ms": 7.333,
+      "event_to_simulation_move_ms": 15.667,
+      "frame_observing_move_ms": 15.667,
+      "phase_sweep": {
+        "samples": 16,
+        "max_tick_accept_ms": 8.203,
+        "max_simulation_move_ms": 16.536,
+        "max_frame_observation_ms": 16.536
+      }
+    }
+  },
+  "aim_to_rotation_ms": 91.667,
+  "native_driver": "dummy",
+  "computer_use": false,
+  "limits": "Synthetic event/tick/frame measurements; physical keyboard rollover, IME/OS hooks and input-to-photon latency not measured."
+}

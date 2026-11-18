@@ -74,7 +74,7 @@ class StageView(PondView):
     def overlay(self,screen,game):
         key=(screen.size,self.world.level_id,tuple(self.world.states.values()),game.bites,
              game.launch_count,self.pond.repels,game.run,self.pond.phase,
-             tuple(sorted(game.ready_work())),game.notice if 4<game.time<game.notice_until else None)
+             tuple(sorted(game.ready_work())),game.notice if game.notice_priority and game.time<game.notice_until else None)
         if key!=self.hud_key:
             for image,_ in self.hud_parts:image.close()
             layer=Image.new('RGBA',screen.size)
@@ -112,10 +112,10 @@ class StageView(PondView):
         elif game.run=='Failed': prompt='물에 떨어졌습니다. R로 마지막 쉼터에서 다시 시작하세요.'
         elif game.run=='Cleared': prompt='이슬의 길 완료! 세 등불이 숲과 연못을 잇습니다.  R 다시 시작'
         elif self.pond.phase=='warn': prompt='물결 경고!  Space 도약으로 피하거나, 입이 올라올 때 E / F로 반격하세요.'
+        elif game.notice_priority and game.time<game.notice_until: prompt=game.notice
         elif game.ready_work():
             kinds={self.world.entity(k).kind for k in game.ready_work()}
             prompt='E 유지: 이끼 섭식' if kinds=={'food'} else 'E: 등불 켜기 / 씨앗 수집'
-        elif game.time<game.notice_until and game.time>4: prompt=game.notice
         draw.text((FIELD.x,FIELD.bottom+12),prompt,font=self.font,fill=(224,232,201))
         draw.text((FIELD.x,FIELD.bottom+45),'A/D 이동·반전 · Ctrl+A/D 회전 · W/S 조준·경로 · Space 도약 · Ctrl 제동 · Shift 달리기 · E 상호작용 · F 공격 · Q 반전 · Z 회전 · P 일시정지 · F2 모션·재질',font=self.small_font,fill=(152,174,168))
         if game.run in ('Paused','Failed','Cleared'):

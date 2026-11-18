@@ -82,6 +82,7 @@ class Game:
         self.vx=self.vy=0.
         self.time=self.recovery=self.goal_hold=0.
         self.held=set()
+        self.input_presses=set()
         self.view='right'
         self.yaw_angle=0.
         self.yaw_pose=None
@@ -128,6 +129,7 @@ class Game:
         self.reject_until=0.
         self.notice='발판을 올라 꼭대기 등불까지 도달하세요.'
         self.notice_until=4.
+        self.notice_priority=False
         if checkpoint:
             self.set_clip('respawn')
         if self.pond:self.pond.reset()
@@ -137,6 +139,7 @@ class Game:
 
     def tell(self,text):
         self.notice=text
+        self.notice_priority=True
         self.notice_until=self.time+2.7
 
     def set_clip(self,name,time=0.):
@@ -168,6 +171,7 @@ class Game:
 
     def close_input(self,preserve_pose=False):
         self.held.clear()
+        self.input_presses.clear()
         self.yaw_w_arc=False
         self.space_pressed=False
         self.elastic_at=None
@@ -203,6 +207,9 @@ class Game:
             if key in self.held:
                 return
             self.held.add(key)
+            if self.directional_yaw and key in ('left','right','up','down','shift','run'):
+                self.input_presses.add(key)
+                if key in ('left','right','up','down'):self.input_presses.update(self.held & {'shift','run'})
         else:
             if key not in self.held:
                 return
@@ -239,6 +246,7 @@ class Game:
     def jump_request(self):
         if self.time<self.hurt_until:
             return
+        self.notice_priority=False
         self.cancel_work()
         self.transition=None
         self.turn_origin=None
@@ -381,6 +389,7 @@ class Game:
             if not self.try_turn(full=full):
                 self.reject('회전 자세를 지지할 넓은 발판이 필요합니다.')
                 return
+            self.notice_priority=False
             if full:
                 self.vx=0.
                 self.action='Idle'
@@ -389,6 +398,7 @@ class Game:
         if reason:
             self.reject(reason)
             return
+        self.notice_priority=False
         from_feed=(self.work and self.work['key']=='f' or
                    self.transition and self.transition_kind=='feed_return')
         attack_entry=self.motion.feed_to_attack(self.visual(),self.view) if key=='x' and from_feed else None
@@ -436,7 +446,7 @@ class Game:
         self.edge_pose=None
         return True
 
-    def steer_yaw(self,dt):
+    def steer_yaw(self,dt,inputs):
         if not self.directional_yaw:return
         if (not self.support or self.prep or self.work or self.transition or self.time<self.hurt_until
                 or self.clip not in ('idle','walk','walk_start','recovery_walk','aim_up','aim_down',
@@ -450,12 +460,12 @@ class Game:
         self.yaw_turning=False
         if self.yaw_pose is None:
             self.yaw_angle=360*(self.yaw_angle//360)+(0. if self.view=='right' else 180.)
-        x=int('right' in self.held)-int('left' in self.held)
-        y=int('up' in self.held)-int('down' in self.held)
+        x=int('right' in inputs)-int('left' in inputs)
+        y=int('up' in inputs)-int('down' in inputs)
         step=dt*360/self.motion.track('ground_spin','left').duration
-        horizontal='left' in self.held or 'right' in self.held
-        continuous='shift' in self.held and horizontal
-        if 'shift' in self.held and not x:return
+        horizontal='left' in inputs or 'right' in inputs
+        continuous='shift' in inputs and horizontal
+        if 'shift' in inputs and not x:return
         if not continuous or x!=self.yaw_detent_direction:self.yaw_detent_until=0.
         detent=False
         if horizontal:
@@ -671,6 +681,13 @@ class Game:
     def _step(self,dt=STEP,on_input=None):
         if self.run=='Paused':
             return
+        inputs=self.held
+        if self.directional_yaw:
+            inputs=set(self.held)
+            for axis in ({'left','right'},{'up','down'}):
+                if not inputs & axis:inputs.update(self.input_presses & axis)
+            inputs.update(self.input_presses & {'shift','run'})
+        self.input_presses.clear()
         self.visual_time+=dt
         if self.run=='Playing':self.time+=dt
         if self.transition:
@@ -695,7 +712,7 @@ class Game:
         self.recovery=max(0.,self.recovery-dt)
         if self.offer and self.time-self.offer[1]>POST_WINDOW:
             self.offer=None
-        direction=int('right' in self.held)-int('left' in self.held)
+        direction=int('right' in inputs)-int('left' in inputs)
         if self.transition and self.turn_origin and direction and not self.full_turn:
             target='right' if direction>0 else 'left'
             if target!=self.transition[1]:
@@ -710,27 +727,28 @@ class Game:
                     cells=original.cells[index:]
                 self.transition=(Track(cells,[.024]*len(cells),False),target)
                 self.transition_time=0.
-        aim=int('up' in self.held)-int('down' in self.held)
+        aim=int('up' in inputs)-int('down' in inputs)
         old_aim=self.aim
         if self.support and not self.prep:
             self.aim=aim
-        braking='shift' in self.held
+        braking='shift' in inputs
         self.balancing=False
-        if (self.support and not direction and not self.work and not self.prep and not self.held
+        if (self.support and not direction and not self.work and not self.prep and not inputs
                 and not self.transition and self.time>=self.hurt_until):
             lo,hi=self.stance_range()
             if lo<=hi and (self.x<lo-.2 or self.x>hi+.2):
                 direction=1 if self.x<lo else -1
                 self.balancing=True
-        self.steer_yaw(dt)
+        self.steer_yaw(dt,inputs)
         if self.directional_yaw:
             if self.yaw_pose is None or not self.support or self.prep or self.work or self.transition:
                 self.aim_display=0.
             else:
                 aligned=abs((self.yaw_angle+90)%180-90)<1e-7
-                target=self.aim if aligned and not self.yaw_turning and ('left' in self.held or 'right' in self.held) else 0.
+                target=self.aim if aligned and not self.yaw_turning and ('left' in inputs or 'right' in inputs) else 0.
                 side=self.aim_display if self.aim_display else target
                 duration=self.motion.track('aim_up' if side>0 else 'aim_down',self.view).duration
+                if self.yaw_turning:duration*=.5
                 self.aim_display=approach(self.aim_display,target,dt/duration)
         if self.support and self.time>=self.hurt_until and not self.prep:
             landing_pose=self.clip in ('land_soft','land_hard','recovery_start','respawn') and self.visual_time<self.duration(self.clip)
@@ -747,7 +765,7 @@ class Game:
                     self.transition_kind='feed_move'
                     self.transition_time=0.
             spinning=self.transition and self.turn_origin and self.full_turn
-            speed=direction*self.walk_speed*(2. if 'run' in self.held else 1.)*(.55 if self.recovery else 1.) if not self.work and not braking and not spinning else 0.
+            speed=direction*self.walk_speed*(2. if 'run' in inputs else 1.)*(.55 if self.recovery else 1.) if not self.work and not braking and not spinning else 0.
             if self.balancing:
                 speed=direction*min(abs(speed),abs((lo if direction>0 else hi)-self.x)/dt)
             reversing=self.walk_speed!=WALK_SPEED and self.vx*speed<0

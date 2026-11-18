@@ -1,0 +1,16 @@
+{
+  "second_Ctrl_F_opens_search": false,
+  "changed_symbol_release": {
+    "held": [
+      "right"
+    ],
+    "physical": {
+      "7": "right"
+    }
+  },
+  "fresh_alias_attack_while_F_held": false,
+  "3ms_direction_tap_displacement": 0.0,
+  "aim_to_rotation_ms": 175.0,
+  "event_during_poll_accepted_same_frame": false,
+  "physical_D_with_changed_symbol": "f9"
+}

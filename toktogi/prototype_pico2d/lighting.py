@@ -1,5 +1,5 @@
 """The existing sprite BRDF evaluated by Pillow's C image arithmetic."""
-from PIL import Image,ImageMath
+from PIL import Image,ImageChops,ImageMath
 from array import array
 
 X=Image.frombytes('F',(128,128),array('f',(x for y in range(128) for x in range(128))).tobytes())
@@ -41,7 +41,14 @@ def srgb(value):
     return calc(lambda v:((v['x']<=.0031308)*v['x']*12.92+(v['x']>.0031308)*(1.055*(v['x']**(1/2.4))-.055))*255+.5,x=value).convert('L')
 
 
-def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale):
+# Neutral reference and maximum tonal shift in 8-bit display space.
+PALETTE_NEUTRAL = [round(.72 * value) for value in range(256)]
+PALETTE_SHIFT = [128 + round(max(-32, min(32, .68 * (value - 128)))) for value in range(256)]
+PALETTE_HIGHLIGHT_LIMIT = [128 + (255 - value) * 2 // 3 for value in range(256)]
+PALETTE_SHADOW_LIMIT = [128 - value * 2 // 3 for value in range(256)]
+
+
+def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,*,palette_base=None):
     sprite,mask,x,y,nx,ny,nz,rgb,rough,metal,glow,box=fields
     dx=calc(lambda v:v['a']-v['x'],a=float(lx),x=x)
     dy=calc(lambda v:v['a']+v['y'],a=float(ly),y=y)
@@ -67,7 +74,20 @@ def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale)
                       r=albedo,df=diffuse,s=specular,f=fresnel,di=dielectric,m=metal,e=emit,es=float(emission_scale if emission else 0.))
         channels.append(srgb(radiance))
     original=sprite.crop(box)
-    color=Image.composite(Image.merge('RGB',channels),original.convert('RGB'),mask)
+    authored = original.convert('RGB')
+    color = Image.merge('RGB', channels)
+    if palette_base is not None:
+        # Apply the same signed light shift to all authored channels to retain the toon colors.
+        neutral = palette_base.crop(box).convert('L').point(PALETTE_NEUTRAL)
+        shift = ImageChops.subtract(color.convert('L'), neutral, offset=128).point(PALETTE_SHIFT)
+        # Leave headroom at both ends so highlights retain their drawn detail and hue.
+        r, g, b = authored.split()
+        brightest = ImageChops.lighter(ImageChops.lighter(r, g), b)
+        darkest = ImageChops.darker(ImageChops.darker(r, g), b)
+        shift = ImageChops.darker(shift, brightest.point(PALETTE_HIGHLIGHT_LIMIT))
+        shift = ImageChops.lighter(shift, darkest.point(PALETTE_SHADOW_LIMIT))
+        color = ImageChops.add(authored, shift.convert('RGB'), offset=-128)
+    color = Image.composite(color, authored, mask)
     color.putalpha(original.getchannel('A'))
     result=sprite.copy();result.paste(color,box[:2])
     return result

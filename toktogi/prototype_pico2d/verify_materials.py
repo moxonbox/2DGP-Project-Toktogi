@@ -33,6 +33,28 @@ def _different(a, b):
     return sum(bool(r|g|b) for r,g,b in zip(*(difference.getchannel(c).tobytes() for c in 'RGB')))
 
 
+def _light_response(assets):
+    # F2 mouse positions in tile coordinates; habitat spawn and first lamp at ground height.
+    scenarios = (('viewer', (16,30), (115,25), 1., .115),
+                 ('habitat', (659,-67), (64,-67), 1.15, .25))
+    results = {}
+    for key in (('idle','left',0), ('walk','right',0)):
+        coverage = assets.maps(key)['base'].getchannel('A').tobytes()
+        for name, first, second, power, ambient in scenarios:
+            frames = [assets.render(key, 'lit', (0,0), pos, power=power, ambient=ambient)
+                      .convert('L').tobytes() for pos in (first, second)]
+            shifts = [b-a for a,b,covered in zip(*frames,coverage) if covered]
+            magnitude = sum(map(abs,shifts)) / len(shifts)
+            if name == 'viewer':
+                assert magnitude >= 18
+                # Opposing surface normals must brighten and darken in the same frame.
+                assert min(sum(d >= 10 for d in shifts), sum(d <= -10 for d in shifts)) >= .20*len(shifts)
+            else:
+                assert sum(shifts)/len(shifts) >= 20
+            results[f'{key[0]}_{name}'] = round(magnitude, 2)
+    return results
+
+
 def _fixture(emission=True, coverage=255, brightness=255):
     maps = {name: Image.new('RGBA', (128,128), (255,255,255,255)) for name in PASSES}
     maps['base'].putalpha(coverage)
@@ -129,7 +151,7 @@ def verify():
         assert assets.validate_all_images() == 2374
 
         maximum, changed, alpha_changed = 0, 0, 0
-        palette_before, palette_after, palette_channels = 0, 0, 0
+        palette_before, palette_after, max_chroma_error, palette_channels = 0, 0, 0, 0
         with ZipFile(ROOT / 'lighting_reference.zip') as reference:
             cases = json.loads(reference.read('cases.json'))
             assert len(cases) == 24
@@ -145,12 +167,17 @@ def verify():
                                         case['emission'], ambient=case['ambient']).tobytes()
                 source = surface[0].tobytes()
                 assert display[3::4] == source[3::4] == actual[3::4]
+                coverage = assets.maps(key)['base'].getchannel('A').tobytes()
                 for offset in range(0, len(source), 4):
+                    if not coverage[offset//4]:
+                        assert display[offset:offset+4] == source[offset:offset+4]
                     if source[offset+3] == 0:continue
+                    shifts = [display[offset+c]-source[offset+c] for c in range(3)]
+                    assert max(map(abs,shifts)) <= 32
+                    max_chroma_error = max(max_chroma_error, max(shifts)-min(shifts))
                     for c in range(3):
                         old_error = abs(actual[offset+c]-source[offset+c])
                         new_error = abs(display[offset+c]-source[offset+c])
-                        assert new_error <= .20*old_error+1
                         palette_before += old_error;palette_after += new_error;palette_channels += 1
                 expected = reference.read(f'{index}.rgba')
                 assert len(actual) == len(expected) == 128*128*4
@@ -159,6 +186,8 @@ def verify():
                 maximum = max(maximum, max(error))
                 changed += sum(value != 0 for value in error)
         assert alpha_changed == 0 and maximum <= 1 and changed <= 4
+        assert max_chroma_error == 0
+        response = _light_response(assets)
 
         key = ('idle','left',0)
         normal = assets.render(key, 'lit', (0,0), (16,30))
@@ -261,7 +290,8 @@ def verify():
         'full_decoded_cells': base_cells+pose_cells, 'load_ms': round(load_ms,3),
         'golden': {'cases':len(cases), 'max_channel_error':maximum,
                    'changed_channels':changed, 'alpha_changed':alpha_changed},
-        'palette': {'cases':len(cases), 'source_weight':.8, 'light_weight':.2,
+        'palette': {'cases':len(cases), 'max_tone_shift':32,
+                    'max_chroma_error':max_chroma_error, 'mean_luma_response':response,
                     'before_mean_rgb_error':round(palette_before/palette_channels,3),
                     'after_mean_rgb_error':round(palette_after/palette_channels,3),
                     'error_reduction_percent':round(100*(1-palette_after/palette_before),2),

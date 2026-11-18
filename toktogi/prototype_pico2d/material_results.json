@@ -13,21 +13,25 @@
   },
   "palette": {
     "cases": 24,
-    "source_weight": 0.8,
-    "light_weight": 0.2,
+    "max_tone_shift": 32,
+    "max_chroma_error": 0,
+    "mean_luma_response": {
+      "idle_viewer": 19.36,
+      "idle_habitat": 25.62,
+      "walk_viewer": 20.27,
+      "walk_habitat": 26.51
+    },
     "before_mean_rgb_error": 35.049,
-    "after_mean_rgb_error": 7.233,
-    "error_reduction_percent": 79.36,
-    "alpha_changed": 0,
-    "blend_only_mean_ms": 0.0811,
-    "raw_optimization_references": 16
+    "after_mean_rgb_error": 15.138,
+    "error_reduction_percent": 56.81,
+    "alpha_changed": 0
   },
   "changed_pixels": {
-    "normal": 2403,
-    "light": 2403,
-    "emission": 87,
-    "roughness": 206,
-    "metallic": 2253
+    "normal": 1901,
+    "light": 2084,
+    "emission": 79,
+    "roughness": 139,
+    "metallic": 2075
   },
   "flat_normal": [
     0,

@@ -66,9 +66,8 @@ class SpriteRenderer:
                 or metallic is not None and (not isfinite(metallic) or not 0 <= metallic <= 1)):
             raise ValueError('Invalid lighting parameter.')
         surface = self.surface_fields(key, flat_normal)
-        lit = shade(surface, lx, ly, roughness, metallic, power, emission, ambient, self.emission_scale)
-        # Sprite already contains the authored toon palette; add light without replacing that palette.
-        return Image.blend(surface[0], lit, .20)
+        return shade(surface, lx, ly, roughness, metallic, power, emission, ambient,
+                     self.emission_scale, palette_base=self.maps(key)['base'])
 
     def bloom(self, key):
         """Return three padded linear RGB layers; fixed kernel, threshold and emission scale."""

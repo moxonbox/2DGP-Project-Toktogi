@@ -1,5 +1,5 @@
 """Fixed-step platformer rules. Animation reads simulation state and never moves the player."""
-from math import atan2, copysign, cos, degrees, hypot, isfinite, radians
+from math import copysign, cos, hypot, isfinite, radians
 from course import COURSE, BEACON, BEACON_TOUCH, CHECKPOINT, COLLECT, COLLECT_TOUCH, FOOD, FOOD_TOUCH, LEVEL, SHELL, Platform
 from physics import STEP, GRAVITY, CAP_RADIUS, CAP_HEIGHT, approach, capsule_overlaps, overhang, segment_box, sweep_x, sweep_y
 from motion import MotionSet, Track, validate_playable
@@ -86,6 +86,7 @@ class Game:
         self.yaw_pose=None
         self.yaw_turning=False
         self.aim=0
+        self.aim_time=0.
         self.run='Playing'
         self.action='Idle'
         self.clip='idle'
@@ -443,20 +444,26 @@ class Game:
             self.yaw_angle=360*(self.yaw_angle//360)+(0. if self.view=='right' else 180.)
         x=int('right' in self.held)-int('left' in self.held)
         y=int('up' in self.held)-int('down' in self.held)
-        if not (x or y):return
-        target=degrees(atan2(y,x))%360
-        delta=(target-self.yaw_angle+180)%360-180
-        if delta==-180:delta=180
-        angle=self.yaw_angle+copysign(min(abs(delta),dt*360/self.motion.track('ground_spin','left').duration),delta)
+        step=dt*360/self.motion.track('ground_spin','left').duration
+        horizontal='left' in self.held or 'right' in self.held
+        if horizontal:
+            if not x:return
+            angle=self.yaw_angle+x*step
+        else:
+            if not y:return
+            target=90. if y>0 else 270.
+            delta=(target-self.yaw_angle+180)%360-180
+            if delta==-180:delta=180
+            angle=self.yaw_angle+copysign(min(abs(delta),step),delta)
         pose=self.motion.yaw_cell(angle)
         markers,legs=self.assets.sample(pose)
         if not all(self.support.x0<=self.x+markers['foot_contact_'+leg]['xy'][0]-self.assets.pivot[0]<=self.support.x1 for leg in legs):return
-        self.yaw_turning=abs((target-angle+180)%360-180)>1e-7
+        self.yaw_turning=horizontal or abs((target-angle+180)%360-180)>1e-7
         self.yaw_angle=angle
         facing=cos(radians(angle))
         if abs(facing)>1e-7:self.view='right' if facing>0 else 'left'
-        # At horizontal headings resume locomotion; released intermediate headings keep their pose.
-        self.yaw_pose=None if abs(angle%180)<1e-7 else pose
+        # Keep the same pose sequence through 180/360 degrees; releasing the key holds its angle.
+        self.yaw_pose=pose
 
     def end_work(self):
         if self.work and self.work['key']=='f' and self.support:
@@ -675,6 +682,7 @@ class Game:
         old_aim=self.aim
         if self.support and not self.prep:
             self.aim=aim
+        self.aim_time=self.aim_time+dt if self.aim==old_aim else 0.
         braking='shift' in self.held
         self.balancing=False
         if (self.support and not direction and not self.work and not self.prep and not self.held

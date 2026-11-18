@@ -24,21 +24,45 @@ def verify():
     try:
         assert App.directional_yaw and not LegacyApp.directional_yaw
         headings={}
-        for names,target in (('d',0),('dw',45),('w',90),('wa',135),('a',180),('as',225),('s',270),('sd',315)):
-            g=reset();keys(g,names,True)
-            shown=[]
-            for _ in range(100):
-                g.step();shown.append(g.visual()[0])
-                if abs((g.yaw_angle-target+180)%360-180)<1e-7:break
-            keys(g,names,False)
-            assert abs((g.yaw_angle-target+180)%360-180)<1e-7,(names,g.yaw_angle)
-            assert not any(name.startswith('turn_') for name in shown)
-            assert g.transition is None and g.support
-            headings[names]=round(g.yaw_angle%360,3)
-        g=reset();keys(g,'dw',True);ticks(g,40)
-        gait=[]
-        for _ in range(36):g.step();gait.append(g.visual())
-        assert len(set(gait))>1 and all(cell[0]=='walk' and cell[1]=='yaw_090' for cell in gait)
+        for key,target in (('w',90),('s',270)):
+            g=reset();keys(g,key,True);ticks(g,60);keys(g,key,False)
+            assert abs((g.yaw_angle-target+180)%360-180)<1e-7
+            headings[key]=round(g.yaw_angle%360,3)
+        camera=assets.manifest['coordinate_contract']['camera_location']
+        def facing(angle):
+            markers,_=assets.sample(g.motion.yaw_cell(angle))
+            mouth,tail=markers['mouth_marker']['world'],markers['furca_marker']['world']
+            return sum((mouth[i]-tail[i])*camera[i] for i in (0,1))
+        initial=facing(0.)
+        facing_scores={};rotations={}
+        for key,sign in (('a',-1),('d',1)):
+            g=reset();g.walk_speed=24.;keys(g,key,True);trace=[]
+            step=360/1.55*STEP
+            for i in range(400):
+                g.step();trace.append(g.yaw_angle)
+                assert g.support and g.transition is None and g.yaw_turning
+                assert abs(g.yaw_angle-sign*(i+1)*step)<1e-6
+                assert g.visual()[0] in ('idle','ground_spin_left')
+                if i==12:facing_scores[key]=facing(g.yaw_angle)
+            assert abs(trace[-1])>720
+            keys(g,key,False);saved=g.yaw_angle;ticks(g,60)
+            assert g.yaw_angle==saved
+            rotations[key]=round(trace[-1],3)
+        assert facing_scores['a']<initial<facing_scores['d']
+        for key in ('a','d'):
+            traces=[]
+            for aim in ('','w','s','ws'):
+                g=reset();g.walk_speed=24.;keys(g,key+aim,True)
+                sequence=[]
+                for _ in range(40):g.step();sequence.append(g.yaw_angle)
+                traces.append(sequence)
+                expected=1 if aim=='w' else -1 if aim=='s' else 0
+                assert g.aim==expected
+                if expected:
+                    assert g.visual()[0]==('aim_up' if expected>0 else 'aim_down')
+                    g.edge('space',True);g.edge('space',False)
+                    assert g.prep and g.prep[-2]==expected
+            assert all(sequence==traces[0] for sequence in traces)
         g=reset();keys(g,'w',True);ticks(g,13);keys(g,'w',False)
         angle,pose=g.yaw_angle,g.visual()
         assert 0<angle<90 and pose[0].startswith('ground_spin_')
@@ -48,15 +72,6 @@ def verify():
         g.pause();ticks(g,120);assert g.yaw_angle==angle and g.visual()==pose
         g.pause();ticks(g,1);assert g.visual()==pose
         keys(g,'s',True);g.step();keys(g,'s',False);assert g.yaw_angle<angle
-        g=reset();trace=[]
-        for key,target in (('w',90),('a',180),('s',270),('d',360)):
-            keys(g,key,True)
-            for _ in range(90):
-                g.step();trace.append(g.yaw_angle)
-                if abs(g.yaw_angle-target)<1e-7:break
-            keys(g,key,False)
-            assert abs(g.yaw_angle-target)<1e-7,(key,g.yaw_angle)
-        assert all(b>=a for a,b in zip(trace,trace[1:])) and trace[-1]==360.
         g=reset();keys(g,'w',True);ticks(g,13);keys(g,'w',False)
         keys(g,'x',True);keys(g,'x',False)
         assert g.work and g.visual()[0]=='attack_demo'
@@ -73,8 +88,8 @@ def verify():
         legacy=Game(assets);legacy.edge('left',True);legacy.step()
         assert legacy.transition and legacy.transition[0].cells[0][0].startswith('turn_')
         return {'passed':True,'headings_degrees':headings,'release_hold_degrees':round(angle,3),
-                'full_rotation_degrees':trace[-1],'pause_and_opposites_hold':True,
-                'reverse_input':True,'diagonal_walk_animated':True,'jump_and_attack':True,'ledge_support_gate':True,
+                'continuous_rotation_degrees':rotations,'screen_facing_scores':facing_scores,'pause_and_opposites_hold':True,
+                'reverse_input':True,'aim_does_not_redirect_rotation':True,'jump_and_attack':True,'ledge_support_gate':True,
                 'z_spin_cells':len(track.cells),'z_spin_seconds':round(track.duration,3),
                 'legacy_fixture_preserved':True,'computer_use':False}
     finally:assets.close()

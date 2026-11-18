@@ -254,6 +254,14 @@ class MotionSet:
             return entry.cells[entry.index(player.work['age'])]
         if player.work and (entry:=player.work.get('entry')):
             return entry.cells[entry.index(player.work['age'])]
+        if (getattr(player,'directional_yaw',False) and player.yaw_pose is not None
+                and player.support and not player.prep and not player.work and player.run=='Playing'
+                and player.aim and ('left' in player.held or 'right' in player.held)):
+            track=self.track('aim_up' if player.aim>0 else 'aim_down',player.view)
+            cell=track.cells[track.index(player.aim_time)]
+            markers,legs=self.assets.sample(cell)
+            if all(player.support.x0<=player.x+markers['foot_contact_'+leg]['xy'][0]-self.assets.pivot[0]<=player.support.x1 for leg in legs):
+                return cell
         if player.yaw_pose is not None and player.support and not player.prep and not player.work and player.run=='Playing':
             if not player.yaw_turning and player.was_walking and player.clip in ('walk','walk_start','recovery_walk'):
                 yaw=self.yaw_heading(player.yaw_angle)

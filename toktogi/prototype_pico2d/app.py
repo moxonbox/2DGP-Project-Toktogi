@@ -11,11 +11,12 @@ from physics import STEP
 from play_view import PlayView,SCREEN
 from replays import game_replays,world_replays
 from timeline import FixedStepTimeline
+from stage_menu import StageMenu
 
 ROOT=Path(__file__).resolve().parent
 GAME_KEYS={'a':'left','d':'right','w':'down','s':'up','space':'space','e':'e','f':'x','x':'x','q':'q','z':'z'}
 GAME_KEYS.update(lctrl='shift',rctrl='shift',lshift='run',rshift='run')
-CONTROL_KEYS=('p','escape','r','f1','f2','tab')
+CONTROL_KEYS=('p','escape','r','f1','f2','tab','m')
 
 def route_event(event,bindings=GAME_KEYS):
     if event.type=='focus_gained' or event.type in ('key_down','key_up') and event.key in bindings:return 'tick'
@@ -55,6 +56,7 @@ class App:
             else:self.play_view=PlayView(self.assets,course,world=world,asset_root=asset_root)
             self.play_view.step(self.game,0)
             self.scene='game';self.buttons=self.viewer.buttons
+            self.stage_menu=StageMenu(world);self.stage_start=None
             self.timeline=FixedStepTimeline(STEP)
             self.running=True;self.focused=True
             self.physical_keys={};self.control_keys=set();self.viewer_keys=set()
@@ -72,14 +74,33 @@ class App:
 
     def close_context(self):
         self.epoch+=1;self.context_cutoff=self.dispatch_time
-        self.physical_keys.clear();self.viewer_keys.clear()
+        self.physical_keys.clear();self.viewer_keys.clear();self.buttons.clear()
         self.game.close_input(preserve_pose=True)
         self.viewer.searching=False;self.viewer.composition=''
         if self.backend:self.backend.set_text_input(False)
 
     def switch(self,which):
         if which!=self.scene:
-            self.close_context();self.scene=which
+            self.close_context();self.stage_menu.hide();self.scene=which
+
+    def toggle_stage_menu(self):
+        if self.stage_menu.opened:
+            self.stage_menu.opened=False
+            self.close_context()
+        else:
+            self.play_view.draw(self.screen,self.game)
+            self.stage_menu.open(self.screen,getattr(getattr(self.play_view,'art',None),'image',None))
+            self.close_context()
+
+    def start_stage(self):
+        self.stage_start=self.game.world.levels[self.stage_menu.selected].level_id
+        self.close_context()
+        self.game.reset(level_id=self.stage_start)
+        self.play_view.step(self.game,0)
+        self.play_view.draw(self.screen,self.game)
+        self.stage_menu.background.close()
+        self.stage_menu.background=self.screen.copy()
+        self.stage_menu.opened=False
 
     def event(self,event,*,at=None):
         event.collected_epoch=self.epoch
@@ -90,16 +111,22 @@ class App:
     def update(self,dt):
         self.timeline.advance(dt,self._event,self.step_scene,lambda e:route_event(e,self.game_keys))
         self.viewer.light_time+=dt
+        self.stage_menu.step(dt)
 
     def step_scene(self,dt,on_input):
-        if self.scene=='game':
+        if self.scene=='game' and self.stage_menu.visible:
+            on_input()
+        elif self.scene=='game':
             self.game.step(dt,on_input if self.game.run=='Playing' else None)
             self.play_view.step(self.game,dt)
         else:self.viewer.step(dt)
 
     def draw(self):
         self.buttons.clear()
-        if self.scene=='game':self.play_view.draw(self.screen,self.game)
+        if self.scene=='game':
+            if self.stage_menu.visible:
+                self.stage_menu.draw(self.screen,self.viewer,self.start_stage,self.toggle_stage_menu)
+            else:self.play_view.draw(self.screen,self.game)
         else:
             self.screen.paste((18,30,25,255),(0,0,*SCREEN))
             self.viewer.draw(self.screen,self.switch)
@@ -148,6 +175,16 @@ class App:
                 self.control_keys.add(key)
             if down and key in ('f1','f2','tab'):
                 self.switch('viewer' if key=='f2' or key=='tab' and self.scene=='game' else 'game')
+            elif down and key=='m' and self.scene=='game':
+                self.toggle_stage_menu()
+            elif self.scene=='game' and self.stage_menu.visible:
+                if not down or e.repeat or key in self.viewer_keys:return
+                self.viewer_keys.add(key)
+                if key=='escape':
+                    if self.stage_menu.opened:self.toggle_stage_menu()
+                elif self.stage_menu.opened:
+                    if key in ('a','left','d','right'):self.stage_menu.move(1 if key in ('d','right') else -1)
+                    elif key in ('e','return'):self.start_stage()
             elif self.scene=='viewer' and self.viewer.searching:
                 if down and key in ('escape','return'):
                     self.viewer.searching=False;self.viewer.composition=''
@@ -157,7 +194,7 @@ class App:
                 if self.scene=='viewer':self.switch('game')
                 else:self.game.pause();self.close_context()
             elif self.scene=='game':
-                if down and key=='r':self.close_context();self.game.reset(self.game.checkpoint)
+                if down and key=='r':self.close_context();self.game.reset(self.game.checkpoint,level_id=self.stage_start)
                 elif down and key=='p':self.game.pause();self.close_context()
                 elif self.game.run=='Playing' and (key in self.game_keys or not down and physical in self.physical_keys):
                     if down:
@@ -199,6 +236,7 @@ class App:
         finally:self.close()
 
     def close(self):
+        if hasattr(self,'stage_menu'):self.stage_menu.hide()
         if hasattr(self,'viewer'):self.viewer.text_surface.cache_clear()
         if hasattr(self,'play_view') and self.play_view.environment:self.play_view.environment.close()
         if hasattr(self,'play_view') and hasattr(self.play_view,'close'):self.play_view.close()

@@ -31,6 +31,8 @@ def verify(*,asset_root=None):
     try:report['pond']=pond(assets)
     finally:assets.close()
     report['controls']=controls(asset_root)
+    from verify_stage_menu import verify as stage_menu
+    report['stage_menu']=stage_menu(asset_root=asset_root)
     assert not any(name in sys.modules for name in ('pygame','sdl2','pico2d'))
     report['no_video_imports']=True
     report['seconds']=round(time.perf_counter()-started,3)

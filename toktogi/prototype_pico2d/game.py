@@ -27,14 +27,14 @@ class Game:
         self.world = world if world is not None else World(course)
         self.pond=None
         course = self.course
-        starts = ((course.spawn_x,self.world.spawn_platform),
-                  *((c.point[0],c.platform) for c in self.world.checkpoints))
-        for x,platform in starts:
+        starts = [self.world.stage_entry(level.level_id) for level in self.world.levels]
+        starts.extend((c.platform,c.point) for c in self.world.checkpoints)
+        for platform,(x,_) in starts:
             self.x,self.view,self.support=x,'right',platform
             if not self.stable_feet(assets.tracks['idle','right']):
-                raise ValueError('Course spawn and checkpoint need room for a supported idle pose.')
+                raise ValueError('Stage entry and checkpoint need room for a supported idle pose.')
             if any(capsule_overlaps(p,x,platform.y) for p in course.platforms if p is not platform):
-                raise ValueError('Course spawn and checkpoint must clear other solid platforms.')
+                raise ValueError('Stage entry and checkpoint must clear other solid platforms.')
         self.reset()
 
     @property
@@ -77,8 +77,8 @@ class Game:
     def collected(self,value):
         self.world.set_value('collect',value)
 
-    def reset(self, checkpoint=False):
-        self.support,(self.x,self.y) = self.world.reset(checkpoint)
+    def reset(self, checkpoint=False, *, level_id=None):
+        self.support,(self.x,self.y) = self.world.reset(checkpoint,level_id=level_id)
         self.vx=self.vy=0.
         self.time=self.recovery=self.goal_hold=0.
         self.held=set()

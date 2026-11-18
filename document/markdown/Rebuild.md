@@ -187,3 +187,5 @@ toktogi/prototype_pico2d/.venv/Scripts/python.exe toktogi/prototype_pico2d/build
 - C261은 asset의 male/right 6액션 72셀·mouth_tip을 재사용한다. 최종 연꽃 에셋 부재로 연잎은 시험 도형이며 양산 인수로 처리하지 않는다.
 - 추가 전 전체 CPU·native dummy 검사 통과. 추가 후에는 종료 시각 요청에 따라 조작·회피·반격·Pause/R·화면 집중 검사만 수행했다.
 - Computer-Use 미사용 요청을 따랐다. 실제 키/IME/DPI·장치 성능, 연꽃 양산은 미검증이다. F2 이동 광원/Bloom dummy p95 22.01/24.70ms로 목표 미달이다.
+
+- 2026-11-18 F1 M 스테이지 메뉴를 추가했다. 하단 180ms 슬라이드·현재 구간/아트 미리보기·키/마우스 선택을 지원한다. 메뉴 중 시뮬레이션 정지, 새 구간 시작·선행 등불·R 복귀 규칙은 [StageLevel](StageLevel.md), 입력은 [Control](Control.md)의 C-10을 따른다.

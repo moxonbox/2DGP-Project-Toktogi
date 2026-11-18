@@ -185,7 +185,23 @@ class World:
     def _initial_states(self):
         self.states = {e.key: 4 if e.kind == 'food' else e.kind == 'shell' for e in self.entities}
 
-    def reset(self, checkpoint=False):
+    def stage_entry(self, level_id):
+        level = next((level for level in self.levels if level.level_id == level_id),None)
+        if level is None:
+            raise ValueError(f'Unknown stage level: {level_id}')
+        if level_id == self.spawn_level:
+            return self.spawn_platform, (self.course.spawn_x,float(self.spawn_platform.y))
+        platform = next((platform for platform in self.course.platforms
+                         if self.platform_ids[id(platform)][1] == level_id),None)
+        if platform is None:
+            raise ValueError(f'Stage has no starting support: {level_id}')
+        x = min(platform.x0+80.,(platform.x0+platform.x1)/2)
+        if any(abs(x-e.point[0])<19 and abs(platform.y-e.point[1])<10 for e in self.targets('shell')):
+            raise ValueError('Stage entry must clear enemy contact.')
+        return platform, (x,float(platform.y))
+
+    def reset(self, checkpoint=False, *, level_id=None):
+        entry = self.stage_entry(level_id) if level_id is not None else None
         selected = None
         if checkpoint:
             selected = next((c for c in self.checkpoints if c.checkpoint_id == self.checkpoint_id), self.checkpoints[0])
@@ -202,6 +218,15 @@ class World:
             return selected.platform, selected.point
         self.checkpoint_id = None
         self.checkpoint_stages.clear()
+        if entry is not None:
+            preceding = {level.level_id for level in self.levels[:next(
+                i for i,level in enumerate(self.levels) if level.level_id == level_id)]}
+            self.completed_stages = {level.stage_id for level in self.levels if level.level_id in preceding}
+            for entity in self.targets('beacon'):
+                if entity.level_id in preceding:
+                    self.states[entity.key] = True
+            self.level_id = level_id
+            return entry
         self.level_id = self.spawn_level
         return self.spawn_platform, (self.course.spawn_x, float(self.spawn_platform.y))
 

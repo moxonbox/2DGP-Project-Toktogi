@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "headings_degrees": {
+    "d": 0.0,
+    "dw": 45.0,
+    "w": 90.0,
+    "wa": 135.0,
+    "a": 180.0,
+    "as": 225.0,
+    "s": 270.0,
+    "sd": 315.0
+  },
+  "release_hold_degrees": 25.161,
+  "full_rotation_degrees": 360.0,
+  "pause_and_opposites_hold": true,
+  "reverse_input": true,
+  "diagonal_walk_animated": true,
+  "jump_and_attack": true,
+  "ledge_support_gate": true,
+  "z_spin_cells": 62,
+  "z_spin_seconds": 1.55,
+  "legacy_fixture_preserved": true,
+  "computer_use": false,
+  "control_spec": "Control.md v1.3: Ctrl brake, Shift 2x run, F attack",
+  "native_input": "SDL dummy: 62 key events including left/right Ctrl and WASD; passed"
+}

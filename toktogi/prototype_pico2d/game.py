@@ -1,5 +1,5 @@
 """Fixed-step platformer rules. Animation reads simulation state and never moves the player."""
-from math import copysign, hypot, isfinite
+from math import atan2, copysign, cos, degrees, hypot, isfinite, radians
 from course import COURSE, BEACON, BEACON_TOUCH, CHECKPOINT, COLLECT, COLLECT_TOUCH, FOOD, FOOD_TOUCH, LEVEL, SHELL, Platform
 from physics import STEP, GRAVITY, CAP_RADIUS, CAP_HEIGHT, approach, capsule_overlaps, overhang, segment_box, sweep_x, sweep_y
 from motion import MotionSet, Track, validate_playable
@@ -16,9 +16,10 @@ ATTACK_ACTIVE = (.078,.162)
 
 
 class Game:
-    def __init__(self,assets,course=COURSE,*,world=None,walk_speed=WALK_SPEED):
+    def __init__(self,assets,course=COURSE,*,world=None,walk_speed=WALK_SPEED,directional_yaw=False):
         if not isfinite(walk_speed) or walk_speed<=0:raise ValueError('Walk speed must be positive and finite.')
         self.walk_speed=float(walk_speed)
+        self.directional_yaw=directional_yaw
         self.assets = assets
         validate_playable(assets)
         self.motion = MotionSet(assets)
@@ -81,6 +82,9 @@ class Game:
         self.time=self.recovery=self.goal_hold=0.
         self.held=set()
         self.view='right'
+        self.yaw_angle=0.
+        self.yaw_pose=None
+        self.yaw_turning=False
         self.aim=0
         self.run='Playing'
         self.action='Idle'
@@ -424,6 +428,36 @@ class Game:
         self.edge_pose=None
         return True
 
+    def steer_yaw(self,dt):
+        if not self.directional_yaw:return
+        if (not self.support or self.prep or self.work or self.transition or self.time<self.hurt_until
+                or self.clip not in ('idle','walk','walk_start','recovery_walk','aim_up','aim_down',
+                                     'aim_return_up','aim_return_down') and not self.clip.startswith('brake')):
+            self.yaw_angle=0. if self.view=='right' else 180.
+            self.yaw_pose=None
+            self.yaw_turning=False
+            return
+        self.yaw_turning=False
+        if 'shift' in self.held:return
+        if self.yaw_pose is None:
+            self.yaw_angle=360*(self.yaw_angle//360)+(0. if self.view=='right' else 180.)
+        x=int('right' in self.held)-int('left' in self.held)
+        y=int('up' in self.held)-int('down' in self.held)
+        if not (x or y):return
+        target=degrees(atan2(y,x))%360
+        delta=(target-self.yaw_angle+180)%360-180
+        if delta==-180:delta=180
+        angle=self.yaw_angle+copysign(min(abs(delta),dt*360/self.motion.track('ground_spin','left').duration),delta)
+        pose=self.motion.yaw_cell(angle)
+        markers,legs=self.assets.sample(pose)
+        if not all(self.support.x0<=self.x+markers['foot_contact_'+leg]['xy'][0]-self.assets.pivot[0]<=self.support.x1 for leg in legs):return
+        self.yaw_turning=abs((target-angle+180)%360-180)>1e-7
+        self.yaw_angle=angle
+        facing=cos(radians(angle))
+        if abs(facing)>1e-7:self.view='right' if facing>0 else 'left'
+        # At horizontal headings resume locomotion; released intermediate headings keep their pose.
+        self.yaw_pose=None if abs(angle%180)<1e-7 else pose
+
     def end_work(self):
         if self.work and self.work['key']=='f' and self.support:
             track=self.motion.feed_return(self.visual())
@@ -649,6 +683,7 @@ class Game:
             if lo<=hi and (self.x<lo-.2 or self.x>hi+.2):
                 direction=1 if self.x<lo else -1
                 self.balancing=True
+        self.steer_yaw(dt)
         if self.support and self.time>=self.hurt_until and not self.prep:
             landing_pose=self.clip in ('land_soft','land_hard','recovery_start','respawn') and self.visual_time<self.duration(self.clip)
             move_entry=None
@@ -658,13 +693,13 @@ class Game:
                 self.set_clip('idle')
             if direction and not self.work and not self.transition and not landing_pose:
                 target='right' if direction>0 else 'left'
-                turned=target!=self.view and self.try_turn(entry=move_entry)
+                turned=not self.directional_yaw and target!=self.view and self.try_turn(entry=move_entry)
                 if move_entry and not turned:
                     self.transition=(move_entry,self.view)
                     self.transition_kind='feed_move'
                     self.transition_time=0.
             spinning=self.transition and self.turn_origin and self.full_turn
-            speed=direction*(self.walk_speed*.55 if self.recovery else self.walk_speed) if not self.work and not braking and not spinning else 0.
+            speed=direction*self.walk_speed*(2. if 'run' in self.held else 1.)*(.55 if self.recovery else 1.) if not self.work and not braking and not spinning else 0.
             if self.balancing:
                 speed=direction*min(abs(speed),abs((lo if direction>0 else hi)-self.x)/dt)
             reversing=self.walk_speed!=WALK_SPEED and self.vx*speed<0

@@ -1,7 +1,7 @@
 """Timed sprite tracks and the playable pose policy."""
 from bisect import bisect_right
 from itertools import accumulate
-from math import isfinite
+from math import isfinite, degrees
 
 class Track:
     def __init__(self, cells, durations, loop):
@@ -207,6 +207,17 @@ class MotionSet:
                 durations=(.025,)*len(entry)+durations
         return Track(cells,durations,False),target
 
+    def yaw_heading(self,angle):
+        # Match screen left/right to the authored camera headings, then traverse Z's baked poses.
+        angle=angle%360
+        right=degrees(self.assets.manifest['views']['right'])
+        yaw=right*(1-angle/180) if angle<=180 else -(360-right)*(angle-180)/180
+        return yaw%360
+
+    def yaw_cell(self,angle):
+        track=self.track('ground_spin','left')
+        return track.cells[track.index(self.yaw_heading(angle)/360*track.duration)]
+
     def feed_to_move(self,source):
         returning=self.feed_return(source)
         if not returning:
@@ -243,6 +254,14 @@ class MotionSet:
             return entry.cells[entry.index(player.work['age'])]
         if player.work and (entry:=player.work.get('entry')):
             return entry.cells[entry.index(player.work['age'])]
+        if player.yaw_pose is not None and player.support and not player.prep and not player.work and player.run=='Playing':
+            if not player.yaw_turning and player.was_walking and player.clip in ('walk','walk_start','recovery_walk'):
+                yaw=self.yaw_heading(player.yaw_angle)
+                view=min(self.assets.clips[player.clip]['supported_views'],
+                         key=lambda v:abs((degrees(self.assets.manifest['views'][v])-yaw+180)%360-180))
+                track=self.track(player.clip,view)
+                return track.cells[track.index(player.visual_time)]
+            return player.yaw_pose
         if player.clip=='groom':
             track=self.assets.groom
             return track.cells[track.index(player.visual_time)]

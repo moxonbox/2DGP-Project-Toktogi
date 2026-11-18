@@ -67,7 +67,7 @@ def verify():
             return raw
 
         clock = EventClock(origin=1000, position_transform=backend.logical_point)
-        keys = ('left', 'right', 'up', 'down', 'space', 'lshift', 'rshift', 'e', 'f',
+        keys = ('left', 'right', 'up', 'down', 'space', 'lshift', 'rshift', 'lctrl', 'rctrl', 'w', 'a', 's', 'd', 'e', 'f',
                 'g', 'x', 'q', 'z', 'p', 'escape', 'r', 'f1', 'f2', 'tab', 'm',
                 'l', 'f3', 'v', 'backspace', 'return')
         batch = []

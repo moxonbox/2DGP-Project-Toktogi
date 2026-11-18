@@ -13,8 +13,8 @@ from replays import game_replays,world_replays
 from timeline import FixedStepTimeline
 
 ROOT=Path(__file__).resolve().parent
-GAME_KEYS={'a':'left','d':'right','w':'up','s':'down','space':'space','e':'e','x':'x','q':'q','z':'z'}
-GAME_KEYS.update(lshift='shift',rshift='shift')
+GAME_KEYS={'a':'left','d':'right','w':'up','s':'down','space':'space','e':'e','f':'x','x':'x','q':'q','z':'z'}
+GAME_KEYS.update(lctrl='shift',rctrl='shift',lshift='run',rshift='run')
 CONTROL_KEYS=('p','escape','r','f1','f2','tab')
 
 def route_event(event,bindings=GAME_KEYS):
@@ -25,6 +25,7 @@ def route_event(event,bindings=GAME_KEYS):
 class App:
     game_keys=GAME_KEYS
     contextual_e=True
+    directional_yaw=True
     def __init__(self,assets_path=ROOT/'toktogi_assets.zip',course=COURSE,*,pose_path=None,native=False,profile='legacy',asset_root=None):
         self.backend=None;self.assets=None
         try:
@@ -37,7 +38,7 @@ class App:
                 from pond import test_world
                 world=test_world()
             else:world=World.seamless() if profile=='seamless' else World(course)
-            self.game=Game(self.assets,world=world,walk_speed=72. if profile=='habitat' else 24.)
+            self.game=Game(self.assets,world=world,walk_speed=72. if profile=='habitat' else 24.,directional_yaw=self.directional_yaw)
             if profile in ('pond_test','habitat'):
                 from pond import Pond
                 self.game.pond=Pond(world,active_span=(1030,2110) if profile=='habitat' else None,

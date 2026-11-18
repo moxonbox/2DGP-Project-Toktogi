@@ -6,3 +6,4 @@ GAME_KEYS.update(lshift='shift',rshift='shift')
 class App(ProductionApp):
     game_keys=GAME_KEYS
     contextual_e=False
+    directional_yaw=False

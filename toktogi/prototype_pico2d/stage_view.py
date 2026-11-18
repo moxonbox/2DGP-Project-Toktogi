@@ -111,13 +111,13 @@ class StageView(PondView):
         if game.run=='Paused': prompt='일시정지  ·  P / Esc 계속하기  ·  R 체크포인트 재시작'
         elif game.run=='Failed': prompt='물에 떨어졌습니다. R로 마지막 쉼터에서 다시 시작하세요.'
         elif game.run=='Cleared': prompt='이슬의 길 완료! 세 등불이 숲과 연못을 잇습니다.  R 다시 시작'
-        elif self.pond.phase=='warn': prompt='물결 경고!  Space 도약으로 피하거나, 입이 올라올 때 E / X로 반격하세요.'
+        elif self.pond.phase=='warn': prompt='물결 경고!  Space 도약으로 피하거나, 입이 올라올 때 E / F로 반격하세요.'
         elif game.ready_work():
             kinds={self.world.entity(k).kind for k in game.ready_work()}
             prompt='E 유지: 이끼 섭식' if kinds=={'food'} else 'E: 등불 켜기 / 씨앗 수집'
         elif game.time<game.notice_until and game.time>4: prompt=game.notice
         draw.text((FIELD.x,FIELD.bottom+12),prompt,font=self.font,fill=(224,232,201))
-        draw.text((FIELD.x,FIELD.bottom+45),'A D 이동 · W S 도약 조준 · Space 도약 · Shift 제동 · E 상호작용/반격 · Q 반전 · Z 회전 · P 일시정지 · F2 모션·재질',font=self.small_font,fill=(152,174,168))
+        draw.text((FIELD.x,FIELD.bottom+45),'WASD 회전 · A/D 이동 · W/S 조준 · Space 도약 · Ctrl 제동 · Shift 달리기 · E 상호작용 · F 공격 · Q 반전 · Z 회전 · P 일시정지 · F2 모션·재질',font=self.small_font,fill=(152,174,168))
         if game.run in ('Paused','Failed','Cleared'):
             box=(FIELD.x+225,FIELD.y+160,FIELD.right-225,FIELD.y+265)
             draw.rounded_rectangle(box,12,fill=(15,31,35,245),outline=(117,166,126),width=2)

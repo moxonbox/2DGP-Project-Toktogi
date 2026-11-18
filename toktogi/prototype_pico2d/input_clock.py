@@ -63,7 +63,7 @@ class EventClock:
             if kind in (s.SDL_KEYDOWN,s.SDL_KEYUP):
                 sym=raw.key.keysym
                 name=s.SDL_GetKeyName(sym.sym).decode('utf-8').lower()
-                name={'left shift':'lshift','right shift':'rshift','return':'return'}.get(name,name)
+                name={'left shift':'lshift','right shift':'rshift','left ctrl':'lctrl','right ctrl':'rctrl','return':'return'}.get(name,name)
                 e=Event('key_down' if kind==s.SDL_KEYDOWN else 'key_up',name,int(sym.mod),bool(raw.key.repeat),scancode=int(sym.scancode))
             elif kind==s.SDL_QUIT: e=Event('quit')
             elif kind==s.SDL_WINDOWEVENT:

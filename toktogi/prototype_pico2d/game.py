@@ -444,18 +444,24 @@ class Game:
             self.yaw_detent_direction=0
             return
         self.yaw_turning=False
-        if 'shift' in self.held:return
         if self.yaw_pose is None:
             self.yaw_angle=360*(self.yaw_angle//360)+(0. if self.view=='right' else 180.)
         x=int('right' in self.held)-int('left' in self.held)
         y=int('up' in self.held)-int('down' in self.held)
         step=dt*360/self.motion.track('ground_spin','left').duration
         horizontal='left' in self.held or 'right' in self.held
-        if x!=self.yaw_detent_direction:self.yaw_detent_until=0.
+        continuous='shift' in self.held and horizontal
+        if 'shift' in self.held and not x:return
+        if not continuous or x!=self.yaw_detent_direction:self.yaw_detent_until=0.
         detent=False
         if horizontal:
             if not x:return
-            if self.time+1e-9<self.yaw_detent_until:
+            if not continuous:
+                target=0. if x>0 else 180.
+                delta=(target-self.yaw_angle+180)%360-180
+                if delta==-180:delta=x*180.
+                angle=self.yaw_angle+copysign(min(abs(delta),step),delta)
+            elif self.time+1e-9<self.yaw_detent_until:
                 angle=self.yaw_angle
             else:
                 angle=self.yaw_angle+x*step
@@ -475,11 +481,11 @@ class Game:
         if detent:
             self.yaw_detent_until=self.time+YAW_DETENT_SECONDS
             self.yaw_detent_direction=x
-        self.yaw_turning=horizontal or abs((target-angle+180)%360-180)>1e-7
+        self.yaw_turning=continuous or abs((target-angle+180)%360-180)>1e-7
         self.yaw_angle=angle
         facing=cos(radians(angle))
         if abs(facing)>1e-7:self.view='right' if facing>0 else 'left'
-        # The brief half-turn detent holds this pose; continued input resumes the same sequence.
+        # Ctrl permits continued rotation; ordinary A/D settles on its left/right heading.
         self.yaw_pose=pose
 
     def end_work(self):

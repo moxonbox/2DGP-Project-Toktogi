@@ -1,14 +1,20 @@
 {
   "passed": true,
   "headings_degrees": {
-    "w": 90.0,
-    "s": 270.0
+    "w": 270.0,
+    "s": 90.0
   },
-  "release_hold_degrees": 25.161,
-  "continuous_rotation_degrees": {
+  "release_hold_degrees": -25.161,
+  "plain_AD_max_turn_degrees": {
+    "a": 180.0,
+    "d": 180.0
+  },
+  "Ctrl_AD_rotation_degrees": {
     "a": -785.806,
     "d": 785.806
   },
+  "Ctrl_mode_switch": true,
+  "WS_inverted": true,
   "half_turn_detent_ms": {
     "a": 100.0,
     "d": 100.0

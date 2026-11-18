@@ -13,7 +13,7 @@ from replays import game_replays,world_replays
 from timeline import FixedStepTimeline
 
 ROOT=Path(__file__).resolve().parent
-GAME_KEYS={'a':'left','d':'right','w':'up','s':'down','space':'space','e':'e','f':'x','x':'x','q':'q','z':'z'}
+GAME_KEYS={'a':'left','d':'right','w':'down','s':'up','space':'space','e':'e','f':'x','x':'x','q':'q','z':'z'}
 GAME_KEYS.update(lctrl='shift',rctrl='shift',lshift='run',rshift='run')
 CONTROL_KEYS=('p','escape','r','f1','f2','tab')
 

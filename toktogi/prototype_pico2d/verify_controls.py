@@ -11,13 +11,14 @@ def verify(asset_root=None):
     try:
         x=g.x;key('right');app.update(.2);key('right',False);assert g.x==x
         key('d');app.update(.2);key('d',False);assert g.x>x
-        key('w');assert 'up' in g.held;key('w',False)
+        key('w');assert 'down' in g.held;key('w',False)
+        key('s');assert 'up' in g.held;key('s',False)
         app.close_context();g.reset()
         key('d');key('lshift');key('rshift');app.update(.2)
         assert g.vx==2*g.walk_speed and 'run' in g.held
         key('lshift',False);app.update(STEP);assert g.vx==2*g.walk_speed
-        key('lctrl');key('rctrl');app.update(.15);assert g.vx==0
-        key('lctrl',False);app.update(.04);assert g.vx==0 and 'shift' in g.held
+        yaw=g.yaw_angle;key('lctrl');key('rctrl');app.update(.15);assert g.vx==0 and g.yaw_angle>yaw
+        yaw=g.yaw_angle;key('lctrl',False);app.update(.04);assert g.vx==0 and 'shift' in g.held and g.yaw_angle>yaw
         key('rctrl',False);app.update(.2);assert g.vx==2*g.walk_speed
         key('rshift',False);app.update(.2);assert g.vx==g.walk_speed
         key('d',False);app.close_context();g.reset()
@@ -39,7 +40,7 @@ def verify(asset_root=None):
         key('r');key('r',False);assert g.pond.phase=='idle' and not g.pond.hits
         app.draw()
         app.screen.save(__import__('pathlib').Path(__file__).with_name('pond_controls_preview.png'))
-        return {'WASD':True,'arrows_disabled':True,'Ctrl_brake_both_sides':True,'Shift_run_2x_both_sides':True,'F_X_single_attack':True,'F2_Ctrl_F_search':True,'E_feed_release':True,'E_activate':True,'E_shell_and_fish_attack':True,'pause_restart':True,'pond_draw':True}
+        return {'WASD':True,'arrows_disabled':True,'Ctrl_brake_both_sides':True,'Ctrl_AD_rotation_both_sides':True,'WS_inverted':True,'Shift_run_2x_both_sides':True,'F_X_single_attack':True,'F2_Ctrl_F_search':True,'E_feed_release':True,'E_activate':True,'E_shell_and_fish_attack':True,'pause_restart':True,'pond_draw':True}
     finally:app.close()
 
 if __name__=='__main__':

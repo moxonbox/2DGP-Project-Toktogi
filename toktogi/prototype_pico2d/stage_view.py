@@ -117,7 +117,7 @@ class StageView(PondView):
             prompt='E 유지: 이끼 섭식' if kinds=={'food'} else 'E: 등불 켜기 / 씨앗 수집'
         elif game.time<game.notice_until and game.time>4: prompt=game.notice
         draw.text((FIELD.x,FIELD.bottom+12),prompt,font=self.font,fill=(224,232,201))
-        draw.text((FIELD.x,FIELD.bottom+45),'A/D 이동·반전 · Ctrl+A/D 회전 · W 아래/S 위 조준 · Space 도약 · Ctrl 제동 · Shift 달리기 · E 상호작용 · F 공격 · Q 반전 · Z 회전 · P 일시정지 · F2 모션·재질',font=self.small_font,fill=(152,174,168))
+        draw.text((FIELD.x,FIELD.bottom+45),'A/D 이동·반전 · Ctrl+A/D 회전 · W/S 조준·경로 · Space 도약 · Ctrl 제동 · Shift 달리기 · E 상호작용 · F 공격 · Q 반전 · Z 회전 · P 일시정지 · F2 모션·재질',font=self.small_font,fill=(152,174,168))
         if game.run in ('Paused','Failed','Cleared'):
             box=(FIELD.x+225,FIELD.y+160,FIELD.right-225,FIELD.y+265)
             draw.rounded_rectangle(box,12,fill=(15,31,35,245),outline=(117,166,126),width=2)

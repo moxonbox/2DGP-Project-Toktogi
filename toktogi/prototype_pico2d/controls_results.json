@@ -4,6 +4,7 @@
   "Ctrl_brake_both_sides": true,
   "Ctrl_AD_rotation_both_sides": true,
   "WS_inverted": true,
+  "WS_arc_selection": true,
   "Shift_run_2x_both_sides": true,
   "F_X_single_attack": true,
   "F2_Ctrl_F_search": true,

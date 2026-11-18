@@ -88,6 +88,7 @@ class Game:
         self.yaw_turning=False
         self.yaw_detent_until=0.
         self.yaw_detent_direction=0
+        self.yaw_w_arc=False
         self.aim=0
         self.aim_time=0.
         self.run='Playing'
@@ -167,6 +168,7 @@ class Game:
 
     def close_input(self,preserve_pose=False):
         self.held.clear()
+        self.yaw_w_arc=False
         self.space_pressed=False
         self.elastic_at=None
         self.prep=None
@@ -205,6 +207,8 @@ class Game:
             if key not in self.held:
                 return
             self.held.remove(key)
+        if down and self.directional_yaw and key in ('up','down'):
+            self.yaw_w_arc=key=='down' and 'up' not in self.held
         if key=='space':
             if down:
                 self.jump_source=(self.visual(),self.time)
@@ -459,7 +463,7 @@ class Game:
             if not continuous:
                 target=0. if x>0 else 180.
                 delta=(target-self.yaw_angle+180)%360-180
-                if delta==-180:delta=x*180.
+                if abs(abs(delta)-180)<1e-7:delta=(x if self.yaw_w_arc else -x)*180.
                 angle=self.yaw_angle+copysign(min(abs(delta),step),delta)
             elif self.time+1e-9<self.yaw_detent_until:
                 angle=self.yaw_angle
@@ -482,6 +486,8 @@ class Game:
             self.yaw_detent_until=self.time+YAW_DETENT_SECONDS
             self.yaw_detent_direction=x
         self.yaw_turning=continuous or abs((target-angle+180)%360-180)>1e-7
+        if horizontal and not continuous and not self.yaw_turning and abs(angle-self.yaw_angle)>1e-7:
+            self.yaw_w_arc=False
         self.yaw_angle=angle
         facing=cos(radians(angle))
         if abs(facing)>1e-7:self.view='right' if facing>0 else 'left'

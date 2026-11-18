@@ -35,7 +35,7 @@ def verify():
             return sum((mouth[i]-tail[i])*camera[i] for i in (0,1))
         initial=facing(0.)
         capped={}
-        for key,view,start,target in (('a','right',0.,-180.),('d','left',180.,360.)):
+        for key,view,start,target in (('a','right',0.,180.),('d','left',180.,0.)):
             g=reset();g.walk_speed=12.;g.view=view;g.yaw_angle=start;keys(g,key,True)
             ticks(g,450)
             assert g.yaw_angle==target and not g.yaw_turning and g.support
@@ -48,6 +48,30 @@ def verify():
             expected=180 if key=='a' else 0
             assert abs((g.yaw_angle-expected+180)%360-180)<1e-7
             assert abs(g.yaw_angle-before)<=180 and not g.yaw_turning
+        arc_paths={}
+        for key,view,start,default,w_target in (('a','right',0.,180.,-180.),('d','left',180.,0.,360.)):
+            for selector in ('default','s','w','ws'):
+                g=reset();g.walk_speed=12.;g.view=view;g.yaw_angle=start
+                if selector!='default':keys(g,selector,True);keys(g,selector,False)
+                assert g.yaw_w_arc==(selector=='w')
+                keys(g,key,True);ticks(g,120)
+                expected=w_target if selector=='w' else default
+                assert g.yaw_angle==expected and not g.yaw_w_arc,(key,selector,g.yaw_angle)
+                arc_paths[key+'_'+selector]=g.yaw_angle-start
+                if selector=='w':
+                    keys(g,key,False);opposite='d' if key=='a' else 'a';keys(g,opposite,True)
+                    ticks(g,120)
+                    assert g.yaw_angle==expected+(-180 if opposite=='d' else 180)
+        g=reset();keys(g,'w',True);keys(g,'w',False);keys(g,'d',True);ticks(g,2)
+        assert g.yaw_w_arc and g.yaw_angle==0
+        keys(g,'d',False);keys(g,'a',True);ticks(g,120)
+        assert g.yaw_angle==-180 and not g.yaw_w_arc
+        for key,view,start,sign in (('a','right',1e-8,1),('d','left',180.+1e-8,-1)):
+            g=reset();g.walk_speed=12.;g.view=view;g.yaw_angle=start;g.yaw_pose=g.motion.yaw_cell(start)
+            keys(g,key,True);g.step();assert sign*(g.yaw_angle-start)>0
+        g=reset();keys(g,'w',True);keys(g,'w',False);assert g.yaw_w_arc
+        keys(g,'s',True);keys(g,'s',False);assert not g.yaw_w_arc
+        keys(g,'w',True);keys(g,'w',False);g.close_input();assert not g.yaw_w_arc
         facing_scores={};rotations={};detents={}
         for key,sign in (('a',-1),('d',1)):
             g=reset();g.walk_speed=24.;g.edge('shift',True);keys(g,key,True);trace=[]
@@ -80,7 +104,7 @@ def verify():
         for key in ('a','d'):
             traces=[]
             for aim in ('','w','s','ws'):
-                g=reset();g.walk_speed=24.;keys(g,key+aim,True)
+                g=reset();g.walk_speed=24.;g.edge('shift',True);keys(g,key+aim,True)
                 sequence=[]
                 for _ in range(110):g.step();sequence.append(g.yaw_angle)
                 traces.append(sequence)
@@ -116,8 +140,8 @@ def verify():
         legacy=Game(assets);legacy.edge('left',True);legacy.step()
         assert legacy.transition and legacy.transition[0].cells[0][0].startswith('turn_')
         return {'passed':True,'headings_degrees':headings,'release_hold_degrees':round(angle,3),
-                'plain_AD_max_turn_degrees':capped,'Ctrl_AD_rotation_degrees':rotations,'Ctrl_mode_switch':True,'WS_inverted':True,'half_turn_detent_ms':detents,'reverse_cancels_detent':True,'screen_facing_scores':facing_scores,'pause_and_opposites_hold':True,
-                'reverse_input':True,'aim_does_not_redirect_rotation':True,'jump_and_attack':True,'ledge_support_gate':True,
+                'plain_AD_max_turn_degrees':capped,'AD_arc_paths_degrees':arc_paths,'W_arc_one_shot':True,'S_cancels_W_arc':True,'context_clears_W_arc':True,'Ctrl_AD_rotation_degrees':rotations,'Ctrl_mode_switch':True,'WS_inverted':True,'half_turn_detent_ms':detents,'reverse_cancels_detent':True,'screen_facing_scores':facing_scores,'pause_and_opposites_hold':True,
+                'reverse_input':True,'aim_does_not_redirect_Ctrl_rotation':True,'jump_and_attack':True,'ledge_support_gate':True,
                 'z_spin_cells':len(track.cells),'z_spin_seconds':round(track.duration,3),
                 'legacy_fixture_preserved':True,'computer_use':False}
     finally:assets.close()

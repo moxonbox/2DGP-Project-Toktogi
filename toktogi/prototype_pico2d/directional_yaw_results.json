@@ -9,6 +9,19 @@
     "a": 180.0,
     "d": 180.0
   },
+  "AD_arc_paths_degrees": {
+    "a_default": 180.0,
+    "a_s": 180.0,
+    "a_w": -180.0,
+    "a_ws": 180.0,
+    "d_default": -180.0,
+    "d_s": -180.0,
+    "d_w": 180.0,
+    "d_ws": -180.0
+  },
+  "W_arc_one_shot": true,
+  "S_cancels_W_arc": true,
+  "context_clears_W_arc": true,
   "Ctrl_AD_rotation_degrees": {
     "a": -785.806,
     "d": 785.806
@@ -26,7 +39,7 @@
   },
   "pause_and_opposites_hold": true,
   "reverse_input": true,
-  "aim_does_not_redirect_rotation": true,
+  "aim_does_not_redirect_Ctrl_rotation": true,
   "jump_and_attack": true,
   "ledge_support_gate": true,
   "z_spin_cells": 62,

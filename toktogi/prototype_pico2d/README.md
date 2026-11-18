@@ -109,7 +109,18 @@ F2 이동 광원/Bloom의 dummy p95는 22.01/24.70ms로 16.7ms 목표 미달이�
 | F2 이동 광원·Bloom | 15.23 / 21.33ms | 12.41 / 16.69ms |
 
 `verify_optimization.py`는 렌더·업로드·출력 시간을 측정하며 시작·물리·입력 폴링·캡처 저장은 시간에서 제외한다.
-`optimization_before.json`의 원본 24개 RGBA 해시와 모두 일치한다. HUD 4상태, Bloom 배율 1/2/3과 입력 응답도 확인한다.
+056 당시 `optimization_before.json`의 원본 24개 RGBA 해시와 모두 일치했다. HUD 4상태, Bloom 배율 1/2/3과 입력 응답도 확인한다.
 `optimization_results.json`에는 9개 도약, E 상호작용·공격, 물고기 피격/회피 4건의 집중 검사 결과를 함께 기록했다.
 플레이 p95는 16.67ms 예산 이내다. F2 p95는 0.027ms 초과하며 최대 프레임 25.44/43.50ms가 남아 모든 프레임의 60fps를 보장하지 않는다.
 전체 회귀·Computer-Use·실기 장시간 인수 및 배포 ZIP 재생성은 생략했다. 위 수치는 이번 로컬 환경의 결과다.
+
+
+## 톡토기 팔레트 보정 · 2026-11-18
+
+원본 Sprite는 팔레트·툰 명암까지 적용된 표시용 결과이며 Base는 거의 흰색인 재질 입력이다.
+톡토기의 `lit` 결과는 원본 Sprite 80%와 기존 BRDF 결과 20%를 표시 공간에서 합성한다. 게임과 F2에 공통 적용한다.
+원본 파일·Alpha·윤곽선·모션과 환경 재질의 조명 식은 유지한다. Normal/RM·광원·발광 반응은 완만해지며 Emissive Bloom은 기존 강도를 유지한다.
+`verify_materials.py`의 24개 기준에서 원본 대비 평균 RGB 절대 오차는 35.049에서 7.233으로 79.36% 감소했다(0~255, 보이는 픽셀).
+기존 BRDF 기준 24건과 새 팔레트 오차 한도, Normal·광원·발광·roughness·metallic 반응, Alpha·Bloom을 함께 검사한다.
+`verify_optimization.py`는 이제 원시 BRDF 재질 16개 해시를 비교한다. 표시용 팔레트와 변경 가능한 환경 프레임을 과거 출력에 고정하지 않는다.
+`palette_comparison.png`는 왼쪽부터 원본·보정 전·보정 후다. 이번에는 전체 게임 회귀·Computer-Use·전체 프레임 성능 재측정·배포 ZIP 재생성을 생략했다.

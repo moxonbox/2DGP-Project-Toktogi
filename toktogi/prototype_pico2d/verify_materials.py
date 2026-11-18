@@ -14,6 +14,7 @@ import warnings
 from PIL import Image, ImageChops
 from materials import Assets, PASSES, _json
 from sprite_renderer import BLOOM_KERNEL, SpriteRenderer
+from lighting import shade
 
 ROOT = Path(__file__).resolve().parent
 
@@ -128,13 +129,29 @@ def verify():
         assert assets.validate_all_images() == 2374
 
         maximum, changed, alpha_changed = 0, 0, 0
+        palette_before, palette_after, palette_channels = 0, 0, 0
         with ZipFile(ROOT / 'lighting_reference.zip') as reference:
             cases = json.loads(reference.read('cases.json'))
             assert len(cases) == 24
             for index, case in enumerate(cases):
-                actual = assets.render(tuple(case['key']), 'lit', (0,0), case['light'],
-                                       case['roughness'], case['metallic'], case['power'],
-                                       case['emission'], ambient=case['ambient']).tobytes()
+                key = tuple(case['key'])
+                surface = assets.surface_fields(key)
+                # The BRDF golden remains unchanged; display grading has a separate palette bound.
+                actual = shade(surface, case['light'][0], -case['light'][1],
+                               case['roughness'], case['metallic'], case['power'],
+                               case['emission'], case['ambient'], assets.renderer.emission_scale).tobytes()
+                display = assets.render(key, 'lit', (0,0), case['light'],
+                                        case['roughness'], case['metallic'], case['power'],
+                                        case['emission'], ambient=case['ambient']).tobytes()
+                source = surface[0].tobytes()
+                assert display[3::4] == source[3::4] == actual[3::4]
+                for offset in range(0, len(source), 4):
+                    if source[offset+3] == 0:continue
+                    for c in range(3):
+                        old_error = abs(actual[offset+c]-source[offset+c])
+                        new_error = abs(display[offset+c]-source[offset+c])
+                        assert new_error <= .20*old_error+1
+                        palette_before += old_error;palette_after += new_error;palette_channels += 1
                 expected = reference.read(f'{index}.rgba')
                 assert len(actual) == len(expected) == 128*128*4
                 alpha_changed += sum(a != b for a,b in zip(actual[3::4],expected[3::4]))
@@ -148,11 +165,13 @@ def verify():
         flat = assets.render(key, 'lit', (0,0), (16,30), flat_normal=True)
         moved = assets.render(key, 'lit', (0,0), (115,25))
         dark = assets.render(key, 'lit', (0,0), (16,30), emission=False)
+        rough = assets.render(key, 'lit', (0,0), (16,30), roughness=.85)
+        metal = assets.render(key, 'lit', (0,0), (16,30), metallic=1.)
         changes = {name: _different(normal,image) for name,image in
-                   (('normal',flat),('light',moved),('emission',dark))}
+                   (('normal',flat),('light',moved),('emission',dark),('roughness',rough),('metallic',metal))}
         assert all(value > 0 for value in changes.values())
         assert all(image.getchannel('A').tobytes() == normal.getchannel('A').tobytes()
-                   for image in (flat,moved,dark))
+                   for image in (flat,moved,dark,rough,metal))
         assert assets.render(key, 'lit', (0,0), (16,30)).tobytes() == normal.tobytes()
         assert [image.getextrema() for image in assets.surface_fields(key, True)[4:7]] == [
             (0.,0.), (0.,0.), (1.,1.)]
@@ -242,6 +261,11 @@ def verify():
         'full_decoded_cells': base_cells+pose_cells, 'load_ms': round(load_ms,3),
         'golden': {'cases':len(cases), 'max_channel_error':maximum,
                    'changed_channels':changed, 'alpha_changed':alpha_changed},
+        'palette': {'cases':len(cases), 'source_weight':.8, 'light_weight':.2,
+                    'before_mean_rgb_error':round(palette_before/palette_channels,3),
+                    'after_mean_rgb_error':round(palette_after/palette_channels,3),
+                    'error_reduction_percent':round(100*(1-palette_after/palette_before),2),
+                    'alpha_changed':0},
         'changed_pixels':changes, 'flat_normal':[0,0,1], 'preview_modes':7,
         'bloom': {'edge_changed_pixels':bloom_changes, 'real_cell_changed_pixels':actual_changes,
                   'outside_emission_changed_pixels':outside_emission,

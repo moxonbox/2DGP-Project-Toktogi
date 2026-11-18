@@ -1,0 +1,97 @@
+{
+  "schema": 1,
+  "passed": true,
+  "base_cells": 1444,
+  "pose_cells": 930,
+  "full_decoded_cells": 2374,
+  "load_ms": 2102.317,
+  "golden": {
+    "cases": 24,
+    "max_channel_error": 1,
+    "changed_channels": 2,
+    "alpha_changed": 0
+  },
+  "palette": {
+    "cases": 24,
+    "source_weight": 0.8,
+    "light_weight": 0.2,
+    "before_mean_rgb_error": 35.049,
+    "after_mean_rgb_error": 7.233,
+    "error_reduction_percent": 79.36,
+    "alpha_changed": 0,
+    "blend_only_mean_ms": 0.0811,
+    "raw_optimization_references": 16
+  },
+  "changed_pixels": {
+    "normal": 2403,
+    "light": 2403,
+    "emission": 87,
+    "roughness": 206,
+    "metallic": 2253
+  },
+  "flat_normal": [
+    0,
+    0,
+    1
+  ],
+  "preview_modes": 7,
+  "bloom": {
+    "edge_changed_pixels": {
+      "1": 69,
+      "2": 276,
+      "3": 621
+    },
+    "real_cell_changed_pixels": 130,
+    "outside_emission_changed_pixels": 43,
+    "black_or_disabled_changed_pixels": 0,
+    "alpha_changed": 0,
+    "scales": [
+      1,
+      2,
+      3
+    ],
+    "clip_checked": true,
+    "linear_coverage_checked": true
+  },
+  "cache_sizes": {
+    "maps": 36,
+    "surface_fields": 24,
+    "lit": 96,
+    "bloom": 24
+  },
+  "rejected_inputs": [
+    "duplicate_json_key",
+    "nonfinite_json",
+    "image_RGB_(128, 640)_PNG",
+    "image_RGBA_(128, 128)_PNG",
+    "image_RGBA_(128, 640)_TIFF",
+    "truncated_png",
+    "zip_duplicate",
+    "zip_missing_metadata",
+    "zip_crc",
+    "duplicate_view",
+    "unsupported_view",
+    "nonpositive_duration",
+    "nonfinite_duration",
+    "missing_view",
+    "invalid_support",
+    "duplicate_support",
+    "missing_marker",
+    "nonfinite_marker",
+    "out_of_bounds_rect",
+    "wrong_rect_size",
+    "missing_png",
+    "invalid_png_header",
+    "unknown_profile_cell",
+    "source_checksum",
+    "nonfinite_light",
+    "invalid_bloom_scale",
+    "nonfinite_bloom_origin",
+    "invalid_bloom_clip",
+    "closed_assets",
+    "closed_renderer"
+  ],
+  "idempotent_close": true,
+  "pygame_imported": false,
+  "scope": "Pillow CPU checks; native SDL output and full-frame timing are separate."
+}

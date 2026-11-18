@@ -95,11 +95,12 @@ class PondView:
             frame.alpha_composite(shadow, (x-32, y-3))
         shadow.close()
         light,power,ambient=self.light(game)
-        sprite = self.assets.render(game.visual(), 'lit', origin, light, power=power, ambient=ambient)
+        key = game.visual()
+        sprite = self.assets.render(key, 'lit', origin, light, power=power, ambient=ambient)
         if game.time < game.reject_until:
             sprite = ImageChops.add(sprite, Image.new('RGBA', sprite.size, (30, 6, 0, 0)))
         frame.alpha_composite(sprite, origin)
-        output=self.effects(frame,game,origin)
+        output=self.effects(frame,key,origin,light,power)
         if output is not frame:frame.close();frame=output
         # Source-over onto the opaque clear: avoid an RGB copy, then restore opaque alpha.
         alpha=frame.getchannel('A')
@@ -130,7 +131,7 @@ class PondView:
         x,y=self.camera.point(game.x,game.y)
         return (x-45,y-87),.82,.34
 
-    def effects(self,frame,game,origin):return frame
+    def effects(self,frame,key,origin,light,power):return frame
 
     def overlay(self,screen,game):pass
 

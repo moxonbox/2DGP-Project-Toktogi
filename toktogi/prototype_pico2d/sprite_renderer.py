@@ -3,7 +3,7 @@ from functools import lru_cache
 from math import exp, isfinite
 
 from PIL import Image, ImageChops
-from lighting import calc, fields, shade, srgb
+from lighting import calc, fields, point_light, shade, srgb
 
 SIZE = 128
 SRGB = tuple(i/255/12.92 if i <= 10 else ((i/255+.055)/1.055)**2.4 for i in range(256))
@@ -69,15 +69,27 @@ class SpriteRenderer:
         return shade(surface, lx, ly, roughness, metallic, power, emission, ambient,
                      self.emission_scale, palette_base=self.maps(key)['base'])
 
-    def bloom(self, key):
-        """Return three padded linear RGB layers; fixed kernel, threshold and emission scale."""
+    def bloom(self, key, lx, ly, power, flat_normal=False):
+        """Blur the illuminated emission in local sprite coordinates (+Y toward the light above)."""
         if self.closed:
             raise RuntimeError('Sprite renderer is closed.')
         maps = self.maps(key)
-        coverage = maps['base'].getchannel('A').point(LINEAR, 'F')
-        channels = [calc(lambda v: v['e']*v['a']*v['s'],
-                         e=maps['emissive'].getchannel(c).point(LINEAR, 'F'),
-                         a=coverage, s=float(self.emission_scale)) for c in 'RGB']
+        emissive = maps['emissive'].convert('RGB')
+        source_box = emissive.getbbox()
+        if not source_box or not power or not self.emission_scale:
+            return None
+        surface = self.surface_fields(key, flat_normal)
+        ox, oy = surface[-1][:2]
+        left, top, right, bottom = source_box
+        local = left-ox, top-oy, right-ox, bottom-oy
+        x, y, nx, ny, nz = (band.crop(local) for band in surface[2:7])
+        _, _, _, ndl, attenuation = point_light(x,y,nx,ny,nz,lx,ly,power)
+        coverage = maps['base'].getchannel('A').crop(source_box).point(LINEAR, 'F')
+        # Ambient and the display palette do not supply direct light to the bloom bright pass.
+        energy = calc(lambda v: v['min'](v['n']*v['light'], 1.)*v['a']*v['s'],
+                      n=ndl, light=attenuation, a=coverage, s=float(self.emission_scale))
+        channels = [calc(lambda v: v['e']*v['energy'], e=band.point(LINEAR, 'F'), energy=energy)
+                    for band in emissive.crop(source_box).split()]
         luminance = calc(lambda v: .2126*v['r']+.7152*v['g']+.0722*v['b'],
                          r=channels[0], g=channels[1], b=channels[2])
         threshold = calc(lambda v: v['min'](v['max']((v['y']-.12)/.10, 0.), 1.), y=luminance)
@@ -86,27 +98,33 @@ class SpriteRenderer:
             return None
         width,height=box[2]-box[0]+2*BLOOM_RADIUS,box[3]-box[1]+2*BLOOM_RADIUS
         side = SIZE + 2*BLOOM_RADIUS
+        # Pad each band before stacking so one pair of separable passes can blur all three.
+        stack_height = 3 * height
+        stack = Image.new('F', (width, stack_height))
+        for index, channel in enumerate(channels):
+            seed = calc(lambda v: v['e']*v['t'], e=channel, t=threshold).crop(box)
+            stack.paste(seed, (BLOOM_RADIUS, index*height+BLOOM_RADIUS))
+        for axis in (0,1):
+            blurred = Image.new('F', stack.size)
+            for offset, weight in zip(range(-BLOOM_RADIUS, BLOOM_RADIUS+1), BLOOM_KERNEL):
+                dx, dy = (offset,0) if axis == 0 else (0,offset)
+                shifted = stack.crop((-dx,-dy,width-dx,stack_height-dy))
+                blurred = calc(lambda v: v['a']+v['b']*v['w'], a=blurred, b=shifted, w=weight)
+            stack = blurred
         layers = []
-        for channel in channels:
-            layer = Image.new('F', (width,height), 0.)
-            layer.paste(calc(lambda v: v['e']*v['t'], e=channel, t=threshold).crop(box), (BLOOM_RADIUS,)*2)
-            for axis in (0,1):
-                blurred = Image.new('F', (width,height), 0.)
-                for offset, weight in zip(range(-BLOOM_RADIUS, BLOOM_RADIUS+1), BLOOM_KERNEL):
-                    dx, dy = (offset,0) if axis == 0 else (0,offset)
-                    shifted = layer.crop((-dx,-dy,width-dx,height-dy))
-                    blurred = calc(lambda v: v['a']+v['b']*v['w'], a=blurred, b=shifted, w=weight)
-                layer = blurred
-            padded=Image.new('F',(side,side),0.)
-            padded.paste(layer,box[:2])
+        for index in range(3):
+            band = stack.crop((0,index*height,width,(index+1)*height))
+            padded = Image.new('F',(side,side))
+            padded.paste(band,(left+box[0],top+box[1]))
             layers.append(padded)
         return tuple(layers)
 
-    def composite_bloom(self, background, key, origin, scale=1, *, emission=True, clip=None, in_place=False):
+    def composite_bloom(self, background, key, origin, scale=1, *, light=None, power=1.,
+                        flat_normal=False, emission=True, clip=None, in_place=False):
         """Add emissive Bloom after the sprite and before overlays.
 
         Origin is the sprite's screen top-left. Clip is (left, top, right, bottom).
-        Scale must be 1, 2 or 3; light power never changes this emissive-only effect.
+        Light and origin are in destination pixels; scale is 1, 2 or 3.
         Set in_place only for caller-owned frame buffers; otherwise return a copy.
         Disabled/empty Bloom returns the unchanged input without allocating a copy.
         """
@@ -118,9 +136,12 @@ class SpriteRenderer:
             raise ValueError('Bloom origin must be a finite pair.')
         if clip is not None and (len(clip) != 4 or any(type(value) is not int for value in clip)):
             raise ValueError('Bloom clip must contain four integer bounds.')
-        if not emission:
+        if (not isfinite(power) or power < 0 or
+                light is not None and (len(light) != 2 or not all(map(isfinite, light)))):
+            raise ValueError('Bloom requires a finite light position and nonnegative power.')
+        if light is None or not power or not emission:
             return background
-        layers = self.bloom(key)
+        layers = self.bloom(key, (light[0]-origin[0])/scale, (origin[1]-light[1])/scale, power, flat_normal)
         if layers is None:
             return background
         # Crop the sparse emission before scaling; moving light must not process the whole tile.

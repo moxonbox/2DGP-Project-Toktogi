@@ -64,6 +64,37 @@ def _fixture(emission=True, coverage=255, brightness=255):
     return maps
 
 
+def _post_light_response(assets):
+    key = ('idle','left',0)
+    origin = (16,16)
+    maps = assets.maps(key)
+    mask = maps['base'].getchannel('A').point([0]+[255]*255)
+    cases = (('no_light',(16,30),0.,0.), ('ambient_only',(16,30),0.,.25),
+             ('shore_spawn',(659,-67),1.15,.25), ('first_lamp',(64,-67),1.15,.25),
+             ('viewer_left',(16,30),1.,.115), ('viewer_right',(115,25),1.,.115))
+    results = {}
+    for name, local, power, ambient in cases:
+        light = (origin[0]+local[0], origin[1]+local[1])
+        image = assets.render(key,'lit',origin,light,power=power,ambient=ambient)
+        frame = Image.new('RGBA',(160,160),(24,31,29,255))
+        frame.alpha_composite(image,origin)
+        out = assets.renderer.composite_bloom(frame,key,origin,light=light,power=power)
+        count = _different(frame,out)
+        if name in ('no_light','ambient_only','shore_spawn'):
+            assert out is frame and count == 0, name
+        else:
+            assert count > 0, name
+        results[name] = count
+    off = assets.render(key,'lit',origin,origin,power=0.,ambient=0.,emission=False)
+    emit = assets.render(key,'lit',origin,origin,power=0.,ambient=0.)
+    assert Image.composite(off.convert('RGB'),Image.new('RGB',off.size),mask).getbbox() is None
+    diff = ImageChops.difference(emit.convert('RGB'),off.convert('RGB'))
+    emission_mask = maps['emissive'].convert('L').point([0]+[255]*255)
+    assert diff.getbbox() and not ImageChops.subtract(diff, emission_mask.convert('RGB')).getbbox()
+    assert off.getchannel('A').tobytes() == maps['sprite'].getchannel('A').tobytes()
+    return results
+
+
 def _negative_inputs(assets, rejected):
     _reject('duplicate_json_key', lambda: _json('{"clips":{},"clips":{}}'), rejected)
     _reject('nonfinite_json', lambda: _json('{"value":NaN}'), rejected)
@@ -188,6 +219,7 @@ def verify():
         assert alpha_changed == 0 and maximum <= 1 and changed <= 4
         assert max_chroma_error == 0
         response = _light_response(assets)
+        post_response = _post_light_response(assets)
 
         key = ('idle','left',0)
         normal = assets.render(key, 'lit', (0,0), (16,30))
@@ -225,23 +257,25 @@ def verify():
             cleanup.callback(renderer.close)
         frame = Image.new('RGBA', (512,512), (100,100,100,111))
         original = frame.tobytes()
-        assert black.composite_bloom(frame, key, (30,30)).tobytes() == original
-        assert faint.composite_bloom(frame, key, (30,30)).tobytes() == original
-        assert bright.composite_bloom(frame, key, (30,30), emission=False).tobytes() == original
-        layer = bright.bloom(key)[0]
+        frontal = dict(light=(30,94),power=3.)
+        assert black.composite_bloom(frame, key, (30,30), **frontal).tobytes() == original
+        assert faint.composite_bloom(frame, key, (30,30), **frontal).tobytes() == original
+        assert bright.composite_bloom(frame, key, (30,30), emission=False, **frontal).tobytes() == original
+        layer = bright.bloom(key,0,-64,3.)[0]
         assert abs(sum(BLOOM_KERNEL)-1.) < 1e-12
         assert abs(layer.getpixel((6,70))-BLOOM_KERNEL[6]**2) < 1e-7
         assert abs(sum(array('f',layer.tobytes()))-1.) < 1e-6
-        assert abs(half.bloom(key)[0].getpixel((6,70))/layer.getpixel((6,70))-128/255) < 1e-6
+        assert abs(half.bloom(key,0,-64,3.)[0].getpixel((6,70))/layer.getpixel((6,70))-128/255) < 1e-6
         bloom_changes = {}
         reference_patch = None
         for scale in (1,2,3):
-            output = bright.composite_bloom(frame, key, (30,30), scale)
+            light = (30,30+64*scale)
+            output = bright.composite_bloom(frame, key, (30,30), scale, light=light, power=3.)
             assert frame.tobytes() == original
             assert output.getchannel('A').tobytes() == frame.getchannel('A').tobytes()
             assert output.getpixel((29,30+64*scale))[0] > 100
             clip = (30,30,400,400)
-            clipped = bright.composite_bloom(frame, key, (30,30), scale, clip=clip)
+            clipped = bright.composite_bloom(frame, key, (30,30), scale, light=light, power=3., clip=clip)
             difference = ImageChops.difference(clipped.convert('RGB'), frame.convert('RGB')).getbbox()
             assert difference is not None and difference[0] >= 30 and difference[1] >= 30
             assert difference[2] <= 400 and difference[3] <= 400
@@ -253,9 +287,34 @@ def verify():
             bloom_changes[str(scale)] = _different(output,frame)
             assert bloom_changes[str(scale)] > 0
 
+        # Both emitters occupy the same cell. Only the one facing the lamp seeds its halo.
+        opposed = _fixture(False)
+        for x, nx in ((32,0),(96,255)):
+            opposed['emissive'].putpixel((x,64),(255,255,255,255))
+            opposed['normal'].putpixel((x,64),(nx,128,128,255))
+        directional = SpriteRenderer(lambda cell: opposed,1.)
+        cleanup.callback(directional.close)
+        for light, lit_x, shadow_x in (((-64,64),32,96),((192,64),96,32)):
+            halo = directional.composite_bloom(frame,key,(0,0),light=light)
+            assert halo.getpixel((lit_x,64))[0] > 100 and halo.getpixel((shadow_x,64))[0] == 100
+        assert directional.composite_bloom(frame,key,(0,0),light=(32,64),flat_normal=True).getpixel((32,64))[0] > 100
+        assert directional.composite_bloom(frame,key,(0,0),light=(32,64)).getpixel((32,64))[0] == 100
+        # The green halo grows with direct power and never enters the red/blue blur bands.
+        opposed['emissive'].putpixel((32,64),(0,255,0,255))
+        green = SpriteRenderer(lambda cell: opposed,1.)
+        cleanup.callback(green.close)
+        gains = []
+        for power in (0., .1, .5, 1.):
+            out = green.composite_bloom(frame,key,(0,0),light=(-64,64),power=power)
+            r,g,b,_ = out.getpixel((32,64))
+            assert r == b == 100
+            gains.append(g-100)
+        assert gains[0] == gains[1] == 0 < gains[2] < gains[3]
+        assert bright.composite_bloom(frame,key,(30,30)) is frame
+
         actual_frame = Image.new('RGB', (256,256), (17,19,23))
         actual_frame.paste(normal, (64,64), normal.getchannel('A'))
-        actual_bloom = assets.renderer.composite_bloom(actual_frame, key, (64,64))
+        actual_bloom = assets.renderer.composite_bloom(actual_frame, key, (64,64), light=(80,94))
         actual_changes = _different(actual_frame, actual_bloom)
         assert actual_changes > 0
         glow = maps['emissive'].convert('RGB')
@@ -266,6 +325,8 @@ def verify():
 
         _negative_inputs(assets, rejected)
         _reject('nonfinite_light', lambda: bright.render(key,'lit',(0,0),(float('nan'),0)), rejected)
+        _reject('invalid_bloom_power', lambda: bright.composite_bloom(frame,key,(0,0),power=-1), rejected)
+        _reject('invalid_bloom_light', lambda: bright.composite_bloom(frame,key,(0,0),light=(0,float('nan'))), rejected)
         _reject('invalid_bloom_scale', lambda: bright.composite_bloom(frame,key,(0,0),4), rejected)
         _reject('nonfinite_bloom_origin', lambda: bright.composite_bloom(frame,key,(float('inf'),0)), rejected)
         _reject('invalid_bloom_clip', lambda: bright.composite_bloom(frame,key,(0,0),clip=(0,0,1.5,2)), rejected)
@@ -273,7 +334,7 @@ def verify():
             assets.maps(cell)
             assets.surface_fields(cell)
             assets.render(cell, 'lit', (0,0), (16,30))
-            assets.renderer.bloom(cell)
+            assets.renderer.bloom(cell,16,-30,1.)
         caches = {name: cache.cache_info().currsize for name,cache in (
             ('maps',assets.maps), ('surface_fields',assets.surface_fields),
             ('lit',assets.renderer.lit), ('bloom',assets.renderer.bloom))}
@@ -297,7 +358,8 @@ def verify():
                     'error_reduction_percent':round(100*(1-palette_after/palette_before),2),
                     'alpha_changed':0},
         'changed_pixels':changes, 'flat_normal':[0,0,1], 'preview_modes':7,
-        'bloom': {'edge_changed_pixels':bloom_changes, 'real_cell_changed_pixels':actual_changes,
+        'bloom': {'lighting_changed_pixels':post_response, 'opposing_normals_checked':True,
+                  'edge_changed_pixels':bloom_changes, 'real_cell_changed_pixels':actual_changes,
                   'outside_emission_changed_pixels':outside_emission,
                   'black_or_disabled_changed_pixels':0, 'alpha_changed':0,
                   'scales':[1,2,3], 'clip_checked':True, 'linear_coverage_checked':True},

@@ -48,8 +48,7 @@ PALETTE_HIGHLIGHT_LIMIT = [128 + (255 - value) * 2 // 3 for value in range(256)]
 PALETTE_SHADOW_LIMIT = [128 - value * 2 // 3 for value in range(256)]
 
 
-def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,*,palette_base=None):
-    sprite,mask,x,y,nx,ny,nz,rgb,rough,metal,glow,box=fields
+def point_light(x,y,nx,ny,nz,lx,ly,power):
     dx=calc(lambda v:v['a']-v['x'],a=float(lx),x=x)
     dy=calc(lambda v:v['a']+v['y'],a=float(ly),y=y)
     d2=calc(lambda v:v['x']*v['x']+v['y']*v['y']+116.*116.,x=dx,y=dy)
@@ -58,12 +57,18 @@ def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,
     c=calc(lambda v:v['y']*v['u'],y=dy,u=inv)
     d=calc(lambda v:116.*v['u'],u=inv)
     ndl=calc(lambda v:v['max'](v['nx']*v['a']+v['ny']*v['c']+v['nz']*v['d'],0.),nx=nx,ny=ny,nz=nz,a=a,c=c,d=d)
+    attenuation=calc(lambda v:v['p']*1.32/(1.+v['d']/32000.),p=float(power),d=d2)
+    return a,c,d,ndl,attenuation
+
+
+def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,*,palette_base=None):
+    sprite,mask,x,y,nx,ny,nz,rgb,rough,metal,glow,box=fields
+    a,c,d,ndl,attenuation=point_light(x,y,nx,ny,nz,lx,ly,power)
     hnorm=calc(lambda v:(2.+2.*v['d'])**-.5,d=d)
     ndh=calc(lambda v:v['min'](v['max']((v['nx']*v['a']+v['ny']*v['c']+v['nz']*(v['d']+1.))*v['h'],0.),1.),nx=nx,ny=ny,nz=nz,a=a,c=c,d=d,h=hnorm)
     if roughness is not None:rough=Image.new('F',mask.size,roughness)
     if metallic is not None:metal=Image.new('F',mask.size,metallic)
     gloss=calc(lambda v:2./(v['r']*v['r'])-2.,r=rough)
-    attenuation=calc(lambda v:v['p']*1.32/(1.+v['d']/32000.),p=float(power),d=d2)
     specular=calc(lambda v:v['a']*v['n']*(v['g']+2.)/8.*(v['h']**v['g']),a=attenuation,n=ndl,g=gloss,h=ndh)
     fresnel=calc(lambda v:(1.-(1.+v['d'])*v['h'])**5.,d=d,h=hnorm)
     diffuse=calc(lambda v:v['ambient']+v['a']*v['n']*(1.-v['m'])*.88,ambient=float(ambient),a=attenuation,n=ndl,m=metal)
@@ -75,7 +80,8 @@ def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,
         channels.append(srgb(radiance))
     original=sprite.crop(box)
     authored = original.convert('RGB')
-    color = Image.merge('RGB', channels)
+    material = Image.merge('RGB', channels)
+    color = material
     if palette_base is not None:
         # Apply the same signed light shift to all authored channels to retain the toon colors.
         neutral = palette_base.crop(box).convert('L').point(PALETTE_NEUTRAL)
@@ -87,6 +93,11 @@ def shade(fields,lx,ly,roughness,metallic,power,emission,ambient,emission_scale,
         shift = ImageChops.darker(shift, brightest.point(PALETTE_HIGHLIGHT_LIMIT))
         shift = ImageChops.lighter(shift, darkest.point(PALETTE_SHADOW_LIMIT))
         color = ImageChops.add(authored, shift.convert('RGB'), offset=-128)
+        # Below the preview's usual ambient level, let unlit material approach its actual radiance.
+        if ambient < .115:
+            visibility = calc(lambda v: v['min']((v['ambient'] + v['a'] * v['n']) / .115, 1.) * 255.,
+                              ambient=float(ambient), a=attenuation, n=ndl).convert('L')
+            color = Image.composite(color, material, visibility)
     color = Image.composite(color, authored, mask)
     color.putalpha(original.getchannel('A'))
     result=sprite.copy();result.paste(color,box[:2])

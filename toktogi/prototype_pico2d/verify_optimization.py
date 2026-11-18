@@ -48,11 +48,13 @@ def focused_checks(app):
     key=app.assets.tracks['idle','right'].cells[0]
     for scale in (1,2,3):
         source=Image.new('RGBA',(200,150),(30,45,60,191))
-        args=(key,(-20,-15),scale)
-        expected=app.assets.renderer.composite_bloom(source,*args,clip=(8,4,190,140))
+        origin=(56-76*scale,68-72*scale)
+        args=(key,origin,scale)
+        light=(origin[0]+64*scale,origin[1]+24*scale)
+        expected=app.assets.renderer.composite_bloom(source,*args,light=light,clip=(8,4,190,140))
         actual=source.copy()
-        result=app.assets.renderer.composite_bloom(actual,*args,clip=(8,4,190,140),in_place=True)
-        assert result is actual and expected.tobytes()==actual.tobytes()
+        result=app.assets.renderer.composite_bloom(actual,*args,light=light,clip=(8,4,190,140),in_place=True)
+        assert result is actual and expected.tobytes()==actual.tobytes() != source.tobytes()
         assert source.getextrema()==((30,30),(45,45),(60,60),(191,191))
         source.close();expected.close();actual.close()
     return {'max_speed_px_s':72,'accelerate_ms':round(acceleration*1000,2),

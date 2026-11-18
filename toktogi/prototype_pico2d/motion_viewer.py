@@ -168,7 +168,7 @@ class Viewer:
         self.button('거칠기  ' + ('원본' if self.roughness is None else f'{self.roughness:.2f}'), x + 14, top + 235, 116, lambda: self.cycle('roughness', (None, 0.22, 0.52, 0.85)))
         self.button('금속성  ' + ('원본' if self.metallic is None else f'{self.metallic:.2f}'), x + 135, top + 235, 116, lambda: self.cycle('metallic', (None, 0.0, 0.5, 1.0)))
         self.button('발광 ' + ('켜짐' if self.emission else '꺼짐'), x + 14, top + 273, 116, lambda: setattr(self, 'emission', not self.emission), self.emission)
-        self.button('강도 ' + f'{self.power:.1f}', x + 135, top + 273, 116, lambda: self.cycle('power', (1.0, 0.4, 1.65)))
+        self.button('강도 ' + f'{self.power:.1f}', x + 135, top + 273, 116, lambda: self.cycle('power', (1.0, 0.4, 0.0, 1.65)))
         self.button('평탄 Normal',x+14,top+310,116,lambda:setattr(self,'flat_normal',not self.flat_normal),self.flat_normal)
         self.button('Bloom',x+135,top+310,116,lambda:setattr(self,'bloom',not self.bloom),self.bloom)
 
@@ -179,7 +179,9 @@ class Viewer:
             image = image.resize((128 * scale, 128 * scale), Image.Resampling.NEAREST)
         self.screen.alpha_composite(image, tuple(map(round, origin)))
         if self.bloom and MODES[self.mode][0]=='lit':
-            self.assets.renderer.composite_bloom(self.screen,key,origin,scale,emission=self.emission,clip=self.preview_clip,in_place=True)
+            self.assets.renderer.composite_bloom(self.screen,key,origin,scale,light=light,power=self.power,
+                                                flat_normal=self.flat_normal,emission=self.emission,
+                                                clip=self.preview_clip,in_place=True)
         if self.markers:
             markers, support = self.assets.sample(key)
             for name, data in markers.items():

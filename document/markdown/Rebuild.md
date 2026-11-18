@@ -119,7 +119,7 @@
 - 창/renderer 출력 크기·viewport·DPI·입력 역변환·clip을 [백엔드](Pico2DBackend.md#backend-coordinates)로 검증한다. 문자·도형·마커·광원에도 같은 변환을 쓰며 API y축 때문에 Normal G를 뒤집지 않는다.
 - RGBA8·RGBA32·pitch 행 복사·Nearest·straight Alpha·그리기 순서를 유지한다. 업로드 실패/잠금 해제·clip 복원·Image/Font 단일 소유권을 검사한다.
 - PLAY_CLEAR=(99,108,112), 플레이 power=.82·ambient=.34와 기존 CPU BRDF·감쇠·윤곽·접점·눈 하이라이트를 먼저 일치시킨다. F2에는 자체 배경·광원 설정을 적용한다.
-- F2 평탄 Normal은 디코딩 후 정확한 (0,0,1)이다. Bloom은 초기 꺼짐이며 발광만 선형 합성한다. 6px 여유·피벗·프리뷰 clip·UI 제외·검은 발광 음성 대조는 [2Dshader](2Dshader.md)를 따른다.
+- F2 평탄 Normal은 디코딩 후 정확한 (0,0,1)이다. Bloom은 초기 꺼짐이며 직접광이 닿은 발광 부위만 선형 합성한다. 6px 여유·피벗·프리뷰 clip·UI 제외·검은 발광 음성 대조는 [2Dshader](2Dshader.md)를 따른다.
 - 맵 36셀·표면 계산 24셀·조명 96셀·글자 512항목은 비교 상한이다. 새 텍스처/Bloom 상한은 기준 장치 측정으로 정하고 eviction·종료 때 해제한다.
 - 2,374셀의 5패스 RGBA 전량은 약 741.9MiB다. 캐시·임시 복사·텍스처·폰트·Bloom은 추가 비용이며 압축 ZIP 크기로 메모리를 판정하지 않는다.
 - 로딩/워밍업과 정상 프레임의 계산·업로드·합성 비용을 분리한다. 장치·OS·Python/DLL·renderer·DPI·해상도·vsync·제한 설정과 120프레임 p95/최대를 남긴다.

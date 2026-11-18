@@ -40,13 +40,22 @@
   ],
   "preview_modes": 7,
   "bloom": {
+    "lighting_changed_pixels": {
+      "no_light": 0,
+      "ambient_only": 0,
+      "shore_spawn": 0,
+      "first_lamp": 111,
+      "viewer_left": 120,
+      "viewer_right": 116
+    },
+    "opposing_normals_checked": true,
     "edge_changed_pixels": {
       "1": 69,
       "2": 276,
       "3": 621
     },
-    "real_cell_changed_pixels": 130,
-    "outside_emission_changed_pixels": 43,
+    "real_cell_changed_pixels": 120,
+    "outside_emission_changed_pixels": 33,
     "black_or_disabled_changed_pixels": 0,
     "alpha_changed": 0,
     "scales": [
@@ -89,6 +98,8 @@
     "unknown_profile_cell",
     "source_checksum",
     "nonfinite_light",
+    "invalid_bloom_power",
+    "invalid_bloom_light",
     "invalid_bloom_scale",
     "nonfinite_bloom_origin",
     "invalid_bloom_clip",

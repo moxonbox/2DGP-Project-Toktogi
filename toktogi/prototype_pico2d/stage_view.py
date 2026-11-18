@@ -68,8 +68,8 @@ class StageView(PondView):
         drift=20*round(2*sin(game.time*.8))
         return self.camera.point(light[0]+drift,light[1]),1.15,.25
 
-    def effects(self,frame,game,origin):
-        return self.assets.renderer.composite_bloom(frame,game.visual(),origin,in_place=True)
+    def effects(self,frame,key,origin,light,power):
+        return self.assets.renderer.composite_bloom(frame,key,origin,light=light,power=power,in_place=True)
 
     def overlay(self,screen,game):
         key=(screen.size,self.world.level_id,tuple(self.world.states.values()),game.bites,

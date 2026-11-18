@@ -34,27 +34,41 @@ def verify():
             mouth,tail=markers['mouth_marker']['world'],markers['furca_marker']['world']
             return sum((mouth[i]-tail[i])*camera[i] for i in (0,1))
         initial=facing(0.)
-        facing_scores={};rotations={}
+        facing_scores={};rotations={};detents={}
         for key,sign in (('a',-1),('d',1)):
             g=reset();g.walk_speed=24.;keys(g,key,True);trace=[]
             step=360/1.55*STEP
-            for i in range(400):
+            for i in range(450):
                 g.step();trace.append(g.yaw_angle)
                 assert g.support and g.transition is None and g.yaw_turning
-                assert abs(g.yaw_angle-sign*(i+1)*step)<1e-6
+                previous=trace[-2] if i else 0.
+                delta=sign*(g.yaw_angle-previous)
+                assert -1e-7<=delta<=step+1e-7
+                if delta<1e-7:assert abs(g.yaw_angle/180-round(g.yaw_angle/180))<1e-7
                 assert g.visual()[0] in ('idle','ground_spin_left')
                 if i==12:facing_scores[key]=facing(g.yaw_angle)
             assert abs(trace[-1])>720
+            for boundary in (180,360,540,720):
+                held=[i for i,angle in enumerate(trace) if abs(angle-sign*boundary)<1e-7]
+                assert len(held)==12 and held==list(range(held[0],held[-1]+1)),(key,boundary,held)
+            detents[key]=len(held)*STEP*1000
             keys(g,key,False);saved=g.yaw_angle;ticks(g,60)
             assert g.yaw_angle==saved
             rotations[key]=round(trace[-1],3)
         assert facing_scores['a']<initial<facing_scores['d']
+        g=reset();g.walk_speed=24.;keys(g,'d',True)
+        for _ in range(100):
+            g.step()
+            if g.yaw_angle==180:break
+        assert g.yaw_angle==180
+        keys(g,'d',False);ticks(g,3);assert g.yaw_angle==180
+        keys(g,'a',True);g.step();assert g.yaw_angle<180
         for key in ('a','d'):
             traces=[]
             for aim in ('','w','s','ws'):
                 g=reset();g.walk_speed=24.;keys(g,key+aim,True)
                 sequence=[]
-                for _ in range(40):g.step();sequence.append(g.yaw_angle)
+                for _ in range(110):g.step();sequence.append(g.yaw_angle)
                 traces.append(sequence)
                 expected=1 if aim=='w' else -1 if aim=='s' else 0
                 assert g.aim==expected
@@ -88,7 +102,7 @@ def verify():
         legacy=Game(assets);legacy.edge('left',True);legacy.step()
         assert legacy.transition and legacy.transition[0].cells[0][0].startswith('turn_')
         return {'passed':True,'headings_degrees':headings,'release_hold_degrees':round(angle,3),
-                'continuous_rotation_degrees':rotations,'screen_facing_scores':facing_scores,'pause_and_opposites_hold':True,
+                'continuous_rotation_degrees':rotations,'half_turn_detent_ms':detents,'reverse_cancels_detent':True,'screen_facing_scores':facing_scores,'pause_and_opposites_hold':True,
                 'reverse_input':True,'aim_does_not_redirect_rotation':True,'jump_and_attack':True,'ledge_support_gate':True,
                 'z_spin_cells':len(track.cells),'z_spin_seconds':round(track.duration,3),
                 'legacy_fixture_preserved':True,'computer_use':False}

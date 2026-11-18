@@ -6,9 +6,14 @@
   },
   "release_hold_degrees": 25.161,
   "continuous_rotation_degrees": {
-    "a": -774.194,
-    "d": 774.194
+    "a": -785.806,
+    "d": 785.806
   },
+  "half_turn_detent_ms": {
+    "a": 100.0,
+    "d": 100.0
+  },
+  "reverse_cancels_detent": true,
   "screen_facing_scores": {
     "a": -0.3318064913072587,
     "d": 2.7713739998483655

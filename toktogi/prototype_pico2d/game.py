@@ -90,7 +90,7 @@ class Game:
         self.yaw_detent_direction=0
         self.yaw_w_arc=False
         self.aim=0
-        self.aim_time=0.
+        self.aim_display=0.
         self.run='Playing'
         self.action='Idle'
         self.clip='idle'
@@ -479,6 +479,9 @@ class Game:
             delta=(target-self.yaw_angle+180)%360-180
             if delta==-180:delta=180
             angle=self.yaw_angle+copysign(min(abs(delta),step),delta)
+        if abs(angle-self.yaw_angle)>1e-7 and abs(self.aim_display)>1e-7:
+            angle=self.yaw_angle
+            detent=False
         pose=self.motion.yaw_cell(angle)
         markers,legs=self.assets.sample(pose)
         if not all(self.support.x0<=self.x+markers['foot_contact_'+leg]['xy'][0]-self.assets.pivot[0]<=self.support.x1 for leg in legs):return
@@ -711,7 +714,6 @@ class Game:
         old_aim=self.aim
         if self.support and not self.prep:
             self.aim=aim
-        self.aim_time=self.aim_time+dt if self.aim==old_aim else 0.
         braking='shift' in self.held
         self.balancing=False
         if (self.support and not direction and not self.work and not self.prep and not self.held
@@ -721,6 +723,15 @@ class Game:
                 direction=1 if self.x<lo else -1
                 self.balancing=True
         self.steer_yaw(dt)
+        if self.directional_yaw:
+            if self.yaw_pose is None or not self.support or self.prep or self.work or self.transition:
+                self.aim_display=0.
+            else:
+                aligned=abs((self.yaw_angle+90)%180-90)<1e-7
+                target=self.aim if aligned and not self.yaw_turning and ('left' in self.held or 'right' in self.held) else 0.
+                side=self.aim_display if self.aim_display else target
+                duration=self.motion.track('aim_up' if side>0 else 'aim_down',self.view).duration
+                self.aim_display=approach(self.aim_display,target,dt/duration)
         if self.support and self.time>=self.hurt_until and not self.prep:
             landing_pose=self.clip in ('land_soft','land_hard','recovery_start','respawn') and self.visual_time<self.duration(self.clip)
             move_entry=None

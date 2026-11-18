@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "rapid_key_changes": 24,
+  "simulation_samples": 288,
+  "max_visual_heading_step_degrees": 7.04,
+  "max_60hz_visual_heading_step_degrees": 7.04,
+  "aim_values_immediate": true,
+  "aim_switch_through_neutral": true,
+  "rotation_waits_for_neutral": true,
+  "pause_pose_preserved": true,
+  "jump_and_attack_priority": true,
+  "computer_use": false,
+  "scope": "Source marker directions and authored pose continuity; physical keyboard/display not certified."
+}

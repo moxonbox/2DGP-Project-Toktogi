@@ -111,7 +111,7 @@ def verify():
                 expected=-1 if aim=='w' else 1 if aim=='s' else 0
                 assert g.aim==expected
                 if expected:
-                    assert g.visual()[0]==('aim_up' if expected>0 else 'aim_down')
+                    assert g.visual()[0] in ('idle','ground_spin_left') and g.aim_display==0
                     g.edge('space',True);g.edge('space',False)
                     assert g.prep and g.prep[-2]==expected
             assert all(sequence==traces[0] for sequence in traces)

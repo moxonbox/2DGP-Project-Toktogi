@@ -1,7 +1,7 @@
 """Timed sprite tracks and the playable pose policy."""
 from bisect import bisect_right
 from itertools import accumulate
-from math import isfinite, degrees
+from math import atan2, isfinite, degrees
 
 class Track:
     def __init__(self, cells, durations, loop):
@@ -105,6 +105,16 @@ class MotionSet:
             durations=[(.48-.20)/18]*20
             durations[9]=durations[14]=.10
             self.playback[name,view]=Track(turn.cells,durations,False)
+
+        self.steering_fallback=()
+        if not getattr(self,'steering_degrees',()):
+            def heading(cell):
+                markers,_=assets.sample(cell)
+                front,back=markers['mouth_marker']['world'],markers['furca_marker']['world']
+                return degrees(atan2(front[1]-back[1],front[0]-back[0]))
+            spin=self.playback['ground_spin','left']
+            origin=heading(spin.cells[0])
+            self.steering_fallback=tuple((cell,(heading(cell)-origin)%360) for cell in spin.cells)
 
     def track(self,clip,view):
         return self.playback.get((clip,view)) or self.assets.tracks[clip,view]
@@ -215,8 +225,8 @@ class MotionSet:
         return yaw%360
 
     def yaw_cell(self,angle):
-        track=self.track('ground_spin','left')
-        return track.cells[track.index(self.yaw_heading(angle)/360*track.duration)]
+        heading=self.yaw_heading(angle)
+        return min(self.steering_fallback,key=lambda item:abs((item[1]-heading+180)%360-180))[0]
 
     def feed_to_move(self,source):
         returning=self.feed_return(source)
@@ -256,9 +266,9 @@ class MotionSet:
             return entry.cells[entry.index(player.work['age'])]
         if (getattr(player,'directional_yaw',False) and player.yaw_pose is not None
                 and player.support and not player.prep and not player.work and player.run=='Playing'
-                and player.aim and ('left' in player.held or 'right' in player.held)):
-            track=self.track('aim_up' if player.aim>0 else 'aim_down',player.view)
-            cell=track.cells[track.index(player.aim_time)]
+                and abs(player.aim_display)>1e-7):
+            track=self.track('aim_up' if player.aim_display>0 else 'aim_down',player.view)
+            cell=track.cells[track.index(abs(player.aim_display)*track.duration)]
             markers,legs=self.assets.sample(cell)
             if all(player.support.x0<=player.x+markers['foot_contact_'+leg]['xy'][0]-self.assets.pivot[0]<=player.support.x1 for leg in legs):
                 return cell
